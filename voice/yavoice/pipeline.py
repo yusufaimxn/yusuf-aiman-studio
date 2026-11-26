@@ -35,8 +35,13 @@ def episode_audio_dir(slug: str) -> Path:
 
 class Pipeline:
     def __init__(self, slug: str, script_text: str, provider_override: str | None = None,
-                 allow_remote: bool = False, mode: str = "preview", preset: str | None = None):
+                 allow_remote: bool = False, mode: str = "preview", preset: str | None = None,
+                 supplied: list[Path] | None = None):
         assert mode in ("preview", "final")
+        # Supplied voiceover: one audio file per script line, in script order
+        # (e.g. MP3s made by hand on the ElevenLabs website). No API call is
+        # made and the audio is kept as recorded (only resampled to 48 kHz mono).
+        self.supplied = [Path(f) for f in supplied] if supplied else None
         self.slug, self.mode = slug, mode
         self.script: Script = parse(script_text)
         self.provider_override = provider_override
@@ -52,6 +57,12 @@ class Pipeline:
 
     # ----------------------------------------------------------- voices
     def voice(self, speaker: str) -> ResolvedVoice:
+        if speaker not in self._voices and self.supplied is not None:
+            v = resolve(speaker, self.provider_override)
+            ok = {"approved"} if self.mode == "final" else {"approved", "preview"}
+            if v.status not in ok:
+                raise ProviderError(f"{v.profile_id} status is {v.status!r}; {self.mode} needs {sorted(ok)}")
+            self._voices[speaker] = v
         if speaker not in self._voices:
             v = resolve(speaker, self.provider_override)
             prov = get_provider(v.provider)
@@ -74,6 +85,8 @@ class Pipeline:
     def synth_segment(self, seg: Segment, prev: Segment | None, nxt: Segment | None,
                       regenerate: bool = False) -> dict:
         v = self.voice(seg.speaker)
+        if self.supplied is not None:
+            return self._supplied_segment(seg, v)
         prov = get_provider(v.provider)
         caps = prov.capabilities(v.model)
         spoken, hits = self.lexicon.apply(seg.text, seg.language)
@@ -111,6 +124,27 @@ class Pipeline:
             self._save_versions()
         return json.loads(meta_path.read_text()) | {"file": str(clean)}
 
+    def _supplied_segment(self, seg: Segment, v: ResolvedVoice) -> dict:
+        src = self.supplied[seg.line_index]
+        digest = hashlib.sha256(src.read_bytes()).hexdigest()[:16]
+        clean = self.seg_dir / f"{seg.id}.{digest}.wav"
+        meta_path = self.seg_dir / f"{seg.id}.{digest}.json"
+        if not (clean.exists() and meta_path.exists()):
+            ffmpeg.to_wav(src, clean, RATE)
+            meta = {"segment": seg.id, "speaker": seg.speaker, "profile": v.profile_id, "provider": "supplied",
+                    "model": f"{v.provider}:{v.model} (made outside the engine)", "voice_id": v.voice_id,
+                    "placeholder": False, "source_file": src.name, "source_sha256": digest,
+                    "text": seg.text, "spoken_text": seg.text, "lexicon_hits": [], "language": seg.language,
+                    "emotion": seg.delivery.emotion, "strategy": "supplied", "notes": [],
+                    "speed": 1.0, "pause_after": seg.delivery.pause_after if seg.delivery.pause_after is not None else 0.35,
+                    "take": 1, "key": digest, "words": [], "duration": ffmpeg.probe(clean)["duration"],
+                    "created_at": dt.datetime.now(dt.timezone.utc).isoformat()}
+            meta_path.write_text(json.dumps(meta, indent=2, ensure_ascii=False))
+            self.versions[seg.id] = [{"take": 1, "key": digest, "file": clean.name, "approved": True,
+                                      "created_at": meta["created_at"]}]
+            self._save_versions()
+        return json.loads(meta_path.read_text()) | {"file": str(clean)}
+
     def _save_versions(self) -> None:
         self.versions_path.write_text(json.dumps(self.versions, indent=2))
 
@@ -125,6 +159,11 @@ class Pipeline:
     def run(self, regenerate: set[str] | None = None) -> dict:
         regenerate = regenerate or set()
         segs = self.script.segments()
+        if self.supplied is not None:
+            segs = self.script.line_segments()
+            if len(self.supplied) != len(segs):
+                raise ProviderError(f"script has {len(segs)} spoken lines but {len(self.supplied)} audio files "
+                                    "were given; supply exactly one file per line, in order")
         metas = [self.synth_segment(s, segs[i - 1] if i else None, segs[i + 1] if i + 1 < len(segs) else None,
                                     regenerate=s.id in regenerate)
                  for i, s in enumerate(segs)]

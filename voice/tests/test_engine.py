@@ -212,3 +212,34 @@ class PipelineMockTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class SuppliedAudioTests(unittest.TestCase):
+    def test_import_one_file_per_line(self):
+        import subprocess
+        import tempfile
+        from yavoice.pipeline import Pipeline
+        from yavoice.providers import ProviderError
+        script = ("---\ntitle: t\n---\n# scene a | A\nYUSUF: Satu dua tiga. Empat lima enam.\n"
+                  "AIMAN (curious): Betul ke?\n")
+        with tempfile.TemporaryDirectory() as d:
+            files = []
+            for i, dur in enumerate((2.0, 1.0)):
+                f = Path(d) / f"{i}.mp3"
+                subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "lavfi", "-i",
+                                f"sine=frequency=220:duration={dur}", str(f)], check=True)
+                files.append(f)
+            slug = "_test-supplied"
+            try:
+                with self.assertRaises(ProviderError):
+                    Pipeline(slug, script, supplied=files[:1]).run()
+                res = Pipeline(slug, script, supplied=files).run()
+                self.assertEqual(len(res["segments"]), 2)  # one per line, not per sentence
+                self.assertEqual(res["segments"][0]["speaker"], "YUSUF")
+                self.assertFalse(res["placeholder_audio"])
+                self.assertTrue(res["segments"][0]["words_approximate"])
+                self.assertAlmostEqual(res["segments"][0]["end"] - res["segments"][0]["start"], 2.0, delta=0.1)
+            finally:
+                import shutil
+                from yavoice.pipeline import REPO
+                shutil.rmtree(REPO / "episodes" / slug, ignore_errors=True)
