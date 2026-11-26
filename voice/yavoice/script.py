@@ -83,6 +83,13 @@ class Script:
         return out
 
 
+    def line_segments(self) -> list[Segment]:
+        """One segment per script line (no sentence split), for supplied audio."""
+        return [Segment(id=f"{ln.scene_id}-{li:03d}-00", speaker=ln.speaker, text=ln.text, delivery=ln.delivery,
+                        language=ln.language, scene_id=ln.scene_id, line_index=li, sfx_after=ln.sfx_after)
+                for li, ln in enumerate(self.lines)]
+
+
 def parse(src: str) -> Script:
     meta: dict = {}
     body = src

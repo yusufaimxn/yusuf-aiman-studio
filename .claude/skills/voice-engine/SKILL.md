@@ -15,4 +15,8 @@ Read `voice/README.md` first. Decided 2026-11-26: Yusuf's real voice is NOT clon
 5. `--mock` output is placeholder audio. Never present it as a real voice, and never export it as final.
 6. To fix one line, use `--regen <segment-id>`. Do not regenerate the whole episode.
 7. Run `python -m yavoice qa` and report its real result. List `listen_first` segments for a human listening pass, because pronunciation and identity cannot be verified automatically.
-8. Per-episode audio goes in `episodes/<slug>/assets/audio/voice/`, as HyperFrames requires.
+8. Free-plan workflow: give the user the full script with each spoken line numbered, the speaker and
+   the voice to use (Yusuf = Shahrul, Aiman = Ashraf, model Eleven Multilingual v2). The user returns one
+   MP3 per line; build audio with `python -m yavoice import` in line order. Check file count and
+   durations before building, and say captions are estimated.
+9. Per-episode audio goes in `episodes/<slug>/assets/audio/voice/`, as HyperFrames requires.

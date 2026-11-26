@@ -16,12 +16,18 @@ Run commands from this folder: `cd voice && python -m yavoice <command>`.
    emotion and options, scene headers and SFX cues.
 4. **Check pronunciations**: `python -m yavoice lexicon check script.txt`, then add fixes to
    `lexicon/zz-overrides.json`.
-5. **Synthesise**: `python -m yavoice synth script.txt --episode <slug> --allow-remote` (preview), or
+5. **Current workflow (Free plan, decided 2026-11-26):** the chosen voices (Shahrul for Yusuf,
+   Ashraf for Aiman) are Voice Library voices, which the ElevenLabs API refuses on the Free plan. So
+   the user makes one MP3 per script line on the ElevenLabs website and uploads them. Build the episode
+   audio with `python -m yavoice import script.txt --episode <slug> line1.mp3 line2.mp3 ...` (files in
+   script line order, exactly one per spoken line). Audio is kept as supplied; captions use estimated
+   word timing (QA warns about it).
+6. **Synthesise** (when API voices are available): `python -m yavoice synth script.txt --episode <slug> --allow-remote` (preview), or
    use `--mock` for an offline dry run with placeholder tones.
-6. **Regenerate one line**: `--regen <segment-id>` makes a new take of only that segment. Approve a
+7. **Regenerate one line**: `--regen <segment-id>` makes a new take of only that segment. Approve a
    take with `python -m yavoice approve`.
-7. **QA**: `python -m yavoice qa --episode <slug> --target 90 [--transcript t.json] [--final]`.
-8. **Master**: `python -m yavoice master --episode <slug> --music bed.mp3`. SFX named in the script
+8. **QA**: `python -m yavoice qa --episode <slug> --target 90 [--transcript t.json] [--final]`.
+9. **Master**: `python -m yavoice master --episode <slug> --music bed.mp3`. SFX named in the script
    come from `assets/audio/sfx/<name>.*`.
 
 ## Outputs (`episodes/<slug>/assets/audio/voice/`)

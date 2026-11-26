@@ -74,6 +74,13 @@ def main(argv: list[str] | None = None) -> int:
     sy.add_argument("--regen", nargs="*", default=[])
     sy.add_argument("--preset")
 
+    im = sub.add_parser("import", help="build episode audio from supplied voiceover files, one per line")
+    im.add_argument("script")
+    im.add_argument("--episode", required=True)
+    im.add_argument("files", nargs="+", help="audio files in script line order")
+    im.add_argument("--final", action="store_true")
+    im.add_argument("--preset")
+
     apv = sub.add_parser("approve")
     apv.add_argument("--episode", required=True)
     apv.add_argument("--segment", required=True)
@@ -186,6 +193,17 @@ def main(argv: list[str] | None = None) -> int:
         write_cues(p.out)
         print(json.dumps({"duration": res["duration"], "segments": len(res["segments"]),
                           "placeholder_audio": res["placeholder_audio"], "out": str(p.out)}, indent=2))
+
+    elif a.cmd == "import":
+        from .pipeline import Pipeline
+        from .sync import write_cues
+        p = Pipeline(a.episode, Path(a.script).read_text(), mode="final" if a.final else "preview",
+                     preset=a.preset, supplied=[Path(f) for f in a.files])
+        res = p.run()
+        write_cues(p.out)
+        print(json.dumps({"duration": res["duration"], "lines": len(res["segments"]),
+                          "captions": "approximate word timing (estimated from text length)",
+                          "out": str(p.out)}, indent=2))
 
     elif a.cmd == "approve":
         from .pipeline import episode_audio_dir
