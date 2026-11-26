@@ -1,0 +1,24 @@
+{
+  "name": "storytelling",
+  "highpass_hz": 65,
+  "eq": [
+    {
+      "f": 200,
+      "g": 1.0,
+      "w": 1.0
+    },
+    {
+      "f": 3000,
+      "g": 1.0,
+      "w": 1.2
+    }
+  ],
+  "deess": 0.2,
+  "comp_ratio": 2.0,
+  "comp_threshold_db": -22,
+  "target_lufs": -14,
+  "true_peak": -1.5,
+  "lra": 11,
+  "music_db": -22,
+  "duck_ratio": 5
+}

@@ -1,0 +1,19 @@
+{
+  "name": "educational",
+  "highpass_hz": 70,
+  "eq": [
+    {
+      "f": 3200,
+      "g": 1.5,
+      "w": 1.2
+    }
+  ],
+  "deess": 0.2,
+  "comp_ratio": 2.5,
+  "comp_threshold_db": -20,
+  "target_lufs": -14,
+  "true_peak": -1.5,
+  "lra": 9,
+  "music_db": -24,
+  "duck_ratio": 6
+}

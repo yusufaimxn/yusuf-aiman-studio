@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voice Enrollment</title>
+<style>
+  :root { --blue:#0066DE; --bg:#f6f8fb; --card:#fff; --ink:#14213d; --muted:#5b6575; --ok:#178a4c; --warn:#b26a00; --bad:#c0362c; --line:#e3e8ef; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0e1420; --card:#161e2d; --ink:#e8edf5; --muted:#9aa6b8; --line:#28324a; } }
+  * { box-sizing: border-box; }
+  body { margin:0; font:15px/1.5 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background:var(--bg); color:var(--ink); }
+  header { background:var(--blue); color:#fff; padding:18px 16px; }
+  header h1 { margin:0; font-size:20px; } header p { margin:4px 0 0; opacity:.9; }
+  main { max-width:980px; margin:0 auto; padding:16px; display:grid; gap:16px; }
+  section { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; }
+  h2 { margin:0 0 10px; font-size:16px; }
+  button, select, input { font:inherit; }
+  button { background:var(--blue); color:#fff; border:0; border-radius:8px; padding:8px 14px; cursor:pointer; }
+  button.secondary { background:transparent; color:var(--blue); border:1px solid var(--blue); }
+  button.danger { background:var(--bad); }
+  button:disabled { opacity:.5; cursor:default; }
+  .row { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+  .prompt { font-size:18px; padding:12px; border-left:4px solid var(--blue); background:color-mix(in srgb, var(--blue) 8%, transparent); border-radius:6px; margin:10px 0; }
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  th, td { text-align:left; padding:8px 6px; border-bottom:1px solid var(--line); vertical-align:top; }
+  .pill { border-radius:99px; padding:2px 8px; font-size:12px; font-weight:600; }
+  .pass { background:color-mix(in srgb, var(--ok) 15%, transparent); color:var(--ok); }
+  .fail { background:color-mix(in srgb, var(--bad) 15%, transparent); color:var(--bad); }
+  .muted { color:var(--muted); } .warn { color:var(--warn); } .bad { color:var(--bad); }
+  ul { margin:6px 0 0 18px; padding:0; }
+  .scroll { overflow-x:auto; }
+  #meter { height:8px; background:var(--line); border-radius:4px; overflow:hidden; flex:1; min-width:120px; }
+  #meter > div { height:100%; width:0; background:var(--ok); transition:width .05s; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Yusuf Aiman voice enrollment</h1>
+  <p>Samples stay on this computer. Nothing is sent to any voice provider from this page.</p>
+</header>
+<main>
+  <section>
+    <h2>Before you record</h2>
+    <ul>
+      <li>Quiet room with soft furnishings; switch off fans and air-conditioning if you can.</li>
+      <li>Keep the same mic and the same distance (about a hand-span, 15 to 20 cm) for every take.</li>
+      <li>Speak naturally, the way you talk on your channel: Bahasa Melayu with your normal English mix.</li>
+      <li>Record several styles: conversational, explaining, excited, calm, serious, humorous.</li>
+      <li>Avoid music, other voices, mouth clicks and heavy breathing into the mic.</li>
+      <li>Instant clone: 1 to 2 minutes of clean audio. Professional clone: at least 30 minutes, ideally 1 to 3 hours.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Record with your microphone</h2>
+    <div class="row">
+      <label>Style
+        <select id="style">
+          <option>conversational</option><option>explaining</option><option>excited</option>
+          <option>calm</option><option>serious</option><option>humorous</option><option>curious</option>
+        </select>
+      </label>
+      <button id="next" class="secondary">Next prompt</button>
+    </div>
+    <div class="prompt" id="prompt"></div>
+    <div class="row">
+      <button id="rec">● Record</button>
+      <button id="stop" disabled>■ Stop</button>
+      <div id="meter"><div></div></div>
+      <span id="timer" class="muted">0:00</span>
+    </div>
+    <p id="recmsg" class="muted"></p>
+  </section>
+
+  <section>
+    <h2>Upload recordings</h2>
+    <div class="row">
+      <input type="file" id="files" multiple accept=".wav,.mp3,.m4a,.flac,.ogg,.webm,.aac,audio/*">
+      <button id="upload">Upload and check</button>
+    </div>
+    <p class="muted">WAV, MP3, M4A, FLAC, OGG, WEBM or AAC. Each file is checked for length, clipping, noise, level and silence.</p>
+  </section>
+
+  <section>
+    <h2>Review samples <span id="summary" class="muted"></span></h2>
+    <div class="row" style="margin-bottom:8px">
+      <label>Reviewer <input id="reviewer" placeholder="Your name" value=""></label>
+    </div>
+    <div class="scroll"><table>
+      <thead><tr><th>Sample</th><th>Check</th><th>Notes</th><th>Status</th><th></th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table></div>
+    <p class="muted">Only samples marked approved can be listed in the consent record and sent to a provider.</p>
+  </section>
+</main>
+<script>
+const PROMPTS = {
+  conversational: ["Assalamualaikum semua, jumpa lagi kita hari ni. Hari ni saya nak share satu benda yang ramai orang tanya.",
+                   "Sebenarnya benda ni simple je, tapi kalau tak faham asas dia, memang confuse lah."],
+  explaining: ["Okay, bayangkan macam ni. Data tu macam bahan mentah, dan model AI tu macam chef yang belajar resipi.",
+               "Bila kita panggil API, aplikasi kita hantar request ke server, lepas tu server bagi balik response."],
+  excited: ["Weh, ini memang game changer! Dulu kena buat manual, sekarang semua automatik!",
+            "Tak sangka hasil dia secepat ni. Jom kita tengok sama-sama!"],
+  calm: ["Tarik nafas dulu. Kita buat satu-satu, perlahan-lahan, tak perlu tergesa-gesa.",
+         "Kalau ada error, itu normal. Baca mesej dia, dan kita cuba faham apa yang sistem nak beritahu."],
+  serious: ["Ini penting. Jangan sesekali kongsi password atau API key anda dengan sesiapa.",
+            "Keselamatan data bukan pilihan. Ia tanggungjawab setiap developer."],
+  humorous: ["Code saya jalan, tapi saya pun tak tahu kenapa. Itulah kehidupan programmer.",
+             "Laptop saya dah panas macam kuali goreng pisang, tapi rendering tak siap lagi."],
+  curious: ["Pernah tak korang terfikir, macam mana sebenarnya Wi-Fi hantar data melalui udara?",
+            "Kenapa agaknya sesetengah app laju, tapi ada yang lambat sangat?"],
+};
+let pi = 0;
+const $ = id => document.getElementById(id);
+const showPrompt = () => { const l = PROMPTS[$('style').value]; $('prompt').textContent = l[pi % l.length]; };
+$('style').onchange = () => { pi = 0; showPrompt(); };
+$('next').onclick = () => { pi++; showPrompt(); };
+showPrompt();
+
+async function post(path, body, headers = {}) {
+  const r = await fetch(path, { method: 'POST', body, headers });
+  const j = await r.json();
+  if (!r.ok) throw new Error(j.error || r.statusText);
+  return j;
+}
+
+let mr, chunks = [], t0, tick, ctx, analyser, raf;
+$('rec').onclick = async () => {
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: false, noiseSuppression: false, autoGainControl: false } });
+    ctx = new AudioContext(); analyser = ctx.createAnalyser(); ctx.createMediaStreamSource(stream).connect(analyser);
+    const buf = new Uint8Array(analyser.fftSize);
+    const draw = () => { analyser.getByteTimeDomainData(buf); let p = 0; for (const v of buf) p = Math.max(p, Math.abs(v - 128));
+      const el = $('meter').firstElementChild; el.style.width = Math.min(100, p / 1.28) + '%'; el.style.background = p > 120 ? 'var(--bad)' : 'var(--ok)'; raf = requestAnimationFrame(draw); };
+    draw();
+    const mime = MediaRecorder.isTypeSupported('audio/webm;codecs=opus') ? 'audio/webm;codecs=opus' : '';
+    mr = new MediaRecorder(stream, mime ? { mimeType: mime, audioBitsPerSecond: 256000 } : {});
+    chunks = []; mr.ondataavailable = e => chunks.push(e.data);
+    mr.onstop = async () => {
+      stream.getTracks().forEach(t => t.stop()); cancelAnimationFrame(raf); ctx.close(); clearInterval(tick);
+      const ext = (mr.mimeType || '').includes('ogg') ? 'ogg' : 'webm';
+      const blob = new Blob(chunks, { type: mr.mimeType });
+      $('recmsg').textContent = 'Checking recording...';
+      try { await post('/api/upload', blob, { 'X-Filename': `mic-${Date.now()}.${ext}`, 'X-Style': $('style').value });
+            $('recmsg').textContent = 'Saved. Review it below.'; load(); }
+      catch (e) { $('recmsg').textContent = 'Upload failed: ' + e.message; }
+    };
+    mr.start(); t0 = Date.now();
+    tick = setInterval(() => { const s = Math.floor((Date.now() - t0) / 1000); $('timer').textContent = `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`; }, 250);
+    $('rec').disabled = true; $('stop').disabled = false; $('recmsg').textContent = 'Recording... keep the meter green, never red.';
+  } catch (e) { $('recmsg').textContent = 'Microphone not available: ' + e.message; }
+};
+$('stop').onclick = () => { mr && mr.stop(); $('rec').disabled = false; $('stop').disabled = true; };
+
+$('upload').onclick = async () => {
+  for (const f of $('files').files) {
+    try { await post('/api/upload', f, { 'X-Filename': f.name, 'X-Style': $('style').value }); }
+    catch (e) { alertRow(f.name + ': ' + e.message); }
+  }
+  load();
+};
+function alertRow(msg) { $('recmsg').textContent = msg; }
+
+async function setStatus(sha, status) {
+  try { await post('/api/status', JSON.stringify({ sha256: sha, status, reviewer: $('reviewer').value || 'unknown' })); load(); }
+  catch (e) { alertRow(e.message); }
+}
+async function remove(sha) { await post('/api/remove', JSON.stringify({ sha256: sha })); load(); }
+
+async function load() {
+  const j = await (await fetch('/api/samples')).json();
+  $('summary').textContent = `· ${j.summary.approved} of ${j.summary.total} approved, ${j.summary.approved_minutes} min approved`;
+  $('rows').innerHTML = '';
+  for (const s of j.samples) {
+    const tr = document.createElement('tr');
+    const notes = [...s.qa.issues.map(x => `<div class="bad">${x}</div>`), ...s.qa.warnings.map(x => `<div class="warn">${x}</div>`)].join('') || '<span class="muted">clean</span>';
+    tr.innerHTML = `<td><div>${s.original_name}</div><div class="muted">${s.style} · ${s.qa.duration}s · ${s.qa.lufs} LUFS</div>
+      <audio controls preload="none" src="/api/audio/${s.file}" style="max-width:220px"></audio></td>
+      <td><span class="pill ${s.qa.passed ? 'pass' : 'fail'}">${s.qa.passed ? 'PASS' : 'FAIL'}</span></td>
+      <td>${notes}</td><td>${s.status}</td>
+      <td class="row"><button ${s.qa.passed ? '' : 'disabled'} data-a="approved">Approve</button>
+      <button class="secondary" data-a="rejected">Reject</button><button class="danger" data-a="rm">Delete</button></td>`;
+    tr.querySelectorAll('button').forEach(b => b.onclick = () => b.dataset.a === 'rm' ? remove(s.sha256) : setStatus(s.sha256, b.dataset.a));
+    $('rows').appendChild(tr);
+  }
+}
+load();
+</script>
+</body>
+</html>

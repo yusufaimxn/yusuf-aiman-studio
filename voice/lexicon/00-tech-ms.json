@@ -1,0 +1,31 @@
+{
+  "description": "Starter pronunciation list for English technical terms inside Bahasa Melayu narration. Aliases are respellings that a Malay-reading voice tends to pronounce the Malaysian way. Every entry is a first draft: Yusuf should listen to previews and correct them in zz-overrides.json.",
+  "entries": [
+    {"term": "AI", "alias": "ei-ai", "lang": "ms", "case_sensitive": true},
+    {"term": "API", "alias": "ei-pi-ai", "lang": "ms", "case_sensitive": true},
+    {"term": "UI", "alias": "yu-ai", "lang": "ms", "case_sensitive": true},
+    {"term": "UX", "alias": "yu-eks", "lang": "ms", "case_sensitive": true},
+    {"term": "IT", "alias": "ai-ti", "lang": "ms", "case_sensitive": true},
+    {"term": "CPU", "alias": "si-pi-yu", "lang": "ms", "case_sensitive": true},
+    {"term": "GPU", "alias": "ji-pi-yu", "lang": "ms", "case_sensitive": true},
+    {"term": "RAM", "alias": "rem", "lang": "ms", "case_sensitive": true},
+    {"term": "SQL", "alias": "es-kiu-el", "lang": "ms", "case_sensitive": true, "note": "some say 'sequel'"},
+    {"term": "HTML", "alias": "eic-ti-em-el", "lang": "ms", "case_sensitive": true},
+    {"term": "CSS", "alias": "si-es-es", "lang": "ms", "case_sensitive": true},
+    {"term": "JSON", "alias": "jei-son", "lang": "ms", "case_sensitive": true},
+    {"term": "URL", "alias": "yu-ar-el", "lang": "ms", "case_sensitive": true},
+    {"term": "Wi-Fi", "alias": "wai-fai", "lang": "ms"},
+    {"term": "GitHub", "alias": "git-hab", "lang": "ms"},
+    {"term": "Python", "alias": "pai-ton", "lang": "ms"},
+    {"term": "JavaScript", "alias": "jaa-va-skrip", "lang": "ms"},
+    {"term": "Linux", "alias": "li-nuks", "lang": "ms"},
+    {"term": "cloud", "alias": "klaud", "lang": "ms"},
+    {"term": "software", "alias": "sof-wer", "lang": "ms"},
+    {"term": "hardware", "alias": "had-wer", "lang": "ms"},
+    {"term": "ChatGPT", "alias": "chat ji-pi-ti", "lang": "ms"},
+    {"term": "YouTube", "alias": "yu-tiub", "lang": "ms"},
+    {"term": "KL", "alias": "kei-el", "lang": "ms", "case_sensitive": true, "note": "Kuala Lumpur"},
+    {"term": "JB", "alias": "jei-bi", "lang": "ms", "case_sensitive": true, "note": "Johor Bahru"},
+    {"term": "Yusuf Aiman", "note": "brand name; no alias, keep provider default unless corrected"}
+  ]
+}

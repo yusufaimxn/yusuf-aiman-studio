@@ -1,0 +1,24 @@
+{
+  "name": "cinematic",
+  "highpass_hz": 60,
+  "eq": [
+    {
+      "f": 120,
+      "g": 1.5,
+      "w": 1.0
+    },
+    {
+      "f": 3500,
+      "g": 1.0,
+      "w": 1.2
+    }
+  ],
+  "deess": 0.25,
+  "comp_ratio": 2.0,
+  "comp_threshold_db": -24,
+  "target_lufs": -16,
+  "true_peak": -1.0,
+  "lra": 14,
+  "music_db": -18,
+  "duck_ratio": 4
+}

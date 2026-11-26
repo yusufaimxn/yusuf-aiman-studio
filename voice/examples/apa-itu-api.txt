@@ -1,0 +1,17 @@
+---
+title: Apa itu API?
+language: ms
+preset: educational
+target_duration: 45
+---
+# scene hook | Pembukaan
+YUSUF (friendly): Assalamualaikum semua! Hari ni kita nak faham satu benda yang selalu sangat orang sebut, iaitu API.
+AIMAN (curious): Eh Yusuf, API tu apa sebenarnya? Macam nama ubat batuk je.
+> SFX boing
+# scene explain | Penerangan
+YUSUF (calm, emphasis=penghubung): Senang cerita, API ni macam penghubung antara dua aplikasi.
+  Bila app kita nak data, dia hantar request. Lepas tu server balas dengan response dalam format JSON.
+AIMAN (surprised): Oh, macam pelayan kat restoran lah!
+YUSUF (confident, lang=en): Exactly. The waiter takes your order to the kitchen and brings back your food.
+# scene close | Penutup
+YUSUF (inspirational): Jadi lepas ni, bila korang dengar perkataan API, korang dah tahu apa maksud dia.

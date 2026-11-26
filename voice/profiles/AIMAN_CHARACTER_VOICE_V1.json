@@ -1,0 +1,60 @@
+{
+  "id": "AIMAN_CHARACTER_VOICE_V1",
+  "speaker": "AIMAN",
+  "display_name": "Aiman (fictional animated character)",
+  "owner": "Yusuf Aiman studio",
+  "kind": "synthetic",
+  "status": "not_selected",
+  "status_help": "Pick a designed or library voice that is NOT a clone of a real person, preview it, then set status to approved.",
+  "mode": "synthetic",
+  "modes": {
+    "synthetic": {
+      "provider": "elevenlabs",
+      "model": "eleven_multilingual_v2",
+      "voice_id_env": "AIMAN_VOICE_ID",
+      "note": "Separate synthetic character voice (Voice Design or a licensed library voice)."
+    },
+    "yusuf_alt": {
+      "profile": "YUSUF_AIMAN_VOICE_V1",
+      "base_speed": 1.05,
+      "provider_settings": {
+        "stability": 0.4,
+        "similarity_boost": 0.75,
+        "style": 0.2,
+        "use_speaker_boost": true
+      },
+      "note": "Alternative performance using Yusuf's cloned voice. Used ONLY when mode is set to yusuf_alt and allow_yusuf_voice is true."
+    }
+  },
+  "allow_yusuf_voice": false,
+  "languages": [
+    "ms",
+    "en"
+  ],
+  "default_language": "ms",
+  "base_speed": 1.04,
+  "preset": "dialogue",
+  "provider_settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true
+  },
+  "delivery_limits": {
+    "max_speed_deviation": 0.12,
+    "max_energy": 0.85,
+    "max_style": 0.4
+  },
+  "identity": {
+    "age_feel": "young adult",
+    "personality": [
+      "curious",
+      "playful",
+      "a bit cheeky",
+      "asks the questions the viewer is thinking"
+    ],
+    "rhythm": "quicker, lighter, more questioning intonation than Yusuf",
+    "contrast_with_host": "must be clearly distinguishable from Yusuf by ear"
+  },
+  "history": []
+}

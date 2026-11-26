@@ -1,0 +1,19 @@
+{
+  "name": "shortform",
+  "highpass_hz": 80,
+  "eq": [
+    {
+      "f": 3500,
+      "g": 2.0,
+      "w": 1.2
+    }
+  ],
+  "deess": 0.3,
+  "comp_ratio": 3.0,
+  "comp_threshold_db": -18,
+  "target_lufs": -14,
+  "true_peak": -1.0,
+  "lra": 7,
+  "music_db": -22,
+  "duck_ratio": 8
+}
