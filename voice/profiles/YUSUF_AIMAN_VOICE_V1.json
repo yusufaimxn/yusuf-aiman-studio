@@ -4,7 +4,7 @@
   "display_name": "Yusuf Aiman (host)",
   "owner": "Yusuf Aiman",
   "kind": "stock",
-  "status": "not_selected",
+  "status": "preview",
   "status_help": "not_selected -> preview (a stock/designed voice is chosen, under review) -> approved | rejected. Final exports require approved.",
   "provider": "elevenlabs",
   "model": "eleven_multilingual_v2",
@@ -56,8 +56,14 @@
     "voice_id_env": "YUSUF_VOICE_ID_CARTESIA",
     "note": "A Cartesia stock voice with Malay support, if ElevenLabs is not used."
   },
-  "history": [],
-  "voice_source": "Stock voice from the provider library or a Voice Design voice. Decided 2026-11-26: do NOT clone Yusuf's real voice.",
+  "history": [
+    {
+      "date": "2026-11-26",
+      "by": "salleh aziz",
+      "event": "chose ElevenLabs library voice Shahrul - Calm, Friendly Support Agent (G3mZ5fAxCu3ThFPWdD3D)"
+    }
+  ],
+  "voice_source": "ElevenLabs Voice Library (needs a paid plan to use via API)",
   "espeak_voice": "ms+m3",
   "espeak_pitch": 45,
   "alternatives": {
@@ -66,5 +72,7 @@
       "voice_id_env": "YUSUF_VOICE_ID_GOOGLE",
       "note": "Google Cloud TTS ms-MY voice name, e.g. ms-MY-Wavenet-B (free tier)"
     }
-  }
+  },
+  "voice_id": "G3mZ5fAxCu3ThFPWdD3D",
+  "voice_name": "Shahrul - Calm, Friendly Support Agent"
 }

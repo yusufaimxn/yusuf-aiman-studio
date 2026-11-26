@@ -132,11 +132,22 @@ class EnrollAndConsentTests(unittest.TestCase):
 
 
 class ProfileTests(unittest.TestCase):
-    def test_no_voice_without_enrollment(self):
+    def test_stored_voice_id_and_env_override(self):
         from yavoice.profiles import resolve
         os.environ.pop("YUSUF_VOICE_ID", None)
+        self.assertEqual(resolve("YUSUF").voice_id, "G3mZ5fAxCu3ThFPWdD3D")
+        self.assertEqual(resolve("AIMAN").voice_id, "NHFTLozDZneDWyQjRGAO")
+        os.environ["YUSUF_VOICE_ID"] = "override"
+        try:
+            self.assertEqual(resolve("YUSUF").voice_id, "override")
+        finally:
+            os.environ.pop("YUSUF_VOICE_ID")
+
+    def test_no_voice_without_selection(self):
+        from yavoice.profiles import resolve
+        os.environ.pop("YUSUF_VOICE_ID_GOOGLE", None)
         with self.assertRaises(ProviderError):
-            resolve("YUSUF")
+            resolve("YUSUF", provider_override="google")
 
     def test_aiman_does_not_use_yusuf_by_default(self):
         from yavoice.profiles import load_profile

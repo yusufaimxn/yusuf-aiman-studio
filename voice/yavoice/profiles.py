@@ -71,7 +71,10 @@ def resolve(speaker: str, provider_override: str | None = None) -> ResolvedVoice
         if not alt:
             raise ProviderError(f"{p['id']}: no '{provider_override}' entry under alternatives")
         provider, model, env = provider_override, alt.get("model"), alt["voice_id_env"]
-    voice_id = os.environ.get(env, "")
+    # A chosen stock voice id is not a secret, so a profile may store it as
+    # "voice_id" (top level, or in its synthetic mode); the env var overrides.
+    fixed = p.get("voice_id") or p.get("modes", {}).get(p.get("mode", ""), {}).get("voice_id")
+    voice_id = os.environ.get(env, "") or (fixed if not provider_override else "")
     if not voice_id:
         raise ProviderError(
             f"{p['id']}: no voice id in ${env}. "

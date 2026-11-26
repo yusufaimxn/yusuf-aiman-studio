@@ -4,7 +4,7 @@
   "display_name": "Aiman (fictional animated character)",
   "owner": "Yusuf Aiman studio",
   "kind": "synthetic",
-  "status": "not_selected",
+  "status": "preview",
   "status_help": "Pick a designed or library voice that is NOT a clone of a real person, preview it, then set status to approved.",
   "mode": "synthetic",
   "modes": {
@@ -12,7 +12,10 @@
       "provider": "elevenlabs",
       "model": "eleven_multilingual_v2",
       "voice_id_env": "AIMAN_VOICE_ID",
-      "note": "Separate synthetic character voice (Voice Design or a licensed library voice)."
+      "note": "Separate synthetic character voice (Voice Design or a licensed library voice).",
+      "voice_id": "NHFTLozDZneDWyQjRGAO",
+      "voice_name": "Ashraf - Smooth, Casual and Expressive",
+      "voice_source": "ElevenLabs Voice Library (needs a paid plan to use via API)"
     },
     "yusuf_alt": {
       "profile": "YUSUF_AIMAN_VOICE_V1",
@@ -56,7 +59,13 @@
     "rhythm": "quicker, lighter, more questioning intonation than Yusuf",
     "contrast_with_host": "must be clearly distinguishable from Yusuf by ear"
   },
-  "history": [],
+  "history": [
+    {
+      "date": "2026-11-26",
+      "by": "salleh aziz",
+      "event": "chose ElevenLabs library voice Ashraf - Smooth, Casual and Expressive (NHFTLozDZneDWyQjRGAO)"
+    }
+  ],
   "espeak_voice": "ms+m1",
   "espeak_pitch": 62,
   "alternatives": {
