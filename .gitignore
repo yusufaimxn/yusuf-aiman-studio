@@ -1,0 +1,8 @@
+node_modules/
+.venv/
+renders/
+exports/
+*.log
+**/.hyperframes/
+**/.cache/
+.DS_Store

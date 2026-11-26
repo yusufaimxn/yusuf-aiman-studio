@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Run the pinned HyperFrames CLI through the official skill launcher.
+# Usage: scripts/hf <command> [args]   (run from an episode folder or pass paths)
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+export HYPERFRAMES_NO_TELEMETRY="${HYPERFRAMES_NO_TELEMETRY:-1}"
+exec node "$ROOT/.claude/skills/hyperframes/scripts/plugin-cli.mjs" --cli-version 0.9.97 "$@"

@@ -1,0 +1,20 @@
+{
+  "name": "yusuf-aiman-studio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Yusuf Aiman AI video production studio",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.3.0",
+    "@fontsource/plus-jakarta-sans": "^5.3.0",
+    "@fontsource/sora": "^5.3.0",
+    "gsap": "^3.15.1",
+    "hyperframes": "^0.9.97"
+  },
+  "devDependencies": {
+    "@mermaid-js/mermaid-cli": "^12.2.0"
+  }
+}
