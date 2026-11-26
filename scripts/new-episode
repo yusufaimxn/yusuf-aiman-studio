@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Create a new episode from templates/episode-base.
+# Usage: scripts/new-episode <slug>     (slug: lowercase letters, digits, hyphens)
+set -euo pipefail
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+SLUG="${1:-}"
+[[ "$SLUG" =~ ^[a-z0-9][a-z0-9-]*$ ]] || { echo "usage: scripts/new-episode <slug>  (lowercase, digits, hyphens)" >&2; exit 2; }
+DEST="$ROOT/episodes/$SLUG"
+[ -e "$DEST" ] && { echo "episodes/$SLUG already exists" >&2; exit 1; }
+cp -r "$ROOT/templates/episode-base" "$DEST"
+mkdir -p "$DEST/assets/vendor" "$DEST/assets/fonts"
+cp "$ROOT/node_modules/gsap/dist/gsap.min.js" "$DEST/assets/vendor/"
+cp "$ROOT/assets/fonts/"*.woff2 "$DEST/assets/fonts/"
+sed -i "s/__SLUG__/$SLUG/" "$DEST/episode.yaml"
+printf '{\n  "id": "%s",\n  "name": "%s",\n  "createdAt": "%s"\n}\n' "$SLUG" "$SLUG" "$(date -u +%FT%TZ)" > "$DEST/meta.json"
+echo "Created episodes/$SLUG. Next: fill episodes/$SLUG/episode.yaml"
