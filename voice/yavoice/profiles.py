@@ -61,6 +61,16 @@ def resolve(speaker: str, provider_override: str | None = None) -> ResolvedVoice
     if provider_override == "mock":
         return ResolvedVoice(p["id"], speaker, "mock", "mock", f"mock-{speaker.lower()}",
                              {}, {**p, "provider": "mock"}, status)
+    if provider_override == "espeak":  # free offline draft voice, distinct variant per speaker
+        ev = p.get("espeak_voice", "ms+m3")
+        return ResolvedVoice(p["id"], speaker, "espeak", "espeak-ng", ev, {"pitch": p.get("espeak_pitch", 50)},
+                             {**p, "provider": "espeak", "provider_settings": {"pitch": p.get("espeak_pitch", 50)}},
+                             "approved")
+    if provider_override:
+        alt = p.get("alternatives", {}).get(provider_override)
+        if not alt:
+            raise ProviderError(f"{p['id']}: no '{provider_override}' entry under alternatives")
+        provider, model, env = provider_override, alt.get("model"), alt["voice_id_env"]
     voice_id = os.environ.get(env, "")
     if not voice_id:
         raise ProviderError(

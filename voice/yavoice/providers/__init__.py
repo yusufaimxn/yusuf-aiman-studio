@@ -10,6 +10,12 @@ def get_provider(name: str) -> VoiceProvider:
     if name == "cartesia":
         from .cartesia import CartesiaProvider
         return CartesiaProvider()
+    if name == "espeak":
+        from .espeak import EspeakProvider
+        return EspeakProvider()
+    if name == "google":
+        from .google import GoogleProvider
+        return GoogleProvider()
     if name == "mock":
         from .mock import MockProvider
         return MockProvider()

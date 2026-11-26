@@ -56,5 +56,14 @@
     "rhythm": "quicker, lighter, more questioning intonation than Yusuf",
     "contrast_with_host": "must be clearly distinguishable from Yusuf by ear"
   },
-  "history": []
+  "history": [],
+  "espeak_voice": "ms+m1",
+  "espeak_pitch": 62,
+  "alternatives": {
+    "google": {
+      "model": null,
+      "voice_id_env": "AIMAN_VOICE_ID_GOOGLE",
+      "note": "Google Cloud TTS ms-MY voice name, e.g. ms-MY-Wavenet-B (free tier)"
+    }
+  }
 }

@@ -57,5 +57,14 @@
     "note": "A Cartesia stock voice with Malay support, if ElevenLabs is not used."
   },
   "history": [],
-  "voice_source": "Stock voice from the provider library or a Voice Design voice. Decided 2026-11-26: do NOT clone Yusuf's real voice."
+  "voice_source": "Stock voice from the provider library or a Voice Design voice. Decided 2026-11-26: do NOT clone Yusuf's real voice.",
+  "espeak_voice": "ms+m3",
+  "espeak_pitch": 45,
+  "alternatives": {
+    "google": {
+      "model": null,
+      "voice_id_env": "YUSUF_VOICE_ID_GOOGLE",
+      "note": "Google Cloud TTS ms-MY voice name, e.g. ms-MY-Wavenet-B (free tier)"
+    }
+  }
 }

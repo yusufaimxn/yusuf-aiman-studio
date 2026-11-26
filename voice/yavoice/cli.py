@@ -68,7 +68,8 @@ def main(argv: list[str] | None = None) -> int:
     sy.add_argument("script")
     sy.add_argument("--episode", required=True)
     sy.add_argument("--mock", action="store_true", help="offline placeholder tones; never final")
-    sy.add_argument("--allow-remote", action="store_true", help="permit paid provider API calls")
+    sy.add_argument("--allow-remote", action="store_true", help="permit provider API calls")
+    sy.add_argument("--provider", help="override profile provider: espeak (free offline), google, mock")
     sy.add_argument("--final", action="store_true")
     sy.add_argument("--regen", nargs="*", default=[])
     sy.add_argument("--preset")
@@ -88,6 +89,9 @@ def main(argv: list[str] | None = None) -> int:
     m.add_argument("--episode", required=True)
     m.add_argument("--music")
     m.add_argument("--preset")
+
+    gv = sub.add_parser("google-voices")
+    gv.add_argument("--lang", default="ms-MY")
 
     ui = sub.add_parser("enroll-ui")
     ui.add_argument("--port", type=int, default=8765)
@@ -176,7 +180,7 @@ def main(argv: list[str] | None = None) -> int:
     elif a.cmd == "synth":
         from .pipeline import Pipeline
         from .sync import write_cues
-        p = Pipeline(a.episode, Path(a.script).read_text(), provider_override="mock" if a.mock else None,
+        p = Pipeline(a.episode, Path(a.script).read_text(), provider_override="mock" if a.mock else a.provider,
                      allow_remote=a.allow_remote, mode="final" if a.final else "preview", preset=a.preset)
         res = p.run(regenerate=set(a.regen))
         write_cues(p.out)
@@ -217,6 +221,11 @@ def main(argv: list[str] | None = None) -> int:
         out = master(d / "narration.wav", d / "mix.wav", Preset.load(a.preset or tl["preset"]),
                      Path(a.music) if a.music else None, sfx)
         print(json.dumps({"mix": str(out), "sfx_placed": len(sfx), "sfx_missing": sorted(set(missing))}))
+
+    elif a.cmd == "google-voices":
+        from .providers.google import GoogleProvider
+        for v in GoogleProvider().list_voices(a.lang):
+            print(v["name"], v.get("ssmlGender"), v.get("naturalSampleRateHertz"))
 
     elif a.cmd == "enroll-ui":
         from .server import serve
