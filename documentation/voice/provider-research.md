@@ -5,7 +5,17 @@ Prices change often, and ElevenLabs was running a time-limited promotion when th
 confirm the numbers before buying. Nothing here was tested with real audio yet: the network in the
 cloud workspace blocks the provider APIs, and no paid account has been used.
 
-## Summary
+## Decision (2026-11-26)
+
+Salleh decided **not to clone Yusuf's real voice**. The host is voiced by a stock voice (a provider
+library voice or a Voice Design voice), and Aiman gets a different stock voice. The cloning and
+consent code stays in the engine but is unused. It only runs if someone decides to clone a voice later.
+
+With no cloning, the provider choice comes down to Malay quality of stock voices, emotion control
+and word timings, and ElevenLabs is still the best fit. A paid plan (Starter or higher) is needed for
+commercial use; the Free plan has no commercial licence.
+
+## Summary (original research, written when cloning was planned)
 
 **Recommended primary provider: ElevenLabs.** Use a Professional Voice Clone (PVC) of Yusuf, created
 by Yusuf in his own ElevenLabs account, with Multilingual v2 as the default model. Eleven v3 or v4 can

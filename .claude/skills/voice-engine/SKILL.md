@@ -5,7 +5,7 @@ description: Generate, regenerate, QA or master Yusuf/Aiman voiceover for an epi
 
 # Voice engine
 
-Read `voice/README.md` first. Rules:
+Read `voice/README.md` first. Decided 2026-11-26: Yusuf's real voice is NOT cloned; both characters use stock voices. Rules:
 
 1. Never call a paid provider (`--allow-remote`) unless the user approved API use in this conversation.
 2. Never upload voice samples without a consent record confirmed by Yusuf Aiman himself

@@ -7,10 +7,11 @@ Run commands from this folder: `cd voice && python -m yavoice <command>`.
 
 ## Flow
 
-1. **Enroll** (once): `python -m yavoice enroll-ui`, then record or upload samples, review and approve them.
-   See `documentation/voice/recording-guide.md`.
-2. **Consent and clone**: see `documentation/voice/security-and-consent.md`. Nothing is uploaded
-   without a consent record confirmed by Yusuf and the `--allow-remote` flag.
+1. **Pick voices** (once): choose a stock voice for YUSUF and a different one for AIMAN, put the ids
+   in `.env` (`YUSUF_VOICE_ID`, `AIMAN_VOICE_ID`), preview, then set each profile's status to
+   `approved`. Decided 2026-11-26: Yusuf's real voice is **not** cloned.
+2. *(Unused unless cloning is approved later)* Enrollment and cloning: `python -m yavoice enroll-ui`,
+   `documentation/voice/recording-guide.md` and `documentation/voice/security-and-consent.md`.
 3. **Write a script** in the studio format (see `examples/apa-itu-api.txt`): speaker lines with
    emotion and options, scene headers and SFX cues.
 4. **Check pronunciations**: `python -m yavoice lexicon check script.txt`, then add fixes to

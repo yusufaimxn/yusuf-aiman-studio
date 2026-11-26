@@ -66,6 +66,6 @@ def resolve(speaker: str, provider_override: str | None = None) -> ResolvedVoice
         raise ProviderError(
             f"{p['id']}: no voice id in ${env}. "
             + ("Yusuf's voice has not been enrolled yet; no voice model exists."
-               if p.get("kind") == "clone" else "Choose and preview a character voice first."))
+               if p.get("kind") == "clone" else "Choose a stock voice, preview it and put its id there."))
     return ResolvedVoice(p["id"], speaker, provider, model, voice_id,
                          p.get("provider_settings", {}), p, status)

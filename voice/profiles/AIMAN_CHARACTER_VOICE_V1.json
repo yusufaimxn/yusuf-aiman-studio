@@ -23,7 +23,7 @@
         "style": 0.2,
         "use_speaker_boost": true
       },
-      "note": "Alternative performance using Yusuf's cloned voice. Used ONLY when mode is set to yusuf_alt and allow_yusuf_voice is true."
+      "note": "Alternative performance using the host's stock voice with different settings. Used ONLY when mode is yusuf_alt and allow_yusuf_voice is true."
     }
   },
   "allow_yusuf_voice": false,
