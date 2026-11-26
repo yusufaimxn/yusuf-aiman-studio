@@ -81,7 +81,11 @@ def main() -> None:
     ap.add_argument("--aiman", default="")
     a = ap.parse_args()
 
-    vs = voices()
+    # --yusuf/--aiman accept "Name:voice_id" pairs, which skips the voice
+    # listing (a key without voices_read permission can still do TTS).
+    explicit = {r: [x.split(":", 1) for x in getattr(a, r).split(",") if ":" in x]
+                for r in ("yusuf", "aiman")}
+    vs = [] if any(explicit.values()) and not a.list else voices()
     if a.list or not a.out:
         for v in vs:
             print(v["voice_id"], v["name"], json.dumps(v.get("labels")), (v.get("description") or "")[:80])
@@ -92,8 +96,9 @@ def main() -> None:
     manifest = []
     used: set[str] = set()
     for role in ("yusuf", "aiman"):
-        ids = [i for i in getattr(a, role).split(",") if i]
-        chosen = [by_id[i] for i in ids if i in by_id] or [
+        ids = [i for i in getattr(a, role).split(",") if i and ":" not in i]
+        chosen = [{"name": n, "voice_id": i} for n, i in explicit[role]] or \
+            [by_id[i] for i in ids if i in by_id] or [
             v for v in pick([v for v in vs if v["voice_id"] not in used], role, a.n)]
         for k, v in enumerate(chosen, 1):
             used.add(v["voice_id"])
