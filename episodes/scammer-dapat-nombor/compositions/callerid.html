@@ -1,0 +1,92 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; }
+    #ci-chip { left: 0; top: 0; }
+    #ci-q { position: absolute; left: 120px; top: 120px; width: 600px; height: 300px; }
+    #ci-q .ttl { position: absolute; left: 0; right: 0; top: 30px; text-align: center; font: 700 28px "Inter"; color: #5b6b86; }
+    #ci-q .nm { position: absolute; left: 0; right: 0; top: 96px; text-align: center; white-space: nowrap; font: 800 50px "Sora"; color: var(--navy); letter-spacing: 0.02em; }
+    #ci-q .bar { position: absolute; left: 90px; right: 90px; height: 18px; border-radius: 9px; background: #e3e9f3; }
+    #ci-net { position: absolute; left: 0; top: 96px; width: 840px; height: 464px; }
+    .ph { position: absolute; left: 0; width: 300px; height: 108px; padding: 16px 18px; border-radius: 22px; background: #fff; color: var(--dark); box-shadow: 0 12px 26px rgba(0,0,0,0.3); }
+    .ph .who { font: 600 18px "Inter"; color: #7a879c; }
+    .ph .nm { font: 800 28px "Sora"; color: var(--navy); white-space: nowrap; margin-top: 4px; }
+    .ph .av { position: absolute; right: 16px; top: 28px; width: 50px; height: 50px; border-radius: 50%; background: #e7eefb; display: grid; place-items: center; font: 800 26px "Sora"; color: var(--blue); }
+    #ci-p1 { top: 10px; } #ci-p2 { top: 150px; } #ci-p3 { top: 290px; }
+    #ci-lines { position: absolute; left: 0; top: 0; width: 840px; height: 464px; overflow: visible; }
+    #ci-db { position: absolute; left: 400px; top: 150px; width: 120px; height: 140px; }
+    #ci-dbl { position: absolute; left: 360px; top: 300px; width: 200px; text-align: center; font: 700 20px "Inter"; color: rgba(245,247,250,0.9); }
+    #ci-res { position: absolute; left: 570px; top: 90px; width: 270px; height: 250px; border-radius: 26px; background: #111d36; border: 3px solid var(--orange); box-shadow: 0 16px 40px rgba(0,0,0,0.45); }
+    #ci-res .t1 { position: absolute; left: 20px; top: 18px; font: 700 18px "Inter"; color: rgba(255,255,255,0.65); }
+    #ci-res .t2 { position: absolute; left: 20px; top: 50px; font: 700 24px "JetBrains Mono", monospace; color: #fff; }
+    #ci-res .t3 { position: absolute; left: 20px; top: 110px; width: 230px; font: 800 32px "Sora"; color: var(--orange); line-height: 1.1; }
+    #ci-res .t4 { position: absolute; left: 20px; top: 196px; font: 600 18px "Inter"; color: rgba(255,255,255,0.65); }
+    .flow { position: absolute; width: 16px; height: 16px; margin: -8px 0 0 -8px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 14px var(--cyan); }
+  </style>
+  <div id="root" data-composition-id="callerid" data-width="1080" data-height="1920">
+    <div class="panel">
+      <div id="ci-q" class="card">
+        <div class="ttl">Macam mana dia tahu nama ni?</div>
+        <div class="nm" id="ci-qn">A???? b?? R?????</div>
+        <div class="bar" style="top:200px"></div><div class="bar" style="top:236px; right:200px"></div>
+      </div>
+      <div id="ci-chip" class="chip"><span class="num">2</span>APP CALLER ID</div>
+      <div id="ci-net">
+        <svg id="ci-lines" viewBox="0 0 840 464">
+          <path id="ci-l1" d="M300 64 C360 64 370 220 410 220" fill="none" stroke="rgba(0,194,255,0.7)" stroke-width="5"/>
+          <path id="ci-l2" d="M300 204 C350 204 370 220 410 220" fill="none" stroke="rgba(0,194,255,0.7)" stroke-width="5"/>
+          <path id="ci-l3" d="M300 344 C360 344 370 220 410 220" fill="none" stroke="rgba(0,194,255,0.7)" stroke-width="5"/>
+          <path id="ci-l4" d="M520 220 C545 220 545 215 570 215" fill="none" stroke="#FF8A00" stroke-width="6"/>
+        </svg>
+        <div id="ci-p1" class="ph"><div class="who">Telefon kawan sekolah</div><div class="nm">Aiman bin Rahman</div></div>
+        <div id="ci-p2" class="ph"><div class="who">Telefon kawan futsal</div><div class="nm">Aiman Futsal</div></div>
+        <div id="ci-p3" class="ph"><div class="who">Telefon sepupu</div><div class="nm">Aiman Sepupu</div></div>
+        <svg id="ci-db" viewBox="0 0 120 140"><ellipse cx="60" cy="22" rx="56" ry="18" fill="#4a8aff"/><path d="M4 22 V118 a56 18 0 0 0 112 0 V22 a56 18 0 0 1 -112 0z" fill="#1f55b8"/>
+          <path d="M4 56 a56 18 0 0 0 112 0 M4 88 a56 18 0 0 0 112 0" fill="none" stroke="#4a8aff" stroke-width="4"/></svg>
+        <div id="ci-dbl">Pangkalan nama app caller ID</div>
+        <div id="ci-f1" class="flow"></div><div id="ci-f2" class="flow"></div><div id="ci-f3" class="flow"></div>
+        <div id="ci-res"><div class="t1">Carian nombor</div><div class="t2">+60 1X-XXX XXXX</div><div class="t3">Aiman bin Rahman</div><div class="t4">Dilihat oleh sesiapa</div></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const S = window.YA_T.scenes.callerid, t = (x) => x - S;
+    gsap.set(["#ci-chip", "#ci-net", "#ci-p1", "#ci-p2", "#ci-p3", "#ci-db", "#ci-dbl", "#ci-res", "#ci-f1", "#ci-f2", "#ci-f3"], { opacity: 0 });
+    ["#ci-l1", "#ci-l2", "#ci-l3", "#ci-l4"].forEach((s) => gsap.set(s, { strokeDasharray: 400, strokeDashoffset: 400 }));
+    // the question: a hidden name that scrambles
+    tl.fromTo("#ci-q", { opacity: 0, scale: 0.85, rotation: -3 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.35, ease: "back.out(2)" }, t(30.95));
+    const scr = ["A???? b?? R?????", "A#m?? b!? R@h???", "?i?a? ?in ?a?m?n", "A???? b?? R?????"];
+    const sc = { p: 0 };
+    tl.fromTo(sc, { p: 0 }, { p: 1, duration: 2.2, ease: "none", onUpdate: () => { document.querySelector("#ci-qn").textContent = scr[Math.min(3, Math.floor(sc.p * 4))]; } }, t(31.0));
+    tl.to("#ci-q", { opacity: 0, y: 40, scale: 0.9, duration: 0.25, ease: "power2.in" }, t(33.55));
+    // "Dua, app caller ID."
+    tl.fromTo("#ci-chip", { opacity: 0, x: -60, scale: 0.8 }, { opacity: 1, x: 0, scale: 1, duration: 0.4, ease: "back.out(2)" }, t(33.75));
+    tl.to("#ci-net", { opacity: 1, duration: 0.01 }, t(34.2));
+    tl.fromTo("#ci-db", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(2)" }, t(34.6));
+    tl.fromTo("#ci-dbl", { opacity: 0 }, { opacity: 1, duration: 0.3 }, t(34.9));
+    // "kumpul nama dari contact list pengguna"
+    ["#ci-p1", "#ci-p2", "#ci-p3"].forEach((s, i) => tl.fromTo(s, { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, t(35.35) + i * 0.25));
+    ["#ci-l1", "#ci-l2", "#ci-l3"].forEach((s, i) => tl.to(s, { strokeDashoffset: 0, duration: 0.5, ease: "power2.inOut" }, t(36.5) + i * 0.15));
+    // data packets travel into the database (positions sampled along each curve)
+    const P = [[300, 64, 360, 64, 370, 220, 410, 220], [300, 204, 350, 204, 370, 220, 410, 220], [300, 344, 360, 344, 370, 220, 410, 220]];
+    const bez = (p, u) => { const m = 1 - u; return [m*m*m*p[0] + 3*m*m*u*p[2] + 3*m*u*u*p[4] + u*u*u*p[6], m*m*m*p[1] + 3*m*m*u*p[3] + 3*m*u*u*p[5] + u*u*u*p[7]]; };
+    ["#ci-f1", "#ci-f2", "#ci-f3"].forEach((s, i) => {
+      for (let k = 0; k < 3; k++) {
+        const o = { u: 0 }, st = t(36.9) + i * 0.2 + k * 0.9;
+        tl.set(s, { opacity: 1 }, st);
+        tl.fromTo(o, { u: 0 }, { u: 1, duration: 0.7, ease: "power1.in", onUpdate: () => { const [x, y] = bez(P[i], o.u); gsap.set(s, { x, y }); } }, st);
+        tl.set(s, { opacity: 0 }, st + 0.7);
+      }
+    });
+    tl.to("#ci-db", { scale: 1.1, duration: 0.12, yoyo: true, repeat: 5 }, t(37.6));
+    // "Kawan kau save nama penuh kau"
+    tl.to("#ci-p1", { scale: 1.08, boxShadow: "0 0 0 6px #FF8A00, 0 16px 34px rgba(0,0,0,0.4)", duration: 0.3, ease: "back.out(2)" }, t(38.8));
+    tl.to(["#ci-p2", "#ci-p3"], { opacity: 0.45, duration: 0.3 }, t(38.8));
+    // "orang lain pun boleh nampak"
+    tl.to("#ci-l4", { strokeDashoffset: 0, duration: 0.35 }, t(40.75));
+    tl.fromTo("#ci-res", { opacity: 0, x: 40, scale: 0.85 }, { opacity: 1, x: 0, scale: 1, duration: 0.4, ease: "back.out(1.8)" }, t(40.95));
+    tl.fromTo("#ci-res .t3", { opacity: 0 }, { opacity: 1, duration: 0.2 }, t(41.3));
+    tl.to("#ci-res", { scale: 1.06, duration: 0.18, yoyo: true, repeat: 1 }, t(41.9));
+    window.__timelines["callerid"] = tl;
+  </script>
+</template>

@@ -1,0 +1,83 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; }
+    #hk-ttl { position: absolute; left: 40px; right: 40px; top: 52px; text-align: center; }
+    #hk-ttl2, #hk-ttl3 { position: absolute; left: 40px; right: 40px; top: 52px; text-align: center; opacity: 0; }
+    #hk-ph { left: 280px; top: 178px; }
+    #hk-demo { left: 300px; top: 150px; z-index: 5; }
+    #hk-muka { left: 610px; top: 330px; }
+    #hk-suara { left: 610px; top: 420px; }
+    #hk-stamp { left: 250px; top: 420px; transform: rotate(-12deg); z-index: 6; }
+    #hk-flash { position: absolute; inset: 0; background: #fff; opacity: 0; }
+    .wave { display: flex; gap: 4px; align-items: center; height: 46px; }
+    .wave i { width: 6px; border-radius: 3px; background: #0066DE; }
+  </style>
+  <div id="root" data-composition-id="hook" data-width="1080" data-height="1920">
+    <div id="hk-ttl" class="h-lg">Labur <span class="c-orange">RM500</span>, dapat <span class="c-orange">RM5,000</span>?!</div>
+    <div id="hk-ttl2" class="h-lg">Muka betul. Suara betul.</div>
+    <div id="hk-ttl3" class="h-lg">Tapi dia <span class="c-red">tak pernah</span> cakap benda ni.</div>
+    <div id="hk-ph" class="phone"><div class="scr">
+      <div class="hdr"><div class="ava">AP</div><div class="nm">AI Profit Rasmi<small>Ditaja · Sponsored</small></div></div>
+      <div class="vid" id="hk-vid"><div class="gold"></div>
+        <img id="hk-dr" class="rgb" src="assets/images/dato-r.png" alt="" />
+        <img id="hk-dato" class="p" src="assets/images/dato.png" alt="Dato' Hartawan (watak rekaan)" />
+        <img id="hk-dc" class="rgb" src="assets/images/dato-c.png" alt="" />
+        <div class="gov">✓ Disokong Kerajaan</div>
+        <div class="strip">Labur <b>RM500</b>, dapat <b>RM5,000</b> dalam 7 hari!</div>
+        <div class="prog"><i id="hk-prog"></i></div>
+        <div class="dim" id="hk-dim"></div>
+        <div class="pause" id="hk-pause"><svg width="60" height="70" viewBox="0 0 70 80"><rect x="6" y="4" width="20" height="72" rx="6" fill="#0B1E3F"/><rect x="44" y="4" width="20" height="72" rx="6" fill="#0B1E3F"/></svg></div>
+      </div>
+      <div class="cta">LEARN MORE</div>
+      <div class="meta"><span>♥ 12K</span><span>3.4K komen · 8K share</span></div>
+    </div></div>
+    <div id="hk-demo" class="demo">CONTOH · BUKAN VIDEO SEBENAR</div>
+    <div id="hk-muka" class="tag"><div class="ok">✓</div>MUKA</div>
+    <div id="hk-suara" class="tag"><div class="ok">✓</div>SUARA <div class="wave"><i style="height:18px"></i><i style="height:36px"></i><i style="height:26px"></i><i style="height:44px"></i><i style="height:20px"></i></div></div>
+    <div id="hk-stamp" class="stamp" data-layout-allow-overlap>PALSU</div>
+    <div id="hk-flash"></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    // frame 0 already shows the ad + headline (no fade from black)
+    tl.fromTo("#hk-ph", { y: 0, rotation: -1.5 }, { y: -10, rotation: 1.5, duration: 1.6, ease: "sine.inOut", yoyo: true, repeat: 3 }, 0);
+    tl.to("#hk-ph", { y: 0, rotation: 0, duration: 0.3 }, 6.9);
+    // the fake "Dato'" talks: head bob + scale beats (no lip-sync: it is a still cartoon, not a deepfake)
+    tl.fromTo("#hk-dato", { y: 0, scale: 1 }, { y: -8, scale: 1.015, duration: 0.32, ease: "sine.inOut", yoyo: true, repeat: 21, transformOrigin: "50% 100%" }, 0);
+    tl.fromTo("#hk-prog", { scaleX: 0 }, { scaleX: 0.62, duration: 7.3, ease: "none" }, 0);
+    tl.fromTo("#hk-ttl", { scale: 1 }, { scale: 1.08, duration: 0.18, ease: "back.out(3)", yoyo: true, repeat: 1, immediateRender: false }, 3.88);
+    tl.fromTo("#hk-ttl", { scale: 1 }, { scale: 1.1, duration: 0.18, ease: "back.out(3)", yoyo: true, repeat: 1, immediateRender: false }, 6.18);
+    // "Muka dia betul." — freeze, pause, glitch
+    tl.to("#hk-dim", { opacity: 1, duration: 0.2 }, 7.3);
+    tl.fromTo("#hk-pause", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.4)" }, 7.3);
+    tl.to("#hk-pause", { scale: 0.6, opacity: 0, duration: 0.25 }, 8.2);
+    tl.to("#hk-dim", { opacity: 0.25, duration: 0.3 }, 8.2);
+    tl.to("#hk-ttl", { opacity: 0, y: -30, duration: 0.2 }, 7.25);
+    tl.fromTo("#hk-ttl2", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 7.3);
+    tl.fromTo("#hk-muka", { opacity: 0, x: -40, scale: 0.6 }, { opacity: 1, x: 0, scale: 1, duration: 0.3, ease: "back.out(2.2)" }, 7.35);
+    tl.fromTo("#hk-suara", { opacity: 0, x: -40, scale: 0.6 }, { opacity: 1, x: 0, scale: 1, duration: 0.3, ease: "back.out(2.2)" }, 8.36);
+    tl.fromTo("#hk-suara .wave i", { scaleY: 0.4 }, { scaleY: 1.2, duration: 0.14, ease: "sine.inOut", yoyo: true, repeat: 7, stagger: 0.05 }, 8.5);
+    // "Tapi dia tak pernah cakap benda ni." — RGB split glitch + PALSU stamp
+    function glitch(t, d) {
+      for (let k = 0; k < Math.round(d / 0.08); k++) {
+        const x = (k % 2 ? 1 : -1) * (6 + (k * 7) % 12);
+        tl.to("#hk-dr", { opacity: 0.9, x: x, duration: 0.04 }, t + k * 0.08);
+        tl.to("#hk-dc", { opacity: 0.9, x: -x, duration: 0.04 }, t + k * 0.08);
+        tl.to("#hk-dato", { x: x * 0.4, skewX: (k % 3 - 1) * 4, duration: 0.04 }, t + k * 0.08);
+      }
+      tl.to(["#hk-dr", "#hk-dc"], { opacity: 0, x: 0, duration: 0.05 }, t + d);
+      tl.to("#hk-dato", { x: 0, skewX: 0, duration: 0.05 }, t + d);
+    }
+    glitch(7.28, 0.5); glitch(9.6, 0.75);
+    tl.to("#hk-ttl2", { opacity: 0, y: -30, duration: 0.2 }, 9.55);
+    tl.fromTo("#hk-ttl3", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 9.63);
+    tl.to(["#hk-muka", "#hk-suara"], { opacity: 0.35, duration: 0.3 }, 10.3);
+    tl.fromTo("#hk-stamp", { opacity: 0, scale: 2.4 }, { opacity: 1, scale: 1, duration: 0.22, ease: "power4.in" }, 10.36);
+    tl.fromTo("#hk-ph", { x: 0 }, { x: 14, duration: 0.05, yoyo: true, repeat: 5, ease: "none", immediateRender: false }, 10.58);
+    tl.fromTo("#hk-flash", { opacity: 0 }, { opacity: 0.35, duration: 0.05, yoyo: true, repeat: 1, immediateRender: false }, 10.58);
+    // glitch wipe out
+    tl.to(["#hk-ph", "#hk-stamp", "#hk-demo", "#hk-muka", "#hk-suara"], { scaleX: 1.3, scaleY: 0.02, opacity: 0, duration: 0.22, ease: "power3.in" }, 12.05);
+    tl.to("#hk-ttl3", { opacity: 0, duration: 0.2 }, 12.05);
+    window.__timelines["hook"] = tl;
+  </script>
+</template>

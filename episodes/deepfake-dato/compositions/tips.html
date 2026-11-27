@@ -1,0 +1,65 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; }
+    #tp-ttl { position: absolute; left: 0; right: 0; top: 70px; display: flex; justify-content: center; }
+    #tp-ttl .chip { position: relative; }
+    .rf { position: absolute; left: 110px; width: 860px; height: 180px; border-radius: 30px; background: rgba(245,247,250,0.97); display: flex; align-items: center; gap: 26px; padding: 0 30px;
+      box-shadow: 0 18px 50px rgba(4,12,30,0.45); border-left: 14px solid #FF4D5E; }
+    .rf .xx { width: 90px; height: 90px; border-radius: 50%; background: #FF4D5E; display: grid; place-items: center; flex: none; }
+    .rf .tx { font: 800 46px "Sora"; color: #0B1E3F; line-height: 1.05; }
+    .rf .tx small { display: block; font: 600 28px "Inter"; color: #6b7280; margin-top: 8px; }
+    #tp-r1 { top: 200px; } #tp-r2 { top: 410px; } #tp-r3 { top: 620px; }
+    #tp-h1, #tp-h2 { position: absolute; left: 40px; right: 40px; text-align: center; }
+    #tp-h1 { top: 90px; } #tp-h2 { top: 180px; }
+    .ck { position: absolute; left: 110px; width: 860px; height: 200px; border-radius: 30px; display: flex; align-items: center; gap: 26px; padding: 0 34px; }
+    .ck .mg { width: 100px; height: 100px; border-radius: 50%; background: #0066DE; display: grid; place-items: center; flex: none; }
+    .ck .tx { font: 800 40px "Sora"; color: #0B1E3F; line-height: 1.08; }
+    .ck .tx small { display: block; font: 600 26px "Inter"; color: #0066DE; margin-top: 8px; }
+    .ck .ok { position: absolute; right: 30px; top: 50%; margin-top: -32px; width: 64px; height: 64px; border-radius: 50%; background: #22C55E; color: #fff; display: grid; place-items: center; font: 800 36px "Sora"; }
+    #tp-c1 { top: 380px; } #tp-c2 { top: 610px; }
+    #tp-997 { left: 150px; top: 170px; width: 780px; height: 640px; text-align: center; padding-top: 40px; border-bottom: 16px solid #0066DE; }
+    #tp-997 .pre { font: 700 36px "Inter"; color: #6b7280; }
+    #tp-997 .n { font: 800 300px "Sora"; color: #0066DE; line-height: 1; letter-spacing: -0.04em; margin-top: 10px; }
+    #tp-997 .l { font: 800 40px "Sora"; color: #0B1E3F; margin-top: 6px; }
+    #tp-997 .l2 { font: 600 28px "Inter"; color: #6b7280; margin-top: 8px; }
+    .ring { position: absolute; left: 50%; top: 250px; width: 300px; height: 300px; margin: -150px 0 0 -150px; border-radius: 50%; border: 8px solid #0066DE; }
+  </style>
+  <div id="root" data-composition-id="tips" data-width="1080" data-height="1920">
+    <div id="tp-ttl"><div class="chip warn"><div class="num">3</div>TANDA BAHAYA</div></div>
+    <div id="tp-r1" class="rf"><div class="xx"><svg width="44" height="44" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19" stroke="#fff" stroke-width="4" stroke-linecap="round"/></svg></div><div class="tx">Untung gila, masa singkat<small>RM500 jadi RM5,000 dalam 7 hari</small></div></div>
+    <div id="tp-r2" class="rf"><div class="xx"><svg width="44" height="44" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19" stroke="#fff" stroke-width="4" stroke-linecap="round"/></svg></div><div class="tx">Desak kau cepat<small>"Slot tinggal sikit, transfer hari ni!"</small></div></div>
+    <div id="tp-r3" class="rf"><div class="xx"><svg width="44" height="44" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19" stroke="#fff" stroke-width="4" stroke-linecap="round"/></svg></div><div class="tx">"Disokong kerajaan"<small>Guna muka orang terkenal &amp; nama rasmi</small></div></div>
+    <div id="tp-h1" class="h-lg">Jangan percaya <span class="c-orange">muka.</span></div>
+    <div id="tp-h2" class="h-lg"><span class="c-cyan">Semak</span> syarikat dulu.</div>
+    <div id="tp-c1" class="ck card"><div class="mg"><svg width="54" height="54" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6.5" stroke="#fff" stroke-width="3" fill="none"/><path d="M15 15l6 6" stroke="#fff" stroke-width="3.4" stroke-linecap="round"/></svg></div><div class="tx">Suruhanjaya Sekuriti<small>Investor Alert List · sc.com.my</small></div><div class="ok">✓</div></div>
+    <div id="tp-c2" class="ck card"><div class="mg"><svg width="54" height="54" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6.5" stroke="#fff" stroke-width="3" fill="none"/><path d="M15 15l6 6" stroke="#fff" stroke-width="3.4" stroke-linecap="round"/></svg></div><div class="tx">Bank Negara Malaysia<small>Financial Consumer Alert List · bnm.gov.my</small></div><div class="ok">✓</div></div>
+    <div id="tp-997" class="card"><div class="ring" id="tp-rg1"></div><div class="ring" id="tp-rg2"></div>
+      <div class="pre">Dah termasuk duit? Terus call</div><div class="n">997</div><div class="l">NSRC</div><div class="l2">Pusat Respons Scam Kebangsaan</div></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const S = window.YA_T.scenes.tips, t = (x) => x - S;
+    gsap.set(["#tp-ttl", ".rf", "#tp-h1", "#tp-h2", ".ck", "#tp-997", ".ring"], { opacity: 0 });
+    gsap.set(".ck .ok", { scale: 0 });
+    tl.fromTo("#tp-ttl", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2.5)" }, t(57.5));
+    [["#tp-r1", 59.4], ["#tp-r2", 61.8], ["#tp-r3", 63.25]].forEach(([s, at]) => {
+      tl.fromTo(s, { opacity: 0, x: 120 }, { opacity: 1, x: 0, duration: 0.3, ease: "back.out(1.8)" }, t(at));
+      tl.fromTo(s + " .xx", { scale: 0, rotation: -90 }, { scale: 1, rotation: 0, duration: 0.3, ease: "back.out(3)" }, t(at + 0.15));
+    });
+    tl.to(["#tp-ttl", ".rf"], { opacity: 0, x: -120, duration: 0.28, ease: "power2.in", stagger: 0.04 }, t(65.2));
+    tl.fromTo("#tp-h1", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, t(65.4));
+    tl.fromTo("#tp-h2", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, t(67.13));
+    tl.fromTo("#tp-c1", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(1.8)" }, t(69.8));
+    tl.to("#tp-c1 .ok", { scale: 1, duration: 0.25, ease: "back.out(3)" }, t(70.5));
+    tl.fromTo("#tp-c2", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(1.8)" }, t(71.2));
+    tl.to("#tp-c2 .ok", { scale: 1, duration: 0.25, ease: "back.out(3)" }, t(71.7));
+    tl.to(["#tp-h1", "#tp-h2", ".ck"], { opacity: 0, y: -50, duration: 0.25, ease: "power2.in" }, t(72.55));
+    tl.fromTo("#tp-997", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2)" }, t(72.7));
+    [["#tp-rg1", 74.3], ["#tp-rg2", 74.9]].forEach(([s, o]) => {
+      for (let k = 0; k < 2; k++) tl.fromTo(s, { scale: 0.6, opacity: 0.8 }, { scale: 1.5, opacity: 0, duration: 1.1, ease: "power1.out", immediateRender: false }, t(o + k * 1.2) - 0);
+    });
+    tl.fromTo("#tp-997 .n", { scale: 1 }, { scale: 1.08, duration: 0.18, yoyo: true, repeat: 1, ease: "back.out(3)", immediateRender: false }, t(74.35));
+    tl.to("#tp-997", { opacity: 0, scale: 0.8, duration: 0.25, ease: "power2.in" }, t(75.45));
+    window.__timelines["tips"] = tl;
+  </script>
+</template>

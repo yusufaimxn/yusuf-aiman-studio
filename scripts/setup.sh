@@ -5,7 +5,7 @@ cd "$(dirname "$0")/.."
 npm ci || npm install
 # Headless Blender as a Python module (official PyPI wheel; must match Python 3.13)
 [ -d .venv ] || python3 -m venv .venv
-.venv/bin/pip install -q bpy==5.3.0
+.venv/bin/pip install -q -r requirements.txt
 # Software EGL so Blender EEVEE/Workbench can render without a GPU (Cycles works without it)
 if ! ldconfig -p | grep -q libEGL.so.1; then
   sudo apt-get update -q && sudo apt-get install -y -q libegl1 libgl1-mesa-dri libegl-mesa0

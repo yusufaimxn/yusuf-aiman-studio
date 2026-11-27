@@ -1,0 +1,27 @@
+---
+title: Muka Dia Betul. Tapi Dia Tak Pernah Cakap Benda Ni.
+language: ms
+preset: educational
+target_duration: 65
+---
+// Format F1 "Aiman Hampir Kena Scam" Ep 2. Satu baris pertuturan = satu MP3 (01.mp3 ... 13.mp3).
+// Nombor ditulis dalam perkataan supaya suara Melayu sebut betul; teks skrin guna angka.
+# scene hook | Video Dato' palsu
+AIMAN (excited): Yusuf, tengok ni! Dato' Hartawan sendiri cakap, labur lima ratus, seminggu dapat lima ribu!
+YUSUF (calm, slow): Muka dia betul. Suara dia betul. Tapi dia tak pernah cakap benda ni.
+# scene how | Macam mana deepfake dibuat
+AIMAN (confused): Hah? Tapi ni video lah, bukan gambar!
+YUSUF (explaining): Ni deepfake. AI belajar dari video dan suara dia yang dah ada kat internet. Lepas tu, AI jana gerak mulut dan suara baru, ikut skrip scammer.
+AIMAN (shocked): Maksudnya, sesiapa pun boleh dibuat cakap apa saja?
+# scene facts | Fakta
+YUSUF (serious): Betul. Polis sendiri dah kesan video palsu guna muka orang kenamaan, janji untung sampai seratus kali ganda.
+YUSUF (serious): Tahun dua ribu dua puluh empat je, ada empat ratus lima puluh empat kes penipuan deepfake. Rugi dua koma tujuh juta ringgit.
+# scene flow | Aliran scam
+YUSUF (friendly): Cara dia senang. Kau tekan Learn More, isi borang, download app. Lepas tu ada agent call, minta kau transfer duit.
+AIMAN (humorous): Alamak. Borang tu aku dah isi tadi.
+# scene tips | Tanda bahaya & cara semak
+YUSUF (confident): Jadi ingat tiga tanda. Untung gila dalam masa singkat. Desak kau cepat. Dan kata disokong kerajaan.
+YUSUF (calm): Jangan percaya muka. Semak dulu nama syarikat tu dalam senarai amaran Suruhanjaya Sekuriti dan Bank Negara.
+YUSUF (serious): Kalau dah termasuk duit, terus call sembilan sembilan tujuh.
+# scene loop | Penutup
+AIMAN (surprised): Okay, faham. Eh, kejap. Ni video Yusuf pulak, suruh aku melabur?!

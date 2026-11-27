@@ -1,0 +1,328 @@
+{
+ "slug": "scammer-dapat-nombor",
+ "total_duration_s": 71.86,
+ "scenes": [
+  {
+   "id": "hook",
+   "purpose": "hook",
+   "start_s": 0.0,
+   "duration_s": 10.31,
+   "goal": "Penonton rasa cemas yang sama: scammer tahu nama penuh, dan nak tahu macam mana.",
+   "visual": "Panggilan masuk berdering, gelembung 'Hello, Encik Aiman bin Rahman?', jeda (pause), soalan + 3 slot kosong.",
+   "environment": "studio gradient + grid isometrik (CSS)",
+   "characters": [
+    {
+     "name": "aiman",
+     "expression": "neutral (reference)",
+     "pose": "hands in pockets"
+    },
+    {
+     "name": "yusuf",
+     "expression": "neutral (reference)",
+     "pose": "hands in pockets"
+    }
+   ],
+   "dialogue": [
+    {
+     "speaker": "aiman",
+     "text": "Yusuf! Orang call aku, dia tahu nama penuh aku! Padahal aku tak pernah bagi nombor pun!"
+    },
+    {
+     "speaker": "yusuf",
+     "text": "Relaks. Jom kita bedah, macam mana dia dapat."
+    }
+   ],
+   "on_screen_text": [
+    "Dia tahu nama penuh aku?!",
+    "Macam mana scammer dapat nombor kau?"
+   ],
+   "assets": [
+    {
+     "path": "assets/images/aiman.png",
+     "status": "placeholder"
+    },
+    {
+     "path": "assets/images/yusuf.png",
+     "status": "placeholder"
+    },
+    {
+     "path": "assets/audio/voice/supplied/01.mp3",
+     "status": "production"
+    },
+    {
+     "path": "assets/audio/voice/supplied/02.mp3",
+     "status": "production"
+    }
+   ]
+  },
+  {
+   "id": "leak",
+   "purpose": "explain",
+   "start_s": 10.31,
+   "duration_s": 20.46,
+   "goal": "Cara 1: kebocoran data telco 2017 (46.2 juta akaun) dan data bocor dijual berulang kali.",
+   "visual": "Pelayan telco isometrik retak, fail terbang, kaunter 46,200,000, cip data (No. telefon, No. IC, Alamat, Data kad SIM), carta 46.2 juta vs ~32 juta penduduk, SIM berbilang, kitaran dijual.",
+   "environment": "studio gradient + grid isometrik (CSS)",
+   "characters": [
+    {
+     "name": "aiman",
+     "expression": "neutral (reference)",
+     "pose": "hands in pockets"
+    },
+    {
+     "name": "yusuf",
+     "expression": "neutral (reference)",
+     "pose": "hands in pockets"
+    }
+   ],
+   "dialogue": [
+    {
+     "speaker": "yusuf",
+     "text": "Satu, data bocor. Tahun dua ribu tujuh belas, terbongkar data empat puluh enam juta akaun telco Malaysia bocor, siap dengan nombor IC."
+    },
+    {
+     "speaker": "aiman",
+     "text": "Empat puluh enam juta? Lebih ramai dari orang Malaysia!"
+    },
+    {
+     "speaker": "yusuf",
+     "text": "Sebab ramai orang ada lebih dari satu SIM. Dan data yang bocor, boleh dijual berulang kali."
+    }
+   ],
+   "on_screen_text": [
+    "1 · DATA BOCOR",
+    "2017",
+    "46,200,000",
+    "Sumber: Malay Mail & The Star, Okt 2017",
+    "Penduduk Malaysia (2017) ≈32 juta"
+   ],
+   "assets": [
+    {
+     "path": "assets/images/aiman.png",
+     "status": "placeholder"
+    },
+    {
+     "path": "assets/images/yusuf.png",
+     "status": "placeholder"
+    },
+    {
+     "path": "assets/audio/voice/supplied/03.mp3",
+     "status": "production"
+    },
+    {
+     "path": "assets/audio/voice/supplied/04.mp3",
+     "status": "production"
+    },
+    {
+     "path": "assets/audio/voice/supplied/05.mp3",
+     "status": "production"
+    }
+   ]
+  },
+  {
+   "id": "callerid",
+   "purpose": "explain",
+   "start_s": 30.77,
+   "duration_s": 12.28,
+   "goal": "Cara 2: app caller ID mengumpul nama dari contact list penggunanya, jadi orang lain boleh nampak nama penuh kita.",
+   "visual": "Nama tersembunyi berkocak, 3 telefon kawan → pangkalan nama → kad 'Carian nombor' memaparkan nama penuh.",
+   "environment": "studio gradient + grid isometrik (CSS)",
+   "characters": [
+    {
+     "name": "aiman",
+     "expression": "neutral (reference)",
+     "pose": "hands in pockets"
+    },
+    {
+     "name": "yusuf",
+     "expression": "neutral (reference)",
+     "pose": "hands in pockets"
+    }
+   ],
+   "dialogue": [
+    {
+     "speaker": "aiman",
+     "text": "Tapi macam mana dia tahu nama penuh aku?"
+    },
+    {
+     "speaker": "yusuf",
+     "text": "Dua, app caller ID. Ada app yang kumpul nama dari contact list pengguna dia. Kawan kau save nama penuh kau, orang lain pun boleh nampak."
+    }
+   ],
+   "on_screen_text": [
+    "2 · APP CALLER ID",
+    "Pangkalan nama app caller ID",
+    "Carian nombor"
+   ],
+   "assets": [
+    {
+     "path": "assets/images/aiman.png",
+     "status": "placeholder"
+    },
+    {
+     "path": "assets/images/yusuf.png",
+     "status": "placeholder"
+    },
+    {
+     "path": "assets/audio/voice/supplied/06.mp3",
+     "status": "production"
+    },
+    {
+     "path": "assets/audio/voice/supplied/07.mp3",
+     "status": "production"
+    }
+   ]
+  },
+  {
+   "id": "public",
+   "purpose": "example",
+   "start_s": 43.05,
+   "duration_s": 10.08,
+   "goal": "Cara 3: kita sendiri kongsi nombor di iklan, group dan borang cabutan bertuah.",
+   "visual": "Tiga kad: iklan jual barang, group jual beli, borang 'MENANG iPhone!'; borang dizum dan dicop 'DIKONGSI'.",
+   "environment": "studio gradient + grid isometrik (CSS)",
+   "characters": [
+    {
+     "name": "aiman",
+     "expression": "neutral (reference)",
+     "pose": "hands in pockets"
+    },
+    {
+     "name": "yusuf",
+     "expression": "neutral (reference)",
+     "pose": "hands in pockets"
+    }
+   ],
+   "dialogue": [
+    {
+     "speaker": "yusuf",
+     "text": "Tiga, kita sendiri yang kongsi. Iklan jual barang, group Facebook, borang cabutan bertuah."
+    },
+    {
+     "speaker": "aiman",
+     "text": "Alamak. Borang menang iPhone hari tu."
+    }
+   ],
+   "on_screen_text": [
+    "3 · KITA SENDIRI KONGSI",
+    "DIKONGSI"
+   ],
+   "assets": [
+    {
+     "path": "assets/images/aiman.png",
+     "status": "placeholder"
+    },
+    {
+     "path": "assets/images/yusuf.png",
+     "status": "placeholder"
+    },
+    {
+     "path": "assets/audio/voice/supplied/08.mp3",
+     "status": "production"
+    },
+    {
+     "path": "assets/audio/voice/supplied/09.mp3",
+     "status": "production"
+    }
+   ]
+  },
+  {
+   "id": "tips",
+   "purpose": "takeaway",
+   "start_s": 53.13,
+   "duration_s": 12.12,
+   "goal": "Tahu nama penuh bukan bukti; letak telefon, call semula nombor rasmi; hilang duit → call 997 (NSRC).",
+   "visual": "Persamaan 'Tahu nama penuh ≠ Dari bank atau polis', 3 langkah (letak telefon, call nombor rasmi, Semak Mule), kad 997.",
+   "environment": "studio gradient + grid isometrik (CSS)",
+   "characters": [
+    {
+     "name": "aiman",
+     "expression": "neutral (reference)",
+     "pose": "hands in pockets"
+    },
+    {
+     "name": "yusuf",
+     "expression": "neutral (reference)",
+     "pose": "hands in pockets"
+    }
+   ],
+   "dialogue": [
+    {
+     "speaker": "yusuf",
+     "text": "Jadi ingat. Dia tahu nama penuh kau, itu bukan bukti dia dari bank atau polis. Letak telefon, call semula nombor rasmi."
+    },
+    {
+     "speaker": "yusuf",
+     "text": "Kalau dah termasuk duit, terus call sembilan sembilan tujuh."
+    }
+   ],
+   "on_screen_text": [
+    "Tahu nama penuh kau ≠ Dari bank atau polis",
+    "Semak nombor: Semak Mule",
+    "997 · NSRC"
+   ],
+   "assets": [
+    {
+     "path": "assets/images/aiman.png",
+     "status": "placeholder"
+    },
+    {
+     "path": "assets/images/yusuf.png",
+     "status": "placeholder"
+    },
+    {
+     "path": "assets/audio/voice/supplied/10.mp3",
+     "status": "production"
+    },
+    {
+     "path": "assets/audio/voice/supplied/11.mp3",
+     "status": "production"
+    }
+   ]
+  },
+  {
+   "id": "loop",
+   "purpose": "outro",
+   "start_s": 65.25,
+   "duration_s": 6.61,
+   "goal": "Ringkasan 3 cara, lalu telefon berdering semula supaya video berulang ke awal.",
+   "visual": "Senarai semak 3 cara, kemudian kad panggilan masuk yang sama seperti frame pertama.",
+   "environment": "studio gradient + grid isometrik (CSS)",
+   "characters": [
+    {
+     "name": "aiman",
+     "expression": "neutral (reference)",
+     "pose": "hands in pockets"
+    },
+    {
+     "name": "yusuf",
+     "expression": "neutral (reference)",
+     "pose": "hands in pockets"
+    }
+   ],
+   "dialogue": [
+    {
+     "speaker": "aiman",
+     "text": "Okay, lepas ni aku tak panik dah. Eh, kejap. Dia call lagi!"
+    }
+   ],
+   "on_screen_text": [
+    "3 cara dia dapat nombor kau"
+   ],
+   "assets": [
+    {
+     "path": "assets/images/aiman.png",
+     "status": "placeholder"
+    },
+    {
+     "path": "assets/images/yusuf.png",
+     "status": "placeholder"
+    },
+    {
+     "path": "assets/audio/voice/supplied/12.mp3",
+     "status": "production"
+    }
+   ]
+  }
+ ]
+}

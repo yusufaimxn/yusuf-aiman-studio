@@ -1,0 +1,137 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+    .slot { position: absolute; }
+    #slot-a { left: 90px; top: 790px; height: 1150px; width: 386px; }
+    #slot-y { left: 604px; top: 778px; height: 1162px; width: 394px; }
+    @media (min-aspect-ratio: 1/1) {
+      #slot-a { left: 40px; top: 214px; height: 900px; width: 302px; }
+      #slot-y { left: 1572px; top: 204px; height: 910px; width: 309px; }
+    }
+    .ch, .dim, .hop, .sq, .br { position: absolute; inset: 0; }
+    .sq, .br { transform-origin: 50% 100%; }
+    .ch, .dim, .hop, .sq, .br, .part { will-change: transform, opacity; }
+    .part { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+    /* head / body split at the collar so the head can tilt (cut-out from the reference render) */
+    #a-body { clip-path: inset(28.5% 0 0 0); }
+    #a-head { clip-path: inset(0 0 71% 0); transform-origin: 50% 29%; }
+    #y-body { clip-path: inset(24.5% 0 0 0); }
+    #y-head { clip-path: inset(0 0 75% 0); transform-origin: 50% 25%; }
+    .badge { position: absolute; width: 120px; height: 120px; border-radius: 50%; display: grid; place-items: center;
+      font-family: "Sora"; font-weight: 800; font-size: 78px; color: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.35); }
+    #b-ex { left: 66%; top: -4%; background: var(--orange); }
+    #b-q { left: 66%; top: -4%; background: var(--cyan); color: var(--navy); }
+    #b-ok { left: 66%; top: -4%; background: var(--green); font-size: 64px; }
+    #b-ex2, #b-ex3 { left: 66%; top: -4%; background: var(--orange); }
+    #b-sweat { left: 6%; top: 6%; width: 54px; height: 76px; border-radius: 50% 50% 50% 50% / 64% 64% 36% 36%;
+      background: linear-gradient(160deg, #bfefff, #00C2FF); box-shadow: none; }
+    .lines { position: absolute; left: 74%; top: -10%; width: 150px; height: 150px; }
+    @media (min-aspect-ratio: 1/1) { .badge { width: 96px; height: 96px; font-size: 62px; } }
+  </style>
+  <div id="root" data-composition-id="cast" data-width="1080" data-height="1920">
+    <div id="slot-a" class="slot">
+      <div id="a-ch" class="ch"><div id="a-dim" class="dim"><div id="a-hop" class="hop"><div id="a-sq" class="sq"><div id="a-br" class="br">
+        <img id="a-body" class="part" src="assets/images/aiman-lit.png" alt="Aiman" />
+        <img id="a-head" class="part" src="assets/images/aiman-lit.png" alt="" />
+      </div></div>
+      <div id="b-ex" class="badge">!</div>
+      <div id="b-q" class="badge">?</div>
+      <div id="b-ok" class="badge">✓</div>
+      <div id="b-ex2" class="badge">!</div>
+      <div id="b-ex3" class="badge">!</div>
+      <div id="b-sweat" class="badge"></div>
+      </div></div></div>
+    </div>
+    <div id="slot-y" class="slot">
+      <div id="y-ch" class="ch"><div id="y-dim" class="dim"><div id="y-hop" class="hop"><div id="y-sq" class="sq"><div id="y-br" class="br">
+        <img id="y-body" class="part" src="assets/images/yusuf-lit.png" alt="Yusuf" />
+        <img id="y-head" class="part" src="assets/images/yusuf-lit.png" alt="" />
+      </div></div></div></div></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const T = window.YA_T, LAND = window.YA_LAND, END = T.total;
+    const AIM_CENTER = LAND ? 0 : 258;        // Aiman alone, centred, in the vertical hook
+    const Y_OFF = LAND ? 520 : 640;           // Yusuf off-screen to the right
+
+    // ---- positions ------------------------------------------------------------------------
+    tl.fromTo("#a-ch", { x: AIM_CENTER }, { x: AIM_CENTER, duration: 0.01 }, 0);
+    tl.fromTo("#y-ch", { x: Y_OFF }, { x: Y_OFF, duration: 0.01 }, 0);
+    // Yusuf walks in on "Relaks", Aiman makes room
+    tl.to("#y-ch", { x: 0, duration: 0.55, ease: "back.out(1.3)" }, 6.62);
+    tl.to("#a-ch", { x: 0, duration: 0.55, ease: "power3.inOut" }, 6.62);
+    // loop: Yusuf slips out, Aiman alone again as the phone rings (matches frame 0)
+    tl.to("#y-ch", { x: Y_OFF, duration: 0.5, ease: "power3.in" }, 68.55);
+    tl.to("#a-ch", { x: AIM_CENTER, duration: 0.6, ease: "power3.inOut" }, 68.6);
+
+    // ---- idle breathing (offset so the two never move in unison) ---------------------------
+    tl.fromTo("#a-br", { scaleY: 1 }, { scaleY: 1.012, duration: 1.7, ease: "sine.inOut", yoyo: true, repeat: Math.ceil(END / 1.7) }, 0);
+    tl.fromTo("#y-br", { scaleY: 1 }, { scaleY: 1.01, duration: 2.1, ease: "sine.inOut", yoyo: true, repeat: Math.ceil(END / 2.1) }, 0.6);
+
+    // ---- who is speaking: speaker full brightness, listener slightly back ------------------
+    const lines = Object.entries(T.lines).map(([n, v]) => ({ n: +n, s: v[0], e: v[1], who: v[2] }));
+    let last = { a: 1, y: 1 };
+    tl.fromTo("#a-dim", { opacity: 1 }, { opacity: 1, duration: 0.01 }, 0);
+    tl.fromTo("#y-dim", { opacity: 1 }, { opacity: 1, duration: 0.01 }, 0);
+    lines.forEach((l) => {
+      const a = l.who === "AIMAN" ? 1 : 0.86, y = l.who === "YUSUF" ? 1 : 0.86;
+      if (a !== last.a) tl.to("#a-dim", { opacity: a, duration: 0.25 }, l.s - 0.15);
+      if (y !== last.y) tl.to("#y-dim", { opacity: y, duration: 0.25 }, l.s - 0.15);
+      last = { a, y };
+    });
+
+    // ---- talking: a small beat on every phrase, head nods alternate --------------------------
+    Object.entries(T.phr).forEach(([n, starts]) => {
+      const who = T.lines[n][2] === "AIMAN" ? "a" : "y";
+      starts.forEach((s, i) => {
+        const amp = who === "a" ? 14 : 9;
+        tl.to(`#${who}-hop`, { y: -amp, duration: 0.12, ease: "power2.out", overwrite: "auto" }, s);
+        tl.to(`#${who}-hop`, { y: 0, duration: 0.3, ease: "power2.inOut", overwrite: "auto" }, s + 0.12);
+        const r = (i % 2 ? -1 : 1) * (who === "a" ? 2.6 : 1.8);
+        tl.to(`#${who}-head`, { rotation: r, duration: 0.35, ease: "sine.out" }, s);
+      });
+      const e = T.lines[n][1];
+      tl.to(`#${who}-head`, { rotation: 0, duration: 0.4, ease: "sine.inOut" }, e);
+    });
+
+    // ---- Aiman's reactions (anticipation, squash, new state, settle) --------------------------
+    function jump(t, h = 46) {
+      tl.to("#a-sq", { scaleY: 0.94, scaleX: 1.04, duration: 0.1, ease: "power2.in" }, t - 0.1);
+      tl.to("#a-sq", { scaleY: 1.04, scaleX: 0.97, y: -h, duration: 0.16, ease: "power2.out" }, t);
+      tl.to("#a-sq", { scaleY: 1, scaleX: 1, y: 0, duration: 0.32, ease: "bounce.out" }, t + 0.16);
+    }
+    function badge(sel, t, d) {
+      tl.fromTo(sel, { scale: 0, rotation: -25, opacity: 1 }, { scale: 1, rotation: 0, duration: 0.3, ease: "back.out(2.5)" }, t);
+      tl.to(sel, { scale: 0, opacity: 0, duration: 0.18, ease: "power2.in" }, t + d - 0.18);
+    }
+    ["#b-ex", "#b-q", "#b-ok", "#b-ex2", "#b-ex3", "#b-sweat"].forEach((s) => gsap.set(s, { scale: 0, opacity: 0 }));
+    // the phone is ringing: nervous jitter before he speaks
+    tl.fromTo("#a-sq", { rotation: -1.2 }, { rotation: 1.2, duration: 0.07, ease: "none", yoyo: true, repeat: 4 }, 0);
+    tl.to("#a-sq", { rotation: 0, duration: 0.05 }, 0.35);
+    badge("#b-ex", 0.0, 4.2);
+    jump(0.4, 50);
+    tl.to("#a-sq", { scale: 1.035, duration: 0.18, ease: "back.out(3)" }, 3.05);           // "nama penuh"
+    tl.to("#a-sq", { scale: 1, duration: 0.4, ease: "power2.inOut" }, 3.4);
+    badge("#b-ex2", 20.45, 2.2); jump(20.55, 40);                                            // "46.2 juta?"
+    tl.to("#a-head", { rotation: -7, duration: 0.35, ease: "back.out(2)" }, 30.9);           // "Tapi macam mana...?"
+    badge("#b-q", 30.85, 2.8);
+    tl.to("#a-head", { rotation: 0, duration: 0.4 }, 33.6);
+    // "Alamak": shrink with guilt
+    tl.to("#a-sq", { scaleY: 0.93, scaleX: 1.03, duration: 0.25, ease: "power2.out" }, 50.0);
+    tl.to("#a-sq", { scaleY: 1, scaleX: 1, duration: 0.5, ease: "power2.inOut" }, 52.9);
+    tl.fromTo("#b-sweat", { scale: 0, opacity: 0, y: -10 }, { scale: 1, opacity: 1, y: 0, duration: 0.25, ease: "back.out(2)" }, 50.05);
+    tl.to("#b-sweat", { y: 40, opacity: 0, duration: 0.6, ease: "power2.in" }, 52.5);
+    // relief, then the twist
+    badge("#b-ok", 65.4, 2.0);
+    tl.to("#a-sq", { scaleY: 1.03, duration: 0.3, ease: "power2.out" }, 65.45);
+    tl.to("#a-sq", { scaleY: 1, duration: 0.4 }, 66.4);
+    tl.to("#a-head", { rotation: 6, duration: 0.15, ease: "power3.out" }, 67.5);            // "Eh, kejap"
+    tl.to("#a-head", { rotation: 0, duration: 0.3 }, 68.3);
+    badge("#b-ex3", 69.3, END - 69.3 + 0.2); jump(69.35, 50);                                 // "Dia call lagi!"
+    // Yusuf: a lean on the key word "bukan"
+    tl.to("#y-sq", { rotation: -3, scale: 1.03, duration: 0.25, ease: "back.out(2)" }, 56.4);
+    tl.to("#y-sq", { rotation: 0, scale: 1, duration: 0.5, ease: "power2.inOut" }, 57.4);
+    window.__timelines["cast"] = tl;
+  </script>
+</template>

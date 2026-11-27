@@ -1,0 +1,63 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; }
+    #lp-alarm { position: absolute; inset: 0; opacity: 0; background: radial-gradient(80% 60% at 50% 30%, rgba(255,138,0,0.0) 40%, rgba(255,77,94,0.35) 100%); }
+    #lp-head { position: absolute; left: 0; top: 0; width: 840px; text-align: center; }
+    #lp-call { left: 150px; top: 168px; width: 540px; height: 330px; background: #0f1b33; color: #fff; border: 2px solid rgba(255,255,255,0.12); }
+    #lp-call .lbl { position: absolute; left: 0; right: 0; top: 26px; text-align: center; font: 600 28px "Inter"; color: rgba(255,255,255,0.75); }
+    #lp-ava { position: absolute; left: 50%; top: 62px; width: 110px; height: 110px; margin-left: -55px; border-radius: 50%;
+      background: linear-gradient(160deg, #3b4a66, #1d2840); display: grid; place-items: center; font: 800 64px "Sora"; color: #9fb3d9; }
+    .ring { position: absolute; left: 50%; top: 117px; width: 110px; height: 110px; margin: -55px 0 0 -55px; border-radius: 50%; border: 4px solid var(--cyan); }
+    #lp-num { position: absolute; left: 0; right: 0; top: 184px; text-align: center; font: 700 38px "JetBrains Mono", monospace; }
+    #lp-unk { position: absolute; left: 0; right: 0; top: 232px; text-align: center; font: 700 24px "Inter"; color: var(--orange); }
+    .btn { position: absolute; top: 268px; width: 64px; height: 64px; margin-top: -10px; border-radius: 50%; display: grid; place-items: center; }
+    #lp-no { left: 120px; background: var(--red); } #lp-yes { right: 120px; background: var(--green); }
+    .rc { position: absolute; left: 60px; width: 720px; height: 104px; border-radius: 24px; background: #fff; color: var(--navy);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.35); font: 800 38px "Sora"; padding: 26px 0 0 120px; white-space: nowrap; }
+    .rc i { position: absolute; left: 24px; top: 18px; width: 68px; height: 68px; border-radius: 50%; background: var(--green); color: #fff;
+      font: 800 40px "Sora"; font-style: normal; display: grid; place-items: center; }
+    .rc b { position: absolute; right: 26px; top: 30px; font: 800 30px "Sora"; color: var(--orange); }
+    #lp-rt { position: absolute; left: 0; top: 0; width: 840px; text-align: center; }
+    #lp-r1 { top: 110px; } #lp-r2 { top: 236px; } #lp-r3 { top: 362px; }
+  </style>
+  <div id="root" data-composition-id="loop" data-width="1080" data-height="1920">
+    <div id="lp-alarm"></div>
+    <div class="panel">
+      <div id="lp-rt" class="h-lg">3 cara dia dapat <span class="c-cyan">nombor kau</span></div>
+      <div id="lp-r1" class="rc"><i>✓</i>Data bocor<b>1</b></div>
+      <div id="lp-r2" class="rc"><i>✓</i>App caller ID<b>2</b></div>
+      <div id="lp-r3" class="rc"><i>✓</i>Kita sendiri kongsi<b>3</b></div>
+      <div id="lp-head" class="h-xl">Dia tahu <span class="c-orange">nama penuh</span> aku?!</div>
+      <div id="lp-call" class="card">
+        <div class="ring" id="lp-g1"></div><div class="ring" id="lp-g2"></div>
+        <div class="lbl">Panggilan masuk…</div>
+        <div id="lp-ava">?</div>
+        <div id="lp-num">+60 1X-XXX XXXX</div>
+        <div id="lp-unk">Nombor tidak dikenali</div>
+        <div id="lp-no" class="btn"><svg width="34" height="34" viewBox="0 0 24 24"><path fill="#fff" d="M12 9c-1.6 0-3.15.25-4.6.72v3.1c0 .39-.23.74-.56.9-.98.49-1.87 1.12-2.66 1.85a1 1 0 0 1-1.41-.02L.29 13.1a1 1 0 0 1 0-1.42C3.34 8.77 7.46 7 12 7s8.66 1.77 11.71 4.68a1 1 0 0 1 0 1.42l-2.48 2.45a1 1 0 0 1-1.41.02 11.3 11.3 0 0 0-2.67-1.85 1 1 0 0 1-.56-.9v-3.1A15 15 0 0 0 12 9z"/></svg></div>
+        <div id="lp-yes" class="btn"><svg width="32" height="32" viewBox="0 0 24 24"><path fill="#fff" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const S = window.YA_T.scenes.loop, t = (x) => x - S;
+    gsap.set(["#lp-alarm", "#lp-head", "#lp-call", "#lp-rt", "#lp-r1", "#lp-r2", "#lp-r3", "#lp-g1", "#lp-g2"], { opacity: 0 });
+    [["#lp-g1", 0], ["#lp-g2", 0.6]].forEach(([s, o]) => { for (let k = 0; k < 2; k++) tl.fromTo(s, { scale: 1, opacity: 0.9 }, { scale: 2.4, opacity: 0, duration: 1.2, ease: "power1.out", immediateRender: false }, t(69.0) + o + k * 1.2); });
+    // recap while Aiman says he won't panic
+    tl.fromTo("#lp-rt", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.3 }, t(65.3));
+    ["#lp-r1", "#lp-r2", "#lp-r3"].forEach((s, i) => {
+      tl.fromTo(s, { opacity: 0, x: -80 }, { opacity: 1, x: 0, duration: 0.3, ease: "power3.out" }, t(65.45) + i * 0.22);
+      tl.fromTo(s + " i", { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: 0.25, ease: "back.out(3)" }, t(65.9) + i * 0.3);
+    });
+    // "Eh, kejap." — it all slides away
+    tl.to(["#lp-rt", "#lp-r1", "#lp-r2", "#lp-r3"], { opacity: 0, y: -40, duration: 0.25, ease: "power2.in", stagger: 0.04 }, t(67.55));
+    // the phone rings again: the same picture as the very first frame, so the clip loops
+    tl.fromTo("#lp-alarm", { opacity: 0 }, { opacity: 1, duration: 0.3 }, t(68.9));
+    tl.fromTo("#lp-head", { opacity: 0, scale: 1.25 }, { opacity: 1, scale: 1, duration: 0.3, ease: "power3.out" }, t(69.0));
+    tl.fromTo("#lp-call", { opacity: 0, y: 120 }, { opacity: 1, y: 0, duration: 0.35, ease: "back.out(1.6)" }, t(68.95));
+    tl.fromTo("#lp-call", { rotation: -2 }, { rotation: 2, duration: 0.08, ease: "none", yoyo: true, repeat: 9, immediateRender: false }, t(69.3));
+    tl.to("#lp-call", { rotation: 0, duration: 0.1 }, t(70.15));
+    window.__timelines["loop"] = tl;
+  </script>
+</template>

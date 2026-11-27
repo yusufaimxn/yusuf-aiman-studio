@@ -1,0 +1,26 @@
+---
+title: Macam mana scammer dapat nombor telefon kau
+language: ms
+preset: educational
+target_duration: 60
+---
+// Format F1 "Aiman Hampir Kena Scam". Satu baris pertuturan = satu MP3 (01.mp3 ... 12.mp3).
+// Nombor ditulis dalam perkataan supaya suara Melayu sebut dengan betul; teks skrin guna angka.
+# scene hook | Aiman dapat call
+AIMAN (surprised): Yusuf! Orang call aku, dia tahu nama penuh aku! Padahal aku tak pernah bagi nombor pun!
+YUSUF (calm): Relaks. Jom kita bedah, macam mana dia dapat.
+# scene leak | Cara 1: data bocor
+YUSUF (serious): Satu, data bocor. Tahun dua ribu tujuh belas, terbongkar data empat puluh enam juta akaun telco Malaysia bocor, siap dengan nombor IC.
+AIMAN (surprised): Empat puluh enam juta? Lebih ramai dari orang Malaysia!
+YUSUF (calm): Sebab ramai orang ada lebih dari satu SIM. Dan data yang bocor, boleh dijual berulang kali.
+# scene callerid | Cara 2: app caller ID
+AIMAN (confused): Tapi macam mana dia tahu nama penuh aku?
+YUSUF (friendly): Dua, app caller ID. Ada app yang kumpul nama dari contact list pengguna dia. Kawan kau save nama penuh kau, orang lain pun boleh nampak.
+# scene public | Cara 3: kita sendiri kongsi
+YUSUF (serious): Tiga, kita sendiri yang kongsi. Iklan jual barang, group Facebook, borang cabutan bertuah.
+AIMAN (humorous): Alamak. Borang menang iPhone hari tu.
+# scene tips | Apa nak buat
+YUSUF (confident, emphasis=bukan): Jadi ingat. Dia tahu nama penuh kau, itu bukan bukti dia dari bank atau polis. Letak telefon, call semula nombor rasmi.
+YUSUF (serious): Kalau dah termasuk duit, terus call sembilan sembilan tujuh.
+# scene loop | Penutup
+AIMAN (surprised): Okay, lepas ni aku tak panik dah. Eh, kejap. Dia call lagi!
