@@ -1,0 +1,64 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; }
+    #tp-ttl { position: absolute; left: 0; top: 0; width: 840px; text-align: center; }
+    .eqb { position: absolute; top: 150px; width: 330px; height: 230px; border-radius: 28px; display: grid; place-items: center; text-align: center; padding: 20px;
+      font: 800 40px "Sora"; line-height: 1.12; box-shadow: 0 18px 40px rgba(0,0,0,0.4); }
+    #tp-e1 { left: 0; background: #fff; color: var(--navy); }
+    #tp-e2 { left: 510px; background: var(--blue); color: #fff; }
+    #tp-neq { position: absolute; left: 340px; top: 170px; width: 160px; text-align: center; font: 800 170px "Sora"; color: var(--orange); line-height: 1; }
+    #tp-enote { position: absolute; left: 0; top: 420px; width: 840px; text-align: center; font: 700 30px "Inter"; color: #fff; }
+    .step { position: absolute; left: 0; width: 840px; height: 120px; border-radius: 26px; background: #fff; color: var(--navy); box-shadow: 0 16px 36px rgba(0,0,0,0.35); }
+    .step .ic { position: absolute; left: 20px; top: 20px; width: 80px; height: 80px; border-radius: 50%; display: grid; place-items: center; }
+    .step .tx { position: absolute; left: 124px; top: 22px; font: 800 36px "Sora"; white-space: nowrap; }
+    .step .sb { position: absolute; left: 124px; top: 70px; font: 600 22px "Inter"; color: #5b6b86; white-space: nowrap; }
+    #tp-s1 { top: 110px; } #tp-s1 .ic { background: var(--red); }
+    #tp-s2 { top: 250px; } #tp-s2 .ic { background: var(--green); }
+    #tp-s3 { top: 390px; } #tp-s3 .ic { background: var(--blue); }
+    #tp-997 { position: absolute; left: 120px; top: 80px; width: 600px; height: 400px; border-radius: 40px;
+      background: linear-gradient(160deg, #0066DE, #0B3C8C); border: 4px solid rgba(0,194,255,0.8); box-shadow: 0 24px 60px rgba(0,0,0,0.5), 0 0 60px rgba(0,194,255,0.35); }
+    #tp-997 .a { position: absolute; left: 0; right: 0; top: 34px; text-align: center; font: 800 36px "Sora"; color: #fff; }
+    #tp-997 .n { position: absolute; left: 0; right: 0; top: 96px; text-align: center; font: 800 190px "Sora"; color: #fff; letter-spacing: -0.02em; line-height: 1; }
+    #tp-997 .b { position: absolute; left: 0; right: 0; top: 300px; text-align: center; font: 700 26px "Inter"; color: rgba(255,255,255,0.9); line-height: 1.3; }
+    #tp-glow { position: absolute; left: 120px; top: 80px; width: 600px; height: 400px; border-radius: 40px; border: 6px solid var(--cyan); }
+  </style>
+  <div id="root" data-composition-id="tips" data-width="1080" data-height="1920">
+    <div class="panel">
+      <div id="tp-ttl" class="h-lg">Jadi <span class="c-cyan">ingat</span>:</div>
+      <div id="tp-e1" class="eqb">Tahu nama penuh kau</div>
+      <div id="tp-neq">≠</div>
+      <div id="tp-e2" class="eqb">Dari bank atau polis</div>
+      <div id="tp-enote">Nama penuh bukan bukti. Data boleh bocor.</div>
+
+      <div id="tp-s1" class="step"><div class="ic"><svg width="44" height="44" viewBox="0 0 24 24"><path fill="#fff" d="M12 9c-1.6 0-3.15.25-4.6.72v3.1c0 .39-.23.74-.56.9-.98.49-1.87 1.12-2.66 1.85a1 1 0 0 1-1.41-.02L.29 13.1a1 1 0 0 1 0-1.42C3.34 8.77 7.46 7 12 7s8.66 1.77 11.71 4.68a1 1 0 0 1 0 1.42l-2.48 2.45a1 1 0 0 1-1.41.02 11.3 11.3 0 0 0-2.67-1.85 1 1 0 0 1-.56-.9v-3.1A15 15 0 0 0 12 9z"/></svg></div><div class="tx">Letak telefon</div><div class="sb">Jangan bagi apa-apa maklumat</div></div>
+      <div id="tp-s2" class="step"><div class="ic"><svg width="40" height="40" viewBox="0 0 24 24"><path fill="#fff" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></div><div class="tx">Call semula nombor rasmi</div><div class="sb">Cari sendiri: laman web rasmi / belakang kad bank</div></div>
+      <div id="tp-s3" class="step"><div class="ic"><svg width="42" height="42" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6.5" fill="none" stroke="#fff" stroke-width="2.6"/><path d="M15 15l6 6" stroke="#fff" stroke-width="2.8" stroke-linecap="round"/></svg></div><div class="tx">Semak nombor: Semak Mule</div><div class="sb">semakmule.rmp.gov.my (PDRM)</div></div>
+
+      <div id="tp-glow"></div>
+      <div id="tp-997"><div class="a">Dah termasuk duit?</div><div class="n">997</div><div class="b">Pusat Respons Scam Kebangsaan<br/>(NSRC) · call segera</div></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const S = window.YA_T.scenes.tips, t = (x) => x - S;
+    gsap.set(["#tp-ttl", "#tp-e1", "#tp-neq", "#tp-e2", "#tp-enote", "#tp-s1", "#tp-s2", "#tp-s3", "#tp-997", "#tp-glow"], { opacity: 0 });
+    tl.fromTo("#tp-ttl", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, t(53.35));
+    tl.fromTo("#tp-e1", { opacity: 0, x: -80 }, { opacity: 1, x: 0, duration: 0.4, ease: "power3.out" }, t(54.0));
+    tl.fromTo("#tp-e2", { opacity: 0, x: 80 }, { opacity: 1, x: 0, duration: 0.4, ease: "power3.out" }, t(57.7));
+    tl.fromTo("#tp-neq", { opacity: 0, scale: 3, rotation: -30 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.28, ease: "power4.in" }, t(56.2));
+    tl.to("#tp-neq", { scale: 1.15, duration: 0.12, yoyo: true, repeat: 1 }, t(56.5));
+    tl.fromTo("#tp-enote", { opacity: 0 }, { opacity: 1, duration: 0.3 }, t(57.2));
+    tl.to(["#tp-ttl", "#tp-e1", "#tp-neq", "#tp-e2", "#tp-enote"], { opacity: 0, y: -30, duration: 0.25, ease: "power2.in", stagger: 0.03 }, t(58.45));
+    tl.fromTo("#tp-s1", { opacity: 0, x: -100 }, { opacity: 1, x: 0, duration: 0.4, ease: "back.out(1.5)" }, t(58.64));
+    tl.fromTo("#tp-s1 .ic", { rotation: 0 }, { rotation: -135, duration: 0.4, ease: "back.out(2)" }, t(59.0));
+    tl.fromTo("#tp-s2", { opacity: 0, x: -100 }, { opacity: 1, x: 0, duration: 0.4, ease: "back.out(1.5)" }, t(59.94));
+    tl.fromTo("#tp-s2 .ic", { scale: 1 }, { scale: 1.15, duration: 0.15, yoyo: true, repeat: 3 }, t(60.4));
+    tl.fromTo("#tp-s3", { opacity: 0, x: -100 }, { opacity: 1, x: 0, duration: 0.4, ease: "back.out(1.5)" }, t(61.25));
+    tl.to(["#tp-s1", "#tp-s2", "#tp-s3"], { opacity: 0, x: 80, duration: 0.25, ease: "power2.in", stagger: 0.05 }, t(62.75));
+    // "Kalau dah termasuk duit, terus call 997."
+    tl.fromTo("#tp-997", { opacity: 0, scale: 0.6, y: 60 }, { opacity: 1, scale: 1, y: 0, duration: 0.45, ease: "back.out(1.7)" }, t(63.15));
+    tl.to("#tp-997 .n", { scale: 1.12, color: "#FFD08A", duration: 0.18, yoyo: true, repeat: 1 }, t(63.95));
+    for (let k = 0; k < 2; k++) tl.fromTo("#tp-glow", { opacity: 0.9, scale: 1 }, { opacity: 0, scale: 1.15, duration: 0.7, ease: "power1.out", immediateRender: false }, t(64.0) + k * 0.6);
+    window.__timelines["tips"] = tl;
+  </script>
+</template>

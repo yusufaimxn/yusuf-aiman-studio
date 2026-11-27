@@ -12,7 +12,7 @@ script:
   file: script.txt
 voiceover:
   source: supplied        # MP3 dari laman ElevenLabs, satu fail per baris (01.mp3 ... 12.mp3), kekal tanpa ubah
-  file: ""                # diisi selepas import: assets/audio/voice/
+  file: "assets/audio/voice/supplied/01.mp3"   # first of 01.mp3 ... 12.mp3 (one per script line), kept as supplied
   voices:
     yusuf: "ElevenLabs Shahrul (G3mZ5fAxCu3ThFPWdD3D), Multilingual v2"
     aiman: "ElevenLabs Ashraf (NHFTLozDZneDWyQjRGAO), Multilingual v2"
