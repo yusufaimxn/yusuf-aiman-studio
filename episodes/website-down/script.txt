@@ -1,0 +1,31 @@
+---
+title: Apa Jadi Kalau Semua Website Dunia Down?
+language: ms
+preset: educational
+target_duration: 60
+---
+// Siri "Apa Jadi Kalau…?" #03. Satu baris = satu MP3 (01.mp3 ... 12.mp3), ikut Doc #03 (versi user).
+# scene hook | Aiman, WiFi penuh, browser merah
+AIMAN (panik): WiFi full!… tapi kenapa satu website pun tak boleh buka?!
+# scene bandar | Bandar malam, panel website merah merebak
+YUSUF (VO): Bayangkan. Internet ada, WiFi pun ada… tapi semua website dekat dunia, down.
+# scene google | Bar carian + troli shopping
+YUSUF (VO): Nak Google? Tak boleh... Nak shopping? Pun tak boleh... asyik loading je...
+# scene assign | Bilik pelajar, upload 99%
+YUSUF (VO): Nak hantar assignment? Student portal pun tak boleh nak bukak...
+# scene office | Office terhenti
+YUSUF (VO): Office pun terhenti. Email tak masuk, meeting online pun semua terputus.
+# scene apps | Phone gergasi, apps loading
+YUSUF (VO): Dan yang paling pelik… banyak apps dalam phone pun down jugak.
+# scene tanya | Aiman close-up
+AIMAN (hairan): Eh, apasal apps pun kena?
+# scene request | Ikut request: phone, router, DNS, pintu server
+YUSUF (VO): Sebab setiap kali kau buka website atau app, phone kau akan hantar request. Dia cari alamat server dulu… lepas tu ketuk pintu dia.
+# scene biasa | Server hantar balik, page tersusun
+YUSUF (VO): Biasanya, server tu yang akan hantar balik gambar, video, harga barang. Semua la.
+# scene error | Server merah, error page
+YUSUF (VO): Tapi kalau server pun tak jawab… browser hanya cuma boleh tunjuk satu benda je... Error.
+# scene faham | Aiman close-up, jalan vs kedai
+AIMAN (faham): Ohh… maksudnya internet tu ibarat macam jalan, and website tu pulak kedai?
+# scene akhir | Yusuf close-up, kedai tutup, CTA
+YUSUF (CTA): Tepat sekali. Jalan elok je, tapi semua kedai tutup. So website apa yang paling banyak korang bukak? Komen bawah.

@@ -1,0 +1,1036 @@
+{
+ "total": 71.8,
+ "lines": [
+  {
+   "n": 1,
+   "speaker": "AIMAN",
+   "scene": "hook",
+   "text": "WiFi full!… tapi kenapa satu website pun tak boleh buka?!",
+   "file": "assets/audio/voice/supplied/01.mp3",
+   "start": 0.35,
+   "file_dur": 4.049,
+   "speech_start": 0.35,
+   "speech_end": 4.239,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "WiFi",
+     "start": 0.35,
+     "end": 0.655
+    },
+    {
+     "text": "full!…",
+     "start": 0.655,
+     "end": 1.081
+    },
+    {
+     "text": "tapi",
+     "start": 1.081,
+     "end": 1.386
+    },
+    {
+     "text": "kenapa",
+     "start": 1.386,
+     "end": 2.167
+    },
+    {
+     "text": "satu",
+     "start": 2.167,
+     "end": 2.472
+    },
+    {
+     "text": "website",
+     "start": 2.472,
+     "end": 2.959
+    },
+    {
+     "text": "pun",
+     "start": 2.959,
+     "end": 3.203
+    },
+    {
+     "text": "tak",
+     "start": 3.203,
+     "end": 3.447
+    },
+    {
+     "text": "boleh",
+     "start": 3.447,
+     "end": 3.812
+    },
+    {
+     "text": "buka?!",
+     "start": 3.812,
+     "end": 4.239
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "speaker": "YUSUF",
+   "scene": "bandar",
+   "text": "Bayangkan. Internet ada, WiFi pun ada… tapi semua website dekat dunia, down.",
+   "file": "assets/audio/voice/supplied/02.mp3",
+   "start": 4.739,
+   "file_dur": 6.766,
+   "speech_start": 4.739,
+   "speech_end": 11.304,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Bayangkan.",
+     "start": 4.739,
+     "end": 5.845
+    },
+    {
+     "text": "Internet",
+     "start": 5.845,
+     "end": 6.422
+    },
+    {
+     "text": "ada,",
+     "start": 6.422,
+     "end": 6.742
+    },
+    {
+     "text": "WiFi",
+     "start": 6.742,
+     "end": 7.356
+    },
+    {
+     "text": "pun",
+     "start": 7.356,
+     "end": 7.613
+    },
+    {
+     "text": "ada…",
+     "start": 7.613,
+     "end": 7.933
+    },
+    {
+     "text": "tapi",
+     "start": 7.933,
+     "end": 8.789
+    },
+    {
+     "text": "semua",
+     "start": 8.789,
+     "end": 9.173
+    },
+    {
+     "text": "website",
+     "start": 9.173,
+     "end": 9.686
+    },
+    {
+     "text": "dekat",
+     "start": 9.686,
+     "end": 10.07
+    },
+    {
+     "text": "dunia,",
+     "start": 10.07,
+     "end": 10.919
+    },
+    {
+     "text": "down.",
+     "start": 10.919,
+     "end": 11.304
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "speaker": "YUSUF",
+   "scene": "google",
+   "text": "Nak Google? Tak boleh... Nak shopping? Pun tak boleh... asyik loading je...",
+   "file": "assets/audio/voice/supplied/03.mp3",
+   "start": 11.504,
+   "file_dur": 5.878,
+   "speech_start": 11.504,
+   "speech_end": 17.155,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Nak",
+     "start": 11.504,
+     "end": 11.735
+    },
+    {
+     "text": "Google?",
+     "start": 11.735,
+     "end": 12.198
+    },
+    {
+     "text": "Tak",
+     "start": 12.59,
+     "end": 12.882
+    },
+    {
+     "text": "boleh...",
+     "start": 12.882,
+     "end": 13.538
+    },
+    {
+     "text": "Nak",
+     "start": 13.847,
+     "end": 14.005
+    },
+    {
+     "text": "shopping?",
+     "start": 14.005,
+     "end": 14.399
+    },
+    {
+     "text": "Pun",
+     "start": 14.785,
+     "end": 14.962
+    },
+    {
+     "text": "tak",
+     "start": 14.962,
+     "end": 15.139
+    },
+    {
+     "text": "boleh...",
+     "start": 15.139,
+     "end": 15.538
+    },
+    {
+     "text": "asyik",
+     "start": 15.944,
+     "end": 16.308
+    },
+    {
+     "text": "loading",
+     "start": 16.308,
+     "end": 16.792
+    },
+    {
+     "text": "je...",
+     "start": 16.792,
+     "end": 17.155
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "speaker": "YUSUF",
+   "scene": "assign",
+   "text": "Nak hantar assignment? Student portal pun tak boleh nak bukak...",
+   "file": "assets/audio/voice/supplied/04.mp3",
+   "start": 17.355,
+   "file_dur": 3.709,
+   "speech_start": 17.355,
+   "speech_end": 20.83,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Nak",
+     "start": 17.355,
+     "end": 17.525
+    },
+    {
+     "text": "hantar",
+     "start": 17.525,
+     "end": 17.822
+    },
+    {
+     "text": "assignment?",
+     "start": 17.822,
+     "end": 18.332
+    },
+    {
+     "text": "Student",
+     "start": 18.332,
+     "end": 19.11
+    },
+    {
+     "text": "portal",
+     "start": 19.11,
+     "end": 19.407
+    },
+    {
+     "text": "pun",
+     "start": 19.407,
+     "end": 19.713
+    },
+    {
+     "text": "tak",
+     "start": 19.713,
+     "end": 19.883
+    },
+    {
+     "text": "boleh",
+     "start": 19.883,
+     "end": 20.138
+    },
+    {
+     "text": "nak",
+     "start": 20.138,
+     "end": 20.308
+    },
+    {
+     "text": "bukak...",
+     "start": 20.308,
+     "end": 20.83
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "speaker": "YUSUF",
+   "scene": "office",
+   "text": "Office pun terhenti. Email tak masuk, meeting online pun semua terputus.",
+   "file": "assets/audio/voice/supplied/05.mp3",
+   "start": 21.03,
+   "file_dur": 5.329,
+   "speech_start": 21.03,
+   "speech_end": 26.199,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Office",
+     "start": 21.03,
+     "end": 21.469
+    },
+    {
+     "text": "pun",
+     "start": 21.469,
+     "end": 21.72
+    },
+    {
+     "text": "terhenti.",
+     "start": 21.72,
+     "end": 22.348
+    },
+    {
+     "text": "Email",
+     "start": 22.819,
+     "end": 23.213
+    },
+    {
+     "text": "tak",
+     "start": 23.213,
+     "end": 23.476
+    },
+    {
+     "text": "masuk,",
+     "start": 23.476,
+     "end": 23.936
+    },
+    {
+     "text": "meeting",
+     "start": 24.057,
+     "end": 24.547
+    },
+    {
+     "text": "online",
+     "start": 24.547,
+     "end": 24.975
+    },
+    {
+     "text": "pun",
+     "start": 24.975,
+     "end": 25.22
+    },
+    {
+     "text": "semua",
+     "start": 25.22,
+     "end": 25.587
+    },
+    {
+     "text": "terputus.",
+     "start": 25.587,
+     "end": 26.199
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "speaker": "YUSUF",
+   "scene": "apps",
+   "text": "Dan yang paling pelik… banyak apps dalam phone pun down jugak.",
+   "file": "assets/audio/voice/supplied/06.mp3",
+   "start": 26.399,
+   "file_dur": 4.284,
+   "speech_start": 26.399,
+   "speech_end": 30.517,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Dan",
+     "start": 26.399,
+     "end": 26.63
+    },
+    {
+     "text": "yang",
+     "start": 26.63,
+     "end": 26.918
+    },
+    {
+     "text": "paling",
+     "start": 26.918,
+     "end": 27.322
+    },
+    {
+     "text": "pelik…",
+     "start": 27.322,
+     "end": 28.21
+    },
+    {
+     "text": "banyak",
+     "start": 28.21,
+     "end": 28.614
+    },
+    {
+     "text": "apps",
+     "start": 28.614,
+     "end": 28.902
+    },
+    {
+     "text": "dalam",
+     "start": 28.902,
+     "end": 29.248
+    },
+    {
+     "text": "phone",
+     "start": 29.248,
+     "end": 29.594
+    },
+    {
+     "text": "pun",
+     "start": 29.594,
+     "end": 29.825
+    },
+    {
+     "text": "down",
+     "start": 29.825,
+     "end": 30.114
+    },
+    {
+     "text": "jugak.",
+     "start": 30.114,
+     "end": 30.517
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "speaker": "AIMAN",
+   "scene": "tanya",
+   "text": "Eh, apasal apps pun kena?",
+   "file": "assets/audio/voice/supplied/07.mp3",
+   "start": 30.667,
+   "file_dur": 2.847,
+   "speech_start": 30.667,
+   "speech_end": 33.304,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Eh,",
+     "start": 30.667,
+     "end": 31.379
+    },
+    {
+     "text": "apasal",
+     "start": 31.379,
+     "end": 31.943
+    },
+    {
+     "text": "apps",
+     "start": 31.943,
+     "end": 32.497
+    },
+    {
+     "text": "pun",
+     "start": 32.497,
+     "end": 32.82
+    },
+    {
+     "text": "kena?",
+     "start": 32.82,
+     "end": 33.304
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "speaker": "YUSUF",
+   "scene": "request",
+   "text": "Sebab setiap kali kau buka website atau app, phone kau akan hantar request. Dia cari alamat server dulu… lepas tu ketuk pintu dia.",
+   "file": "assets/audio/voice/supplied/08.mp3",
+   "start": 33.504,
+   "file_dur": 8.751,
+   "speech_start": 33.504,
+   "speech_end": 42.063,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Sebab",
+     "start": 33.504,
+     "end": 33.827
+    },
+    {
+     "text": "setiap",
+     "start": 33.827,
+     "end": 34.203
+    },
+    {
+     "text": "kali",
+     "start": 34.203,
+     "end": 34.472
+    },
+    {
+     "text": "kau",
+     "start": 34.472,
+     "end": 34.687
+    },
+    {
+     "text": "buka",
+     "start": 34.687,
+     "end": 34.956
+    },
+    {
+     "text": "website",
+     "start": 34.956,
+     "end": 35.387
+    },
+    {
+     "text": "atau",
+     "start": 35.387,
+     "end": 35.656
+    },
+    {
+     "text": "app,",
+     "start": 35.656,
+     "end": 35.925
+    },
+    {
+     "text": "phone",
+     "start": 35.925,
+     "end": 36.697
+    },
+    {
+     "text": "kau",
+     "start": 36.697,
+     "end": 36.912
+    },
+    {
+     "text": "akan",
+     "start": 36.912,
+     "end": 37.181
+    },
+    {
+     "text": "hantar",
+     "start": 37.181,
+     "end": 37.557
+    },
+    {
+     "text": "request.",
+     "start": 37.557,
+     "end": 38.041
+    },
+    {
+     "text": "Dia",
+     "start": 38.041,
+     "end": 38.651
+    },
+    {
+     "text": "cari",
+     "start": 38.651,
+     "end": 38.92
+    },
+    {
+     "text": "alamat",
+     "start": 38.92,
+     "end": 39.296
+    },
+    {
+     "text": "server",
+     "start": 39.296,
+     "end": 39.673
+    },
+    {
+     "text": "dulu…",
+     "start": 39.673,
+     "end": 39.996
+    },
+    {
+     "text": "lepas",
+     "start": 39.996,
+     "end": 40.766
+    },
+    {
+     "text": "tu",
+     "start": 40.766,
+     "end": 40.928
+    },
+    {
+     "text": "ketuk",
+     "start": 40.928,
+     "end": 41.471
+    },
+    {
+     "text": "pintu",
+     "start": 41.471,
+     "end": 41.794
+    },
+    {
+     "text": "dia.",
+     "start": 41.794,
+     "end": 42.063
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "speaker": "YUSUF",
+   "scene": "biasa",
+   "text": "Biasanya, server tu yang akan hantar balik gambar, video, harga barang. Semua la.",
+   "file": "assets/audio/voice/supplied/09.mp3",
+   "start": 42.263,
+   "file_dur": 6.034,
+   "speech_start": 42.263,
+   "speech_end": 48.126,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Biasanya,",
+     "start": 42.263,
+     "end": 42.928
+    },
+    {
+     "text": "server",
+     "start": 42.928,
+     "end": 43.567
+    },
+    {
+     "text": "tu",
+     "start": 43.567,
+     "end": 43.767
+    },
+    {
+     "text": "yang",
+     "start": 43.767,
+     "end": 44.1
+    },
+    {
+     "text": "akan",
+     "start": 44.1,
+     "end": 44.432
+    },
+    {
+     "text": "hantar",
+     "start": 44.432,
+     "end": 44.898
+    },
+    {
+     "text": "balik",
+     "start": 44.898,
+     "end": 45.297
+    },
+    {
+     "text": "gambar,",
+     "start": 45.297,
+     "end": 45.83
+    },
+    {
+     "text": "video,",
+     "start": 45.83,
+     "end": 46.296
+    },
+    {
+     "text": "harga",
+     "start": 46.296,
+     "end": 46.695
+    },
+    {
+     "text": "barang.",
+     "start": 46.695,
+     "end": 47.227
+    },
+    {
+     "text": "Semua",
+     "start": 47.227,
+     "end": 47.859
+    },
+    {
+     "text": "la.",
+     "start": 47.859,
+     "end": 48.126
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "speaker": "YUSUF",
+   "scene": "error",
+   "text": "Tapi kalau server pun tak jawab… browser hanya cuma boleh tunjuk satu benda je... Error.",
+   "file": "assets/audio/voice/supplied/10.mp3",
+   "start": 48.326,
+   "file_dur": 6.426,
+   "speech_start": 48.326,
+   "speech_end": 54.552,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Tapi",
+     "start": 48.326,
+     "end": 48.615
+    },
+    {
+     "text": "kalau",
+     "start": 48.615,
+     "end": 49.088
+    },
+    {
+     "text": "server",
+     "start": 49.088,
+     "end": 49.492
+    },
+    {
+     "text": "pun",
+     "start": 49.492,
+     "end": 49.723
+    },
+    {
+     "text": "tak",
+     "start": 49.723,
+     "end": 49.954
+    },
+    {
+     "text": "jawab…",
+     "start": 49.954,
+     "end": 50.358
+    },
+    {
+     "text": "browser",
+     "start": 50.358,
+     "end": 51.282
+    },
+    {
+     "text": "hanya",
+     "start": 51.282,
+     "end": 51.628
+    },
+    {
+     "text": "cuma",
+     "start": 51.628,
+     "end": 51.917
+    },
+    {
+     "text": "boleh",
+     "start": 51.917,
+     "end": 52.263
+    },
+    {
+     "text": "tunjuk",
+     "start": 52.263,
+     "end": 52.667
+    },
+    {
+     "text": "satu",
+     "start": 52.667,
+     "end": 52.956
+    },
+    {
+     "text": "benda",
+     "start": 52.956,
+     "end": 53.303
+    },
+    {
+     "text": "je...",
+     "start": 53.303,
+     "end": 54.148
+    },
+    {
+     "text": "Error.",
+     "start": 54.148,
+     "end": 54.552
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "speaker": "AIMAN",
+   "scene": "faham",
+   "text": "Ohh… maksudnya internet tu ibarat macam jalan, and website tu pulak kedai?",
+   "file": "assets/audio/voice/supplied/11.mp3",
+   "start": 54.902,
+   "file_dur": 7.001,
+   "speech_start": 54.902,
+   "speech_end": 61.736,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Ohh…",
+     "start": 54.902,
+     "end": 55.32
+    },
+    {
+     "text": "maksudnya",
+     "start": 55.32,
+     "end": 56.157
+    },
+    {
+     "text": "internet",
+     "start": 56.157,
+     "end": 57.069
+    },
+    {
+     "text": "tu",
+     "start": 57.069,
+     "end": 57.32
+    },
+    {
+     "text": "ibarat",
+     "start": 57.32,
+     "end": 57.906
+    },
+    {
+     "text": "macam",
+     "start": 57.906,
+     "end": 58.408
+    },
+    {
+     "text": "jalan,",
+     "start": 58.408,
+     "end": 59.392
+    },
+    {
+     "text": "and",
+     "start": 59.392,
+     "end": 59.727
+    },
+    {
+     "text": "website",
+     "start": 59.727,
+     "end": 60.397
+    },
+    {
+     "text": "tu",
+     "start": 60.397,
+     "end": 60.648
+    },
+    {
+     "text": "pulak",
+     "start": 60.648,
+     "end": 61.15
+    },
+    {
+     "text": "kedai?",
+     "start": 61.15,
+     "end": 61.736
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "speaker": "YUSUF",
+   "scene": "akhir",
+   "text": "Tepat sekali. Jalan elok je, tapi semua kedai tutup. So website apa yang paling banyak korang bukak? Komen bawah.",
+   "file": "assets/audio/voice/supplied/12.mp3",
+   "start": 61.936,
+   "file_dur": 8.202,
+   "speech_start": 61.936,
+   "speech_end": 69.902,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Tepat",
+     "start": 61.936,
+     "end": 62.407
+    },
+    {
+     "text": "sekali.",
+     "start": 62.407,
+     "end": 62.825
+    },
+    {
+     "text": "Jalan",
+     "start": 62.825,
+     "end": 63.513
+    },
+    {
+     "text": "elok",
+     "start": 63.513,
+     "end": 63.775
+    },
+    {
+     "text": "je,",
+     "start": 63.775,
+     "end": 63.983
+    },
+    {
+     "text": "tapi",
+     "start": 63.983,
+     "end": 64.245
+    },
+    {
+     "text": "semua",
+     "start": 64.245,
+     "end": 64.895
+    },
+    {
+     "text": "kedai",
+     "start": 64.895,
+     "end": 65.208
+    },
+    {
+     "text": "tutup.",
+     "start": 65.208,
+     "end": 65.574
+    },
+    {
+     "text": "So",
+     "start": 65.574,
+     "end": 65.731
+    },
+    {
+     "text": "website",
+     "start": 65.731,
+     "end": 66.662
+    },
+    {
+     "text": "apa",
+     "start": 66.662,
+     "end": 67.067
+    },
+    {
+     "text": "yang",
+     "start": 67.067,
+     "end": 67.328
+    },
+    {
+     "text": "paling",
+     "start": 67.328,
+     "end": 67.693
+    },
+    {
+     "text": "banyak",
+     "start": 67.693,
+     "end": 68.059
+    },
+    {
+     "text": "korang",
+     "start": 68.059,
+     "end": 68.425
+    },
+    {
+     "text": "bukak?",
+     "start": 68.425,
+     "end": 68.79
+    },
+    {
+     "text": "Komen",
+     "start": 68.79,
+     "end": 69.537
+    },
+    {
+     "text": "bawah.",
+     "start": 69.537,
+     "end": 69.902
+    }
+   ]
+  }
+ ],
+ "scenes": [
+  {
+   "id": "hook",
+   "start": 0.0,
+   "lines": [
+    1
+   ],
+   "duration": 4.49
+  },
+  {
+   "id": "bandar",
+   "start": 4.49,
+   "lines": [
+    2
+   ],
+   "duration": 6.91
+  },
+  {
+   "id": "google",
+   "start": 11.4,
+   "lines": [
+    3
+   ],
+   "duration": 5.86
+  },
+  {
+   "id": "assign",
+   "start": 17.26,
+   "lines": [
+    4
+   ],
+   "duration": 3.67
+  },
+  {
+   "id": "office",
+   "start": 20.93,
+   "lines": [
+    5
+   ],
+   "duration": 5.37
+  },
+  {
+   "id": "apps",
+   "start": 26.3,
+   "lines": [
+    6
+   ],
+   "duration": 4.29
+  },
+  {
+   "id": "tanya",
+   "start": 30.59,
+   "lines": [
+    7
+   ],
+   "duration": 2.81
+  },
+  {
+   "id": "request",
+   "start": 33.4,
+   "lines": [
+    8
+   ],
+   "duration": 8.76
+  },
+  {
+   "id": "biasa",
+   "start": 42.16,
+   "lines": [
+    9
+   ],
+   "duration": 6.07
+  },
+  {
+   "id": "error",
+   "start": 48.23,
+   "lines": [
+    10
+   ],
+   "duration": 6.5
+  },
+  {
+   "id": "faham",
+   "start": 54.73,
+   "lines": [
+    11
+   ],
+   "duration": 7.11
+  },
+  {
+   "id": "akhir",
+   "start": 61.84,
+   "lines": [
+    12
+   ],
+   "duration": 9.96
+  }
+ ]
+}

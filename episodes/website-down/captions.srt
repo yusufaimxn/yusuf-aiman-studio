@@ -1,0 +1,117 @@
+1
+00:00:00,350 --> 00:00:04,439
+WiFi full!… tapi kenapa satu website pun
+tak boleh buka?!
+
+2
+00:00:04,739 --> 00:00:06,045
+Bayangkan.
+
+3
+00:00:05,845 --> 00:00:11,504
+Internet ada, WiFi pun ada… tapi semua
+website dekat dunia, down.
+
+4
+00:00:11,504 --> 00:00:12,398
+Nak Google?
+
+5
+00:00:12,590 --> 00:00:13,738
+Tak boleh...
+
+6
+00:00:13,847 --> 00:00:14,599
+Nak shopping?
+
+7
+00:00:14,785 --> 00:00:15,738
+Pun tak boleh...
+
+8
+00:00:15,944 --> 00:00:17,355
+asyik loading je...
+
+9
+00:00:17,355 --> 00:00:18,532
+Nak hantar assignment?
+
+10
+00:00:18,332 --> 00:00:21,030
+Student portal pun tak boleh nak bukak...
+
+11
+00:00:21,030 --> 00:00:22,548
+Office pun terhenti.
+
+12
+00:00:22,819 --> 00:00:26,399
+Email tak masuk, meeting online pun semua
+terputus.
+
+13
+00:00:26,399 --> 00:00:30,717
+Dan yang paling pelik… banyak apps dalam
+phone pun down jugak.
+
+14
+00:00:30,667 --> 00:00:33,504
+Eh, apasal apps pun kena?
+
+15
+00:00:33,504 --> 00:00:38,241
+Sebab setiap kali kau buka website atau
+app, phone kau akan hantar request.
+
+16
+00:00:38,041 --> 00:00:42,263
+Dia cari alamat server dulu… lepas tu
+ketuk pintu dia.
+
+17
+00:00:42,263 --> 00:00:47,427
+Biasanya, server tu yang akan hantar balik
+gambar, video, harga barang.
+
+18
+00:00:47,227 --> 00:00:48,326
+Semua la.
+
+19
+00:00:48,326 --> 00:00:53,156
+Tapi kalau server pun tak jawab… browser
+hanya cuma boleh tunjuk satu
+
+20
+00:00:52,956 --> 00:00:54,348
+benda je...
+
+21
+00:00:54,148 --> 00:00:54,752
+Error.
+
+22
+00:00:54,902 --> 00:00:59,592
+Ohh… maksudnya internet tu ibarat macam
+jalan,
+
+23
+00:00:59,392 --> 00:01:01,936
+and website tu pulak kedai?
+
+24
+00:01:01,936 --> 00:01:03,025
+Tepat sekali.
+
+25
+00:01:02,825 --> 00:01:05,774
+Jalan elok je, tapi semua kedai tutup.
+
+26
+00:01:05,574 --> 00:01:08,990
+So website apa yang paling banyak korang
+bukak?
+
+27
+00:01:08,790 --> 00:01:10,102
+Komen bawah.
