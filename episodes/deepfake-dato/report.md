@@ -59,3 +59,9 @@ Siri F1 "Aiman Hampir Kena Scam" · Ep 2 · Bahasa Melayu · render 2026-11-27
 - Watak 2.5D: pose bertukar (squash-pop) dan badan "hop" ikut frasa; tiada lip-sync kerana imej pegun.
 - Masa perkataan caption dianggar dari pengesanan senyap (model transkripsi disekat di sini).
 - Dato' Hartawan dalam aset pengguna nampak seiras gaya Yusuf (rambut, janggut). Dilabel jelas sebagai contoh rekaan.
+
+## v2 (2026-11-27, maklum balas pengguna)
+- Kamera baru: close-up pada watak yang bercakap (watak lain keluar frame), two-shot bila berbual; zoom 1.75× / 1.35×, kaki boleh keluar frame.
+- Kepala sentiasa penuh dan di bawah zon grafik; shade gelap di bawah; caption dipindah ke atas shade (bottom 420 px).
+- QC v2: 1080×1920, 30 fps, 83.1 s, −14.1 LUFS, sync 0 ms, tiada hitam/beku, `hyperframes check` 0 ralat; 8 frame disemak.
+- Peraturan disimpan: `documentation/character-framing.md`.

@@ -4,9 +4,12 @@
     .slot { position: absolute; top: 1120px; width: 640px; height: 800px; }
     #slot-a { left: -40px; }
     #slot-y { left: 470px; }
-    .ch, .dim, .hop, .sq, .br { position: absolute; inset: 0; }
+    .ch, .cam, .dim, .hop, .sq, .br { position: absolute; inset: 0; }
+    .cam { transform-origin: 50% 12%; }
+    #shade { position: absolute; left: 0; right: 0; bottom: 0; height: 900px;
+      background: linear-gradient(180deg, rgba(3,10,26,0) 0%, rgba(3,10,26,0.55) 45%, rgba(3,10,26,0.88) 100%); }
     .sq, .br { transform-origin: 50% 100%; }
-    .ch, .dim, .hop, .sq, .br, .pose { will-change: transform, opacity; }
+    #shade, .cam, .ch, .dim, .hop, .sq, .br, .pose { will-change: transform, opacity; }
     .pose { position: absolute; left: 0; top: 0; width: 640px; height: 800px; }
     .shadow { position: absolute; left: 170px; bottom: -14px; width: 300px; height: 44px; border-radius: 50%;
       background: radial-gradient(closest-side, rgba(0,0,0,0.42), rgba(0,0,0,0)); }
@@ -18,7 +21,7 @@
   </style>
   <div id="root" data-composition-id="cast" data-width="1080" data-height="1920">
     <div id="slot-a" class="slot">
-      <div id="a-ch" class="ch"><div class="shadow"></div><div id="a-dim" class="dim"><div id="a-hop" class="hop"><div id="a-sq" class="sq"><div id="a-br" class="br">
+      <div id="a-ch" class="ch"><div id="a-cam" class="cam"><div class="shadow"></div><div id="a-dim" class="dim"><div id="a-hop" class="hop"><div id="a-sq" class="sq"><div id="a-br" class="br">
         <img id="a-celebrating" class="pose" src="assets/images/aiman-celebrating.png" alt="Aiman" />
         <img id="a-asking" class="pose" src="assets/images/aiman-asking.png" alt="" />
         <img id="a-shocked" class="pose" src="assets/images/aiman-shocked.png" alt="" />
@@ -29,17 +32,18 @@
       </div></div>
       <div id="b-sweat" class="badge"></div>
       <div id="b-ex" class="badge">!</div>
-      </div></div></div>
+      </div></div></div></div>
     </div>
     <div id="slot-y" class="slot">
-      <div id="y-ch" class="ch"><div class="shadow"></div><div id="y-dim" class="dim"><div id="y-hop" class="hop"><div id="y-sq" class="sq"><div id="y-br" class="br">
+      <div id="y-ch" class="ch"><div id="y-cam" class="cam"><div class="shadow"></div><div id="y-dim" class="dim"><div id="y-hop" class="hop"><div id="y-sq" class="sq"><div id="y-br" class="br">
         <img id="y-stop" class="pose" src="assets/images/yusuf-stop.png" alt="Yusuf" />
         <img id="y-crossed-arms" class="pose" src="assets/images/yusuf-crossed-arms.png" alt="" />
         <img id="y-explain" class="pose" src="assets/images/yusuf-explain.png" alt="" />
         <img id="y-thinking" class="pose" src="assets/images/yusuf-thinking.png" alt="" />
         <img id="y-pointing" class="pose" src="assets/images/yusuf-pointing.png" alt="" />
-      </div></div></div></div></div>
+      </div></div></div></div></div></div>
     </div>
+    <div id="shade"></div>
   </div>
   <script>
     const tl = gsap.timeline({ paused: true });
@@ -63,12 +67,32 @@
     }
     poses("a", A_POSES); poses("y", Y_POSES);
 
-    // ---- positions: Aiman alone in the hook, Yusuf walks in on "Muka dia betul", leaves for the loop
-    gsap.set("#a-ch", { x: A_CENTER }); gsap.set("#y-ch", { x: Y_OFF });
-    tl.to("#y-ch", { x: 0, duration: 0.5, ease: "back.out(1.3)" }, 6.85);
-    tl.to("#a-ch", { x: 0, duration: 0.5, ease: "power3.inOut" }, 6.85);
-    tl.to("#y-ch", { x: Y_OFF, duration: 0.5, ease: "power3.in" }, 76.6);
-    tl.to("#a-ch", { x: A_CENTER, duration: 0.6, ease: "power3.inOut" }, 76.7);
+    // ---- CAMERA / FRAMING (standing rule 2026-11-27): one speaker = close-up on that character, other one off-frame;
+    // a conversation exchange = two-shot. Heads always fully in frame (head top ~980 px, below the graphics zone);
+    // legs may leave the bottom. Dark shade at the bottom keeps focus on the face and carries the captions.
+    const CLOSE = { s: 1.75, y: -135 }, TWO = { s: 1.35, y: -125 };
+    const FRAMES = {
+      A:  { a: { x: 260, ...CLOSE }, y: { x: 760, ...CLOSE }, shade: 1 },
+      Y:  { a: { x: -760, ...CLOSE }, y: { x: -250, ...CLOSE }, shade: 1 },
+      AY: { a: { x: 25, ...TWO }, y: { x: -25, ...TWO }, shade: 0.75 },
+    };
+    const SHOTS = [[0, "A"], [7.2, "Y"], [12.45, "AY"], [15.75, "Y"], [26.05, "A"], [29.95, "Y"], [54.15, "A"], [57.3, "Y"], [75.7, "AY"], [77.3, "A"]];
+    gsap.set(["#a-ch", "#y-ch"], { transformOrigin: "50% 0%" });
+    const f0 = FRAMES[SHOTS[0][1]];
+    gsap.set("#a-ch", { x: f0.a.x, y: f0.a.y, scale: f0.a.s }); gsap.set("#y-ch", { x: f0.y.x, y: f0.y.y, scale: f0.y.s });
+    gsap.set("#shade", { opacity: f0.shade });
+    SHOTS.forEach(([t, k], i) => {
+      const f = FRAMES[k], nxt = i + 1 < SHOTS.length ? SHOTS[i + 1][0] : END;
+      if (i) {
+        tl.to("#a-ch", { x: f.a.x, y: f.a.y, scale: f.a.s, duration: 0.4, ease: "power3.inOut" }, t);
+        tl.to("#y-ch", { x: f.y.x, y: f.y.y, scale: f.y.s, duration: 0.4, ease: "power3.inOut" }, t);
+        tl.to("#shade", { opacity: f.shade, duration: 0.4 }, t);
+      }
+      // slow push-in while the shot holds
+      const who = k === "A" ? "#a-cam" : k === "Y" ? "#y-cam" : null;
+      if (who && nxt - t > 1.2) tl.fromTo(who, { scale: 1 }, { scale: 1.05, duration: nxt - t - 0.4, ease: "none", immediateRender: false }, t + 0.4);
+      if (who && nxt - t > 1.2) tl.to(who, { scale: 1, duration: 0.4, ease: "power3.inOut" }, nxt);
+    });
 
     // ---- idle breathing, offset
     tl.fromTo("#a-br", { scaleY: 1 }, { scaleY: 1.012, duration: 1.7, ease: "sine.inOut", yoyo: true, repeat: Math.ceil(END / 1.7) }, 0);

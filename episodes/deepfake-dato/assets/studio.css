@@ -44,7 +44,7 @@ body { font-family: "Inter", sans-serif; color: var(--light); }
 .src { position: absolute; font-family: "Inter"; font-weight: 500; font-size: 20px; color: rgba(245,247,250,0.75); white-space: nowrap; }
 
 /* captions */
-.cap { position: absolute; left: 0; right: 0; bottom: 850px; text-align: center; overflow: visible; }
+.cap { position: absolute; left: 0; right: 0; bottom: 420px; text-align: center; overflow: visible; }
 .cap-in { display: inline-block; max-width: 860px; padding: 10px 26px 14px; border-radius: 22px;
   background: rgba(11,30,63,0.78); font-family: "Sora"; font-weight: 800; font-size: 54px; line-height: 1.12;
   color: #fff; letter-spacing: -0.01em; }
