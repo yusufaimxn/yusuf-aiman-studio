@@ -14,6 +14,7 @@ This repo turns a topic or script into a finished educational video featuring Yu
 ## Stack
 - Compositor and renderer: **HyperFrames 0.9.97** (HTML + GSAP → MP4). Always run it as `scripts/hf <command>` (pins the CLI, telemetry off). Read the `hyperframes` skill before writing compositions and follow its contract.
 - 3D: **Blender 5.3 as Python module** (`.venv/bin/python`, `import bpy`). This machine has no GPU: Cycles ≈ 56 s/frame at 1080p. Use Blender for still plates, layers and very short loops; animate them in HyperFrames.
+- 3D characters: `scripts/char3d` (import, rig, face, lipsync, render). Character renders run on the owner's GPU, never on this box. No 3D model is used in an episode before `characters/<name>/model/APPROVAL.md` exists. See `documentation/3d-character-pipeline.md`.
 - Media: FFmpeg 6.1. Diagrams: SVG (hand-written or `npx mmdc` Mermaid → SVG), animated with GSAP.
 - No second renderer (Remotion evaluated and rejected, see `documentation/phase-2-setup.md`).
 - No CDN loads at render time: GSAP from `assets/vendor/gsap.min.js`, fonts via `@font-face` to `assets/fonts/*.woff2`.

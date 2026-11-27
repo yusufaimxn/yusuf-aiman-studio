@@ -1,0 +1,17 @@
+{
+  "_about": "One 3D character shot. Paths are relative to the repo root. engine: cycles (final, GPU), eevee (fast), workbench (blocking preview).",
+  "character": "yusuf",
+  "camera": "medium",
+  "yaw_deg": 20,
+  "cam_height": 0.0,
+  "resolution": [1080, 1920],
+  "scale_percent": 100,
+  "fps": 30,
+  "engine": "cycles",
+  "samples": 64,
+  "expression": "02_happy",
+  "audio": "episodes/<slug>/assets/audio/01.mp3",
+  "dialog": "Exact line from the script, improves lip sync accuracy.",
+  "clip": "assets/3d/animations/explain_idle.fbx",
+  "out": "renders/char3d/yusuf/<slug>_01"
+}

@@ -6,3 +6,5 @@ exports/
 **/.hyperframes/
 **/.cache/
 .DS_Store
+tools/rhubarb/
+characters/testdummy/
