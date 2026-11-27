@@ -1,4 +1,4 @@
-# Content Matrix #2 — "Apa Jadi Kalau…?" (Tech Escalation Stories)
+# Content Matrix #2 — "Apa Jadi Kalau…?" (v2)
 
 Yusuf & Aiman · *Technology, Made Understandable.* · Disediakan 27 Nov 2026
 Fokus: tech umum (network, software, hardware, database, AI, infrastruktur). **Bukan cybersecurity.**
@@ -23,9 +23,10 @@ Fokus: tech umum (network, software, hardware, database, AI, infrastruktur). **B
 | Kod | Siri | Struktur fasa | Durasi |
 |---|---|---|---|
 | **W1** | **Apa Jadi Kalau…?** | Garis masa: Minit 1 → Jam 1 → Hari 1 → Minggu 1 → (Bulan 1) | 60–90 s |
-| **W2** | **Satu Kesilapan Kecil** | Kiraan detik/jam selepas satu bug/kesilapan kecil ("Saat 0… Saat 37… BOOM") | 45–75 s |
-| **W3** | **Hari Bila ___ Mati** | Kisah benar outage besar, diceritakan ikut jam (jam 1, jam 3, jam 6…) | 60–90 s |
-| **W4** | **Perjalanan 1 Saat** | Ikut perjalanan data dalam milisaat (tekan Send → sampai) | 45–60 s |
+| **W2** | **Apa Jadi Kalau… (kiraan saat)** | Kiraan detik selepas satu kesilapan kecil ("Saat 0… Saat 37… BOOM") | 45–75 s |
+| **W3** | **Apa Jadi Kalau… (kisah benar)** | Kisah benar yang pernah jadi, diceritakan ikut jam (jam 1, jam 3, jam 6…) | 60–90 s |
+
+Semua tajuk guna pembuka **"Apa jadi kalau…?"** (v2, permintaan user 27 Nov 2026). Format W4 lama digabung ke W1.
 
 Peranan watak: **Aiman** = orang biasa yang panik/tertanya ("Habis tu ATM macam mana?!"), **Yusuf** = narrator tenang yang buka fasa seterusnya.
 
@@ -42,63 +43,64 @@ Peranan watak: **Aiman** = orang biasa yang panik/tertanya ("Habis tu ATM macam 
 
 ---
 
-## 4. Content Matrix
+## 4. Content Matrix (v2: semua "Apa jadi kalau…?", bahasa mudah)
 
-Priority: **P0** = buat dulu (hook paling kuat + fakta paling kukuh), **P1** = kuat, **P2** = simpanan.
-Viral = anggaran potensi (★1–5) berdasarkan relatability + elemen terkejut, bukan data.
+Peraturan bahasa v2: tajuk mesti boleh faham oleh mak cik di kedai kopi. Istilah teknikal hanya muncul **selepas** diterangkan dengan benda harian (contoh: "kabel bawah laut" dulu, baru "submarine cable").
 
-| # | Tajuk / Hook | Pillar | Format | Fasa ringkas | Anchor fakta sebenar | Viral | Priority |
-|---|---|---|---|---|---|---|---|
-| 1 | **"Apa jadi kalau internet hilang dari bumi?"** | Network | W1 | Minit 1: WhatsApp, TikTok, DuitNow mati → Jam 1: kedai tak boleh terima bayaran → Hari 1: kapal terbang, logistik lambat → Minggu 1: barang dapur kurang → Twist: internet sebenarnya kabel bawah laut, bukan "awan" | Outage Facebook/WhatsApp/IG 4 Okt 2021 (~6 jam, punca BGP); Telegram dapat 70 juta pengguna baru dalam sehari; kabel dasar laut bawa >99% trafik antarabenua | ★★★★★ | **P0** |
-| 2 | **"Ada satu tarikh komputer seluruh dunia boleh 'balik ke tahun 1901'"** (Y2K38) | Software | W1 (countdown) | Hari ni: kenapa nombor 2,147,483,647 → 11:14:07 pagi, 19 Jan 2038 (waktu Malaysia) → saat seterusnya jam sistem lama jadi 13 Dis 1901 → apa yang boleh terjejas (sistem lama, embedded) → Twist: nombor sama pernah "pecahkan" YouTube (Gangnam Style 2014) & buat Boeing 787 kena restart setiap 248 hari | 32-bit Unix time overflow 03:14:07 UTC 19 Jan 2038; Gangnam Style perlukan counter 64-bit (Dis 2014); FAA Airworthiness Directive 2015 (787, 248 hari) | ★★★★★ | **P0** |
-| 3 | **"Satu update software matikan 8.5 juta komputer dalam satu pagi"** | Software | W3 | Minit 1: skrin biru (BSOD) → Jam 1: lapangan terbang, bank, hospital lumpuh → Hari 1: penerbangan dibatalkan → Minggu 1: Delta masih tak pulih, rugi USD500 juta → Twist: hanya <1% komputer Windows dunia | CrowdStrike, 19 Jul 2024; Microsoft anggar 8.5 juta peranti; Delta CEO: kos ~USD500 juta | ★★★★★ | **P0** |
-| 4 | **"Apa jadi kalau GPS hilang? Bukan setakat Waze sesat…"** | Infrastruktur | W1 | Minit 1: Waze, Grab, food delivery sesat → Jam 1: kapal & kapal terbang guna backup → Hari 1: rangkaian telco & bank terganggu sebab GPS bagi **masa** tepat → Twist: jam satelit GPS lari 38 mikrosaat/hari sebab teori relativiti Einstein; tanpa betulkan, lokasi silap ~10 km sehari | NIST/RTI (2019): GPS hilang ≈ USD1 bilion/hari di AS; UK London Economics (2017): £5.2 bilion untuk 5 hari; Physics Today: relativiti & GPS | ★★★★★ | **P0** |
-| 5 | **"Engineer ni terdelete database company, live depan dunia"** | Database | W3 | Jam 0: penat, taip arahan delete di server salah → Saat ke-…: 300GB hilang → Jam 1: 5 cara backup semua gagal → Jam 6+: selamat sebab satu salinan "terkebetulan" → Twist: GitLab streaming live proses recovery di YouTube | GitLab.com, 31 Jan 2017, postmortem rasmi GitLab | ★★★★☆ | **P0** |
-| 6 | **"Apa jadi kalau WhatsApp hilang sehari?"** (kisah Korea) | Network | W1 + W3 | Jam 1: tak boleh chat → Jam 3: teksi (Kakao T), bayaran (Kakao Pay) pun mati → Hari 1: negara "beku" → Hari 2: CEO letak jawatan → Twist: semua sebab SATU data centre terbakar | Kebakaran data centre SK C&C Pangyo, 15 Okt 2022; KakaoTalk (≈90% rakyat Korea guna) down >10 jam, pulih penuh ~2 hari; co-CEO letak jawatan | ★★★★★ | P1 |
-| 7 | **"Apa jadi kalau satu negara blackout serentak?"** | Infrastruktur | W3 | Minit 1: lampu isyarat, MRT/metro berhenti → Jam 1: ATM & kad tak boleh guna, orang beratur beli radio → Malam: gelap gelita → Hari 2: siasatan → Twist: punca bukan serangan, tapi "overvoltage" berantai | Blackout Iberia (Sepanyol & Portugal), 28 Apr 2025; laporan kerajaan Sepanyol (Jun 2025) & ENTSO-E: pelbagai faktor teknikal, bukan cyberattack | ★★★★☆ | P1 |
-| 8 | **"Apa jadi kalau ribut matahari 1859 berlaku hari ini?"** | Infrastruktur | W1 | 1859: wayar telegraf keluar percikan api, operator boleh hantar mesej walaupun bateri dicabut → 1989: Quebec gelap 9 jam → 2022: Starlink hilang ~40 satelit → Hari ini: senario grid & satelit → Twist: aurora boleh nampak dekat khatulistiwa | Carrington Event 1859 (NOAA); blackout Quebec 13 Mac 1989; Starlink Feb 2022; Lloyd's (2013): kos AS USD0.6–2.6 trilion | ★★★★☆ | P1 |
-| 9 | **"Kalau Google down 5 minit, internet dunia jadi apa?"** | Network | W2 | Minit 1: Google, YouTube, Gmail mati → Minit 2: trafik internet global jatuh 40% → Minit 5: kembali → Twist: separuh internet "bergantung" pada satu syarikat | Google outage 16 Ogos 2013, GoSquared: trafik global jatuh ~40% | ★★★★☆ | P1 |
-| 10 | **"Kabel bawah laut putus. Satu negara terputus dari dunia 5 minggu"** | Network | W1 | Hari 1: tsunami/gunung berapi → Minggu 1: bank, kerajaan guna satelit kecil → Minggu 5: kabel dibaiki → Bonus: 2024 kabel Laut Merah rosak kena sauh kapal → Twist: kapal baiki kabel cuma beberapa puluh buah sedunia (sahkan angka) | Tonga, letusan Hunga Tonga Jan 2022; kabel Laut Merah Feb–Mac 2024 (Fortune, Cloudflare) | ★★★★☆ | P1 |
-| 11 | **"11 baris code dipadam. Separuh internet developer rosak"** | Software | W2 | Minit 0: developer marah, padam package → Jam 1: ribuan projek (termasuk React/Babel) gagal build → Jam 2: npm buat keputusan luar biasa, pulihkan package → Twist: dunia software dibina atas "lego" orang lain | npm left-pad, 22 Mac 2016 | ★★★★☆ | P1 |
-| 12 | **"Excel hilangkan 16,000 pesakit COVID"** | Database | W3 | Hari 1: data masuk Excel → Hari 7: angka pelik rendah → Hari 8: rupanya fail format lama had 65,536 baris → Twist: Excel bukan database | Public Health England, Okt 2020; ~16,000 kes tak dilaporkan (fail .XLS) | ★★★★☆ | P1 |
-| 13 | **"Roket USD370 juta meletup dalam 37 saat sebab satu nombor"** | Software | W2 | Saat 0: lancar → Saat 36: nombor terlalu besar untuk "kotak" 16-bit → Saat 37: roket pusing & musnah → Bonus: NASA hilang kapal Mars USD125 juta sebab salah unit (pound vs newton) | Ariane 5 Flight 501, 4 Jun 1996 (laporan inkuiri); Mars Climate Orbiter 1999 (NASA JPL) | ★★★★☆ | P1 |
-| 14 | **"Apa jadi kalau AI tak pernah wujud? Sehari dalam hidup kau"** | AI | W1 (pagi → malam) | 7 pagi: face unlock tak jalan → 8 pagi: inbox penuh spam → 9 pagi: Waze tak tahu jam sesak → Malam: FYP TikTok rawak → Twist: kau guna AI ratusan kali sehari tanpa sedar | Contoh AI harian (spam filter, ETA peta, recommendation, autocorrect) — sahkan angka spesifik dari sumber rasmi Google/Meta masa skrip | ★★★★☆ | P1 |
-| 15 | **"Apa jadi kalau kau percaya AI 100%?"** | AI | W3 | Hari 1: lawyer guna ChatGPT cari kes → Minggu 1: hakim cari kes tu, tak wujud → Bulan 1: didenda USD5,000 → Bonus: chatbot Air Canada "reka" polisi, syarikat kena bayar → Twist: AI boleh *hallucinate* dengan yakin | Mata v. Avianca (SDNY, Jun 2023); Moffatt v. Air Canada (BC CRT, Feb 2024) | ★★★★☆ | P1 |
-| 16 | **"Apa jadi kalau cip hilang? Malaysia sebenarnya 'kilang rahsia' dunia"** | Hardware | W1 | Minggu 1: kereta baru tak boleh siap → Bulan 1: harga console/phone naik → 2021: industri kereta rugi USD210 bilion → Twist: Malaysia pegang ~13% pasaran pemasangan & ujian cip dunia | AlixPartners (Sept 2021); MIDA/BNM: Malaysia ~13% global ATP | ★★★☆☆ | P1 |
-| 17 | **"Satu saat 'tambahan' pernah crash Reddit & sistem airline"** | Software | W2 | 23:59:59 → 23:59:60 (saat yang pelik) → server Reddit, sistem check-in airline jammed → 2017 Cloudflare DNS tergendala → Twist: dunia setuju buang leap second menjelang 2035 | Leap second 30 Jun 2012; Cloudflare postmortem 1 Jan 2017; CGPM 2022 (sahkan sumber masa skrip) | ★★★☆☆ | P2 |
-| 18 | **"Data centre terbakar. 3.6 juta website hilang"** | Infrastruktur | W3 | Jam 0: api di Strasbourg → Jam 3: satu bangunan musnah → Hari 1: website, game server hilang → Twist: "cloud" tu sebenarnya bangunan fizikal | OVHcloud SBG2, 10 Mac 2021; Netcraft: 3.6 juta laman web | ★★★☆☆ | P2 |
-| 19 | **"Apa jadi bila kau tekan Send kat WhatsApp?"** | Network | W4 | 0 ms: mesej dienkripsi → 10 ms: ke tower → 50 ms: fiber/kabel → 100+ ms: server → sampai → Twist: mesej kau mungkin lalu bawah laut | Penerangan umum rangkaian; angka milisaat = anggaran, label "lebih kurang" | ★★★☆☆ | P2 |
-| 20 | **"Apa jadi kalau internet laju macam 1999 (56k)?"** | Network | W1 | Video TikTok 15MB = ~35 minit nak load → gambar IG keluar baris demi baris → Twist: phone kau hari ni ~ribuan kali lebih laju | Pengiraan: 56 kbps ≈ 7 KB/s (andaian, tunjuk kira) | ★★★☆☆ | P2 |
+Priority: **P0** = buat dulu, **P1** = kuat, **P2** = simpanan. Viral = anggaran (★1–5), bukan data.
+
+| # | Tajuk "Apa jadi kalau…?" | Fasa (bahasa mudah) | Benda betul yang pernah jadi | Viral | Priority |
+|---|---|---|---|---|---|
+| 1 | **Apa jadi kalau internet hilang dari bumi?** | Minit 1: WhatsApp & TikTok senyap → Jam 1: QR & kad tak boleh bayar, kedai minta duit tunai → Hari 1: flight & penghantaran barang kelam-kabut → Minggu 1: rak kedai mula kosong → Twist: internet bukan "awan", tapi kabel bawah laut | 2021: WhatsApp, FB, IG hilang 6 jam serentak; Telegram dapat 70 juta user baru dalam sehari | ★★★★★ | **P0** |
+| 2 | **Apa jadi kalau jam semua komputer tiba-tiba balik ke tahun 1901?** | Hari ni: komputer kira masa macam "kira saat sejak 1970" → Ada nombor paling besar yang komputer lama boleh simpan → 19 Jan 2038, 11:14:07 pagi (waktu Malaysia) nombor tu penuh → Saat seterusnya jam "pusing balik" ke 1901 → Twist: benda sama pernah jadi pada view YouTube Gangnam Style & kapal terbang Boeing 787 | Masalah "Tahun 2038"; YouTube terpaksa besarkan kaunter view (2014); Boeing 787 diarah restart setiap 248 hari (2015) | ★★★★★ | **P0** |
+| 3 | **Apa jadi kalau satu update phone/laptop tersilap, dihantar ke seluruh dunia?** | Minit 1: berjuta komputer keluar skrin biru → Jam 1: airport tulis boarding pass guna tangan, bank & hospital tergendala → Hari 1: ribuan flight batal → Minggu 1: satu airline rugi ~USD500 juta (lebih RM2 bilion) → Twist: itu baru kurang 1% komputer dunia | CrowdStrike, 19 Jul 2024: 8.5 juta komputer Windows; Delta rugi ~USD500 juta | ★★★★★ | **P0** |
+| 4 | **Apa jadi kalau GPS hilang?** | Minit 1: Waze, Grab, Foodpanda sesat → Jam 1: kapal & kapal terbang guna cara lama → Hari 1: line phone & bank pun terganggu, sebab GPS bagi **masa** paling tepat → Twist: jam kat satelit GPS bergerak laju sikit (teori Einstein); kalau tak dibetulkan, lokasi kau silap 10 km sehari | Kajian AS: GPS hilang ≈ USD1 bilion rugi sehari; UK: £5.2 bilion untuk 5 hari | ★★★★★ | **P0** |
+| 5 | **Apa jadi kalau kau tertekan "delete" semua data company?** | Malam: pekerja penat, padam fail kat komputer salah → Beberapa saat: 300GB data hilang → Jam 1: 5 cara backup, satu pun tak jalan → Jam 6+: selamat sebab ada satu salinan "kebetulan" → Twist: company tu siarkan proses pulih secara live di YouTube | GitLab, 31 Jan 2017 (laporan rasmi GitLab) | ★★★★☆ | **P0** |
+| 6 | **Apa jadi kalau WhatsApp hilang sehari?** | Jam 1: tak boleh chat → Jam 3: app teksi & e-wallet pun mati (sebab satu company) → Hari 1: satu negara "beku" → Hari 2: bos company letak jawatan → Twist: semua sebab SATU bangunan simpan data terbakar | Korea, 15 Okt 2022: KakaoTalk (app chat ~90% rakyat Korea) mati >10 jam, pulih penuh ~2 hari | ★★★★★ | P1 |
+| 7 | **Apa jadi kalau satu negara tiba-tiba blackout?** | Minit 1: lampu isyarat & tren berhenti → Jam 1: ATM & kad tak boleh guna, orang beratur beli radio → Malam: gelap satu negara → Hari 2: semua tuduh kena hack → Twist: rupanya sebab voltan elektrik "terlebih", bukan serangan | Sepanyol & Portugal, 28 Apr 2025; siasatan rasmi: masalah teknikal grid, bukan serangan | ★★★★☆ | P1 |
+| 8 | **Apa jadi kalau ribut matahari paling kuat berlaku hari ini?** | 1859: wayar telegraf keluar api, mesej boleh dihantar walaupun bateri dicabut → 1989: satu wilayah Kanada gelap 9 jam → 2022: puluhan satelit internet jatuh → Hari ini: senario satelit & elektrik → Twist: aurora boleh nampak dari tempat dekat khatulistiwa | Peristiwa Carrington 1859; Quebec 1989; Starlink Feb 2022 (~40 satelit) | ★★★★☆ | P1 |
+| 9 | **Apa jadi kalau Google mati 5 minit?** | Minit 1: Google, YouTube, Gmail tak boleh buka → Minit 2: trafik internet SELURUH DUNIA jatuh 40% → Minit 5: hidup balik → Twist: hampir separuh internet bergantung pada satu company | Google down ~5 minit, 16 Ogos 2013 | ★★★★☆ | P1 |
+| 10 | **Apa jadi kalau kabel internet bawah laut putus?** | Hari 1: gunung berapi meletus → Minggu 1: satu negara hampir terputus dari dunia, bank guna satelit → Minggu 5: kapal khas baru siap baiki → Bonus: 2024 kabel putus kena sauh kapal → Twist: kabel tu sebesar hos paip je | Tonga, Jan 2022 (sambungan pulih ~5 minggu); Laut Merah, Feb–Mac 2024 | ★★★★☆ | P1 |
+| 11 | **Apa jadi kalau seorang programmer padam 11 baris code?** | Minit 0: dia geram, padam code kecil dia dari internet → Jam 1: ribuan app & website gagal dibina → Jam 2: syarikat terpaksa "hidupkan" balik code tu → Twist: app moden dibina macam Lego, guna kepingan orang lain | npm "left-pad", 22 Mac 2016 | ★★★★☆ | P1 |
+| 12 | **Apa jadi kalau Excel kau "penuh"?** | Hari 1: data pesakit masuk Excel → Hari 7: angka nampak rendah pelik → Hari 8: rupanya Excel versi lama ada had baris, data selebihnya hilang → Twist: Excel bukan tempat simpan data besar | England, Okt 2020: ~16,000 kes COVID tak dilaporkan (had 65,536 baris) | ★★★★☆ | P1 |
+| 13 | **Apa jadi kalau satu nombor terlalu besar untuk komputer roket?** | Saat 0: roket berlepas → Saat 36: nombor kelajuan terlalu besar untuk "kotak" yang disediakan → Saat 37: roket pusing & meletup → Bonus: NASA hilang kapal ke Marikh sebab satu team guna inci, satu lagi guna sentimeter (pound vs newton) | Ariane 5, 4 Jun 1996; Mars Climate Orbiter 1999 (USD125 juta) | ★★★★☆ | P1 |
+| 14 | **Apa jadi kalau AI tak pernah wujud?** | 7 pagi: face unlock tak jalan → 8 pagi: inbox penuh email spam → 9 pagi: Waze tak tahu jalan jam → Malam: FYP TikTok jadi rawak → Twist: kau guna AI banyak kali sehari tanpa sedar | AI harian: tapis spam, anggaran masa sampai, cadangan video, autocorrect (angka disahkan masa proposal) | ★★★★☆ | P1 |
+| 15 | **Apa jadi kalau kau percaya 100% apa AI cakap?** | Hari 1: lawyer suruh ChatGPT cari kes mahkamah → Minggu 1: hakim cari kes tu, rupanya tak wujud → Bulan 1: lawyer didenda → Bonus: chatbot airline "reka" polisi, airline kena bayar → Twist: AI boleh tipu dengan yakin (hallucination) | Mata v. Avianca, AS 2023 (denda USD5,000); Air Canada, Kanada 2024 | ★★★★☆ | P1 |
+| 16 | **Apa jadi kalau cip komputer habis di dunia?** | Minggu 1: kereta baru tak boleh siap → Bulan 1: harga phone & console naik → 2021: industri kereta rugi USD210 bilion → Twist: Malaysia antara tempat paling penting dunia untuk pasang & uji cip | Kekurangan cip 2021; Malaysia ~13% pasaran pasang & uji cip dunia (MIDA/BNM) | ★★★☆☆ | P1 |
+| 17 | **Apa jadi kalau satu minit ada 61 saat?** | 11:59:59 malam → 11:59:60 (saat "tambahan") → server Reddit & sistem check-in airline jam → 2017: Cloudflare pun kena → Twist: dunia setuju buang saat tambahan ni menjelang 2035 | Leap second 2012 & 2017 (sahkan sumber masa proposal) | ★★★☆☆ | P2 |
+| 18 | **Apa jadi kalau bangunan "cloud" terbakar?** | Jam 0: api di Perancis → Jam 3: satu bangunan habis → Hari 1: 3.6 juta website hilang → Twist: "cloud" sebenarnya komputer dalam bangunan betul | OVHcloud Strasbourg, 10 Mac 2021 | ★★★☆☆ | P2 |
+| 19 | **Apa jadi kalau kau tekan Send kat WhatsApp?** | Sekelip mata: mesej dikunci → ke menara telco → lalu kabel → ke server → sampai ke kawan → Twist: mesej kau mungkin lalu bawah laut dulu | Cara rangkaian berfungsi (masa dalam milisaat = anggaran, label "lebih kurang") | ★★★☆☆ | P2 |
+| 20 | **Apa jadi kalau internet kau selaju tahun 1999?** | Satu video TikTok = ~35 minit nak load → gambar IG keluar sebaris-sebaris → Twist: internet hari ni ribuan kali lebih laju | Pengiraan: modem 56k ≈ 7 KB sesaat (tunjuk cara kira) | ★★★☆☆ | P2 |
 
 ---
 
-## 5. Top 5 — pecahan fasa terperinci
+## 5. Top 5 — pecahan fasa terperinci (bahasa mudah)
 
-### #1 Apa jadi kalau internet hilang dari bumi? (W1, ~80 s)
-- **Hook (0–3 s):** Aiman: "Kalau internet hilang sekarang, benda pertama yang mati bukan TikTok."
-- **Minit 1:** WhatsApp, TikTok, Gmail senyap. Aiman ingat WiFi rumah rosak.
-- **Jam 1:** QR & kad tak boleh. Kedai minta tunai. *Anchor:* 2021 WhatsApp/FB/IG hilang 6 jam, Telegram dapat 70 juta pengguna sehari.
-- **Hari 1:** Sistem tempahan penerbangan, logistik, gudang bergantung pada rangkaian. *(senario, rujuk impak CrowdStrike 2024)*
-- **Minggu 1:** rantaian bekalan perlahan, rak kedai mula kosong. *(senario, label jelas)*
-- **Twist:** "Internet bukan awan. Lebih 99% data antara benua lalu kabel bawah laut sebesar hos."
-- **Loop ending:** "Nak tahu apa jadi bila kabel tu betul-betul putus? Part 2."
+### #1 Apa jadi kalau internet hilang dari bumi? (~80 s)
+- **Hook:** Aiman: "Kalau internet hilang sekarang, benda pertama yang susah bukan TikTok… tapi nak beli nasi lemak."
+- **Minit 1:** WhatsApp, TikTok senyap. Aiman ingat WiFi rumah rosak.
+- **Jam 1:** QR & kad tak jalan. Kedai minta tunai. *Betul pernah jadi:* 2021, WhatsApp/FB/IG hilang 6 jam, 70 juta orang lari ke Telegram dalam sehari.
+- **Hari 1:** flight & penghantaran barang bergantung pada internet. *(senario, rujuk 2024 bila satu update rosakkan airport)*
+- **Minggu 1:** bekalan barang lambat. *(senario, label jelas)*
+- **Twist:** "Internet bukan awan. Hampir semua data antara negara lalu kabel bawah laut."
+- **Ending:** "Nak tahu apa jadi bila kabel tu betul-betul putus? Part 2."
 
-### #2 19 Januari 2038, jam 11:14:07 pagi (W1 countdown, ~70 s)
+### #2 Apa jadi kalau jam semua komputer balik ke tahun 1901? (~70 s)
 - **Hook:** Yusuf: "Ada satu saat dalam masa depan yang boleh buat komputer ingat sekarang tahun 1901."
-- **Fasa 1:** komputer kira masa dalam saat sejak 1 Jan 1970.
-- **Fasa 2:** sistem 32-bit maksimum 2,147,483,647.
-- **Fasa 3:** 19 Jan 2038 03:14:07 UTC (11:14:07 pagi Malaysia) → saat seterusnya jam jadi 13 Dis 1901.
-- **Fasa 4 (bukti nombor ni berbahaya):** Gangnam Style 2014 lepas had counter YouTube; Boeing 787 FAA arah restart setiap 248 hari.
-- **Twist/akhir:** kebanyakan sistem moden dah 64-bit, tapi sistem lama & embedded masih risiko. (Jangan buat panik palsu.)
+- **Fasa 1:** komputer tak faham "tarikh", dia cuma kira saat sejak 1 Jan 1970.
+- **Fasa 2:** komputer lama simpan nombor tu dalam "kotak" yang ada had (2,147,483,647).
+- **Fasa 3:** 19 Jan 2038, 11:14:07 pagi waktu Malaysia, kotak penuh. Saat seterusnya nombor terbalik, jam jadi 13 Dis 1901.
+- **Fasa 4 (bukti):** view Gangnam Style pernah lepas had yang sama; Boeing 787 kena restart setiap 248 hari sebab masalah serupa.
+- **Akhir:** kebanyakan phone & komputer moden dah selamat; yang risiko ialah sistem lama dan mesin terbenam. (Jangan buat panik palsu.)
 
-### #3 Satu update matikan 8.5 juta komputer (W3, ~75 s)
-- Minit 1 BSOD → Jam 1 lapangan terbang tulis boarding pass guna tangan → Hari 1 ribuan penerbangan batal → Minggu 1 Delta rugi ~USD500 juta → Twist: itu cuma <1% komputer Windows dunia. Fokus: konsep "update" & "kernel" secara mudah, bukan aspek keselamatan.
+### #3 Apa jadi kalau satu update tersilap dihantar ke seluruh dunia? (~75 s)
+- Minit 1 skrin biru → Jam 1 airport tulis boarding pass guna tangan → Hari 1 ribuan flight batal → Minggu 1 satu airline rugi ~USD500 juta → Twist: itu cuma kurang 1% komputer Windows dunia. Terangkan "update" & kenapa ada update yang boleh "masuk dalam jantung" komputer, guna analogi mudah.
 
-### #4 Apa jadi kalau GPS hilang? (W1, ~75 s)
-- Minit 1 Waze/Grab sesat → Jam 1 kapal & pesawat backup → Hari 1 telco & bank sebab GPS = jam paling tepat → Twist: relativiti Einstein, 38 µs/hari, ~10 km sehari kalau tak dibetulkan. Angka ekonomi: ~USD1 bilion/hari (AS).
+### #4 Apa jadi kalau GPS hilang? (~75 s)
+- Minit 1 Waze/Grab sesat → Jam 1 kapal & pesawat guna cara lama → Hari 1 line phone & bank terganggu sebab GPS = jam paling tepat → Twist: teori Einstein buat jam satelit laju 38 mikrosaat sehari; tak betulkan = silap ~10 km sehari.
 
-### #5 Engineer terdelete database live (W3, ~75 s)
-- Malam lewat, engineer penat → arahan delete di server production (bukan backup) → stop selepas ~300GB hilang → 5 kaedah backup tak berfungsi → selamat dari salinan staging 6 jam lepas → GitLab streaming recovery live. Pengajaran: backup yang tak pernah diuji = tiada backup.
+### #5 Apa jadi kalau kau tertekan "delete" semua data company? (~75 s)
+- Malam, pekerja penat → padam di komputer salah → ~300GB hilang → 5 cara backup tak jalan → selamat dari salinan 6 jam lepas → company siar live. Pengajaran mudah: backup yang tak pernah dicuba = macam tak ada backup.
 
 ---
 
