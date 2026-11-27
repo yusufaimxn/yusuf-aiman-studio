@@ -26,7 +26,7 @@ Suara: **Yusuf = Shahrul**, **Aiman = Ashraf** · model ElevenLabs **Multilingua
 | 11 | YUSUF | serius | Kalau dah termasuk duit, terus call sembilan sembilan tujuh. |
 | 12 | AIMAN | terkejut | Okay, lepas ni aku tak panik dah. Eh, kejap. Dia call lagi! |
 
-## Senarai Yusuf (suara Shahrul), 8 baris
+## Senarai Yusuf (suara Shahrul), 7 baris
 - **02** Relaks. Jom kita bedah, macam mana dia dapat.
 - **03** Satu, data bocor. Tahun dua ribu tujuh belas, terbongkar data empat puluh enam juta akaun telco Malaysia bocor, siap dengan nombor IC.
 - **05** Sebab ramai orang ada lebih dari satu SIM. Dan data yang bocor, boleh dijual berulang kali.
