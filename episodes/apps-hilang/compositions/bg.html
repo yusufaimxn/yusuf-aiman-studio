@@ -1,0 +1,40 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden;
+      background: radial-gradient(120% 70% at 50% 62%, #1C5FD0 0%, #0D3a8a 38%, #0B1E3F 78%); }
+    #bg-grid { position: absolute; left: 50%; top: 50%; width: 2400px; height: 2400px; margin: -1200px 0 0 -1200px; opacity: 0.34; will-change: transform; }
+    #bg-glow { position: absolute; left: 50%; top: 40%; width: 1300px; height: 1300px; margin: -650px 0 0 -650px; border-radius: 50%;
+      background: radial-gradient(closest-side, rgba(0,194,255,0.40), rgba(0,102,222,0.0)); will-change: transform, opacity; }
+    .bg-dot { position: absolute; width: 14px; height: 14px; border-radius: 50%; background: rgba(0,194,255,0.55); will-change: transform; }
+    .plate { position: absolute; left: -54px; top: -96px; width: 1188px; height: 2112px; will-change: transform, opacity; }
+    #bg-top { position: absolute; left: 0; right: 0; top: 0; height: 1100px; background: linear-gradient(180deg, rgba(11,30,63,0.62) 0%, rgba(11,30,63,0.25) 70%, rgba(11,30,63,0) 100%); }
+    #bg-floor { position: absolute; left: 0; right: 0; bottom: 0; height: 420px; background: linear-gradient(180deg, rgba(11,30,63,0) 0%, rgba(11,30,63,0.45) 100%); }
+    #bg-vig { position: absolute; inset: 0; background: radial-gradient(120% 80% at 50% 50%, transparent 58%, rgba(3,10,26,0.6) 100%); }
+  </style>
+  <div id="root" data-composition-id="bg" data-width="1080" data-height="1920">
+    <img id="bg-grid" src="assets/images/grid.png" alt="" />
+    <div id="bg-glow"></div>
+    <div id="bg-d1" class="bg-dot" style="left:12%;top:20%"></div>
+    <div id="bg-d2" class="bg-dot" style="left:82%;top:14%"></div>
+    <div id="bg-d3" class="bg-dot" style="left:70%;top:46%;width:10px;height:10px"></div>
+    <div id="bg-d4" class="bg-dot" style="left:18%;top:52%;width:8px;height:8px"></div>
+    <img id="pl-cafe" class="plate" src="assets/images/cafe-plate.jpg" alt="" />
+    <img id="pl-studio" class="plate" src="assets/images/studio-plate.jpg" alt="" />
+    <div id="bg-top"></div>
+    <div id="bg-floor"></div>
+    <div id="bg-vig"></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const T = window.YA_T, D = T.total, S = T.scenes;
+    tl.fromTo("#bg-grid", { x: 0, y: 0 }, { x: -180, y: 104, duration: D, ease: "none" }, 0);
+    tl.fromTo("#bg-glow", { scale: 0.95, opacity: 0.8 }, { scale: 1.08, opacity: 1, duration: D / 2, ease: "sine.inOut", yoyo: true, repeat: 1 }, 0);
+    [["#bg-d1", 60, -90], ["#bg-d2", -50, 70], ["#bg-d3", 40, -120], ["#bg-d4", -70, -60]].forEach(([s, x, y], i) => {
+      tl.fromTo(s, { x: 0, y: 0 }, { x, y, duration: 12 + i * 2, ease: "sine.inOut", yoyo: true, repeat: Math.ceil(D / (12 + i * 2)) }, 0);
+    });
+    // one environment for every talking scene: the mamak (cafe plate)
+    gsap.set("#pl-studio", { opacity: 0 });
+    tl.fromTo("#pl-cafe", { scale: 1.0 }, { scale: 1.07, duration: D, ease: "none" }, 0);
+    window.__timelines["bg"] = tl;
+  </script>
+</template>

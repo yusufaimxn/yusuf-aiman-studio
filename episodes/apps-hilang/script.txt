@@ -1,0 +1,26 @@
+---
+title: Apa Jadi Kalau Semua Apps Dalam Phone Kau Hilang?
+language: ms
+preset: educational
+target_duration: 55
+---
+// Siri "Apa Jadi Kalau…?" #02. Satu baris = satu MP3 (01.mp3 ... 10.mp3), ikut Doc Skrip & Storyboard (versi user).
+# scene hook | Phone atas katil, icon terbang
+AIMAN (panik): Eh… mana pulak semua apps aku?!
+# scene setup | Bilik miniatur, skrin kosong
+YUSUF (VO): Bayangkan. Kau baru je bangun pagi… dan semua apps dalam phone kau, hilang.
+# scene trigger | Close-up skrin, tap kosong
+YUSUF (VO): Nak chat? Takde. Nak bayar? Takde. Nak cari jalan? Pun takde. Semua takde. Kosong.
+# scene bandar | Jalan, kedai, satu bandar
+YUSUF (VO): Dan bukan phone kau je… satu bandar.
+# scene hidup | Phone masih menyala
+YUSUF (VO): Tapi yang peliknya… phone kau tu masih hidup.
+# scene os | Exploded view: hardware, OS, apps
+YUSUF (VO): Sebab apps ni cuma macam kedai. Yang hidupkan phone kau… ialah OS. Dia tapak bangunan tu.
+# scene server | Data ke server
+YUSUF (VO): Duit dengan akaun kau pun bukan duduk dalam app. Semua tu simpan dalam server.
+# scene balik | Icon terbang balik
+AIMAN (lega): Ohh… jadi kalau aku install balik, login, semua tu akan ada balik ke?
+YUSUF (senyum): Ha ah betul tu... semua akan ada balik.
+# scene akhir | Two-shot, CTA
+YUSUF (CTA): So kalau korang, app apa yang korang akan install dulu? Cuba komen dekat bawah.

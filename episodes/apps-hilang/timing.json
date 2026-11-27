@@ -1,0 +1,785 @@
+{
+ "total": 60.31,
+ "lines": [
+  {
+   "n": 1,
+   "speaker": "AIMAN",
+   "scene": "hook",
+   "text": "Eh… mana pulak semua apps aku?!",
+   "file": "assets/audio/voice/supplied/01.mp3",
+   "start": 0.35,
+   "file_dur": 2.429,
+   "speech_start": 0.35,
+   "speech_end": 2.584,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Eh…",
+     "start": 0.35,
+     "end": 0.6
+    },
+    {
+     "text": "mana",
+     "start": 0.6,
+     "end": 1.143
+    },
+    {
+     "text": "pulak",
+     "start": 1.143,
+     "end": 1.519
+    },
+    {
+     "text": "semua",
+     "start": 1.519,
+     "end": 1.895
+    },
+    {
+     "text": "apps",
+     "start": 1.895,
+     "end": 2.208
+    },
+    {
+     "text": "aku?!",
+     "start": 2.208,
+     "end": 2.584
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "speaker": "YUSUF",
+   "scene": "setup",
+   "text": "Bayangkan. Kau baru je bangun pagi… dan semua apps dalam phone kau, hilang.",
+   "file": "assets/audio/voice/supplied/02.mp3",
+   "start": 3.584,
+   "file_dur": 5.878,
+   "speech_start": 3.584,
+   "speech_end": 9.253,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Bayangkan.",
+     "start": 3.584,
+     "end": 4.209
+    },
+    {
+     "text": "Kau",
+     "start": 4.209,
+     "end": 4.88
+    },
+    {
+     "text": "baru",
+     "start": 4.88,
+     "end": 5.164
+    },
+    {
+     "text": "je",
+     "start": 5.164,
+     "end": 5.335
+    },
+    {
+     "text": "bangun",
+     "start": 5.335,
+     "end": 5.732
+    },
+    {
+     "text": "pagi…",
+     "start": 5.732,
+     "end": 6.073
+    },
+    {
+     "text": "dan",
+     "start": 6.073,
+     "end": 6.815
+    },
+    {
+     "text": "semua",
+     "start": 6.815,
+     "end": 7.156
+    },
+    {
+     "text": "apps",
+     "start": 7.156,
+     "end": 7.44
+    },
+    {
+     "text": "dalam",
+     "start": 7.44,
+     "end": 7.781
+    },
+    {
+     "text": "phone",
+     "start": 7.781,
+     "end": 8.122
+    },
+    {
+     "text": "kau,",
+     "start": 8.122,
+     "end": 8.406
+    },
+    {
+     "text": "hilang.",
+     "start": 8.406,
+     "end": 9.253
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "speaker": "YUSUF",
+   "scene": "trigger",
+   "text": "Nak chat? Takde. Nak bayar? Takde. Nak cari jalan? Pun takde. Semua takde. Kosong.",
+   "file": "assets/audio/voice/supplied/03.mp3",
+   "start": 9.503,
+   "file_dur": 7.706,
+   "speech_start": 9.503,
+   "speech_end": 17.209,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Nak",
+     "start": 9.503,
+     "end": 9.696
+    },
+    {
+     "text": "chat?",
+     "start": 9.696,
+     "end": 9.985
+    },
+    {
+     "text": "Takde.",
+     "start": 10.464,
+     "end": 10.974
+    },
+    {
+     "text": "Nak",
+     "start": 11.332,
+     "end": 11.519
+    },
+    {
+     "text": "bayar?",
+     "start": 11.519,
+     "end": 11.848
+    },
+    {
+     "text": "Takde.",
+     "start": 12.19,
+     "end": 12.831
+    },
+    {
+     "text": "Nak",
+     "start": 13.188,
+     "end": 13.376
+    },
+    {
+     "text": "cari",
+     "start": 13.376,
+     "end": 13.611
+    },
+    {
+     "text": "jalan?",
+     "start": 13.611,
+     "end": 13.94
+    },
+    {
+     "text": "Pun",
+     "start": 14.313,
+     "end": 14.559
+    },
+    {
+     "text": "takde.",
+     "start": 14.559,
+     "end": 14.989
+    },
+    {
+     "text": "Semua",
+     "start": 15.28,
+     "end": 15.717
+    },
+    {
+     "text": "takde.",
+     "start": 15.717,
+     "end": 16.226
+    },
+    {
+     "text": "Kosong.",
+     "start": 16.583,
+     "end": 17.209
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "speaker": "YUSUF",
+   "scene": "bandar",
+   "text": "Dan bukan phone kau je… satu bandar.",
+   "file": "assets/audio/voice/supplied/04.mp3",
+   "start": 21.409,
+   "file_dur": 3.161,
+   "speech_start": 21.409,
+   "speech_end": 24.378,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Dan",
+     "start": 21.409,
+     "end": 21.683
+    },
+    {
+     "text": "bukan",
+     "start": 21.683,
+     "end": 22.093
+    },
+    {
+     "text": "phone",
+     "start": 22.093,
+     "end": 22.504
+    },
+    {
+     "text": "kau",
+     "start": 22.504,
+     "end": 22.778
+    },
+    {
+     "text": "je…",
+     "start": 22.778,
+     "end": 23.355
+    },
+    {
+     "text": "satu",
+     "start": 23.355,
+     "end": 23.831
+    },
+    {
+     "text": "bandar.",
+     "start": 23.831,
+     "end": 24.378
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "speaker": "YUSUF",
+   "scene": "hidup",
+   "text": "Tapi yang peliknya… phone kau tu masih hidup.",
+   "file": "assets/audio/voice/supplied/05.mp3",
+   "start": 26.778,
+   "file_dur": 3.553,
+   "speech_start": 26.778,
+   "speech_end": 30.148,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Tapi",
+     "start": 26.778,
+     "end": 27.233
+    },
+    {
+     "text": "yang",
+     "start": 27.233,
+     "end": 27.539
+    },
+    {
+     "text": "peliknya…",
+     "start": 27.539,
+     "end": 28.152
+    },
+    {
+     "text": "phone",
+     "start": 28.152,
+     "end": 28.923
+    },
+    {
+     "text": "kau",
+     "start": 28.923,
+     "end": 29.168
+    },
+    {
+     "text": "tu",
+     "start": 29.168,
+     "end": 29.352
+    },
+    {
+     "text": "masih",
+     "start": 29.352,
+     "end": 29.719
+    },
+    {
+     "text": "hidup.",
+     "start": 29.719,
+     "end": 30.148
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "speaker": "YUSUF",
+   "scene": "os",
+   "text": "Sebab apps ni cuma macam kedai. Yang hidupkan phone kau… ialah OS. Dia tapak bangunan tu.",
+   "file": "assets/audio/voice/supplied/06.mp3",
+   "start": 30.398,
+   "file_dur": 6.922,
+   "speech_start": 30.398,
+   "speech_end": 37.144,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Sebab",
+     "start": 30.398,
+     "end": 30.75
+    },
+    {
+     "text": "apps",
+     "start": 30.75,
+     "end": 31.218
+    },
+    {
+     "text": "ni",
+     "start": 31.218,
+     "end": 31.394
+    },
+    {
+     "text": "cuma",
+     "start": 31.394,
+     "end": 31.687
+    },
+    {
+     "text": "macam",
+     "start": 31.687,
+     "end": 32.039
+    },
+    {
+     "text": "kedai.",
+     "start": 32.039,
+     "end": 32.449
+    },
+    {
+     "text": "Yang",
+     "start": 32.449,
+     "end": 33.167
+    },
+    {
+     "text": "hidupkan",
+     "start": 33.167,
+     "end": 33.695
+    },
+    {
+     "text": "phone",
+     "start": 33.695,
+     "end": 34.047
+    },
+    {
+     "text": "kau…",
+     "start": 34.047,
+     "end": 34.658
+    },
+    {
+     "text": "ialah",
+     "start": 34.658,
+     "end": 35.01
+    },
+    {
+     "text": "OS.",
+     "start": 35.01,
+     "end": 35.244
+    },
+    {
+     "text": "Dia",
+     "start": 35.244,
+     "end": 35.873
+    },
+    {
+     "text": "tapak",
+     "start": 35.873,
+     "end": 36.381
+    },
+    {
+     "text": "bangunan",
+     "start": 36.381,
+     "end": 36.909
+    },
+    {
+     "text": "tu.",
+     "start": 36.909,
+     "end": 37.144
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "speaker": "YUSUF",
+   "scene": "server",
+   "text": "Duit dengan akaun kau pun bukan duduk dalam app. Semua tu simpan dalam server.",
+   "file": "assets/audio/voice/supplied/07.mp3",
+   "start": 37.544,
+   "file_dur": 5.068,
+   "speech_start": 37.544,
+   "speech_end": 42.444,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Duit",
+     "start": 37.544,
+     "end": 37.806
+    },
+    {
+     "text": "dengan",
+     "start": 37.806,
+     "end": 38.172
+    },
+    {
+     "text": "akaun",
+     "start": 38.172,
+     "end": 38.487
+    },
+    {
+     "text": "kau",
+     "start": 38.487,
+     "end": 38.696
+    },
+    {
+     "text": "pun",
+     "start": 38.696,
+     "end": 38.905
+    },
+    {
+     "text": "bukan",
+     "start": 38.905,
+     "end": 39.22
+    },
+    {
+     "text": "duduk",
+     "start": 39.22,
+     "end": 39.534
+    },
+    {
+     "text": "dalam",
+     "start": 39.534,
+     "end": 39.848
+    },
+    {
+     "text": "app.",
+     "start": 39.848,
+     "end": 40.11
+    },
+    {
+     "text": "Semua",
+     "start": 40.566,
+     "end": 40.942
+    },
+    {
+     "text": "tu",
+     "start": 40.942,
+     "end": 41.129
+    },
+    {
+     "text": "simpan",
+     "start": 41.129,
+     "end": 41.568
+    },
+    {
+     "text": "dalam",
+     "start": 41.568,
+     "end": 41.943
+    },
+    {
+     "text": "server.",
+     "start": 41.943,
+     "end": 42.444
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "speaker": "AIMAN",
+   "scene": "balik",
+   "text": "Ohh… jadi kalau aku install balik, login, semua tu akan ada balik ke?",
+   "file": "assets/audio/voice/supplied/08.mp3",
+   "start": 44.044,
+   "file_dur": 5.799,
+   "speech_start": 44.044,
+   "speech_end": 49.653,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Ohh…",
+     "start": 44.044,
+     "end": 44.382
+    },
+    {
+     "text": "jadi",
+     "start": 44.382,
+     "end": 44.719
+    },
+    {
+     "text": "kalau",
+     "start": 44.719,
+     "end": 45.389
+    },
+    {
+     "text": "aku",
+     "start": 45.389,
+     "end": 45.659
+    },
+    {
+     "text": "install",
+     "start": 45.659,
+     "end": 46.325
+    },
+    {
+     "text": "balik,",
+     "start": 46.325,
+     "end": 46.798
+    },
+    {
+     "text": "login,",
+     "start": 46.798,
+     "end": 47.53
+    },
+    {
+     "text": "semua",
+     "start": 47.53,
+     "end": 47.936
+    },
+    {
+     "text": "tu",
+     "start": 47.936,
+     "end": 48.37
+    },
+    {
+     "text": "akan",
+     "start": 48.37,
+     "end": 48.707
+    },
+    {
+     "text": "ada",
+     "start": 48.707,
+     "end": 48.978
+    },
+    {
+     "text": "balik",
+     "start": 48.978,
+     "end": 49.383
+    },
+    {
+     "text": "ke?",
+     "start": 49.383,
+     "end": 49.653
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "speaker": "YUSUF",
+   "scene": "balik",
+   "text": "Ha ah betul tu... semua akan ada balik.",
+   "file": "assets/audio/voice/supplied/09.mp3",
+   "start": 49.903,
+   "file_dur": 3.474,
+   "speech_start": 49.903,
+   "speech_end": 53.112,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Ha",
+     "start": 49.903,
+     "end": 50.089
+    },
+    {
+     "text": "ah",
+     "start": 50.089,
+     "end": 50.275
+    },
+    {
+     "text": "betul",
+     "start": 50.275,
+     "end": 50.965
+    },
+    {
+     "text": "tu...",
+     "start": 50.965,
+     "end": 51.747
+    },
+    {
+     "text": "semua",
+     "start": 51.747,
+     "end": 52.12
+    },
+    {
+     "text": "akan",
+     "start": 52.12,
+     "end": 52.43
+    },
+    {
+     "text": "ada",
+     "start": 52.43,
+     "end": 52.678
+    },
+    {
+     "text": "balik.",
+     "start": 52.678,
+     "end": 53.112
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "speaker": "YUSUF",
+   "scene": "akhir",
+   "text": "So kalau korang, app apa yang korang akan install dulu? Cuba komen dekat bawah.",
+   "file": "assets/audio/voice/supplied/10.mp3",
+   "start": 53.612,
+   "file_dur": 4.989,
+   "speech_start": 53.612,
+   "speech_end": 58.411,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "So",
+     "start": 53.612,
+     "end": 53.749
+    },
+    {
+     "text": "kalau",
+     "start": 53.749,
+     "end": 54.27
+    },
+    {
+     "text": "korang,",
+     "start": 54.27,
+     "end": 54.636
+    },
+    {
+     "text": "app",
+     "start": 54.636,
+     "end": 55.291
+    },
+    {
+     "text": "apa",
+     "start": 55.291,
+     "end": 55.474
+    },
+    {
+     "text": "yang",
+     "start": 55.474,
+     "end": 55.702
+    },
+    {
+     "text": "korang",
+     "start": 55.702,
+     "end": 56.023
+    },
+    {
+     "text": "akan",
+     "start": 56.023,
+     "end": 56.252
+    },
+    {
+     "text": "install",
+     "start": 56.252,
+     "end": 56.618
+    },
+    {
+     "text": "dulu?",
+     "start": 56.618,
+     "end": 56.893
+    },
+    {
+     "text": "Cuba",
+     "start": 56.893,
+     "end": 57.542
+    },
+    {
+     "text": "komen",
+     "start": 57.542,
+     "end": 57.816
+    },
+    {
+     "text": "dekat",
+     "start": 57.816,
+     "end": 58.091
+    },
+    {
+     "text": "bawah.",
+     "start": 58.091,
+     "end": 58.411
+    }
+   ]
+  }
+ ],
+ "scenes": [
+  {
+   "id": "hook",
+   "start": 0.0,
+   "lines": [
+    1
+   ],
+   "duration": 3.08
+  },
+  {
+   "id": "setup",
+   "start": 3.08,
+   "lines": [
+    2
+   ],
+   "duration": 6.3
+  },
+  {
+   "id": "trigger",
+   "start": 9.38,
+   "lines": [
+    3
+   ],
+   "duration": 9.93
+  },
+  {
+   "id": "bandar",
+   "start": 19.31,
+   "lines": [
+    4
+   ],
+   "duration": 6.27
+  },
+  {
+   "id": "hidup",
+   "start": 25.58,
+   "lines": [
+    5
+   ],
+   "duration": 4.69
+  },
+  {
+   "id": "os",
+   "start": 30.27,
+   "lines": [
+    6
+   ],
+   "duration": 7.07
+  },
+  {
+   "id": "server",
+   "start": 37.34,
+   "lines": [
+    7
+   ],
+   "duration": 5.9
+  },
+  {
+   "id": "balik",
+   "start": 43.24,
+   "lines": [
+    8,
+    9
+   ],
+   "duration": 10.12
+  },
+  {
+   "id": "akhir",
+   "start": 53.36,
+   "lines": [
+    10
+   ],
+   "duration": 6.95
+  }
+ ]
+}
