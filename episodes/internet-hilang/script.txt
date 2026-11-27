@@ -1,0 +1,37 @@
+---
+title: Apa Jadi Kalau Internet Hilang Dari Bumi?
+language: ms
+preset: educational
+target_duration: 90
+---
+// Siri "Apa Jadi Kalau…?" Ep 1. Satu baris = satu MP3 (01.mp3 ... 16.mp3), ikut doc Skrip & Storyboard (versi user).
+# scene hook | Mamak, WiFi mati
+AIMAN (panik): Bang! Kenapa WiFi mamak ni hilang! Aku tak boleh scan QR ni, macam mana nak bayar teh tarik ni!
+YUSUF (tenang): Haa... Tu baru WiFi kedai. Cuba bayangkan kalau internet hilang... dari seluruh bumi.
+# scene minit | ISO kedai mamak
+YUSUF (VO): Minit pertama. WhatsApp, TikTok, Instagram. Semua senyap. Takde notification langsung. Mesej semua tersangkut, ada ikon jam je yang bergerak.
+# scene tidur | A
+AIMAN (santai): Alah, takpe lah... Aku tidur je lah...
+# scene jam | ISO jalan
+YUSUF (VO): Jam pertama. QR tak jalan, kad tak jalan, semua kedai cuma terima cash je...
+# scene dompet | A
+AIMAN (sedih): Alamak... Aku dah la ada tiga ringgit je dalam dompet ni...
+# scene fakta | C kad fakta
+YUSUF (VO): Dan benda ni pernah jadi tau! Tahun 2021, WhatsApp, Facebook dan Instagram hilang hampir enam jam. Tiga setengah bilion orang terkesan.
+# scene telegram | ISO migrasi
+YUSUF (VO): Menurut founder Telegram, tujuh puluh juta orang terus lari ke Telegram! Dalam satu hari je...
+# scene sehari | A
+AIMAN (risau): Tu baru enam jam je, macam mana kalau sehari?!
+# scene bandar | ISO bandar + pasar raya
+YUSUF (VO): Sehari. Tiket flight, penghantaran barang, gudang. Semua yang guna sistem online, semuanya akan jadi slow.
+YUSUF (VO): Seminggu. Lori tak tahu nak hantar apa dan ke mana. Rak kedai semua mula kosong.
+# scene awan | A
+AIMAN (keliru): Bang, internet ni sebenarnya duduk kat mana? Dekat langit ke?
+# scene kabel | ISO bumi + dasar laut
+YUSUF (VO): Hehehe. Bukan. Lebih sembilan puluh sembilan peratus data antara benua lalu kabel bawah laut. Saiz dia? Lebih kurang hos paip je.
+# scene jerung | A
+AIMAN (takut): Habis tu, kalau jerung gigit macam mana?
+# scene sauh | ISO laut
+YUSUF (senyum, suspen): Jerung? Data dari 2007 sampai 2014, kosong kes. Yang selalu putuskan kabel ialah sauh kapal dan bot nelayan. Dan pernah sekali... satu negara terus terputus dari dunia.
+# scene akhir | A
+YUSUF (mesra): Nak tahu cerita tu? Follow, tunggu Part 2.

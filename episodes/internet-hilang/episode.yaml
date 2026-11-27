@@ -1,0 +1,16 @@
+# Episode input. Script: script.txt (yavoice format). Storyboard + script: Claude Doc https://claude.ai/artifact/4kg4VUSvkSwgh72G6xGEwe
+slug: internet-hilang
+title: "Apa Jadi Kalau Internet Hilang Dari Bumi?"
+series: "Apa Jadi Kalau…? Ep 1"
+language: ms
+formats: [vertical]
+voiceover:
+  source: supplied
+  file: "assets/audio/voice/supplied/01.mp3"   # 01..16, kept as supplied
+  voices:
+    yusuf: "ElevenLabs Shahrul (G3mZ5fAxCu3ThFPWdD3D), Multilingual v2"
+    aiman: "ElevenLabs Ashraf (NHFTLozDZneDWyQjRGAO), Multilingual v2"
+characters: [yusuf, aiman]
+visual_preferences:
+  environments: [cafe, tech-world-isometric]
+  notes: "Scene A berbual (2.5D), B isometric 3D (code-built Three.js kit in assets/iso), C kad fakta. Counter MASA TANPA INTERNET."

@@ -1,0 +1,1500 @@
+{
+ "total": 110.85,
+ "lines": [
+  {
+   "n": 1,
+   "speaker": "AIMAN",
+   "scene": "hook",
+   "text": "Bang! Kenapa WiFi mamak ni hilang! Aku tak boleh scan QR ni, macam mana nak bayar teh tarik ni!",
+   "file": "assets/audio/voice/supplied/01.mp3",
+   "start": 0.35,
+   "file_dur": 6.531,
+   "speech_start": 0.35,
+   "speech_end": 6.73,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Bang!",
+     "start": 0.35,
+     "end": 0.806
+    },
+    {
+     "text": "Kenapa",
+     "start": 1.118,
+     "end": 1.51
+    },
+    {
+     "text": "WiFi",
+     "start": 1.51,
+     "end": 1.79
+    },
+    {
+     "text": "mamak",
+     "start": 1.79,
+     "end": 2.126
+    },
+    {
+     "text": "ni",
+     "start": 2.126,
+     "end": 2.294
+    },
+    {
+     "text": "hilang!",
+     "start": 2.294,
+     "end": 2.742
+    },
+    {
+     "text": "Aku",
+     "start": 3.114,
+     "end": 3.371
+    },
+    {
+     "text": "tak",
+     "start": 3.371,
+     "end": 3.628
+    },
+    {
+     "text": "boleh",
+     "start": 3.628,
+     "end": 4.014
+    },
+    {
+     "text": "scan",
+     "start": 4.014,
+     "end": 4.336
+    },
+    {
+     "text": "QR",
+     "start": 4.336,
+     "end": 4.529
+    },
+    {
+     "text": "ni,",
+     "start": 4.529,
+     "end": 4.786
+    },
+    {
+     "text": "macam",
+     "start": 5.097,
+     "end": 5.377
+    },
+    {
+     "text": "mana",
+     "start": 5.377,
+     "end": 5.611
+    },
+    {
+     "text": "nak",
+     "start": 5.611,
+     "end": 5.797
+    },
+    {
+     "text": "bayar",
+     "start": 5.797,
+     "end": 6.077
+    },
+    {
+     "text": "teh",
+     "start": 6.077,
+     "end": 6.264
+    },
+    {
+     "text": "tarik",
+     "start": 6.264,
+     "end": 6.544
+    },
+    {
+     "text": "ni!",
+     "start": 6.544,
+     "end": 6.73
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "speaker": "YUSUF",
+   "scene": "hook",
+   "text": "Haa... Tu baru WiFi kedai. Cuba bayangkan kalau internet hilang... dari seluruh bumi.",
+   "file": "assets/audio/voice/supplied/02.mp3",
+   "start": 7.03,
+   "file_dur": 6.531,
+   "speech_start": 7.03,
+   "speech_end": 13.33,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Haa...",
+     "start": 7.03,
+     "end": 7.669
+    },
+    {
+     "text": "Tu",
+     "start": 7.899,
+     "end": 8.081
+    },
+    {
+     "text": "baru",
+     "start": 8.081,
+     "end": 8.384
+    },
+    {
+     "text": "WiFi",
+     "start": 8.384,
+     "end": 8.686
+    },
+    {
+     "text": "kedai.",
+     "start": 8.686,
+     "end": 9.11
+    },
+    {
+     "text": "Cuba",
+     "start": 9.604,
+     "end": 9.862
+    },
+    {
+     "text": "bayangkan",
+     "start": 9.862,
+     "end": 10.377
+    },
+    {
+     "text": "kalau",
+     "start": 10.377,
+     "end": 10.686
+    },
+    {
+     "text": "internet",
+     "start": 10.686,
+     "end": 11.15
+    },
+    {
+     "text": "hilang...",
+     "start": 11.15,
+     "end": 11.665
+    },
+    {
+     "text": "dari",
+     "start": 12.015,
+     "end": 12.361
+    },
+    {
+     "text": "seluruh",
+     "start": 12.361,
+     "end": 12.915
+    },
+    {
+     "text": "bumi.",
+     "start": 12.915,
+     "end": 13.33
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "speaker": "YUSUF",
+   "scene": "minit",
+   "text": "Minit pertama. WhatsApp, TikTok, Instagram. Semua senyap. Takde notification langsung. Mesej semua tersangkut, ada ikon jam je yang bergerak.",
+   "file": "assets/audio/voice/supplied/03.mp3",
+   "start": 13.58,
+   "file_dur": 10.762,
+   "speech_start": 13.58,
+   "speech_end": 24.064,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Minit",
+     "start": 13.58,
+     "end": 13.886
+    },
+    {
+     "text": "pertama.",
+     "start": 13.886,
+     "end": 14.345
+    },
+    {
+     "text": "WhatsApp,",
+     "start": 14.345,
+     "end": 15.426
+    },
+    {
+     "text": "TikTok,",
+     "start": 15.426,
+     "end": 16.678
+    },
+    {
+     "text": "Instagram.",
+     "start": 16.678,
+     "end": 17.743
+    },
+    {
+     "text": "Semua",
+     "start": 17.743,
+     "end": 18.049
+    },
+    {
+     "text": "senyap.",
+     "start": 18.049,
+     "end": 18.457
+    },
+    {
+     "text": "Takde",
+     "start": 18.457,
+     "end": 19.321
+    },
+    {
+     "text": "notification",
+     "start": 19.321,
+     "end": 19.984
+    },
+    {
+     "text": "langsung.",
+     "start": 19.984,
+     "end": 20.878
+    },
+    {
+     "text": "Mesej",
+     "start": 20.878,
+     "end": 21.184
+    },
+    {
+     "text": "semua",
+     "start": 21.184,
+     "end": 21.49
+    },
+    {
+     "text": "tersangkut,",
+     "start": 21.49,
+     "end": 22.102
+    },
+    {
+     "text": "ada",
+     "start": 22.102,
+     "end": 22.687
+    },
+    {
+     "text": "ikon",
+     "start": 22.687,
+     "end": 22.942
+    },
+    {
+     "text": "jam",
+     "start": 22.942,
+     "end": 23.146
+    },
+    {
+     "text": "je",
+     "start": 23.146,
+     "end": 23.299
+    },
+    {
+     "text": "yang",
+     "start": 23.299,
+     "end": 23.554
+    },
+    {
+     "text": "bergerak.",
+     "start": 23.554,
+     "end": 24.064
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "speaker": "AIMAN",
+   "scene": "tidur",
+   "text": "Alah, takpe lah... Aku tidur je lah...",
+   "file": "assets/audio/voice/supplied/04.mp3",
+   "start": 24.364,
+   "file_dur": 3.474,
+   "speech_start": 24.364,
+   "speech_end": 27.59,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Alah,",
+     "start": 24.364,
+     "end": 25.19
+    },
+    {
+     "text": "takpe",
+     "start": 25.31,
+     "end": 25.68
+    },
+    {
+     "text": "lah...",
+     "start": 25.68,
+     "end": 26.112
+    },
+    {
+     "text": "Aku",
+     "start": 26.456,
+     "end": 26.683
+    },
+    {
+     "text": "tidur",
+     "start": 26.683,
+     "end": 27.023
+    },
+    {
+     "text": "je",
+     "start": 27.023,
+     "end": 27.193
+    },
+    {
+     "text": "lah...",
+     "start": 27.193,
+     "end": 27.59
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "speaker": "YUSUF",
+   "scene": "jam",
+   "text": "Jam pertama. QR tak jalan, kad tak jalan, semua kedai cuma terima cash je...",
+   "file": "assets/audio/voice/supplied/05.mp3",
+   "start": 27.84,
+   "file_dur": 6.766,
+   "speech_start": 27.84,
+   "speech_end": 34.424,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Jam",
+     "start": 27.84,
+     "end": 28.092
+    },
+    {
+     "text": "pertama.",
+     "start": 28.092,
+     "end": 28.658
+    },
+    {
+     "text": "QR",
+     "start": 28.658,
+     "end": 29.387
+    },
+    {
+     "text": "tak",
+     "start": 29.387,
+     "end": 29.639
+    },
+    {
+     "text": "jalan,",
+     "start": 29.639,
+     "end": 30.08
+    },
+    {
+     "text": "kad",
+     "start": 30.08,
+     "end": 30.331
+    },
+    {
+     "text": "tak",
+     "start": 30.331,
+     "end": 31.029
+    },
+    {
+     "text": "jalan,",
+     "start": 31.029,
+     "end": 31.614
+    },
+    {
+     "text": "semua",
+     "start": 31.614,
+     "end": 31.992
+    },
+    {
+     "text": "kedai",
+     "start": 31.992,
+     "end": 32.81
+    },
+    {
+     "text": "cuma",
+     "start": 32.81,
+     "end": 33.124
+    },
+    {
+     "text": "terima",
+     "start": 33.124,
+     "end": 33.732
+    },
+    {
+     "text": "cash",
+     "start": 33.732,
+     "end": 34.047
+    },
+    {
+     "text": "je...",
+     "start": 34.047,
+     "end": 34.424
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "speaker": "AIMAN",
+   "scene": "dompet",
+   "text": "Alamak... Aku dah la ada tiga ringgit je dalam dompet ni...",
+   "file": "assets/audio/voice/supplied/06.mp3",
+   "start": 34.724,
+   "file_dur": 4.284,
+   "speech_start": 34.724,
+   "speech_end": 38.848,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Alamak...",
+     "start": 34.724,
+     "end": 35.806
+    },
+    {
+     "text": "Aku",
+     "start": 35.954,
+     "end": 36.185
+    },
+    {
+     "text": "dah",
+     "start": 36.185,
+     "end": 36.417
+    },
+    {
+     "text": "la",
+     "start": 36.417,
+     "end": 36.59
+    },
+    {
+     "text": "ada",
+     "start": 36.59,
+     "end": 36.822
+    },
+    {
+     "text": "tiga",
+     "start": 36.822,
+     "end": 37.111
+    },
+    {
+     "text": "ringgit",
+     "start": 37.111,
+     "end": 37.574
+    },
+    {
+     "text": "je",
+     "start": 37.574,
+     "end": 37.748
+    },
+    {
+     "text": "dalam",
+     "start": 37.748,
+     "end": 38.095
+    },
+    {
+     "text": "dompet",
+     "start": 38.095,
+     "end": 38.501
+    },
+    {
+     "text": "ni...",
+     "start": 38.501,
+     "end": 38.848
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "speaker": "YUSUF",
+   "scene": "fakta",
+   "text": "Dan benda ni pernah jadi tau! Tahun 2021, WhatsApp, Facebook dan Instagram hilang hampir enam jam. Tiga setengah bilion orang terkesan.",
+   "file": "assets/audio/voice/supplied/07.mp3",
+   "start": 39.148,
+   "file_dur": 10.919,
+   "speech_start": 39.148,
+   "speech_end": 49.861,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Dan",
+     "start": 39.148,
+     "end": 39.394
+    },
+    {
+     "text": "benda",
+     "start": 39.394,
+     "end": 39.763
+    },
+    {
+     "text": "ni",
+     "start": 39.763,
+     "end": 39.947
+    },
+    {
+     "text": "pernah",
+     "start": 39.947,
+     "end": 40.378
+    },
+    {
+     "text": "jadi",
+     "start": 40.378,
+     "end": 40.685
+    },
+    {
+     "text": "tau!",
+     "start": 40.685,
+     "end": 40.993
+    },
+    {
+     "text": "Tahun",
+     "start": 41.484,
+     "end": 42.207
+    },
+    {
+     "text": "2021,",
+     "start": 42.207,
+     "end": 42.93
+    },
+    {
+     "text": "WhatsApp,",
+     "start": 43.273,
+     "end": 43.79
+    },
+    {
+     "text": "Facebook",
+     "start": 43.966,
+     "end": 44.579
+    },
+    {
+     "text": "dan",
+     "start": 44.579,
+     "end": 44.851
+    },
+    {
+     "text": "Instagram",
+     "start": 44.851,
+     "end": 45.533
+    },
+    {
+     "text": "hilang",
+     "start": 45.533,
+     "end": 46.009
+    },
+    {
+     "text": "hampir",
+     "start": 46.009,
+     "end": 46.486
+    },
+    {
+     "text": "enam",
+     "start": 46.486,
+     "end": 46.827
+    },
+    {
+     "text": "jam.",
+     "start": 46.827,
+     "end": 47.168
+    },
+    {
+     "text": "Tiga",
+     "start": 47.706,
+     "end": 47.997
+    },
+    {
+     "text": "setengah",
+     "start": 47.997,
+     "end": 48.521
+    },
+    {
+     "text": "bilion",
+     "start": 48.521,
+     "end": 48.929
+    },
+    {
+     "text": "orang",
+     "start": 48.929,
+     "end": 49.278
+    },
+    {
+     "text": "terkesan.",
+     "start": 49.278,
+     "end": 49.861
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "speaker": "YUSUF",
+   "scene": "telegram",
+   "text": "Menurut founder Telegram, tujuh puluh juta orang terus lari ke Telegram! Dalam satu hari je...",
+   "file": "assets/audio/voice/supplied/08.mp3",
+   "start": 50.161,
+   "file_dur": 5.956,
+   "speech_start": 50.161,
+   "speech_end": 55.987,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Menurut",
+     "start": 50.161,
+     "end": 50.578
+    },
+    {
+     "text": "founder",
+     "start": 50.578,
+     "end": 50.995
+    },
+    {
+     "text": "Telegram,",
+     "start": 50.995,
+     "end": 51.516
+    },
+    {
+     "text": "tujuh",
+     "start": 51.803,
+     "end": 52.133
+    },
+    {
+     "text": "puluh",
+     "start": 52.133,
+     "end": 52.464
+    },
+    {
+     "text": "juta",
+     "start": 52.464,
+     "end": 52.739
+    },
+    {
+     "text": "orang",
+     "start": 52.739,
+     "end": 53.069
+    },
+    {
+     "text": "terus",
+     "start": 53.069,
+     "end": 53.399
+    },
+    {
+     "text": "lari",
+     "start": 53.399,
+     "end": 53.674
+    },
+    {
+     "text": "ke",
+     "start": 53.674,
+     "end": 53.839
+    },
+    {
+     "text": "Telegram!",
+     "start": 53.839,
+     "end": 54.39
+    },
+    {
+     "text": "Dalam",
+     "start": 54.761,
+     "end": 55.095
+    },
+    {
+     "text": "satu",
+     "start": 55.095,
+     "end": 55.374
+    },
+    {
+     "text": "hari",
+     "start": 55.374,
+     "end": 55.653
+    },
+    {
+     "text": "je...",
+     "start": 55.653,
+     "end": 55.987
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "speaker": "AIMAN",
+   "scene": "sehari",
+   "text": "Tu baru enam jam je, macam mana kalau sehari?!",
+   "file": "assets/audio/voice/supplied/09.mp3",
+   "start": 56.287,
+   "file_dur": 3.396,
+   "speech_start": 56.287,
+   "speech_end": 59.536,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Tu",
+     "start": 56.287,
+     "end": 56.501
+    },
+    {
+     "text": "baru",
+     "start": 56.501,
+     "end": 56.858
+    },
+    {
+     "text": "enam",
+     "start": 56.858,
+     "end": 57.216
+    },
+    {
+     "text": "jam",
+     "start": 57.216,
+     "end": 57.501
+    },
+    {
+     "text": "je,",
+     "start": 57.501,
+     "end": 57.787
+    },
+    {
+     "text": "macam",
+     "start": 58.148,
+     "end": 58.468
+    },
+    {
+     "text": "mana",
+     "start": 58.468,
+     "end": 58.735
+    },
+    {
+     "text": "kalau",
+     "start": 58.735,
+     "end": 59.056
+    },
+    {
+     "text": "sehari?!",
+     "start": 59.056,
+     "end": 59.536
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "speaker": "YUSUF",
+   "scene": "bandar",
+   "text": "Sehari. Tiket flight, penghantaran barang, gudang. Semua yang guna sistem online, semuanya akan jadi slow.",
+   "file": "assets/audio/voice/supplied/10.mp3",
+   "start": 59.836,
+   "file_dur": 8.359,
+   "speech_start": 59.836,
+   "speech_end": 67.957,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Sehari.",
+     "start": 59.836,
+     "end": 60.5
+    },
+    {
+     "text": "Tiket",
+     "start": 61.018,
+     "end": 61.295
+    },
+    {
+     "text": "flight,",
+     "start": 61.295,
+     "end": 61.663
+    },
+    {
+     "text": "penghantaran",
+     "start": 62.002,
+     "end": 62.592
+    },
+    {
+     "text": "barang,",
+     "start": 62.592,
+     "end": 62.955
+    },
+    {
+     "text": "gudang.",
+     "start": 63.214,
+     "end": 63.724
+    },
+    {
+     "text": "Semua",
+     "start": 64.18,
+     "end": 64.499
+    },
+    {
+     "text": "yang",
+     "start": 64.499,
+     "end": 64.766
+    },
+    {
+     "text": "guna",
+     "start": 64.766,
+     "end": 65.032
+    },
+    {
+     "text": "sistem",
+     "start": 65.032,
+     "end": 65.405
+    },
+    {
+     "text": "online,",
+     "start": 65.405,
+     "end": 65.831
+    },
+    {
+     "text": "semuanya",
+     "start": 66.239,
+     "end": 66.857
+    },
+    {
+     "text": "akan",
+     "start": 66.857,
+     "end": 67.201
+    },
+    {
+     "text": "jadi",
+     "start": 67.201,
+     "end": 67.544
+    },
+    {
+     "text": "slow.",
+     "start": 67.544,
+     "end": 67.957
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "speaker": "YUSUF",
+   "scene": "bandar",
+   "text": "Seminggu. Lori tak tahu nak hantar apa dan ke mana. Rak kedai semua mula kosong.",
+   "file": "assets/audio/voice/supplied/11.mp3",
+   "start": 68.257,
+   "file_dur": 6.269,
+   "speech_start": 68.257,
+   "speech_end": 74.343,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Seminggu.",
+     "start": 68.257,
+     "end": 68.87
+    },
+    {
+     "text": "Lori",
+     "start": 68.87,
+     "end": 69.68
+    },
+    {
+     "text": "tak",
+     "start": 69.68,
+     "end": 69.925
+    },
+    {
+     "text": "tahu",
+     "start": 69.925,
+     "end": 70.232
+    },
+    {
+     "text": "nak",
+     "start": 70.232,
+     "end": 70.477
+    },
+    {
+     "text": "hantar",
+     "start": 70.477,
+     "end": 70.907
+    },
+    {
+     "text": "apa",
+     "start": 70.907,
+     "end": 71.278
+    },
+    {
+     "text": "dan",
+     "start": 71.278,
+     "end": 71.524
+    },
+    {
+     "text": "ke",
+     "start": 71.524,
+     "end": 71.708
+    },
+    {
+     "text": "mana.",
+     "start": 71.708,
+     "end": 72.564
+    },
+    {
+     "text": "Rak",
+     "start": 72.564,
+     "end": 72.809
+    },
+    {
+     "text": "kedai",
+     "start": 72.809,
+     "end": 73.177
+    },
+    {
+     "text": "semua",
+     "start": 73.177,
+     "end": 73.545
+    },
+    {
+     "text": "mula",
+     "start": 73.545,
+     "end": 73.852
+    },
+    {
+     "text": "kosong.",
+     "start": 73.852,
+     "end": 74.343
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "speaker": "AIMAN",
+   "scene": "awan",
+   "text": "Bang, internet ni sebenarnya duduk kat mana? Dekat langit ke?",
+   "file": "assets/audio/voice/supplied/12.mp3",
+   "start": 74.643,
+   "file_dur": 4.127,
+   "speech_start": 74.643,
+   "speech_end": 78.555,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Bang,",
+     "start": 74.643,
+     "end": 75.05
+    },
+    {
+     "text": "internet",
+     "start": 75.425,
+     "end": 75.877
+    },
+    {
+     "text": "ni",
+     "start": 75.877,
+     "end": 76.028
+    },
+    {
+     "text": "sebenarnya",
+     "start": 76.028,
+     "end": 76.58
+    },
+    {
+     "text": "duduk",
+     "start": 76.58,
+     "end": 76.881
+    },
+    {
+     "text": "kat",
+     "start": 76.881,
+     "end": 77.082
+    },
+    {
+     "text": "mana?",
+     "start": 77.082,
+     "end": 77.383
+    },
+    {
+     "text": "Dekat",
+     "start": 77.797,
+     "end": 78.065
+    },
+    {
+     "text": "langit",
+     "start": 78.065,
+     "end": 78.377
+    },
+    {
+     "text": "ke?",
+     "start": 78.377,
+     "end": 78.555
+    }
+   ]
+  },
+  {
+   "n": 13,
+   "speaker": "YUSUF",
+   "scene": "kabel",
+   "text": "Hehehe. Bukan. Lebih sembilan puluh sembilan peratus data antara benua lalu kabel bawah laut. Saiz dia? Lebih kurang hos paip je.",
+   "file": "assets/audio/voice/supplied/13.mp3",
+   "start": 78.855,
+   "file_dur": 9.796,
+   "speech_start": 78.855,
+   "speech_end": 88.432,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Hehehe.",
+     "start": 78.855,
+     "end": 79.576
+    },
+    {
+     "text": "Bukan.",
+     "start": 79.697,
+     "end": 80.75
+    },
+    {
+     "text": "Lebih",
+     "start": 81.176,
+     "end": 81.499
+    },
+    {
+     "text": "sembilan",
+     "start": 81.499,
+     "end": 81.983
+    },
+    {
+     "text": "puluh",
+     "start": 81.983,
+     "end": 82.306
+    },
+    {
+     "text": "sembilan",
+     "start": 82.306,
+     "end": 82.79
+    },
+    {
+     "text": "peratus",
+     "start": 82.79,
+     "end": 83.221
+    },
+    {
+     "text": "data",
+     "start": 83.221,
+     "end": 83.49
+    },
+    {
+     "text": "antara",
+     "start": 83.49,
+     "end": 83.866
+    },
+    {
+     "text": "benua",
+     "start": 83.866,
+     "end": 84.189
+    },
+    {
+     "text": "lalu",
+     "start": 84.189,
+     "end": 84.458
+    },
+    {
+     "text": "kabel",
+     "start": 84.458,
+     "end": 84.781
+    },
+    {
+     "text": "bawah",
+     "start": 84.781,
+     "end": 85.104
+    },
+    {
+     "text": "laut.",
+     "start": 85.104,
+     "end": 85.427
+    },
+    {
+     "text": "Saiz",
+     "start": 85.937,
+     "end": 86.204
+    },
+    {
+     "text": "dia?",
+     "start": 86.204,
+     "end": 86.472
+    },
+    {
+     "text": "Lebih",
+     "start": 86.9,
+     "end": 87.254
+    },
+    {
+     "text": "kurang",
+     "start": 87.254,
+     "end": 87.666
+    },
+    {
+     "text": "hos",
+     "start": 87.666,
+     "end": 87.902
+    },
+    {
+     "text": "paip",
+     "start": 87.902,
+     "end": 88.197
+    },
+    {
+     "text": "je.",
+     "start": 88.197,
+     "end": 88.432
+    }
+   ]
+  },
+  {
+   "n": 14,
+   "speaker": "AIMAN",
+   "scene": "jerung",
+   "text": "Habis tu, kalau jerung gigit macam mana?",
+   "file": "assets/audio/voice/supplied/14.mp3",
+   "start": 88.732,
+   "file_dur": 2.926,
+   "speech_start": 88.732,
+   "speech_end": 91.427,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Habis",
+     "start": 88.732,
+     "end": 89.063
+    },
+    {
+     "text": "tu,",
+     "start": 89.063,
+     "end": 89.284
+    },
+    {
+     "text": "kalau",
+     "start": 89.284,
+     "end": 89.872
+    },
+    {
+     "text": "jerung",
+     "start": 89.872,
+     "end": 90.258
+    },
+    {
+     "text": "gigit",
+     "start": 90.258,
+     "end": 90.589
+    },
+    {
+     "text": "macam",
+     "start": 90.589,
+     "end": 91.096
+    },
+    {
+     "text": "mana?",
+     "start": 91.096,
+     "end": 91.427
+    }
+   ]
+  },
+  {
+   "n": 15,
+   "speaker": "YUSUF",
+   "scene": "sauh",
+   "text": "Jerung? Data dari 2007 sampai 2014, kosong kes. Yang selalu putuskan kabel ialah sauh kapal dan bot nelayan. Dan pernah sekali... satu negara terus terputus dari dunia.",
+   "file": "assets/audio/voice/supplied/15.mp3",
+   "start": 91.727,
+   "file_dur": 14.446,
+   "speech_start": 91.727,
+   "speech_end": 105.937,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Jerung?",
+     "start": 91.727,
+     "end": 92.771
+    },
+    {
+     "text": "Data",
+     "start": 92.771,
+     "end": 93.116
+    },
+    {
+     "text": "dari",
+     "start": 93.116,
+     "end": 93.462
+    },
+    {
+     "text": "2007",
+     "start": 93.462,
+     "end": 93.808
+    },
+    {
+     "text": "sampai",
+     "start": 93.808,
+     "end": 94.291
+    },
+    {
+     "text": "2014,",
+     "start": 94.291,
+     "end": 94.706
+    },
+    {
+     "text": "kosong",
+     "start": 94.706,
+     "end": 95.19
+    },
+    {
+     "text": "kes.",
+     "start": 95.19,
+     "end": 95.535
+    },
+    {
+     "text": "Yang",
+     "start": 95.535,
+     "end": 96.219
+    },
+    {
+     "text": "selalu",
+     "start": 96.219,
+     "end": 96.702
+    },
+    {
+     "text": "putuskan",
+     "start": 96.702,
+     "end": 97.934
+    },
+    {
+     "text": "kabel",
+     "start": 97.934,
+     "end": 98.349
+    },
+    {
+     "text": "ialah",
+     "start": 98.349,
+     "end": 98.763
+    },
+    {
+     "text": "sauh",
+     "start": 98.763,
+     "end": 99.109
+    },
+    {
+     "text": "kapal",
+     "start": 99.109,
+     "end": 99.523
+    },
+    {
+     "text": "dan",
+     "start": 99.523,
+     "end": 99.8
+    },
+    {
+     "text": "bot",
+     "start": 99.8,
+     "end": 100.076
+    },
+    {
+     "text": "nelayan.",
+     "start": 100.076,
+     "end": 100.698
+    },
+    {
+     "text": "Dan",
+     "start": 100.698,
+     "end": 100.975
+    },
+    {
+     "text": "pernah",
+     "start": 100.975,
+     "end": 101.969
+    },
+    {
+     "text": "sekali...",
+     "start": 101.969,
+     "end": 102.66
+    },
+    {
+     "text": "satu",
+     "start": 102.66,
+     "end": 103.005
+    },
+    {
+     "text": "negara",
+     "start": 103.005,
+     "end": 103.725
+    },
+    {
+     "text": "terus",
+     "start": 103.725,
+     "end": 104.361
+    },
+    {
+     "text": "terputus",
+     "start": 104.361,
+     "end": 105.108
+    },
+    {
+     "text": "dari",
+     "start": 105.108,
+     "end": 105.454
+    },
+    {
+     "text": "dunia.",
+     "start": 105.454,
+     "end": 105.937
+    }
+   ]
+  },
+  {
+   "n": 16,
+   "speaker": "YUSUF",
+   "scene": "akhir",
+   "text": "Nak tahu cerita tu? Follow, tunggu Part 2.",
+   "file": "assets/audio/voice/supplied/16.mp3",
+   "start": 106.337,
+   "file_dur": 3.082,
+   "speech_start": 106.337,
+   "speech_end": 109.253,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Nak",
+     "start": 106.337,
+     "end": 106.519
+    },
+    {
+     "text": "tahu",
+     "start": 106.519,
+     "end": 106.747
+    },
+    {
+     "text": "cerita",
+     "start": 106.747,
+     "end": 107.066
+    },
+    {
+     "text": "tu?",
+     "start": 107.066,
+     "end": 107.248
+    },
+    {
+     "text": "Follow,",
+     "start": 107.753,
+     "end": 108.185
+    },
+    {
+     "text": "tunggu",
+     "start": 108.464,
+     "end": 108.833
+    },
+    {
+     "text": "Part",
+     "start": 108.833,
+     "end": 109.096
+    },
+    {
+     "text": "2.",
+     "start": 109.096,
+     "end": 109.253
+    }
+   ]
+  }
+ ],
+ "scenes": [
+  {
+   "id": "hook",
+   "start": 0.0,
+   "lines": [
+    1,
+    2
+   ],
+   "duration": 13.46
+  },
+  {
+   "id": "minit",
+   "start": 13.46,
+   "lines": [
+    3
+   ],
+   "duration": 10.75
+  },
+  {
+   "id": "tidur",
+   "start": 24.21,
+   "lines": [
+    4
+   ],
+   "duration": 3.5
+  },
+  {
+   "id": "jam",
+   "start": 27.71,
+   "lines": [
+    5
+   ],
+   "duration": 6.86
+  },
+  {
+   "id": "dompet",
+   "start": 34.57,
+   "lines": [
+    6
+   ],
+   "duration": 4.43
+  },
+  {
+   "id": "fakta",
+   "start": 39.0,
+   "lines": [
+    7
+   ],
+   "duration": 11.01
+  },
+  {
+   "id": "telegram",
+   "start": 50.01,
+   "lines": [
+    8
+   ],
+   "duration": 6.13
+  },
+  {
+   "id": "sehari",
+   "start": 56.14,
+   "lines": [
+    9
+   ],
+   "duration": 3.55
+  },
+  {
+   "id": "bandar",
+   "start": 59.69,
+   "lines": [
+    10,
+    11
+   ],
+   "duration": 14.8
+  },
+  {
+   "id": "awan",
+   "start": 74.49,
+   "lines": [
+    12
+   ],
+   "duration": 4.22
+  },
+  {
+   "id": "kabel",
+   "start": 78.71,
+   "lines": [
+    13
+   ],
+   "duration": 9.87
+  },
+  {
+   "id": "jerung",
+   "start": 88.58,
+   "lines": [
+    14
+   ],
+   "duration": 3.0
+  },
+  {
+   "id": "sauh",
+   "start": 91.58,
+   "lines": [
+    15
+   ],
+   "duration": 14.56
+  },
+  {
+   "id": "akhir",
+   "start": 106.14,
+   "lines": [
+    16
+   ],
+   "duration": 4.71
+  }
+ ]
+}

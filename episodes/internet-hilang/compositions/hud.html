@@ -1,0 +1,150 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+    .ab { position: absolute; }
+    #dim { inset: 0; background: rgba(6,16,38,0.62); }
+    #flash { inset: 0; background: #F5F7FA; }
+    /* counter */
+    #ctr { left: 90px; right: 90px; top: 110px; height: 190px; text-align: center; }
+    #ctr-box { position: absolute; left: 50%; top: 0; transform-origin: 50% 0; }
+    #ctr-in { position: relative; left: -50%; display: inline-block; padding: 18px 44px 22px; border-radius: 30px;
+      background: rgba(11,30,63,0.86); border: 3px solid rgba(0,194,255,0.55); box-shadow: 0 18px 50px rgba(0,0,0,0.45); white-space: nowrap; }
+    #ctr-lab { font-family: "Sora"; font-weight: 700; font-size: 30px; letter-spacing: 0.12em; color: var(--cyan); }
+    #ctr-val { font-family: "Sora"; font-weight: 800; font-size: 96px; line-height: 1.0; color: #fff; letter-spacing: 0.02em; font-variant-numeric: tabular-nums; }
+    /* hook title */
+    #title { left: 70px; right: 70px; top: 360px; text-align: center; }
+    #title .k { font-family: "Sora"; font-weight: 800; font-size: 44px; color: var(--orange); letter-spacing: 0.06em; }
+    #title .h { font-family: "Sora"; font-weight: 800; font-size: 86px; line-height: 1.02; color: #fff; letter-spacing: -0.02em;
+      text-shadow: 0 8px 30px rgba(0,0,0,0.55); }
+    #wifi { left: 390px; top: 640px; width: 300px; height: 300px; }
+    .chip2 { position: absolute; padding: 12px 26px; border-radius: 999px; font-family: "Sora"; font-weight: 800; font-size: 32px; letter-spacing: 0.08em;
+      color: #fff; box-shadow: 0 12px 30px rgba(0,0,0,0.35); white-space: nowrap; }
+    #sen1, #sen2 { right: 80px; top: 340px; background: var(--orange); }
+    #real { left: 50%; top: 360px; margin-left: -230px; width: 460px; text-align: center; background: var(--red); }
+    /* fact cards */
+    .fc { position: absolute; left: 120px; width: 840px; border-radius: 30px; background: var(--card); color: var(--dark); padding: 26px 36px;
+      box-shadow: 0 24px 60px rgba(4,12,30,0.5); }
+    .fc .big { font-family: "Sora"; font-weight: 800; font-size: 92px; line-height: 1; color: var(--blue); letter-spacing: -0.02em; }
+    .fc .big.red { color: var(--red); }
+    .fc .sm { font-family: "Inter"; font-weight: 600; font-size: 34px; line-height: 1.2; color: var(--dark); margin-top: 6px; }
+    #f1 { top: 470px; } #f2 { top: 760px; } #f3 { top: 1010px; }
+    #tg { top: 1130px; text-align: center; padding: 18px 30px; }
+    #k99 { top: 430px; text-align: center; }
+    #k99 .big { font-size: 170px; }
+    #hose { left: 330px; top: 640px; width: 420px; text-align: center; background: #22C55E; color: #fff; }
+    #sh0 { top: 470px; }
+    #sh1 { top: 470px; }
+    #p2 { top: 380px; text-align: center; background: var(--navy); color: #fff; border: 3px solid var(--cyan); }
+    #p2 .k { font-family: "Sora"; font-weight: 800; font-size: 40px; color: var(--orange); letter-spacing: 0.1em; }
+    #p2 .h { font-family: "Sora"; font-weight: 800; font-size: 62px; line-height: 1.06; color: #fff; margin-top: 8px; }
+    #tag { left: 0; right: 0; top: 700px; text-align: center; font-family: "Plus Jakarta Sans"; font-weight: 700; font-size: 40px; color: #fff; text-shadow: 0 4px 18px rgba(0,0,0,0.6); }
+    #fol { left: 50%; top: 790px; margin-left: -170px; width: 340px; text-align: center; background: var(--blue); font-size: 44px; }
+    .srcx { position: absolute; left: 120px; right: 120px; font-family: "Inter"; font-weight: 500; font-size: 28px; color: rgba(245,247,250,0.9);
+      text-shadow: 0 2px 8px rgba(0,0,0,0.7); text-align: center; }
+  </style>
+  <div id="root" data-composition-id="hud" data-width="1080" data-height="1920">
+    <div id="dim" class="ab"></div>
+    <div id="title" class="ab"><div class="k">APA JADI KALAU</div><div class="h">INTERNET HILANG DARI BUMI?</div></div>
+    <svg id="wifi" class="ab" viewBox="0 0 300 300">
+      <circle cx="150" cy="150" r="140" fill="#0B1E3F" opacity="0.88" />
+      <g fill="none" stroke="#00C2FF" stroke-width="20" stroke-linecap="round">
+        <path d="M60 128 Q150 50 240 128" /><path d="M92 162 Q150 112 208 162" /><path d="M122 194 Q150 172 178 194" />
+      </g>
+      <circle cx="150" cy="222" r="14" fill="#00C2FF" />
+      <path id="wifi-x" d="M70 70 L230 230" stroke="#FF4D5E" stroke-width="26" stroke-linecap="round" />
+    </svg>
+    <div id="ctr" class="ab"><div id="ctr-box"><div id="ctr-in"><div id="ctr-lab">MASA TANPA INTERNET</div><div id="ctr-val">00:00:00</div></div></div></div>
+    <div id="sen1" class="chip2">SENARIO</div>
+    <div id="sen2" class="chip2">SENARIO</div>
+    <div id="real" class="chip2">PERNAH BERLAKU</div>
+    <div id="f1" class="fc"><div class="big">4 OKT 2021</div><div class="sm">WhatsApp, Facebook, Instagram serentak tak boleh guna</div></div>
+    <div id="f2" class="fc"><div class="big red">≈ 6 JAM</div><div class="sm">hampir enam jam gelap</div></div>
+    <div id="f3" class="fc"><div class="big">3.5 BILION</div><div class="sm">pengguna terkesan</div></div>
+    <div id="s-fakta" class="srcx" style="top:1240px">Sumber: Reuters (The Star, 6 Okt 2021) · Meta Engineering, 5 Okt 2021</div>
+    <div id="tg" class="fc"><div class="big" style="color:#2AA3EF">+<span id="tg-n">0</span> JUTA</div><div class="sm">pengguna baru Telegram semasa outage itu<br />(menurut pengasas Telegram)</div></div>
+    <div id="s-tg" class="srcx" style="top:1352px">Sumber: Reuters (The Star, 6 Okt 2021)</div>
+    <div id="k99" class="fc"><div class="big">99%</div><div class="sm">data antara benua lalu kabel bawah laut</div></div>
+    <div id="s-99" class="srcx" style="top:800px">Sumber: TeleGeography, 2023</div>
+    <div id="hose" class="fc"><div class="sm" style="color:#fff;font-family:Sora;font-weight:800;font-size:40px">≈ selebar hos paip</div></div>
+    <div id="sh0" class="fc"><div class="big">0 KES</div><div class="sm">kabel rosak sebab gigitan jerung/ikan (2007–2014)</div></div>
+    <div id="sh1" class="fc"><div class="big red">2 / 3</div><div class="sm">kerosakan kabel sebab bot nelayan &amp; sauh kapal</div></div>
+    <div id="s-sh" class="srcx" style="top:760px">Sumber: TeleGeography (data ICPC)</div>
+    <div id="p2" class="fc"><div class="k">PART 2</div><div class="h">Negara yang terputus dari dunia</div></div>
+    <div id="tag" class="ab">Technology, Made Understandable.</div>
+    <div id="fol" class="chip2">FOLLOW</div>
+    <div id="flash" class="ab"></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const T = window.YA_T, S = T.scenes, END = T.total;
+    const W = (n, w) => T.words[n].find((v) => v[0].toLowerCase().startsWith(w.toLowerCase()))[1];
+    const LN = (n) => T.lines[n];
+    const ALL = ["#dim", "#title", "#wifi", "#ctr", "#sen1", "#sen2", "#real", "#f1", "#f2", "#f3", "#s-fakta", "#tg", "#s-tg", "#k99", "#s-99", "#hose", "#sh0", "#sh1", "#s-sh", "#p2", "#tag", "#fol", "#flash"];
+    gsap.set(ALL, { opacity: 0 });
+    const show = (sel, a, b, from = { y: 30, scale: 0.92 }) => {
+      tl.fromTo(sel, { opacity: 0, ...from }, { opacity: 1, y: 0, scale: 1, duration: 0.28, ease: "back.out(2)", immediateRender: false }, a);
+      if (b !== undefined) tl.to(sel, { opacity: 0, duration: 0.18, ease: "power2.in" }, b - 0.18);
+    };
+    // ---- A<->B cut flashes
+    ["minit", "tidur", "jam", "dompet", "fakta", "sehari", "bandar", "awan", "kabel", "jerung", "sauh", "akhir"].forEach((id) => {
+      tl.fromTo("#flash", { opacity: 0 }, { opacity: 0.55, duration: 0.07, immediateRender: false }, S[id] - 0.12);
+      tl.to("#flash", { opacity: 0, duration: 0.22 }, S[id] - 0.05);
+    });
+    // ---- hook
+    show("#title", 0.15, LN(2)[0] + 2.2, { y: -30, scale: 0.9 });
+    show("#wifi", W(1, "WiFi") - 0.1, LN(1)[1] + 0.2, { scale: 0.3, y: 0 });
+    gsap.set("#wifi-x", { strokeDasharray: 240, strokeDashoffset: 240 });
+    tl.to("#wifi-x", { strokeDashoffset: 0, duration: 0.25, ease: "power2.out" }, W(1, "hilang"));
+    tl.to("#wifi", { rotation: 8, duration: 0.06, yoyo: true, repeat: 5 }, W(1, "hilang"));
+    // ---- counter (text is a function of time)
+    show("#ctr", 0.1, S.kabel, { y: -40, scale: 0.9 });
+    const pad = (n) => String(Math.floor(n)).padStart(2, "0");
+    function ctrText(t) {
+      if (t < S.minit) return "00:00:" + pad(t);
+      if (t < S.tidur) return "00:01:" + pad((t - S.minit) * 2);
+      if (t < S.jam) return "00:2" + Math.floor((t - S.tidur)) + ":" + pad(((t - S.tidur) * 17) % 60);
+      if (t < S.dompet) return "01:0" + Math.floor((t - S.jam) / 2) + ":" + pad(((t - S.jam) * 23) % 60);
+      if (t < S.fakta) return "01:3" + Math.floor((t - S.dompet)) + ":" + pad(((t - S.dompet) * 29) % 60);
+      if (t < S.sehari) return "06:00:00";
+      if (t < S.bandar) return "1" + Math.min(9, 2 + Math.floor((t - S.sehari) * 2)) + ":00:00";
+      if (t < LN(11)[0] - 0.1) return "HARI 1";
+      return "HARI 7";
+    }
+    const val = document.querySelector("#ctr-val");
+    tl.to({ p: 0 }, { p: 1, duration: END, ease: "none", onUpdate() { val.textContent = ctrText(tl.time()); } }, 0);
+    [S.minit, S.jam, S.fakta, S.sehari, S.bandar, LN(11)[0] - 0.1].forEach((t) => {
+      tl.fromTo("#ctr-box", { scale: 1 }, { scale: 1.16, duration: 0.1, ease: "power2.out", immediateRender: false }, t);
+      tl.to("#ctr-box", { scale: 1, duration: 0.35, ease: "back.out(3)" }, t + 0.1);
+    });
+    // ---- scenario labels
+    show("#sen1", W(5, "QR") - 0.2, S.dompet);
+    show("#sen2", W(10, "Tiket") - 0.2, S.awan);
+    // ---- fakta: dim the city, three facts
+    tl.fromTo("#dim", { opacity: 0 }, { opacity: 1, duration: 0.3, immediateRender: false }, S.fakta);
+    tl.to("#dim", { opacity: 0, duration: 0.2 }, S.telegram - 0.2);
+    show("#real", W(7, "pernah") - 0.1, S.telegram);
+    show("#f1", W(7, "Tahun") - 0.1, S.telegram, { x: -80, y: 0 });
+    show("#f2", W(7, "hampir") - 0.1, S.telegram, { x: 80, y: 0 });
+    show("#f3", W(7, "Tiga") - 0.1, S.telegram, { x: -80, y: 0 });
+    show("#s-fakta", W(7, "Tahun"), S.telegram, { y: 0 });
+    // ---- telegram counter climbs to 70
+    show("#tg", W(8, "tujuh") - 0.2, S.sehari);
+    show("#s-tg", W(8, "tujuh"), S.sehari, { y: 0 });
+    const tgn = document.querySelector("#tg-n"), tg0 = W(8, "tujuh") - 0.1, tg1 = W(8, "Telegram!");
+    tl.to({ p: 0 }, { p: 1, duration: END, ease: "none", onUpdate() { const k = Math.max(0, Math.min(1, (tl.time() - tg0) / (tg1 - tg0))); tgn.textContent = String(Math.round(70 * (1 - Math.pow(1 - k, 2)))); } }, 0);
+    // ---- kabel
+    show("#k99", W(13, "sembilan") - 0.15, W(13, "Saiz") - 0.25, { scale: 0.6, y: 0 });
+    show("#s-99", W(13, "sembilan"), W(13, "Saiz") - 0.25, { y: 0 });
+    show("#hose", W(13, "Saiz") + 0.2, S.jerung);
+    // ---- sauh
+    show("#sh0", W(15, "kosong") - 0.15, W(15, "sauh") - 0.15);
+    show("#sh1", W(15, "sauh") - 0.1, W(15, "terputus") - 0.2);
+    show("#s-sh", W(15, "kosong"), W(15, "terputus") - 0.2, { y: 0 });
+    // ---- akhir
+    show("#p2", S.akhir + 0.1, END + 1);
+    show("#tag", W(16, "Follow") - 0.6, END + 1, { y: 0 });
+    show("#fol", W(16, "Follow") - 0.1, END + 1, { scale: 0.4, y: 0 });
+    tl.to("#fol", { scale: 1.08, duration: 0.3, yoyo: true, repeat: 3, ease: "sine.inOut" }, W(16, "Follow") + 0.4);
+    window.__timelines["hud"] = tl;
+  </script>
+</template>
