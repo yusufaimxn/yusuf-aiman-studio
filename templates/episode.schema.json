@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Yusuf Aiman episode input",
+  "type": "object",
+  "required": ["slug", "topic", "language", "target_duration_s", "formats", "script", "voiceover"],
+  "properties": {
+    "slug": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+    "title": {"type": "string"},
+    "topic": {"type": "string", "minLength": 1},
+    "language": {"enum": ["ms", "en", "ms-en"]},
+    "target_duration_s": {"type": "number", "minimum": 10, "maximum": 1200},
+    "formats": {"type": "array", "minItems": 1, "items": {"enum": ["landscape", "vertical"]}},
+    "script": {"type": "object", "required": ["source"], "properties": {
+      "source": {"enum": ["none", "inline", "file"]}, "text": {"type": "string"}, "file": {"type": "string"}}},
+    "voiceover": {"type": "object", "required": ["source"], "properties": {
+      "source": {"enum": ["none", "supplied", "generated"]}, "file": {"type": "string"}}},
+    "characters": {"type": "array", "items": {"enum": ["yusuf", "aiman"]}},
+    "visual_preferences": {"type": "object"}
+  }
+}

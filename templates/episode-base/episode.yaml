@@ -1,0 +1,19 @@
+# Episode input. Fill this in, then plan with the episode-planner skill.
+slug: __SLUG__
+title: ""                 # working title shown in the video
+topic: ""                 # one line: what the viewer will understand by the end
+language: ms              # ms (Bahasa Melayu, English tech terms allowed) | en | ms-en
+target_duration_s: 60     # 30-60 short form, 360-720 long form
+formats: [landscape, vertical]   # landscape = 1920x1080, vertical = 1080x1920; both 30 fps
+script:
+  source: none            # none (AI writes it) | inline | file
+  text: ""                # when source = inline
+  file: ""                # path relative to this folder when source = file
+voiceover:
+  source: none            # none | supplied (preserve as-is) | generated (voice engine)
+  file: ""                # assets/audio/<file> when supplied
+characters: [yusuf, aiman]
+visual_preferences:
+  style: explainer        # explainer | story | cinematic | short
+  environments: []        # e.g. main-studio, data-center, isometric-city
+  notes: ""

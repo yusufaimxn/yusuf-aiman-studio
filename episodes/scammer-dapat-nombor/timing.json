@@ -1,0 +1,1054 @@
+{
+ "total": 71.86,
+ "lines": [
+  {
+   "n": 1,
+   "speaker": "AIMAN",
+   "scene": "hook",
+   "text": "Yusuf! Orang call aku, dia tahu nama penuh aku! Padahal aku tak pernah bagi nombor pun!",
+   "file": "assets/audio/voice/supplied/01.mp3",
+   "start": 0.35,
+   "file_dur": 6.269,
+   "speech_start": 0.35,
+   "speech_end": 6.482,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Yusuf!",
+     "start": 0.35,
+     "end": 1.003
+    },
+    {
+     "text": "Orang",
+     "start": 1.374,
+     "end": 1.732
+    },
+    {
+     "text": "call",
+     "start": 1.732,
+     "end": 2.029
+    },
+    {
+     "text": "aku,",
+     "start": 2.029,
+     "end": 2.327
+    },
+    {
+     "text": "dia",
+     "start": 2.597,
+     "end": 2.815
+    },
+    {
+     "text": "tahu",
+     "start": 2.815,
+     "end": 3.087
+    },
+    {
+     "text": "nama",
+     "start": 3.087,
+     "end": 3.359
+    },
+    {
+     "text": "penuh",
+     "start": 3.359,
+     "end": 3.685
+    },
+    {
+     "text": "aku!",
+     "start": 3.685,
+     "end": 3.957
+    },
+    {
+     "text": "Padahal",
+     "start": 4.383,
+     "end": 4.803
+    },
+    {
+     "text": "aku",
+     "start": 4.803,
+     "end": 5.012
+    },
+    {
+     "text": "tak",
+     "start": 5.012,
+     "end": 5.222
+    },
+    {
+     "text": "pernah",
+     "start": 5.222,
+     "end": 5.59
+    },
+    {
+     "text": "bagi",
+     "start": 5.59,
+     "end": 5.852
+    },
+    {
+     "text": "nombor",
+     "start": 5.852,
+     "end": 6.22
+    },
+    {
+     "text": "pun!",
+     "start": 6.22,
+     "end": 6.482
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "speaker": "YUSUF",
+   "scene": "hook",
+   "text": "Relaks. Jom kita bedah, macam mana dia dapat.",
+   "file": "assets/audio/voice/supplied/02.mp3",
+   "start": 6.732,
+   "file_dur": 3.631,
+   "speech_start": 6.732,
+   "speech_end": 10.131,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Relaks.",
+     "start": 6.732,
+     "end": 7.653
+    },
+    {
+     "text": "Jom",
+     "start": 7.973,
+     "end": 8.148
+    },
+    {
+     "text": "kita",
+     "start": 8.148,
+     "end": 8.367
+    },
+    {
+     "text": "bedah,",
+     "start": 8.367,
+     "end": 8.673
+    },
+    {
+     "text": "macam",
+     "start": 8.976,
+     "end": 9.291
+    },
+    {
+     "text": "mana",
+     "start": 9.291,
+     "end": 9.553
+    },
+    {
+     "text": "dia",
+     "start": 9.553,
+     "end": 9.763
+    },
+    {
+     "text": "dapat.",
+     "start": 9.763,
+     "end": 10.131
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "speaker": "YUSUF",
+   "scene": "leak",
+   "text": "Satu, data bocor. Tahun dua ribu tujuh belas, terbongkar data empat puluh enam juta akaun telco Malaysia bocor, siap dengan nombor IC.",
+   "file": "assets/audio/voice/supplied/03.mp3",
+   "start": 10.481,
+   "file_dur": 10.031,
+   "speech_start": 10.481,
+   "speech_end": 20.341,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Satu,",
+     "start": 10.481,
+     "end": 11.052
+    },
+    {
+     "text": "data",
+     "start": 11.369,
+     "end": 11.789
+    },
+    {
+     "text": "bocor.",
+     "start": 11.789,
+     "end": 12.377
+    },
+    {
+     "text": "Tahun",
+     "start": 12.938,
+     "end": 13.221
+    },
+    {
+     "text": "dua",
+     "start": 13.221,
+     "end": 13.409
+    },
+    {
+     "text": "ribu",
+     "start": 13.409,
+     "end": 13.645
+    },
+    {
+     "text": "tujuh",
+     "start": 13.645,
+     "end": 13.927
+    },
+    {
+     "text": "belas,",
+     "start": 13.927,
+     "end": 14.257
+    },
+    {
+     "text": "terbongkar",
+     "start": 14.547,
+     "end": 15.191
+    },
+    {
+     "text": "data",
+     "start": 15.191,
+     "end": 15.483
+    },
+    {
+     "text": "empat",
+     "start": 15.483,
+     "end": 15.834
+    },
+    {
+     "text": "puluh",
+     "start": 15.834,
+     "end": 16.185
+    },
+    {
+     "text": "enam",
+     "start": 16.185,
+     "end": 16.478
+    },
+    {
+     "text": "juta",
+     "start": 16.478,
+     "end": 16.77
+    },
+    {
+     "text": "akaun",
+     "start": 16.77,
+     "end": 17.121
+    },
+    {
+     "text": "telco",
+     "start": 17.121,
+     "end": 17.472
+    },
+    {
+     "text": "Malaysia",
+     "start": 17.472,
+     "end": 17.999
+    },
+    {
+     "text": "bocor,",
+     "start": 17.999,
+     "end": 18.408
+    },
+    {
+     "text": "siap",
+     "start": 18.829,
+     "end": 19.157
+    },
+    {
+     "text": "dengan",
+     "start": 19.157,
+     "end": 19.618
+    },
+    {
+     "text": "nombor",
+     "start": 19.618,
+     "end": 20.078
+    },
+    {
+     "text": "IC.",
+     "start": 20.078,
+     "end": 20.341
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "speaker": "AIMAN",
+   "scene": "leak",
+   "text": "Empat puluh enam juta? Lebih ramai dari orang Malaysia!",
+   "file": "assets/audio/voice/supplied/04.mp3",
+   "start": 20.541,
+   "file_dur": 3.866,
+   "speech_start": 20.541,
+   "speech_end": 24.27,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Empat",
+     "start": 20.541,
+     "end": 20.918
+    },
+    {
+     "text": "puluh",
+     "start": 20.918,
+     "end": 21.295
+    },
+    {
+     "text": "enam",
+     "start": 21.295,
+     "end": 21.609
+    },
+    {
+     "text": "juta?",
+     "start": 21.609,
+     "end": 21.986
+    },
+    {
+     "text": "Lebih",
+     "start": 22.533,
+     "end": 22.849
+    },
+    {
+     "text": "ramai",
+     "start": 22.849,
+     "end": 23.165
+    },
+    {
+     "text": "dari",
+     "start": 23.165,
+     "end": 23.428
+    },
+    {
+     "text": "orang",
+     "start": 23.428,
+     "end": 23.744
+    },
+    {
+     "text": "Malaysia!",
+     "start": 23.744,
+     "end": 24.27
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "speaker": "YUSUF",
+   "scene": "leak",
+   "text": "Sebab ramai orang ada lebih dari satu SIM. Dan data yang bocor, boleh dijual berulang kali.",
+   "file": "assets/audio/voice/supplied/05.mp3",
+   "start": 24.52,
+   "file_dur": 6.269,
+   "speech_start": 24.52,
+   "speech_end": 30.622,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Sebab",
+     "start": 24.52,
+     "end": 24.9
+    },
+    {
+     "text": "ramai",
+     "start": 24.9,
+     "end": 25.279
+    },
+    {
+     "text": "orang",
+     "start": 25.279,
+     "end": 25.659
+    },
+    {
+     "text": "ada",
+     "start": 25.659,
+     "end": 25.912
+    },
+    {
+     "text": "lebih",
+     "start": 25.912,
+     "end": 26.292
+    },
+    {
+     "text": "dari",
+     "start": 26.292,
+     "end": 26.608
+    },
+    {
+     "text": "satu",
+     "start": 26.608,
+     "end": 26.924
+    },
+    {
+     "text": "SIM.",
+     "start": 26.924,
+     "end": 27.241
+    },
+    {
+     "text": "Dan",
+     "start": 27.678,
+     "end": 27.91
+    },
+    {
+     "text": "data",
+     "start": 27.91,
+     "end": 28.2
+    },
+    {
+     "text": "yang",
+     "start": 28.2,
+     "end": 28.491
+    },
+    {
+     "text": "bocor,",
+     "start": 28.491,
+     "end": 28.897
+    },
+    {
+     "text": "boleh",
+     "start": 29.062,
+     "end": 29.396
+    },
+    {
+     "text": "dijual",
+     "start": 29.396,
+     "end": 29.786
+    },
+    {
+     "text": "berulang",
+     "start": 29.786,
+     "end": 30.288
+    },
+    {
+     "text": "kali.",
+     "start": 30.288,
+     "end": 30.622
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "speaker": "AIMAN",
+   "scene": "callerid",
+   "text": "Tapi macam mana dia tahu nama penuh aku?",
+   "file": "assets/audio/voice/supplied/06.mp3",
+   "start": 30.922,
+   "file_dur": 2.769,
+   "speech_start": 30.922,
+   "speech_end": 33.479,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Tapi",
+     "start": 30.922,
+     "end": 31.21
+    },
+    {
+     "text": "macam",
+     "start": 31.21,
+     "end": 31.753
+    },
+    {
+     "text": "mana",
+     "start": 31.753,
+     "end": 32.04
+    },
+    {
+     "text": "dia",
+     "start": 32.04,
+     "end": 32.271
+    },
+    {
+     "text": "tahu",
+     "start": 32.271,
+     "end": 32.558
+    },
+    {
+     "text": "nama",
+     "start": 32.558,
+     "end": 32.846
+    },
+    {
+     "text": "penuh",
+     "start": 32.846,
+     "end": 33.191
+    },
+    {
+     "text": "aku?",
+     "start": 33.191,
+     "end": 33.479
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "speaker": "YUSUF",
+   "scene": "callerid",
+   "text": "Dua, app caller ID. Ada app yang kumpul nama dari contact list pengguna dia. Kawan kau save nama penuh kau, orang lain pun boleh nampak.",
+   "file": "assets/audio/voice/supplied/07.mp3",
+   "start": 33.729,
+   "file_dur": 9.326,
+   "speech_start": 33.729,
+   "speech_end": 42.829,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Dua,",
+     "start": 33.729,
+     "end": 33.986
+    },
+    {
+     "text": "app",
+     "start": 33.986,
+     "end": 34.592
+    },
+    {
+     "text": "caller",
+     "start": 34.592,
+     "end": 35.093
+    },
+    {
+     "text": "ID.",
+     "start": 35.093,
+     "end": 35.299
+    },
+    {
+     "text": "Ada",
+     "start": 35.299,
+     "end": 35.505
+    },
+    {
+     "text": "app",
+     "start": 35.505,
+     "end": 36.251
+    },
+    {
+     "text": "yang",
+     "start": 36.251,
+     "end": 36.508
+    },
+    {
+     "text": "kumpul",
+     "start": 36.508,
+     "end": 36.869
+    },
+    {
+     "text": "nama",
+     "start": 36.869,
+     "end": 37.126
+    },
+    {
+     "text": "dari",
+     "start": 37.126,
+     "end": 37.383
+    },
+    {
+     "text": "contact",
+     "start": 37.383,
+     "end": 37.795
+    },
+    {
+     "text": "list",
+     "start": 37.795,
+     "end": 38.052
+    },
+    {
+     "text": "pengguna",
+     "start": 38.052,
+     "end": 38.516
+    },
+    {
+     "text": "dia.",
+     "start": 38.516,
+     "end": 38.773
+    },
+    {
+     "text": "Kawan",
+     "start": 38.773,
+     "end": 39.082
+    },
+    {
+     "text": "kau",
+     "start": 39.082,
+     "end": 39.866
+    },
+    {
+     "text": "save",
+     "start": 39.866,
+     "end": 40.123
+    },
+    {
+     "text": "nama",
+     "start": 40.123,
+     "end": 40.38
+    },
+    {
+     "text": "penuh",
+     "start": 40.38,
+     "end": 40.689
+    },
+    {
+     "text": "kau,",
+     "start": 40.689,
+     "end": 40.946
+    },
+    {
+     "text": "orang",
+     "start": 40.946,
+     "end": 41.645
+    },
+    {
+     "text": "lain",
+     "start": 41.645,
+     "end": 41.902
+    },
+    {
+     "text": "pun",
+     "start": 41.902,
+     "end": 42.108
+    },
+    {
+     "text": "boleh",
+     "start": 42.108,
+     "end": 42.417
+    },
+    {
+     "text": "nampak.",
+     "start": 42.417,
+     "end": 42.829
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "speaker": "YUSUF",
+   "scene": "public",
+   "text": "Tiga, kita sendiri yang kongsi. Iklan jual barang, group Facebook, borang cabutan bertuah.",
+   "file": "assets/audio/voice/supplied/08.mp3",
+   "start": 43.279,
+   "file_dur": 6.766,
+   "speech_start": 43.279,
+   "speech_end": 49.807,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Tiga,",
+     "start": 43.279,
+     "end": 43.744
+    },
+    {
+     "text": "kita",
+     "start": 44.229,
+     "end": 44.5
+    },
+    {
+     "text": "sendiri",
+     "start": 44.5,
+     "end": 44.933
+    },
+    {
+     "text": "yang",
+     "start": 44.933,
+     "end": 45.204
+    },
+    {
+     "text": "kongsi.",
+     "start": 45.204,
+     "end": 45.637
+    },
+    {
+     "text": "Iklan",
+     "start": 46.191,
+     "end": 46.537
+    },
+    {
+     "text": "jual",
+     "start": 46.537,
+     "end": 46.825
+    },
+    {
+     "text": "barang,",
+     "start": 46.825,
+     "end": 47.286
+    },
+    {
+     "text": "group",
+     "start": 47.484,
+     "end": 47.764
+    },
+    {
+     "text": "Facebook,",
+     "start": 47.764,
+     "end": 48.233
+    },
+    {
+     "text": "borang",
+     "start": 48.568,
+     "end": 48.929
+    },
+    {
+     "text": "cabutan",
+     "start": 48.929,
+     "end": 49.342
+    },
+    {
+     "text": "bertuah.",
+     "start": 49.342,
+     "end": 49.807
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "speaker": "AIMAN",
+   "scene": "public",
+   "text": "Alamak. Borang menang iPhone hari tu.",
+   "file": "assets/audio/voice/supplied/09.mp3",
+   "start": 50.007,
+   "file_dur": 3.082,
+   "speech_start": 50.007,
+   "speech_end": 52.903,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Alamak.",
+     "start": 50.007,
+     "end": 50.916
+    },
+    {
+     "text": "Borang",
+     "start": 51.116,
+     "end": 51.533
+    },
+    {
+     "text": "menang",
+     "start": 51.533,
+     "end": 51.95
+    },
+    {
+     "text": "iPhone",
+     "start": 51.95,
+     "end": 52.367
+    },
+    {
+     "text": "hari",
+     "start": 52.367,
+     "end": 52.665
+    },
+    {
+     "text": "tu.",
+     "start": 52.665,
+     "end": 52.903
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "speaker": "YUSUF",
+   "scene": "tips",
+   "text": "Jadi ingat. Dia tahu nama penuh kau, itu bukan bukti dia dari bank atau polis. Letak telefon, call semula nombor rasmi.",
+   "file": "assets/audio/voice/supplied/10.mp3",
+   "start": 53.353,
+   "file_dur": 8.438,
+   "speech_start": 53.353,
+   "speech_end": 61.611,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Jadi",
+     "start": 53.353,
+     "end": 53.621
+    },
+    {
+     "text": "ingat.",
+     "start": 53.621,
+     "end": 53.997
+    },
+    {
+     "text": "Dia",
+     "start": 53.997,
+     "end": 54.712
+    },
+    {
+     "text": "tahu",
+     "start": 54.712,
+     "end": 54.98
+    },
+    {
+     "text": "nama",
+     "start": 54.98,
+     "end": 55.248
+    },
+    {
+     "text": "penuh",
+     "start": 55.248,
+     "end": 55.57
+    },
+    {
+     "text": "kau,",
+     "start": 55.57,
+     "end": 55.839
+    },
+    {
+     "text": "itu",
+     "start": 55.839,
+     "end": 56.46
+    },
+    {
+     "text": "bukan",
+     "start": 56.46,
+     "end": 56.782
+    },
+    {
+     "text": "bukti",
+     "start": 56.782,
+     "end": 57.242
+    },
+    {
+     "text": "dia",
+     "start": 57.242,
+     "end": 57.457
+    },
+    {
+     "text": "dari",
+     "start": 57.457,
+     "end": 57.725
+    },
+    {
+     "text": "bank",
+     "start": 57.725,
+     "end": 57.993
+    },
+    {
+     "text": "atau",
+     "start": 57.993,
+     "end": 58.262
+    },
+    {
+     "text": "polis.",
+     "start": 58.262,
+     "end": 58.637
+    },
+    {
+     "text": "Letak",
+     "start": 58.637,
+     "end": 59.456
+    },
+    {
+     "text": "telefon,",
+     "start": 59.456,
+     "end": 59.939
+    },
+    {
+     "text": "call",
+     "start": 59.939,
+     "end": 60.484
+    },
+    {
+     "text": "semula",
+     "start": 60.484,
+     "end": 60.859
+    },
+    {
+     "text": "nombor",
+     "start": 60.859,
+     "end": 61.235
+    },
+    {
+     "text": "rasmi.",
+     "start": 61.235,
+     "end": 61.611
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "speaker": "YUSUF",
+   "scene": "tips",
+   "text": "Kalau dah termasuk duit, terus call sembilan sembilan tujuh.",
+   "file": "assets/audio/voice/supplied/11.mp3",
+   "start": 61.911,
+   "file_dur": 3.317,
+   "speech_start": 61.911,
+   "speech_end": 65.021,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Kalau",
+     "start": 61.911,
+     "end": 62.205
+    },
+    {
+     "text": "dah",
+     "start": 62.205,
+     "end": 62.402
+    },
+    {
+     "text": "termasuk",
+     "start": 62.402,
+     "end": 62.843
+    },
+    {
+     "text": "duit,",
+     "start": 62.843,
+     "end": 63.137
+    },
+    {
+     "text": "terus",
+     "start": 63.496,
+     "end": 63.75
+    },
+    {
+     "text": "call",
+     "start": 63.75,
+     "end": 63.962
+    },
+    {
+     "text": "sembilan",
+     "start": 63.962,
+     "end": 64.343
+    },
+    {
+     "text": "sembilan",
+     "start": 64.343,
+     "end": 64.725
+    },
+    {
+     "text": "tujuh.",
+     "start": 64.725,
+     "end": 65.021
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "speaker": "AIMAN",
+   "scene": "loop",
+   "text": "Okay, lepas ni aku tak panik dah. Eh, kejap. Dia call lagi!",
+   "file": "assets/audio/voice/supplied/12.mp3",
+   "start": 65.471,
+   "file_dur": 4.911,
+   "speech_start": 65.471,
+   "speech_end": 70.258,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Okay,",
+     "start": 65.471,
+     "end": 65.833
+    },
+    {
+     "text": "lepas",
+     "start": 65.833,
+     "end": 66.195
+    },
+    {
+     "text": "ni",
+     "start": 66.195,
+     "end": 66.376
+    },
+    {
+     "text": "aku",
+     "start": 66.376,
+     "end": 66.618
+    },
+    {
+     "text": "tak",
+     "start": 66.618,
+     "end": 66.859
+    },
+    {
+     "text": "panik",
+     "start": 66.859,
+     "end": 67.221
+    },
+    {
+     "text": "dah.",
+     "start": 67.221,
+     "end": 67.523
+    },
+    {
+     "text": "Eh,",
+     "start": 67.523,
+     "end": 67.764
+    },
+    {
+     "text": "kejap.",
+     "start": 67.764,
+     "end": 69.353
+    },
+    {
+     "text": "Dia",
+     "start": 69.353,
+     "end": 69.594
+    },
+    {
+     "text": "call",
+     "start": 69.594,
+     "end": 69.896
+    },
+    {
+     "text": "lagi!",
+     "start": 69.896,
+     "end": 70.258
+    }
+   ]
+  }
+ ],
+ "scenes": [
+  {
+   "id": "hook",
+   "start": 0.0,
+   "lines": [
+    1,
+    2
+   ],
+   "duration": 10.31
+  },
+  {
+   "id": "leak",
+   "start": 10.31,
+   "lines": [
+    3,
+    4,
+    5
+   ],
+   "duration": 20.46
+  },
+  {
+   "id": "callerid",
+   "start": 30.77,
+   "lines": [
+    6,
+    7
+   ],
+   "duration": 12.28
+  },
+  {
+   "id": "public",
+   "start": 43.05,
+   "lines": [
+    8,
+    9
+   ],
+   "duration": 10.08
+  },
+  {
+   "id": "tips",
+   "start": 53.13,
+   "lines": [
+    10,
+    11
+   ],
+   "duration": 12.12
+  },
+  {
+   "id": "loop",
+   "start": 65.25,
+   "lines": [
+    12
+   ],
+   "duration": 6.61
+  }
+ ]
+}
