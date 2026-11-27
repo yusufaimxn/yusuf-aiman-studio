@@ -1,0 +1,23 @@
+# Episode input. Script: script.txt (yavoice format). Storyboard: storyboard/storyboard.md
+slug: scammer-dapat-nombor
+title: "Macam mana scammer dapat nombor telefon kau"
+topic: "Penonton faham 3 cara utama scammer dapat nombor (data bocor, app caller ID, maklumat yang kita kongsi sendiri) dan tahu apa nak buat bila dapat call."
+series: "F1 Aiman Hampir Kena Scam"
+language: ms
+target_duration_s: 60
+formats: [vertical, landscape]   # vertical (TikTok) is primary
+script:
+  source: file
+  text: ""
+  file: script.txt
+voiceover:
+  source: supplied        # MP3 dari laman ElevenLabs, satu fail per baris (01.mp3 ... 12.mp3), kekal tanpa ubah
+  file: ""                # diisi selepas import: assets/audio/voice/
+  voices:
+    yusuf: "ElevenLabs Shahrul (G3mZ5fAxCu3ThFPWdD3D), Multilingual v2"
+    aiman: "ElevenLabs Ashraf (NHFTLozDZneDWyQjRGAO), Multilingual v2"
+characters: [yusuf, aiman]
+visual_preferences:
+  style: short
+  environments: [main-studio, phone-ui, isometric-city]
+  notes: "Hook 2 saat pertama tanpa logo. Teks skrin besar, kata kunci 'nama penuh' diulang. Loop di hujung ke babak pembukaan."
