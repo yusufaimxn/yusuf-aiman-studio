@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# 3D character pipeline CLI. See documentation/3d-character-pipeline.md
+set -euo pipefail
+cd "$(dirname "$0")/.."
+PY=${BLENDER_PY:-.venv/bin/python}
+exec "$PY" scripts/blender/char3d.py "$@"
