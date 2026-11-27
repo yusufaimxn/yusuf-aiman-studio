@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family: "PJS"; src: url("assets/fonts/plus-jakarta-sans-latin-700-normal.woff2") format("woff2"); font-weight: 700; }
+  html, body { margin: 0; background: #000; }
+  #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+  #stage { position: absolute; inset: 0; width: 1080px; height: 1920px; }
+  #cap { position: absolute; left: 60px; right: 60px; top: 1300px; text-align: center; font-family: "PJS", sans-serif; font-weight: 700;
+         font-size: 92px; line-height: 1.05; color: #fff; -webkit-text-stroke: 14px #111; paint-order: stroke fill; letter-spacing: -1px; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-width="1080" data-height="1920" data-duration="11" data-fps="30">
+  <canvas id="stage" class="clip" data-start="0" data-duration="11" data-track-index="0" width="1080" height="1920"></canvas>
+  <div id="cap" class="clip" data-start="0" data-duration="11" data-track-index="2"></div>
+  <audio id="vo1" class="clip" data-start="0.3" data-duration="6.27" data-track-index="1" src="assets/01.mp3"></audio>
+  <audio id="vo2" class="clip" data-start="7.0" data-duration="3.63" data-track-index="3" src="assets/02.mp3"></audio>
+</div>
+<script src="assets/lib/gsap.min.js"></script>
+<script>
+  window.__timelines = window.__timelines || {};
+  const tl = gsap.timeline({ paused: true });
+  tl.to({}, { duration: 11 });
+  window.__timelines["main"] = tl;
+</script>
+<script type="module">
+import * as THREE from "./assets/lib/three.module.js";
+import { makeStickman, STICK_YUSUF, STICK_AIMAN, STICK_POSES } from "./assets/lib/stickman.js";
+import { CUES1, CUES2 } from "./assets/lib/visemes.js";
+
+const clamp01 = (x) => Math.max(0, Math.min(1, x));
+const ease = (x) => { x = clamp01(x); return x * x * (3 - 2 * x); };
+const lerp = (a, b, k) => a + (b - a) * k;
+
+// ---------------- renderer
+const canvas = document.getElementById("stage");
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(1); renderer.setSize(1080, 1920, false);
+renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.15;
+const scene = new THREE.Scene();
+scene.background = new THREE.Color("#7cc4f0");
+const camera = new THREE.PerspectiveCamera(42, 1080 / 1920, 0.1, 80);
+
+// ---------------- light: warm sun key, cool sky fill (long blue shadows)
+scene.add(new THREE.HemisphereLight("#cfe8ff", "#8a6a55", 1.0));
+const sun = new THREE.DirectionalLight("#ffd9a8", 3.0);
+sun.position.set(-4, 6, 5); sun.castShadow = true; sun.shadow.mapSize.set(2048, 2048);
+Object.assign(sun.shadow.camera, { left: -7, right: 7, top: 7, bottom: -3, near: 0.5, far: 25 });
+sun.shadow.bias = -0.0006; sun.shadow.radius = 3;
+scene.add(sun);
+
+// ---------------- painted textures (procedural, seeded)
+function rng(seed) { let s = seed >>> 0; return () => ((s = (s * 1664525 + 1013904223) >>> 0) / 4294967296); }
+function canvasTex(w, h, paint, rep = [1, 1]) {
+  const c = document.createElement("canvas"); c.width = w; c.height = h; paint(c.getContext("2d"), w, h);
+  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.wrapS = t.wrapT = THREE.RepeatWrapping; t.repeat.set(...rep); t.anisotropy = 8; return t;
+}
+const planks = canvasTex(512, 512, (g, w, h) => {
+  const r = rng(7);
+  for (let i = 0; i < 8; i++) {
+    const base = [196, 128, 78].map((v) => v + (r() - 0.5) * 30);
+    g.fillStyle = `rgb(${base})`; g.fillRect(0, i * 64, w, 64);
+    for (let k = 0; k < 18; k++) { g.strokeStyle = `rgba(90,50,25,${0.12 + r() * 0.15})`; g.lineWidth = 1 + r() * 2; g.beginPath(); const y = i * 64 + r() * 64; g.moveTo(0, y); g.bezierCurveTo(w * 0.3, y + (r() - 0.5) * 8, w * 0.7, y + (r() - 0.5) * 8, w, y); g.stroke(); }
+    g.fillStyle = "#3b2416"; g.fillRect(0, i * 64, w, 4);
+    const cut = r() * w; g.fillRect(cut, i * 64, 4, 64);
+  }
+}, [4, 4]);
+const wallTex = canvasTex(256, 256, (g, w, h) => {
+  g.fillStyle = "#2f8fa3"; g.fillRect(0, 0, w, h); const r = rng(3);
+  for (let i = 0; i < 900; i++) { g.fillStyle = `rgba(255,255,255,${r() * 0.05})`; g.fillRect(r() * w, r() * h, 3, 3); }
+}, [3, 2]);
+const skyTex = canvasTex(512, 512, (g, w, h) => {
+  const gr = g.createLinearGradient(0, 0, 0, h); gr.addColorStop(0, "#4aa8ea"); gr.addColorStop(1, "#bfe6ff"); g.fillStyle = gr; g.fillRect(0, 0, w, h);
+  g.fillStyle = "#ffffff"; for (const [x, y, s] of [[120, 160, 1], [360, 110, 0.8], [300, 300, 1.1]]) { for (const [dx, dy, rr] of [[0, 0, 40], [40, -14, 46], [84, 0, 38], [42, 14, 40]]) { g.beginPath(); g.arc(x + dx * s, y + dy * s, rr * s, 0, Math.PI * 2); g.fill(); } }
+});
+
+// ---------------- ink outline: black edges on every world mesh
+const ink = new THREE.LineBasicMaterial({ color: "#16121a" });
+function add(m, { outline = true, shadow = true, recv = true } = {}) {
+  m.castShadow = shadow; m.receiveShadow = recv;
+  if (outline) m.add(new THREE.LineSegments(new THREE.EdgesGeometry(m.geometry, 28), ink));
+  scene.add(m); return m;
+}
+const mat = (c, r = 0.8, map) => new THREE.MeshStandardMaterial({ color: c, roughness: r, map });
+const box = (w, h, d, c, x, y, z, o) => { const m = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), typeof c === "string" ? mat(c) : c); m.position.set(x, y, z); return add(m, o); };
+
+// ---------------- set: Aiman's bedroom (Bedroom / Daily Life)
+const floor = add(new THREE.Mesh(new THREE.PlaneGeometry(14, 14), mat("#ffffff", 0.85, planks)), { outline: false, shadow: false });
+floor.rotation.x = -Math.PI / 2;
+const wallM = mat("#ffffff", 0.95, wallTex);
+box(14, 6, 0.2, wallM, 0, 3, -3.2);
+box(0.2, 6, 10, wallM, -4.6, 3, 1.5);
+box(14, 0.18, 0.12, "#f5f7fa", 0, 0.09, -3.05);                                   // skirting
+// window with sky
+box(2.6, 1.9, 0.12, "#f5f7fa", 1.6, 3.2, -3.08);
+const sky = new THREE.Mesh(new THREE.PlaneGeometry(2.3, 1.6), new THREE.MeshBasicMaterial({ map: skyTex, toneMapped: false })); sky.position.set(1.6, 3.2, -3.0); scene.add(sky);
+box(0.08, 1.6, 0.06, "#f5f7fa", 1.6, 3.2, -2.97); box(2.3, 0.08, 0.06, "#f5f7fa", 1.6, 3.2, -2.97);
+// bed with blue blanket and pillow
+box(2.4, 0.4, 1.5, "#8a5a3c", -2.9, 0.2, -2.1);
+box(2.35, 0.25, 1.45, "#0066DE", -2.9, 0.52, -2.1);
+box(0.7, 0.2, 1.2, "#f5f7fa", -3.75, 0.72, -2.1);
+box(0.12, 1.0, 1.5, "#8a5a3c", -4.15, 0.5, -2.1);
+// desk + glowing laptop + lamp
+box(1.8, 0.08, 0.8, "#c98a55", 2.7, 1.0, -2.6);
+for (const [x, z] of [[1.9, -2.9], [3.5, -2.9], [1.9, -2.3], [3.5, -2.3]]) box(0.07, 1.0, 0.07, "#5b3a26", x, 0.5, z);
+box(0.7, 0.03, 0.45, "#c3c8cf", 2.6, 1.06, -2.5);
+const scr = box(0.7, 0.45, 0.03, "#1F2937", 2.6, 1.3, -2.74);
+const glow = new THREE.Mesh(new THREE.PlaneGeometry(0.62, 0.38), new THREE.MeshBasicMaterial({ color: "#7fe0ff", toneMapped: false })); glow.position.set(2.6, 1.3, -2.72); scene.add(glow);
+box(0.06, 0.55, 0.06, "#FF8A00", 3.3, 1.32, -2.75); box(0.3, 0.16, 0.3, "#FF8A00", 3.3, 1.66, -2.7);
+// shelf with books, poster
+box(1.4, 0.06, 0.35, "#c98a55", -1.0, 2.6, -3.0);
+["#FF8A00", "#00C2FF", "#e64b4b", "#f5f7fa", "#0B1E3F", "#4bbf73"].forEach((c, i) => box(0.14, 0.36 - (i % 3) * 0.05, 0.28, c, -1.55 + i * 0.19, 2.81 - (i % 3) * 0.025, -3.0));
+box(0.9, 1.2, 0.04, "#FF8A00", -1.0, 3.75, -3.08); box(0.6, 0.6, 0.02, "#0B1E3F", -1.0, 3.85, -3.05, { outline: false });
+// plant + rug
+const pot = add(new THREE.Mesh(new THREE.CylinderGeometry(0.25, 0.2, 0.45, 18), mat("#e6774b"))); pot.position.set(3.9, 0.22, -1.4);
+for (let i = 0; i < 6; i++) { const l = add(new THREE.Mesh(new THREE.SphereGeometry(0.28, 12, 9), mat("#3fae5f")), { outline: true }); l.position.set(3.9 + Math.cos(i * 1.1) * 0.2, 0.75 + (i % 3) * 0.22, -1.4 + Math.sin(i * 1.1) * 0.2); }
+const rug = add(new THREE.Mesh(new THREE.CircleGeometry(1.5, 48), mat("#f2b33d", 0.95)), { outline: false, shadow: false }); rug.rotation.x = -Math.PI / 2; rug.position.set(0.2, 0.01, 0.2);
+const rug2 = add(new THREE.Mesh(new THREE.RingGeometry(1.15, 1.3, 48), mat("#e0702f", 0.95)), { outline: false, shadow: false }); rug2.rotation.x = -Math.PI / 2; rug2.position.set(0.2, 0.012, 0.2);
+
+// ---------------- cast
+const aiman = makeStickman(THREE, STICK_AIMAN, 1.75); scene.add(aiman.object);
+const yusuf = makeStickman(THREE, STICK_YUSUF, 1.8); scene.add(yusuf.object);
+
+// ---------------- timing data
+const visemeAt = (cues, t) => { if (t < 0) return "X"; let v = "X"; for (const [s, val] of cues) { if (s <= t) v = val; else break; } return v; };
+const blinkAt = (t, off) => { for (let b = 1.3 + off; b < 11; b += 2.7) { const k = (t - b) / 0.15; if (k >= 0 && k <= 1) return Math.sin(k * Math.PI) * 1.2; } return 0; };
+// caption phrases: [start, end, text] (speech spans measured with silencedetect), words spread by length
+const PHR = [[0.3, 0.9, "Yusuf!"], [1.33, 2.27, "Orang call aku,"], [2.55, 3.9, "dia tahu nama penuh aku!"], [4.33, 6.41, "Padahal aku tak pernah bagi nombor pun!"],
+             [7.0, 7.9, "Relaks."], [8.24, 8.94, "Jom kita bedah,"], [9.24, 10.37, "macam mana dia dapat."]];
+const WORDS = [];
+for (const [a, b, text] of PHR) { const ws = text.split(" "); const tot = ws.reduce((n, w) => n + w.length + 2, 0); let t = a; for (const w of ws) { const d = (b - a) * (w.length + 2) / tot; WORDS.push([t, w]); t += d; } WORDS.push([b, ""]); }
+const capEl = document.getElementById("cap");
+function captionAt(t) {
+  let i = -1; for (let k = 0; k < WORDS.length; k++) if (WORDS[k][0] <= t) i = k;
+  if (i < 0 || !WORDS[i][1]) return "";
+  const f = firstOfPhrase(i), start = f + 2 * Math.floor((i - f) / 2);
+  return [WORDS[start], WORDS[start + 1]].filter((w) => w && w[1]).map((w) => w[1]).join(" ");
+}
+function firstOfPhrase(i) { let k = i; while (k > 0 && WORDS[k - 1][1]) k--; return k; }
+
+function renderAt(t) {
+  // ---- Aiman: phone at ear, panicking while 01 plays, then relaxes
+  const aT = t - 0.3;
+  const aPanic = t < 6.8;
+  const aPose = t < 6.8 ? STICK_POSES.phone : STICK_POSES.idle;
+  aiman.object.position.set(-0.55, 0, 0.6);
+  aiman.draw({ pose: aPose, expression: aPanic ? (t < 1 ? "surprised" : "panic") : (t < 8.5 ? "worried" : "neutral"), viseme: visemeAt(CUES1, aT > 6.2 ? -1 : aT),
+               blink: blinkAt(t, 0), flip: false, bob: aPanic ? Math.sin(t * 9) * 4 : 0, look: t > 6.3 ? 1 : 0 });
+  // ---- Yusuf: walks in from the right at 4.8-6.8 s, then talks calmly with a gesture
+  const wk = ease((t - 4.8) / 2.0);
+  const walking = t > 4.8 && t < 6.8 ? 1 : 0;
+  yusuf.object.position.set(lerp(3.6, 0.75, wk), 0, lerp(1.0, 0.75, wk));
+  const yT = t - 7.0;
+  const gest = ease((t - 8.1) / 0.4) * (1 - ease((t - 10.3) / 0.4));
+  yusuf.draw({ pose: gest > 0.5 ? STICK_POSES.explain : (t > 7 ? STICK_POSES.handsHips : STICK_POSES.idle), expression: t < 7.9 ? "calm" : "smug",
+               viseme: visemeAt(CUES2, yT > 3.55 ? -1 : yT), blink: blinkAt(t, 1.1), flip: true, walk: (t - 4.8) * 1.1, walking });
+  // billboards face the camera around Y
+  for (const c of [aiman, yusuf]) c.object.rotation.y = Math.atan2(camera.position.x - c.object.position.x, camera.position.z - c.object.position.z);
+  // ---- camera: slow push-in, then glides right to make room for Yusuf (no hard cuts)
+  const p1 = ease(t / 5), p2 = ease((t - 5) / 2.2), p3 = ease((t - 8) / 3);
+  camera.position.set(lerp(-0.9, -0.55, p1) + 0.8 * p2, lerp(1.6, 1.5, p1), lerp(5.6, 4.9, p1) + 0.9 * p2 - 0.3 * p3);
+  camera.lookAt(lerp(-0.55, -0.5, p1) + 0.6 * p2, lerp(1.05, 1.0, p1) + 0.05 * p2, 0);
+  capEl.textContent = captionAt(t);
+  renderer.render(scene, camera);
+}
+window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+document.fonts.load('700 92px "PJS"').then(() => renderAt(0));
+</script>
+</body>
+</html>
