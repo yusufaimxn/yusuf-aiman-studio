@@ -1,0 +1,23 @@
+# Episode input. Script: script.txt (yavoice format). Storyboard: storyboard.md
+slug: deepfake-dato
+title: "Muka Dia Betul. Tapi Dia Tak Pernah Cakap Benda Ni."
+topic: "Penonton faham video deepfake orang kenamaan boleh dipalsukan untuk scam pelaburan, kenal aliran scam dan 3 tanda bahaya, dan tahu semak SC/BNM serta call 997."
+series: "F1 Aiman Hampir Kena Scam"
+language: ms
+target_duration_s: 65
+formats: [vertical]   # short: vertical only (user rule 2026-11-27)
+script:
+  source: file
+  text: ""
+  file: script.txt
+voiceover:
+  source: supplied
+  file: "assets/audio/voice/supplied/01.mp3"   # first of 01.mp3 ... 13.mp3 (one per script line), kept as supplied
+  voices:
+    yusuf: "ElevenLabs Shahrul (G3mZ5fAxCu3ThFPWdD3D), Multilingual v2"
+    aiman: "ElevenLabs Ashraf (NHFTLozDZneDWyQjRGAO), Multilingual v2"
+characters: [yusuf, aiman]
+visual_preferences:
+  style: short
+  environments: [cafe, tech-world-isometric, main-studio]
+  notes: "Dato' Hartawan ialah watak rekaan; tiada tokoh sebenar, tiada deepfake sebenar. Loop di hujung ke iklan pembukaan."

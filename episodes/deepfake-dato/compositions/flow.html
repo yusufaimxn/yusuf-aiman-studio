@@ -1,0 +1,48 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; }
+    #fl-ttl { position: absolute; left: 0; right: 0; top: 60px; display: flex; justify-content: center; }
+    #fl-ttl .chip { position: relative; }
+    .nd { position: absolute; left: 130px; width: 820px; height: 150px; border-radius: 30px; background: rgba(245,247,250,0.97); display: flex; align-items: center; gap: 26px; padding: 0 30px;
+      box-shadow: 0 18px 50px rgba(4,12,30,0.45); }
+    .nd .ic { width: 96px; height: 96px; border-radius: 26px; background: #0066DE; display: grid; place-items: center; flex: none; }
+    .nd .tx { font: 800 42px "Sora"; color: #0B1E3F; line-height: 1.05; }
+    .nd .tx small { display: block; font: 600 26px "Inter"; color: #6b7280; margin-top: 6px; }
+    .nd .no { position: absolute; right: 28px; top: 50%; margin-top: -30px; width: 60px; height: 60px; border-radius: 50%; background: #E5EAF2; color: #0B1E3F; display: grid; place-items: center; font: 800 30px "Sora"; }
+    #fl-n1 { top: 180px; } #fl-n2 { top: 380px; } #fl-n3 { top: 580px; } #fl-n4 { top: 780px; border: 6px solid #FF4D5E; }
+    #fl-n4 .ic { background: #FF4D5E; }
+    .ar { position: absolute; left: 524px; width: 32px; height: 50px; }
+    #fl-a1 { top: 330px; } #fl-a2 { top: 530px; } #fl-a3 { top: 730px; }
+    #fl-done { position: absolute; left: 590px; top: 330px; padding: 6px 18px 10px; border: 7px solid #FF8A00; border-radius: 16px; color: #FF8A00; background: #fff;
+      font: 800 36px "Sora"; transform: rotate(-8deg); white-space: nowrap; }
+  </style>
+  <div id="root" data-composition-id="flow" data-width="1080" data-height="1920">
+    <div id="fl-ttl"><div class="chip warn"><div class="num">!</div>MACAM MANA DIA TIPU</div></div>
+    <div id="fl-n1" class="nd"><div class="ic"><svg width="56" height="56" viewBox="0 0 24 24"><path fill="#fff" d="M9 11.2V5.5a1.5 1.5 0 0 1 3 0v4.7l4.2.9c1 .2 1.8 1.1 1.8 2.2V18a4 4 0 0 1-4 4h-2.4a4 4 0 0 1-3.3-1.7L5 16.4a1.4 1.4 0 0 1 2-2l2 1.6z"/></svg></div><div class="tx">Tekan "Learn More"<small>Link dari iklan video</small></div><div class="no">1</div></div>
+    <svg id="fl-a1" class="ar" viewBox="0 0 32 50"><path d="M16 0v38M4 28l12 14 12-14" stroke="#00C2FF" stroke-width="7" fill="none" stroke-linecap="round"/></svg>
+    <div id="fl-n2" class="nd"><div class="ic"><svg width="52" height="56" viewBox="0 0 24 26"><rect x="3" y="2" width="18" height="22" rx="3" fill="#fff"/><rect x="7" y="8" width="10" height="2.4" rx="1.2" fill="#0066DE"/><rect x="7" y="13" width="10" height="2.4" rx="1.2" fill="#0066DE"/><rect x="7" y="18" width="6" height="2.4" rx="1.2" fill="#0066DE"/></svg></div><div class="tx">Isi borang<small>Nama, IC, nombor telefon</small></div><div class="no">2</div></div>
+    <svg id="fl-a2" class="ar" viewBox="0 0 32 50"><path d="M16 0v38M4 28l12 14 12-14" stroke="#00C2FF" stroke-width="7" fill="none" stroke-linecap="round"/></svg>
+    <div id="fl-n3" class="nd"><div class="ic"><svg width="56" height="56" viewBox="0 0 24 24"><path d="M12 3v12M6.5 10 12 15.5 17.5 10M4 20h16" stroke="#fff" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="tx">Download app<small>App "pelaburan" palsu</small></div><div class="no">3</div></div>
+    <svg id="fl-a3" class="ar" viewBox="0 0 32 50"><path d="M16 0v38M4 28l12 14 12-14" stroke="#FF4D5E" stroke-width="7" fill="none" stroke-linecap="round"/></svg>
+    <div id="fl-n4" class="nd"><div class="ic"><svg width="52" height="52" viewBox="0 0 24 24"><path fill="#fff" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></div><div class="tx">"Agent" call<small style="color:#FF4D5E">"Transfer sekarang, slot terhad!"</small></div><div class="no" style="background:#FF4D5E;color:#fff">RM</div></div>
+    <div id="fl-done" data-layout-allow-overlap>SUDAH DIHANTAR ✓</div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const S = window.YA_T.scenes.flow, t = (x) => x - S;
+    gsap.set(["#fl-ttl", ".nd", ".ar", "#fl-done"], { opacity: 0 });
+    tl.fromTo("#fl-ttl", { opacity: 0, y: -30 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(2)" }, t(46.35));
+    [["#fl-n1", 48.05], ["#fl-a1", 48.9], ["#fl-n2", 49.2], ["#fl-a2", 49.95], ["#fl-n3", 50.15], ["#fl-a3", 51.3], ["#fl-n4", 52.05]].forEach(([s, at]) => {
+      tl.fromTo(s, { opacity: 0, x: s.includes("-a") ? 0 : -90, y: s.includes("-a") ? -16 : 0 }, { opacity: 1, x: 0, y: 0, duration: 0.3, ease: "back.out(1.8)" }, t(at));
+    });
+    tl.fromTo("#fl-n4", { boxShadow: "0 0 0px rgba(255,77,94,0.0)" }, { boxShadow: "0 0 70px rgba(255,77,94,0.95)", duration: 0.3, yoyo: true, repeat: 5, ease: "sine.inOut", immediateRender: false }, t(53.0));
+    tl.fromTo("#fl-n4", { x: 0 }, { x: 10, duration: 0.05, yoyo: true, repeat: 7, ease: "none", immediateRender: false }, t(53.05));
+    // line 9: "Alamak. Borang tu aku dah isi tadi."
+    tl.to(["#fl-n1", "#fl-n3", "#fl-n4", ".ar"], { opacity: 0.3, duration: 0.25 }, t(54.25));
+    tl.to("#fl-n2", { scale: 1.08, borderColor: "#FF8A00", duration: 0.3, ease: "back.out(2)" }, t(54.25));
+    tl.set("#fl-n2", { border: "6px solid #FF8A00" }, t(54.25));
+    tl.fromTo("#fl-done", { opacity: 0, scale: 2.2 }, { opacity: 1, scale: 1, duration: 0.22, ease: "power4.in" }, t(55.4));
+    tl.to(["#fl-ttl", ".nd", ".ar", "#fl-done"], { opacity: 0, y: -40, duration: 0.25, ease: "power2.in" }, t(57.0));
+    window.__timelines["flow"] = tl;
+  </script>
+</template>

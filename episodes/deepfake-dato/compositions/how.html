@@ -1,0 +1,117 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; }
+    #hw-q { left: 170px; top: 250px; width: 740px; height: 420px; display: grid; place-items: center; text-align: center; }
+    #hw-q .big { font: 800 96px "Sora"; color: #0B1E3F; line-height: 1; }
+    #hw-q .eq { font: 800 64px "Sora"; color: #0066DE; margin-top: 18px; }
+    #hw-ttl { position: absolute; left: 0; right: 0; top: 70px; display: flex; justify-content: center; }
+    #hw-ttl .chip { position: relative; }
+    .vt { position: absolute; left: 50px; width: 260px; height: 150px; border-radius: 20px; overflow: hidden; background: #1c3260; border: 3px solid rgba(0,194,255,0.55); }
+    .vt img { position: absolute; left: 50%; top: 6px; width: 200px; margin-left: -100px; }
+    .vt .pl { position: absolute; right: 10px; bottom: 10px; width: 42px; height: 42px; border-radius: 50%; background: rgba(255,255,255,0.9); display: grid; place-items: center; }
+    #hw-v1 { top: 230px; } #hw-v2 { top: 400px; }
+    .wv { position: absolute; left: 50px; top: 570px; width: 260px; height: 120px; border-radius: 20px; background: rgba(11,30,63,0.85); border: 3px solid rgba(0,194,255,0.55);
+      display: flex; align-items: center; justify-content: center; gap: 7px; }
+    .wv i { width: 9px; border-radius: 5px; background: #00C2FF; }
+    #hw-lbl-in { position: absolute; left: 50px; top: 704px; width: 260px; text-align: center; font: 700 24px "Inter"; color: #F5F7FA; }
+    #hw-chip { position: absolute; left: 395px; top: 370px; width: 290px; height: 290px; border-radius: 48px; background: linear-gradient(150deg, #0d2a5c, #0B1E3F);
+      border: 5px solid #00C2FF; box-shadow: 0 0 60px rgba(0,194,255,0.55); display: grid; place-items: center; }
+    #hw-chip .ai { font: 800 120px "Sora"; color: #F5F7FA; letter-spacing: -0.04em; }
+    .pin { position: absolute; width: 34px; height: 10px; border-radius: 5px; background: #00C2FF; }
+    #hw-bar { position: absolute; left: 40px; right: 40px; bottom: 34px; height: 14px; border-radius: 7px; background: rgba(255,255,255,0.15); overflow: hidden; }
+    #hw-bar i { position: absolute; inset: 0; background: linear-gradient(90deg, #00C2FF, #0066DE); transform-origin: 0 50%; }
+    #hw-mesh { position: absolute; left: 395px; top: 370px; width: 290px; height: 290px; }
+    #hw-out { position: absolute; left: 770px; top: 260px; width: 260px; height: 440px; border-radius: 24px; overflow: hidden; background: #2d4a7a; border: 4px solid #FF8A00; }
+    #hw-out img { position: absolute; left: 50%; bottom: 90px; width: 200px; margin-left: -100px; }
+    #hw-mouth { position: absolute; left: 95px; top: 104px; width: 70px; height: 46px; border-radius: 50%; border: 5px solid #FF8A00; box-shadow: 0 0 18px #FF8A00; }
+    #hw-out .wv2 { position: absolute; left: 0; right: 0; bottom: 0; height: 90px; background: rgba(11,30,63,0.9); display: flex; align-items: center; justify-content: center; gap: 7px; }
+    #hw-out .wv2 i { width: 9px; border-radius: 5px; background: #FF8A00; }
+    #hw-lbl-out { position: absolute; left: 770px; top: 712px; width: 260px; text-align: center; font: 700 24px "Inter"; color: #FF8A00; }
+    .arr { position: absolute; height: 8px; border-radius: 4px; background: repeating-linear-gradient(90deg, #00C2FF 0 22px, transparent 22px 36px); transform-origin: 0 50%; }
+    #hw-a1 { left: 318px; top: 511px; width: 70px; } #hw-a2 { left: 692px; top: 511px; width: 70px; }
+    #hw-skrip { position: absolute; left: 375px; top: 770px; width: 330px; padding: 16px 20px; border-radius: 18px; background: #fff; color: #1F2937; font: 700 22px "Inter"; line-height: 1.25;
+      box-shadow: 0 14px 40px rgba(0,0,0,0.4); border-top: 10px solid #FF4D5E; }
+    #hw-skrip b { display: block; font: 800 22px "Sora"; color: #FF4D5E; margin-bottom: 4px; }
+    #hw-grid { position: absolute; left: 90px; top: 210px; width: 900px; height: 700px; }
+    .face { position: absolute; width: 250px; height: 250px; border-radius: 34px; background: rgba(11,30,63,0.8); border: 3px solid rgba(0,194,255,0.5); overflow: hidden; }
+    .face svg { position: absolute; left: 35px; top: 40px; }
+    .bub { position: absolute; left: 40px; top: 6px; padding: 6px 12px; border-radius: 14px 14px 14px 4px; background: #FF8A00; color: #fff; font: 800 20px "Inter"; white-space: nowrap; }
+    #hw-gt { position: absolute; left: 0; right: 0; top: 80px; text-align: center; }
+  </style>
+  <div id="root" data-composition-id="how" data-width="1080" data-height="1920">
+    <div id="hw-q" class="card"><div><div class="big">Video = bukti?</div><div class="eq">Belum tentu.</div></div></div>
+    <div id="hw-ttl"><div class="chip"><div class="num">?</div>APA ITU DEEPFAKE</div></div>
+    <div id="hw-v1" class="vt"><img src="assets/images/dato.png" alt="" /><div class="pl"><svg width="18" height="20" viewBox="0 0 18 20"><path d="M2 1l15 9-15 9z" fill="#0B1E3F"/></svg></div></div>
+    <div id="hw-v2" class="vt"><img src="assets/images/dato.png" alt="" style="width:240px;margin-left:-120px;top:-4px" /><div class="pl"><svg width="18" height="20" viewBox="0 0 18 20"><path d="M2 1l15 9-15 9z" fill="#0B1E3F"/></svg></div></div>
+    <div id="hw-w1" class="wv"><i style="height:30px"></i><i style="height:62px"></i><i style="height:44px"></i><i style="height:80px"></i><i style="height:36px"></i><i style="height:58px"></i><i style="height:26px"></i><i style="height:70px"></i><i style="height:40px"></i></div>
+    <div id="hw-lbl-in">Video &amp; suara lama<br/>di internet</div>
+    <div id="hw-a1" class="arr"></div>
+    <div id="hw-chip"><div class="ai">AI</div>
+      <div class="pin" style="left:-34px;top:80px"></div><div class="pin" style="left:-34px;top:140px"></div><div class="pin" style="left:-34px;top:200px"></div>
+      <div class="pin" style="right:-34px;top:80px"></div><div class="pin" style="right:-34px;top:140px"></div><div class="pin" style="right:-34px;top:200px"></div>
+      <div id="hw-bar"><i id="hw-bar-i"></i></div></div>
+    <svg id="hw-mesh" viewBox="0 0 290 290"><g fill="none" stroke="#00C2FF" stroke-width="2" opacity="0.85">
+      <ellipse cx="145" cy="140" rx="92" ry="116"/><ellipse cx="145" cy="140" rx="60" ry="116"/><ellipse cx="145" cy="140" rx="26" ry="116"/>
+      <ellipse cx="145" cy="140" rx="92" ry="80"/><ellipse cx="145" cy="140" rx="92" ry="40"/><line x1="53" y1="140" x2="237" y2="140"/></g></svg>
+    <div id="hw-a2" class="arr"></div>
+    <div id="hw-out"><img src="assets/images/dato.png" alt="" /><div id="hw-mouth"></div>
+      <div class="wv2"><i style="height:24px"></i><i style="height:50px"></i><i style="height:36px"></i><i style="height:64px"></i><i style="height:30px"></i><i style="height:52px"></i><i style="height:22px"></i></div></div>
+    <div id="hw-lbl-out">Mulut &amp; suara BARU</div>
+    <div id="hw-skrip"><b>SKRIP SCAMMER</b>“Labur RM500, dapat RM5,000 dalam 7 hari!”</div>
+    <div id="hw-gt" class="h-lg">Sesiapa pun boleh <span class="c-orange">dipalsukan</span></div>
+    <div id="hw-grid"></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const S = window.YA_T.scenes.how, t = (x) => x - S;
+    // generic cartoon faces (no real people): built here, 3 x 2
+    const cols = ["#F2C6A0", "#D9A27A", "#E8B892", "#C98B62", "#F0CDB0", "#B97A52"], hair = ["#2b1d14", "#3a2a1f", "#1d1d1d", "#4a3426", "#2b1d14", "#151515"];
+    const g = document.getElementById("hw-grid");
+    for (let i = 0; i < 6; i++) {
+      const d = document.createElement("div"); d.className = "face"; d.id = "hw-f" + i;
+      d.style.left = (i % 3) * 320 + "px"; d.style.top = Math.floor(i / 3) * 330 + 30 + "px";
+      d.innerHTML = `<svg width="180" height="200" viewBox="0 0 180 200"><rect x="30" y="150" width="120" height="60" rx="30" fill="#0066DE"/><circle cx="90" cy="92" r="62" fill="${cols[i]}"/>` +
+        `<path d="M30 80 Q90 ${10 + i * 4} 150 80 L150 60 Q90 ${-10 + i * 3} 30 60z" fill="${hair[i]}"/><circle cx="68" cy="98" r="7" fill="#1F2937"/><circle cx="112" cy="98" r="7" fill="#1F2937"/>` +
+        `<ellipse id="hw-m${i}" cx="90" cy="128" rx="16" ry="6" fill="#7a2e2e"/></svg><div class="bub" id="hw-b${i}">Labur sekarang!</div>`;
+      g.appendChild(d);
+    }
+    gsap.set(["#hw-ttl", "#hw-v1", "#hw-v2", "#hw-w1", "#hw-lbl-in", "#hw-chip", "#hw-mesh", "#hw-out", "#hw-lbl-out", "#hw-skrip", "#hw-gt", "#hw-a1", "#hw-a2"], { opacity: 0 });
+    gsap.set(".face", { opacity: 0, scale: 0.4 }); gsap.set(".bub", { opacity: 0, scale: 0 });
+    // line 3: "Tapi ni video lah, bukan gambar!"
+    tl.fromTo("#hw-q", { opacity: 0, scale: 0.7, rotation: -4 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.35, ease: "back.out(2)" }, t(12.6));
+    tl.to("#hw-q", { opacity: 0, scale: 0.8, y: -60, duration: 0.25, ease: "power2.in" }, t(15.75));
+    // line 4: deepfake pipeline
+    tl.fromTo("#hw-ttl", { opacity: 0, y: -30 }, { opacity: 1, y: 0, duration: 0.35, ease: "back.out(2)" }, t(15.9));
+    tl.fromTo("#hw-chip", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(2)" }, t(16.2));
+    tl.fromTo("#hw-chip", { boxShadow: "0 0 30px rgba(0,194,255,0.35)" }, { boxShadow: "0 0 90px rgba(0,194,255,0.85)", duration: 0.5, yoyo: true, repeat: 15, ease: "sine.inOut", immediateRender: false }, t(17.3));
+    tl.fromTo("#hw-v1", { opacity: 0, x: -80 }, { opacity: 1, x: 0, duration: 0.3, ease: "power3.out" }, t(17.4));
+    tl.fromTo("#hw-v2", { opacity: 0, x: -80 }, { opacity: 1, x: 0, duration: 0.3, ease: "power3.out" }, t(18.2));
+    tl.fromTo("#hw-w1", { opacity: 0, x: -80 }, { opacity: 1, x: 0, duration: 0.3, ease: "power3.out" }, t(18.77));
+    tl.fromTo("#hw-w1 i", { scaleY: 0.5 }, { scaleY: 1.15, duration: 0.18, yoyo: true, repeat: 9, stagger: 0.04, ease: "sine.inOut" }, t(18.9));
+    tl.fromTo("#hw-lbl-in", { opacity: 0 }, { opacity: 1, duration: 0.3 }, t(19.3));
+    tl.fromTo("#hw-a1", { opacity: 1, scaleX: 0 }, { scaleX: 1, duration: 0.35, ease: "power2.out" }, t(19.5));
+    tl.fromTo("#hw-a1", { backgroundPosition: "0px 0px" }, { backgroundPosition: "72px 0px", duration: 0.6, repeat: 9, ease: "none", immediateRender: false }, t(19.8));
+    tl.fromTo("#hw-bar-i", { scaleX: 0 }, { scaleX: 1, duration: 3.0, ease: "power1.inOut" }, t(17.4));
+    tl.fromTo("#hw-mesh", { opacity: 0, rotation: -20, scale: 0.7 }, { opacity: 1, rotation: 0, scale: 1, duration: 0.5, ease: "back.out(1.6)" }, t(20.25));
+    tl.to("#hw-mesh", { rotationY: 0, rotation: 8, duration: 1.6, yoyo: true, repeat: 2, ease: "sine.inOut" }, t(20.8));
+    tl.to("#hw-chip .ai", { opacity: 0.25, duration: 0.3 }, t(20.25));
+    tl.fromTo("#hw-a2", { opacity: 1, scaleX: 0 }, { scaleX: 1, duration: 0.35, ease: "power2.out" }, t(22.3));
+    tl.fromTo("#hw-out", { opacity: 0, x: 80 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, t(22.45));
+    tl.fromTo("#hw-mouth", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(3)" }, t(23.13));
+    tl.fromTo("#hw-mouth", { scaleY: 1 }, { scaleY: 0.5, duration: 0.12, yoyo: true, repeat: 15, ease: "sine.inOut", immediateRender: false }, t(23.45));
+    tl.fromTo("#hw-out .wv2 i", { scaleY: 0.4 }, { scaleY: 1.2, duration: 0.15, yoyo: true, repeat: 13, stagger: 0.04, ease: "sine.inOut" }, t(23.75));
+    tl.fromTo("#hw-lbl-out", { opacity: 0 }, { opacity: 1, duration: 0.3 }, t(23.75));
+    tl.fromTo("#hw-skrip", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.35, ease: "back.out(2)" }, t(24.8));
+    tl.to("#hw-skrip", { y: -12, duration: 0.2, yoyo: true, repeat: 1 }, t(25.4));
+    // line 5: "sesiapa pun boleh dibuat cakap apa saja?"
+    tl.to(["#hw-ttl", "#hw-v1", "#hw-v2", "#hw-w1", "#hw-lbl-in", "#hw-chip", "#hw-mesh", "#hw-out", "#hw-lbl-out", "#hw-skrip", "#hw-a1", "#hw-a2"], { opacity: 0, scale: 0.85, duration: 0.25, ease: "power2.in" }, t(26.1));
+    tl.fromTo("#hw-gt", { opacity: 0, y: -30 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(2)" }, t(26.4));
+    for (let i = 0; i < 6; i++) {
+      tl.to("#hw-f" + i, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, t(26.5 + i * 0.12));
+      tl.to("#hw-b" + i, { opacity: 1, scale: 1, duration: 0.25, ease: "back.out(3)" }, t(27.2 + i * 0.3));
+      tl.fromTo("#hw-m" + i, { attr: { ry: 6 } }, { attr: { ry: 13 }, duration: 0.13, yoyo: true, repeat: 9, ease: "sine.inOut" }, t(27.2 + i * 0.3));
+    }
+    tl.to(["#hw-gt", "#hw-grid"], { opacity: 0, duration: 0.25 }, t(29.7));
+    window.__timelines["how"] = tl;
+  </script>
+</template>

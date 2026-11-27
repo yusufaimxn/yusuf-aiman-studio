@@ -1,0 +1,693 @@
+{
+ "slug": "deepfake-dato",
+ "total_duration_s": 83.02,
+ "scenes": [
+  {
+   "id": "hook",
+   "purpose": "hook",
+   "start_s": 0.0,
+   "duration_s": 12.43,
+   "goal": "Iklan video Dato' (rekaan) janji RM500 jadi RM5,000; Yusuf pause: muka & suara betul, tapi dia tak pernah cakap.",
+   "visual": "Telefon iklan video berlabel CONTOH, pause, tag MUKA/SUARA, glitch RGB, cop PALSU.",
+   "environment": "07 Café",
+   "characters": [
+    {
+     "name": "aiman",
+     "pose": "pose library (see compositions/cast.html)"
+    },
+    {
+     "name": "yusuf",
+     "pose": "pose library (see compositions/cast.html)"
+    }
+   ],
+   "dialogue": [
+    {
+     "speaker": "aiman",
+     "text": "Yusuf, tengok ni! Dato' Hartawan sendiri cakap, labur lima ratus, seminggu dapat lima ribu!"
+    },
+    {
+     "speaker": "yusuf",
+     "text": "Muka dia betul. Suara dia betul. Tapi dia tak pernah cakap benda ni."
+    }
+   ],
+   "on_screen_text": [
+    "Labur RM500, dapat RM5,000?!",
+    "Muka betul. Suara betul.",
+    "Tapi dia tak pernah cakap benda ni.",
+    "CONTOH · BUKAN VIDEO SEBENAR"
+   ],
+   "assets": [
+    {
+     "path": "assets/images/aiman-anxious.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-asking.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-celebrating.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-sad.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-scared.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-shocked.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-thumbs-up.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/dato-c.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/dato-r.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/dato.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/grid.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-ad.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-crossed-arms.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-explain.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-pointing.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-stop.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-thinking.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/audio/voice/supplied/01.mp3",
+     "status": "production"
+    },
+    {
+     "path": "assets/audio/voice/supplied/02.mp3",
+     "status": "production"
+    }
+   ]
+  },
+  {
+   "id": "how",
+   "purpose": "explain",
+   "start_s": 12.43,
+   "duration_s": 17.45,
+   "goal": "Deepfake: AI belajar dari video & suara sedia ada, jana mulut & suara baru ikut skrip scammer; sesiapa pun boleh dipalsukan.",
+   "visual": "Kad 'Video = bukti?', pipeline input → cip AI + mesh wajah → video output dengan mulut & suara baru, kad skrip scammer, grid 6 wajah rekaan bercakap.",
+   "environment": "10 Tech World (grid)",
+   "characters": [
+    {
+     "name": "aiman",
+     "pose": "pose library (see compositions/cast.html)"
+    },
+    {
+     "name": "yusuf",
+     "pose": "pose library (see compositions/cast.html)"
+    }
+   ],
+   "dialogue": [
+    {
+     "speaker": "aiman",
+     "text": "Hah? Tapi ni video lah, bukan gambar!"
+    },
+    {
+     "speaker": "yusuf",
+     "text": "Ni deepfake. AI belajar dari video dan suara dia yang dah ada kat internet. Lepas tu, AI jana gerak mulut dan suara baru, ikut skrip scammer."
+    },
+    {
+     "speaker": "aiman",
+     "text": "Maksudnya, sesiapa pun boleh dibuat cakap apa saja?"
+    }
+   ],
+   "on_screen_text": [
+    "Video = bukti? Belum tentu.",
+    "APA ITU DEEPFAKE",
+    "Sesiapa pun boleh dipalsukan"
+   ],
+   "assets": [
+    {
+     "path": "assets/images/aiman-anxious.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-asking.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-celebrating.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-sad.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-scared.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-shocked.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-thumbs-up.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/dato-c.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/dato-r.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/dato.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/grid.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-ad.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-crossed-arms.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-explain.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-pointing.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-stop.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-thinking.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/audio/voice/supplied/03.mp3",
+     "status": "production"
+    },
+    {
+     "path": "assets/audio/voice/supplied/04.mp3",
+     "status": "production"
+    },
+    {
+     "path": "assets/audio/voice/supplied/05.mp3",
+     "status": "production"
+    }
+   ]
+  },
+  {
+   "id": "facts",
+   "purpose": "explain",
+   "start_s": 29.88,
+   "duration_s": 16.22,
+   "goal": "PDRM kesan 5 video deepfake VIP janji untung sampai 100x; 2024: 454 kes, RM2.72 juta.",
+   "visual": "Kad polis + 5 jubin VIP cop PALSU, 100x, kaunter 454, kad RM2.72 juta, sumber.",
+   "environment": "10 Tech World (grid)",
+   "characters": [
+    {
+     "name": "aiman",
+     "pose": "pose library (see compositions/cast.html)"
+    },
+    {
+     "name": "yusuf",
+     "pose": "pose library (see compositions/cast.html)"
+    }
+   ],
+   "dialogue": [
+    {
+     "speaker": "yusuf",
+     "text": "Betul. Polis sendiri dah kesan video palsu guna muka orang kenamaan, janji untung sampai seratus kali ganda."
+    },
+    {
+     "speaker": "yusuf",
+     "text": "Tahun dua ribu dua puluh empat je, ada empat ratus lima puluh empat kes penipuan deepfake. Rugi dua koma tujuh juta ringgit."
+    }
+   ],
+   "on_screen_text": [
+    "Polis kesan 5 video deepfake orang kenamaan",
+    "100x",
+    "TAHUN 2024",
+    "454 kes penipuan deepfake",
+    "RM2.72 juta"
+   ],
+   "assets": [
+    {
+     "path": "assets/images/aiman-anxious.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-asking.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-celebrating.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-sad.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-scared.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-shocked.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-thumbs-up.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/dato-c.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/dato-r.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/dato.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/grid.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-ad.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-crossed-arms.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-explain.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-pointing.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-stop.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-thinking.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/audio/voice/supplied/06.mp3",
+     "status": "production"
+    },
+    {
+     "path": "assets/audio/voice/supplied/07.mp3",
+     "status": "production"
+    }
+   ]
+  },
+  {
+   "id": "flow",
+   "purpose": "explain",
+   "start_s": 46.1,
+   "duration_s": 11.12,
+   "goal": "Aliran scam: Learn More → borang → download app → agent minta transfer; Aiman dah isi borang.",
+   "visual": "Carta aliran 4 nod, nod agent merah berdenyut, cop SUDAH DIHANTAR pada borang.",
+   "environment": "07 Café",
+   "characters": [
+    {
+     "name": "aiman",
+     "pose": "pose library (see compositions/cast.html)"
+    },
+    {
+     "name": "yusuf",
+     "pose": "pose library (see compositions/cast.html)"
+    }
+   ],
+   "dialogue": [
+    {
+     "speaker": "yusuf",
+     "text": "Cara dia senang. Kau tekan Learn More, isi borang, download app. Lepas tu ada agent call, minta kau transfer duit."
+    },
+    {
+     "speaker": "aiman",
+     "text": "Alamak. Borang tu aku dah isi tadi."
+    }
+   ],
+   "on_screen_text": [
+    "MACAM MANA DIA TIPU",
+    "Tekan Learn More",
+    "Isi borang",
+    "Download app",
+    "Agent call"
+   ],
+   "assets": [
+    {
+     "path": "assets/images/aiman-anxious.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-asking.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-celebrating.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-sad.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-scared.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-shocked.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-thumbs-up.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/dato-c.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/dato-r.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/dato.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/grid.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-ad.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-crossed-arms.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-explain.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-pointing.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-stop.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-thinking.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/audio/voice/supplied/08.mp3",
+     "status": "production"
+    },
+    {
+     "path": "assets/audio/voice/supplied/09.mp3",
+     "status": "production"
+    }
+   ]
+  },
+  {
+   "id": "tips",
+   "purpose": "takeaway",
+   "start_s": 57.22,
+   "duration_s": 18.41,
+   "goal": "3 tanda bahaya, jangan percaya muka, semak SC Investor Alert List & BNM Financial Consumer Alert List, 997 jika hilang duit.",
+   "visual": "3 kad tanda bahaya, tajuk semak, 2 kad semakan, kad 997 NSRC.",
+   "environment": "01 Main Studio",
+   "characters": [
+    {
+     "name": "aiman",
+     "pose": "pose library (see compositions/cast.html)"
+    },
+    {
+     "name": "yusuf",
+     "pose": "pose library (see compositions/cast.html)"
+    }
+   ],
+   "dialogue": [
+    {
+     "speaker": "yusuf",
+     "text": "Jadi ingat tiga tanda. Untung gila dalam masa singkat. Desak kau cepat. Dan kata disokong kerajaan."
+    },
+    {
+     "speaker": "yusuf",
+     "text": "Jangan percaya muka. Semak dulu nama syarikat tu dalam senarai amaran Suruhanjaya Sekuriti dan Bank Negara."
+    },
+    {
+     "speaker": "yusuf",
+     "text": "Kalau dah termasuk duit, terus call sembilan sembilan tujuh."
+    }
+   ],
+   "on_screen_text": [
+    "3 TANDA BAHAYA",
+    "Jangan percaya muka. Semak syarikat dulu.",
+    "SC Investor Alert List",
+    "BNM Financial Consumer Alert List",
+    "997 NSRC"
+   ],
+   "assets": [
+    {
+     "path": "assets/images/aiman-anxious.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-asking.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-celebrating.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-sad.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-scared.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-shocked.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-thumbs-up.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/dato-c.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/dato-r.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/dato.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/grid.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-ad.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-crossed-arms.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-explain.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-pointing.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-stop.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-thinking.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/audio/voice/supplied/10.mp3",
+     "status": "production"
+    },
+    {
+     "path": "assets/audio/voice/supplied/11.mp3",
+     "status": "production"
+    },
+    {
+     "path": "assets/audio/voice/supplied/12.mp3",
+     "status": "production"
+    }
+   ]
+  },
+  {
+   "id": "loop",
+   "purpose": "outro",
+   "start_s": 75.63,
+   "duration_s": 7.39,
+   "goal": "Aiman faham, lalu iklan sama muncul dengan 'Yusuf' palsu; CTA share.",
+   "visual": "Okay faham, telefon iklan (Yusuf, label CONTOH), glitch, CTA share.",
+   "environment": "07 Café",
+   "characters": [
+    {
+     "name": "aiman",
+     "pose": "pose library (see compositions/cast.html)"
+    },
+    {
+     "name": "yusuf",
+     "pose": "pose library (see compositions/cast.html)"
+    }
+   ],
+   "dialogue": [
+    {
+     "speaker": "aiman",
+     "text": "Okay, faham. Eh, kejap. Ni video Yusuf pulak, suruh aku melabur?!"
+    }
+   ],
+   "on_screen_text": [
+    "Okay, faham!",
+    "Eh, ni video Yusuf pulak?!",
+    "SHARE kat group family"
+   ],
+   "assets": [
+    {
+     "path": "assets/images/aiman-anxious.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-asking.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-celebrating.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-sad.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-scared.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-shocked.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/aiman-thumbs-up.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/dato-c.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/dato-r.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/dato.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/grid.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-ad.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-crossed-arms.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-explain.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-pointing.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-stop.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/images/yusuf-thinking.png",
+     "status": "production"
+    },
+    {
+     "path": "assets/audio/voice/supplied/13.mp3",
+     "status": "production"
+    }
+   ]
+  }
+ ]
+}
