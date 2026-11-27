@@ -11,8 +11,8 @@
 
 export const YUSUF = {
   name: "yusuf",
-  skin: "#f2b48a", skinShade: "#e39a72",
-  hair: "#2a201d", brow: "#2a201d", beard: "#4a3a33",
+  skin: "#f6bf98", skinShade: "#e8a07c",
+  hair: "#2b211e", brow: "#2b211e", beard: "#3a2b26",
   eye: "#111014",
   shirt: "#1f1d22", pants: "#2a2729", shoes: "#f3f1ee", soles: "#d9d6d2",
   watch: "#b9bec6", watchFace: "#3b4048",
@@ -69,7 +69,7 @@ export function buildCharacter(THREE, spec) {
   const mats = {};
   const M = (key, color, rough = 0.62, extra = {}) =>
     (mats[key] ||= new THREE.MeshStandardMaterial({ color, roughness: rough, ...extra }));
-  const skin = M("skin", spec.skin, 0.5);
+  const skin = (mats.skinP ||= new THREE.MeshPhysicalMaterial({ color: spec.skin, roughness: 0.5, sheen: 0.5, sheenColor: new THREE.Color("#ffd2b8"), sheenRoughness: 0.6 }));
   const hairM = M("hair", spec.hair, 0.45);
   const joints = {};
   const meshes = [];
@@ -104,7 +104,7 @@ export function buildCharacter(THREE, spec) {
 
   // ---- torso: one smooth shirt shape (lathe), flattened front-to-back
   const shirt = M("shirt", spec.shirt, spec.hoodie ? 0.9 : 0.8);
-  const torso = mesh(lathe([[0.0, -0.1], [0.19, -0.1], [0.205, -0.04], [0.2, 0.08], [0.21, 0.2], [0.225, 0.3], [0.215, 0.38], [0.17, 0.43], [0.09, 0.455], [0.0, 0.46]]),
+  const torso = mesh(lathe([[0.0, -0.11], [0.215, -0.11], [0.225, -0.05], [0.22, 0.08], [0.23, 0.2], [0.245, 0.3], [0.24, 0.37], [0.2, 0.425], [0.1, 0.455], [0.0, 0.46]]),
     shirt, spine, 0, 0, 0, 1, 1, 0.72);
   if (spec.hoodie) {
     mesh(new THREE.TorusGeometry(0.1, 0.05, 14, 32), shirt, chest, 0, 0.19, -0.02, 1.15, 1, 1).rotation.x = Math.PI / 2;
@@ -116,82 +116,106 @@ export function buildCharacter(THREE, spec) {
   mesh(new THREE.CylinderGeometry(0.052, 0.058, 0.1, 24), skin, neck, 0, 0.0, 0);
 
   // ---- head: one sphere, fuller cheeks and jaw (vertex shaping, no seams)
-  const headGeo = new THREE.SphereGeometry(0.2, 64, 48);
+  const HR = 0.2;
+  const headGeo = new THREE.SphereGeometry(HR, 72, 54);
   const pos = headGeo.attributes.position, v = new THREE.Vector3();
   for (let i = 0; i < pos.count; i++) {
     v.fromBufferAttribute(pos, i);
-    const low = Math.max(0, -v.y / 0.2);                      // 0 at equator .. 1 at chin
-    const cheek = Math.exp(-((v.y + 0.07) ** 2) / 0.004) * 0.1; // cheek bulge band
-    const w = 1 + cheek - 0.1 * low * low;
-    v.x *= w * 1.04; v.z *= (1 + cheek * 0.6) * 0.96; v.y *= 1.04;
+    const ny = v.y / HR, nz = v.z / HR;
+    const low = Math.max(0, -ny);
+    const cheek = Math.exp(-((ny + 0.3) ** 2) / 0.09) * 0.09 * (0.4 + 0.6 * Math.max(0, nz));
+    const w = 1.06 + cheek - 0.16 * low ** 2.2;
+    v.x *= w; v.z *= (0.97 + cheek * 0.5 - 0.05 * low ** 2); v.y *= 1.02;
     pos.setXYZ(i, v.x, v.y, v.z);
   }
   headGeo.computeVertexNormals();
   const HC = 0.2;                                              // head centre height above neck joint
-  mesh(headGeo, skin, head, 0, HC, 0);
-  const surfZ = (x, y) => { // approximate front surface depth of the shaped head
-    const r = 0.2, yy = (y - HC) / 1.04, xx = x / 1.06;
-    return Math.sqrt(Math.max(0, r * r - xx * xx - yy * yy)) * 0.97;
-  };
-  for (const s of [1, -1]) {
-    const ear = mesh(sphere(0.048, 24), skin, head, s * 0.2, HC - 0.02, -0.01, 0.5, 0.95, 0.75);
-    mesh(sphere(0.026, 16), M("skinShade", spec.skinShade, 0.6), ear, s * 0.014, 0, 0.012, 0.55, 1, 0.6);
+  const skinP = skin;
+  mesh(headGeo, skinP, head, 0, HC, 0);
+  // front surface depth of the shaped head, used to seat facial features
+  const ray = new THREE.Raycaster(); const headMesh = new THREE.Mesh(headGeo);
+  const surfZ = (x, y) => { ray.set(new THREE.Vector3(x, y - HC, 1), new THREE.Vector3(0, 0, -1)); const h = ray.intersectObject(headMesh)[0]; return h ? h.point.z : 0.15; };
+  for (const s of [1, -1]) {                                             // big round ears that stick out
+    const ear = g(s > 0 ? "earL" : "earR", head, s * 0.205, HC - 0.03, -0.005);
+    ear.rotation.y = s * 0.45;
+    mesh(sphere(0.056, 28), skinP, ear, 0, 0, 0, 0.42, 1.0, 0.82);
+    mesh(sphere(0.034, 20), M("skinShade", spec.skinShade, 0.65), ear, s * 0.012, -0.004, 0.008, 0.3, 0.95, 0.7);
   }
-  mesh(sphere(0.03, 24), skin, head, 0, HC - 0.035, surfZ(0, HC - 0.035) + 0.008, 1.15, 0.95, 0.9);  // nose
+  mesh(sphere(0.026, 28), skinP, head, 0, HC - 0.045, surfZ(0, HC - 0.045) + 0.004, 1.25, 0.95, 0.95);   // small round nose
+  const blushM = (mats.blush ||= new THREE.MeshStandardMaterial({ color: "#f29a86", roughness: 0.8, transparent: true, opacity: 0.28, depthWrite: false }));
+  for (const s of [1, -1]) mesh(sphere(0.035, 20), blushM, head, s * 0.115, HC - 0.06, surfZ(s * 0.115, HC - 0.06) - 0.012, 1.2, 0.7, 0.5).castShadow = false;
 
-  const EY = HC + 0.0, EX = 0.072;
+  const EY = HC - 0.005, EX = 0.082;
   const eyes = [];
   for (const s of [1, -1]) {
-    const e = g(s > 0 ? "eyeL" : "eyeR", head, s * EX, EY, surfZ(s * EX, EY) - 0.006);
-    mesh(sphere(0.03, 24), M("eye", spec.eye, 0.12), e, 0, 0, 0, 0.8, 1.12, 0.5);
-    const hl = new THREE.Mesh(sphere(0.0085, 12), new THREE.MeshBasicMaterial({ color: "#ffffff" }));
-    hl.position.set(s * -0.007 + 0.006, 0.013, 0.013); e.add(hl);
+    const e = g(s > 0 ? "eyeL" : "eyeR", head, s * EX, EY, surfZ(s * EX, EY) - 0.004);
+    mesh(sphere(0.022, 24), M("eye", spec.eye, 0.1), e, 0, 0, 0, 0.82, 1.18, 0.45);
+    const hl = new THREE.Mesh(sphere(0.0062, 12), new THREE.MeshBasicMaterial({ color: "#ffffff" }));
+    hl.position.set(0.006, 0.01, 0.009); e.add(hl);
     eyes.push(e);
   }
   const BY = EY + 0.062;
   const brows = [];
-  for (const s of [1, -1]) {
-    const b = g(s > 0 ? "browL" : "browR", head, s * 0.074, BY, surfZ(s * 0.074, BY) - 0.004);
-    const bm = mesh(capsule(0.0145, 0.048, 12), M("brow", spec.brow, 0.75), b, 0, 0, 0, 1, 1, 0.7);
-    bm.rotation.z = Math.PI / 2 + s * 0.12; bm.rotation.y = s * -0.35;
+  for (const s of [1, -1]) {                                              // thin arched brows
+    const b = g(s > 0 ? "browL" : "browR", head, s * 0.082, BY, surfZ(s * 0.082, BY) - 0.002);
+    const bm = mesh(new THREE.TorusGeometry(0.042, 0.0085, 10, 24, Math.PI * 0.62), M("brow", spec.brow, 0.8), b, 0, -0.03, 0, 1, 1, 0.6);
+    bm.rotation.z = Math.PI / 2 - Math.PI * 0.31 + s * 0.12;
+    b.rotation.y = s * 0.32;
     brows.push(b);
   }
-  const MY = HC - 0.088;
-  const mouth = g("mouth", head, 0, MY, surfZ(0, MY) + 0.004);
-  const mouthIn = mesh(sphere(0.036, 24), M("mouthIn", "#5b1d22", 0.8), mouth, 0, 0, -0.006, 1, 0.1, 0.4);
-  const tongue = mesh(sphere(0.022, 16), M("tongue", "#c4545a", 0.7), mouth, 0, -0.012, -0.002, 1.1, 0.4, 0.5);
-  const teeth = mesh(sphere(0.028, 16), M("teeth", "#fbf7f2", 0.35), mouth, 0, 0.01, -0.002, 1, 0.25, 0.4);
-  const lip = mesh(new THREE.TorusGeometry(0.036, 0.0068, 8, 32, Math.PI), M("lip", "#6a2e2a", 0.6), mouth, 0, 0.006, 0.0);
-  lip.rotation.z = Math.PI;                                     // U shape = smile
-  if (spec.goatee) {
-    const gy = HC - 0.15;
-    mesh(sphere(0.022, 24), M("beard", spec.beard, 0.95), head, 0, gy, surfZ(0, gy) - 0.006, 1.2, 0.7, 0.4);
+  const MY = HC - 0.1;
+  const mouth = g("mouth", head, 0, MY, surfZ(0, MY) + 0.002);
+  const mouthIn = mesh(sphere(0.034, 24), M("mouthIn", "#5b1d22", 0.8), mouth, 0, 0, -0.008, 1, 0.1, 0.4);
+  const tongue = mesh(sphere(0.02, 16), M("tongue", "#c4545a", 0.7), mouth, 0, -0.012, -0.004, 1.1, 0.4, 0.5);
+  const teeth = mesh(sphere(0.026, 16), M("teeth", "#fbf7f2", 0.35), mouth, 0, 0.009, -0.004, 1, 0.25, 0.4);
+  const lip = mesh(new THREE.TorusGeometry(0.04, 0.0058, 8, 36, Math.PI * 0.8), M("lip", "#5e2a26", 0.6), mouth, 0, 0.012, 0.0);
+  lip.rotation.z = Math.PI + Math.PI * 0.1;                                // U shape = closed smile
+  if (spec.goatee) {                                                       // chin goatee + soul patch
+    const bm = M("beard", spec.beard, 0.95);
+    const gy = HC - 0.158;
+    mesh(sphere(0.024, 24), bm, head, 0, gy, surfZ(0, gy) - 0.009, 1.2, 0.7, 0.45);
+    mesh(sphere(0.012, 16), bm, head, 0, HC - 0.127, surfZ(0, HC - 0.127) - 0.004, 0.9, 1.1, 0.45);
   }
 
-  // ---- hair
-  if (spec.hairStyle === "quiff") {
-    // top cap stops at the hairline in front; a back shell covers the back of the head to the nape
-    mesh(new THREE.SphereGeometry(0.214, 48, 32, 0, Math.PI * 2, 0, Math.PI * 0.36), hairM, head, 0, HC + 0.012, -0.01, 1.07, 1.1, 1.02);
-    mesh(new THREE.SphereGeometry(0.214, 48, 32, Math.PI, Math.PI, 0, Math.PI * 0.74), hairM, head, 0, HC + 0.005, -0.006, 1.07, 1.06, 1.04).geometry = new THREE.SphereGeometry(0.214, 48, 32, Math.PI - 0.45, Math.PI + 0.9, 0, Math.PI * 0.7);
-    for (const s of [1, -1]) mesh(sphere(0.06, 20), hairM, head, s * 0.165, HC + 0.04, -0.03, 0.5, 1.1, 1.3); // short sides
-    // wavy quiff: overlapping strands swept up and back
-    const strands = [[0, 0.205, 0.1, 0.085, -0.5], [-0.07, 0.195, 0.085, 0.075, -0.4], [0.075, 0.19, 0.08, 0.075, -0.45],
-                     [0.02, 0.235, 0.03, 0.09, -0.3], [-0.09, 0.21, 0.01, 0.08, -0.2], [0.1, 0.205, 0.0, 0.08, -0.2],
-                     [0, 0.22, -0.07, 0.095, 0], [-0.08, 0.185, -0.1, 0.08, 0.2], [0.08, 0.185, -0.1, 0.08, 0.2], [0.0, 0.17, -0.15, 0.09, 0.4]];
-    for (const [x, y, z, r, tilt] of strands) {
-      const m = mesh(sphere(r, 28), hairM, head, x, HC + y - 0.02, z, 1.05, 0.62, 1.15);
-      m.rotation.x = tilt;
+  // ---- hair: one sculpted shell around the head (thick swept quiff on top, short faded sides, nape at the back)
+  const hairShell = (style) => {
+    const geo = new THREE.SphereGeometry(HR * 1.0, 96, 72);
+    const p = geo.attributes.position, n = new THREE.Vector3(), cols = [];
+    const cH = new THREE.Color(spec.hair), cS = new THREE.Color(spec.skin), tmp = new THREE.Color();
+    const sstep = (e0, e1, x) => { const t = Math.max(0, Math.min(1, (x - e0) / (e1 - e0))); return t * t * (3 - 2 * t); };
+    for (let i = 0; i < p.count; i++) {
+      n.fromBufferAttribute(p, i).normalize();
+      const { x, y, z } = n;
+      // hairline height (unit-sphere y) around the head: high on the forehead, ear-top on the sides, low at the nape
+      const front = sstep(0.15, 0.85, z), back = sstep(0.0, 0.75, -z);
+      const hl = style === "quiff" ? (0.5 * front + -0.08 * (1 - front - back) + -0.55 * back)
+                                   : (0.42 * front + -0.15 * (1 - front - back) + -0.5 * back);
+      const inHair = sstep(hl, hl + 0.1, y);
+      let t;
+      if (style === "quiff") {
+        const side = sstep(0.55, 0.85, Math.abs(x)) * (1 - sstep(0.55, 0.8, y));   // faded sides
+        const top = sstep(0.35, 0.9, y);
+        const quiff = Math.exp(-(((z - 0.55) ** 2) / 0.12 + ((y - 0.7) ** 2) / 0.1)) * (1 + 0.35 * x);  // volume at front-top, swept to one side
+        const waves = 0.012 * Math.sin(22 * (z * 0.75 - x * 0.65) + 3 * y) * top;
+        t = (0.026 + 0.034 * top + 0.06 * quiff + waves) * (1 - 0.8 * side);
+      } else {
+        const curls = 0.02 * Math.sin(17 * x + 5) * Math.sin(15 * z + 2) * Math.sin(13 * y + 1);
+        t = 0.03 + 0.06 * sstep(0.0, 0.8, y) + Math.abs(curls) * 1.6;
+      }
+      const r = HR * 0.9 + (HR * 0.16 + t) * inHair;                          // outside the hair region: tucked inside the skull
+      const sx = 1.06, sy = 1.02;
+      p.setXYZ(i, x * r * sx, y * r * sy, z * r);
+      // short faded sides read as skin-tinted stubble; the rest is full hair colour
+      const fadeSide = style === "quiff" ? sstep(0.55, 0.85, Math.abs(x)) * (1 - sstep(0.5, 0.75, y)) * (1 - sstep(0.1, 0.6, -z)) : 0;
+      tmp.copy(cH).lerp(cS, 0.42 * fadeSide);
+      cols.push(tmp.r, tmp.g, tmp.b);
     }
-  } else {
-    mesh(new THREE.SphereGeometry(0.222, 48, 32, 0, Math.PI * 2, 0, Math.PI * 0.38), hairM, head, 0, HC + 0.012, -0.01, 1.07, 1.08, 1.03);
-    mesh(new THREE.SphereGeometry(0.222, 48, 32, Math.PI, Math.PI, 0, Math.PI * 0.72), hairM, head, 0, HC + 0.005, -0.006, 1.07, 1.05, 1.05);
-    for (let i = 0; i < 26; i++) {                               // curls (golden-angle layout, deterministic)
-      const a = i * 2.39996, r = 0.19 + (i % 3) * 0.012, yy = 0.13 + ((i * 37) % 13) / 110;
-      const zc = Math.cos(a) * r;
-      if (zc > 0.1 && yy < 0.16) continue;                       // keep the forehead clear
-      mesh(sphere(0.05 + (i % 4) * 0.006, 20), hairM, head, Math.sin(a) * r * 1.05, HC + yy, zc * 0.95, 1.1, 0.85, 1);
-    }
-  }
+    geo.setAttribute("color", new THREE.Float32BufferAttribute(cols, 3));
+    geo.computeVertexNormals();
+    return geo;
+  };
+  const hairMat = new THREE.MeshPhysicalMaterial({ vertexColors: true, roughness: 0.42, sheen: 0.6, sheenColor: new THREE.Color("#6b5a52"), sheenRoughness: 0.4 });
+  mesh(hairShell(spec.hairStyle), hairMat, head, 0, HC, -0.004);
   if (spec.glasses) {
     const fr = M("glasses", "#1d1d22", 0.35);
     for (const s of [1, -1]) mesh(new THREE.TorusGeometry(0.044, 0.0055, 10, 36), fr, head, s * EX, EY, surfZ(s * EX, EY) + 0.016);
@@ -207,18 +231,18 @@ export function buildCharacter(THREE, spec) {
   // ---- arms: joints hang straight down at rest (A-pose comes from POSES.idle)
   const armMat = spec.hoodie ? shirt : skin;
   for (const [s, L] of [[1, "L"], [-1, "R"]]) {
-    const sh = g("shoulder" + L, chest, s * 0.205, 0.13, 0);
-    mesh(sphere(0.075, 24), shirt, sh, 0, -0.01, 0);                                     // shoulder / sleeve cap
-    mesh(new THREE.CylinderGeometry(0.072, 0.07, 0.11, 24), shirt, sh, 0, -0.065, 0);      // sleeve
-    if (!spec.hoodie) mesh(new THREE.TorusGeometry(0.066, 0.008, 8, 28), shirt, sh, 0, -0.12, 0).rotation.x = Math.PI / 2;
-    limb(0.052, 0.047, 0.15, armMat, sh, -0.06);                                            // upper arm
+    const sh = g("shoulder" + L, chest, s * 0.225, 0.12, 0);
+    mesh(sphere(0.082, 24), shirt, sh, 0, -0.01, 0, 1, 1, 0.95);                                     // shoulder / sleeve cap
+    mesh(new THREE.CylinderGeometry(0.08, 0.077, 0.11, 24), shirt, sh, 0, -0.065, 0);      // sleeve
+    if (!spec.hoodie) mesh(new THREE.TorusGeometry(0.073, 0.008, 8, 28), shirt, sh, 0, -0.12, 0).rotation.x = Math.PI / 2;
+    limb(0.058, 0.052, 0.15, armMat, sh, -0.06);                                            // upper arm
     const el = g("elbow" + L, sh, 0, -0.22, 0);
-    limb(0.047, 0.042, 0.15, armMat, el, 0);                                                // forearm
+    limb(0.052, 0.046, 0.15, armMat, el, 0);                                                // forearm
     const wr = g("wrist" + L, el, 0, -0.17, 0);
     if (spec.hoodie) mesh(new THREE.CylinderGeometry(0.05, 0.05, 0.035, 20), M("cuff", spec.shirt, 0.95), el, 0, -0.15, 0);
     // chunky cartoon hand: palm + mitten fingers + thumb
     mesh(sphere(0.05, 24), skin, wr, 0, -0.045, 0, 0.85, 1.05, 0.62);
-    mesh(capsule(0.03, 0.03, 16), skin, wr, 0, -0.095, 0.0, 1.35, 1, 0.75);
+    for (let f = 0; f < 4; f++) mesh(capsule(0.0125, 0.034, 12), skin, wr, (f - 1.5) * 0.022, -0.1 + Math.abs(f - 1.5) * 0.006, 0.004);
     const th = mesh(capsule(0.016, 0.03, 12), skin, wr, -s * 0.0, -0.04, 0.035);
     th.rotation.x = 0.6;
     if (L === "L" && spec.watch) {
@@ -232,9 +256,9 @@ export function buildCharacter(THREE, spec) {
   mesh(lathe([[0, 0.02], [0.2, 0.02], [0.205, -0.04], [0.19, -0.1], [0.15, -0.14], [0, -0.15]]), pants, hips, 0, 0, 0, 1, 1, 0.75);
   for (const [s, L] of [[1, "L"], [-1, "R"]]) {
     const hp = g("hip" + L, hips, s * 0.095, -0.06, 0);
-    limb(0.088, 0.075, 0.26, pants, hp, 0);
+    limb(0.095, 0.083, 0.26, pants, hp, 0);
     const kn = g("knee" + L, hp, 0, -0.3, 0);
-    limb(0.075, 0.066, 0.25, pants, kn, 0);
+    limb(0.083, 0.07, 0.25, pants, kn, 0);
     mesh(new THREE.CylinderGeometry(0.06, 0.058, 0.04, 24), M("cuffP", spec.pants, 0.95), kn, 0, -0.29, 0);
     const an = g("ankle" + L, kn, 0, -0.32, 0);
     mesh(sphere(0.075, 28), M("shoe", spec.shoes, 0.55), an, 0, -0.03, 0.04, 0.95, 0.62, 1.5);

@@ -37,7 +37,7 @@ renderer.outputColorSpace = THREE.SRGBColorSpace;
 renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.1;
 
 const scene = new THREE.Scene();
-scene.background = new THREE.Color("#dfe6f0");
+scene.background = new THREE.Color("#f3e4d8");
 const camera = new THREE.PerspectiveCamera(30, 1080 / 1920, 0.1, 50);
 
 scene.add(new THREE.HemisphereLight("#eaf4ff", "#8a7f86", 1.1));
@@ -47,9 +47,9 @@ Object.assign(key.shadow.camera, { left: -2, right: 2, top: 3, bottom: -1, near:
 key.shadow.bias = -0.0004; key.shadow.normalBias = 0.02;
 scene.add(key);
 const rim = new THREE.DirectionalLight("#00C2FF", 1.6); rim.position.set(2.5, 3, -3.5); scene.add(rim);
-const floor = new THREE.Mesh(new THREE.CircleGeometry(4, 64), new THREE.MeshStandardMaterial({ color: "#c9d3e2", roughness: 0.95 }));
+const floor = new THREE.Mesh(new THREE.CircleGeometry(4, 64), new THREE.MeshStandardMaterial({ color: "#efdccd", roughness: 0.95 }));
 floor.rotation.x = -Math.PI / 2; floor.receiveShadow = true; scene.add(floor);
-const wall = new THREE.Mesh(new THREE.PlaneGeometry(12, 8), new THREE.MeshStandardMaterial({ color: "#0066DE", roughness: 0.9 }));
+const wall = new THREE.Mesh(new THREE.PlaneGeometry(12, 8), new THREE.MeshStandardMaterial({ color: "#f3e4d8", roughness: 0.95 }));
 wall.position.set(0, 4, -3); wall.receiveShadow = true; scene.add(wall);
 
 const y = buildCharacter(THREE, YUSUF);
