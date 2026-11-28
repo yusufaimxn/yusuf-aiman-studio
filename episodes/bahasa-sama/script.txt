@@ -1,0 +1,23 @@
+// Siri "Apa Jadi Kalau…?" #05. Satu baris = satu MP3 (01.mp3 ... 11.mp3), ikut Doc #05 (versi user). Yusuf sahaja.
+# scene hook | Empat blok bahasa bercantum jadi satu
+YUSUF (teruja): Bayangkan Python, Java, C++ dan JavaScript… jadi satu bahasa je.
+# scene best | Office developer, semua faham code
+YUSUF (gembira): Mula-mula memang akan rasa best. sebab semua developer boleh faham code antara satu sama lain.
+# scene belajar | Student satu buku, semua benda muncul
+YUSUF (yakin): Belajar satu bahasa, terus dah boleh buat semua benda.
+# scene tunggu | Neraca SENANG vs LAJU
+YUSUF (curious): Tapi tunggu jap… bahasa tu tujuan dia nak senang ke, atau nak laju?
+# scene senang | Game lag, phone panas
+YUSUF (geram): Kalau pilih nak senang, game akan mula jadi lag, phone pun akan jadi cepat panas.
+# scene laju | Dinding kod berselirat, student pening
+YUSUF (mengeluh): Kalau pilih nak laju pulak, code akan jadi susah gila and sangat complex. Student pun pening nak belajar.
+# scene bug | Bug masuk kiub, bandar merah serentak
+YUSUF (dramatik): Dan kalau ada satu bug je dalam bahasa tu… seluruh sistem dekat dunia ni akan terkesan.
+# scene toolbox | Toolbox, tukul & screwdriver
+YUSUF (jelas): Sebab sebenarnya, setiap bahasa tu dicipta untuk kerja yang berbeza. Macam toolbox. Tukul untuk paku, screwdriver untuk skru.
+# scene mesin | Chip CPU, aliran 0 dan 1
+YUSUF (kagum): Dan yang paling best… komputer sebenarnya memang dah guna satu bahasa pun. iaitu, Kosong dan satu.
+# scene terjemah | Corong penterjemah, bahasa jadi 0/1
+YUSUF (puas): Semua bahasa programming tu hanyalah cuma penterjemah je. Kita tulis, dia yang akan tukar jadi bahasa komputer.
+# scene akhir | Yusuf close-up, CTA
+YUSUF (ajak): Jadi banyak bahasa tu bukan lah masalah, tapi tu adalah kelebihan. Korang mula belajar bahasa apa dulu? Komen bawah!

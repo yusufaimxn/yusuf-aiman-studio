@@ -1,0 +1,1079 @@
+{
+ "total": 73.63,
+ "lines": [
+  {
+   "n": 1,
+   "speaker": "YUSUF",
+   "scene": "hook",
+   "text": "Bayangkan Python, Java, C++ dan JavaScript… jadi satu bahasa je.",
+   "file": "assets/audio/voice/supplied/01.mp3",
+   "start": 0.2,
+   "file_dur": 6.113,
+   "speech_start": 0.2,
+   "speech_end": 6.128,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Bayangkan",
+     "start": 0.2,
+     "end": 1.359
+    },
+    {
+     "text": "Python,",
+     "start": 1.359,
+     "end": 2.094
+    },
+    {
+     "text": "Java,",
+     "start": 2.094,
+     "end": 2.553
+    },
+    {
+     "text": "C++",
+     "start": 2.553,
+     "end": 2.859
+    },
+    {
+     "text": "dan",
+     "start": 2.859,
+     "end": 3.164
+    },
+    {
+     "text": "JavaScript…",
+     "start": 3.164,
+     "end": 4.082
+    },
+    {
+     "text": "jadi",
+     "start": 4.082,
+     "end": 4.465
+    },
+    {
+     "text": "satu",
+     "start": 4.465,
+     "end": 5.287
+    },
+    {
+     "text": "bahasa",
+     "start": 5.287,
+     "end": 5.822
+    },
+    {
+     "text": "je.",
+     "start": 5.822,
+     "end": 6.128
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "speaker": "YUSUF",
+   "scene": "best",
+   "text": "Mula-mula memang akan rasa best. sebab semua developer boleh faham code antara satu sama lain.",
+   "file": "assets/audio/voice/supplied/02.mp3",
+   "start": 6.278,
+   "file_dur": 6.269,
+   "speech_start": 6.278,
+   "speech_end": 12.389,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Mula-mula",
+     "start": 6.278,
+     "end": 6.937
+    },
+    {
+     "text": "memang",
+     "start": 6.937,
+     "end": 7.399
+    },
+    {
+     "text": "akan",
+     "start": 7.399,
+     "end": 7.729
+    },
+    {
+     "text": "rasa",
+     "start": 7.729,
+     "end": 8.058
+    },
+    {
+     "text": "best.",
+     "start": 8.058,
+     "end": 8.454
+    },
+    {
+     "text": "sebab",
+     "start": 8.875,
+     "end": 9.215
+    },
+    {
+     "text": "semua",
+     "start": 9.215,
+     "end": 9.555
+    },
+    {
+     "text": "developer",
+     "start": 9.555,
+     "end": 10.122
+    },
+    {
+     "text": "boleh",
+     "start": 10.122,
+     "end": 10.462
+    },
+    {
+     "text": "faham",
+     "start": 10.462,
+     "end": 10.802
+    },
+    {
+     "text": "code",
+     "start": 10.802,
+     "end": 11.086
+    },
+    {
+     "text": "antara",
+     "start": 11.086,
+     "end": 11.482
+    },
+    {
+     "text": "satu",
+     "start": 11.482,
+     "end": 11.766
+    },
+    {
+     "text": "sama",
+     "start": 11.766,
+     "end": 12.049
+    },
+    {
+     "text": "lain.",
+     "start": 12.049,
+     "end": 12.389
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "speaker": "YUSUF",
+   "scene": "belajar",
+   "text": "Belajar satu bahasa, terus dah boleh buat semua benda.",
+   "file": "assets/audio/voice/supplied/03.mp3",
+   "start": 12.539,
+   "file_dur": 3.553,
+   "speech_start": 12.539,
+   "speech_end": 15.894,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Belajar",
+     "start": 12.539,
+     "end": 13.033
+    },
+    {
+     "text": "satu",
+     "start": 13.033,
+     "end": 13.342
+    },
+    {
+     "text": "bahasa,",
+     "start": 13.342,
+     "end": 13.836
+    },
+    {
+     "text": "terus",
+     "start": 14.194,
+     "end": 14.494
+    },
+    {
+     "text": "dah",
+     "start": 14.494,
+     "end": 14.694
+    },
+    {
+     "text": "boleh",
+     "start": 14.694,
+     "end": 14.994
+    },
+    {
+     "text": "buat",
+     "start": 14.994,
+     "end": 15.244
+    },
+    {
+     "text": "semua",
+     "start": 15.244,
+     "end": 15.544
+    },
+    {
+     "text": "benda.",
+     "start": 15.544,
+     "end": 15.894
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "speaker": "YUSUF",
+   "scene": "tunggu",
+   "text": "Tapi tunggu jap… bahasa tu tujuan dia nak senang ke, atau nak laju?",
+   "file": "assets/audio/voice/supplied/04.mp3",
+   "start": 16.144,
+   "file_dur": 5.146,
+   "speech_start": 16.144,
+   "speech_end": 21.122,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Tapi",
+     "start": 16.144,
+     "end": 16.431
+    },
+    {
+     "text": "tunggu",
+     "start": 16.431,
+     "end": 17.034
+    },
+    {
+     "text": "jap…",
+     "start": 17.034,
+     "end": 17.87
+    },
+    {
+     "text": "bahasa",
+     "start": 17.87,
+     "end": 18.272
+    },
+    {
+     "text": "tu",
+     "start": 18.272,
+     "end": 18.573
+    },
+    {
+     "text": "tujuan",
+     "start": 18.573,
+     "end": 18.975
+    },
+    {
+     "text": "dia",
+     "start": 18.975,
+     "end": 19.205
+    },
+    {
+     "text": "nak",
+     "start": 19.205,
+     "end": 19.435
+    },
+    {
+     "text": "senang",
+     "start": 19.435,
+     "end": 19.837
+    },
+    {
+     "text": "ke,",
+     "start": 19.837,
+     "end": 20.067
+    },
+    {
+     "text": "atau",
+     "start": 20.067,
+     "end": 20.548
+    },
+    {
+     "text": "nak",
+     "start": 20.548,
+     "end": 20.778
+    },
+    {
+     "text": "laju?",
+     "start": 20.778,
+     "end": 21.122
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "speaker": "YUSUF",
+   "scene": "senang",
+   "text": "Kalau pilih nak senang, game akan mula jadi lag, phone pun akan jadi cepat panas.",
+   "file": "assets/audio/voice/supplied/05.mp3",
+   "start": 21.272,
+   "file_dur": 5.251,
+   "speech_start": 21.272,
+   "speech_end": 26.378,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Kalau",
+     "start": 21.272,
+     "end": 21.575
+    },
+    {
+     "text": "pilih",
+     "start": 21.575,
+     "end": 21.877
+    },
+    {
+     "text": "nak",
+     "start": 21.877,
+     "end": 22.079
+    },
+    {
+     "text": "senang,",
+     "start": 22.079,
+     "end": 22.482
+    },
+    {
+     "text": "game",
+     "start": 22.694,
+     "end": 22.976
+    },
+    {
+     "text": "akan",
+     "start": 22.976,
+     "end": 23.259
+    },
+    {
+     "text": "mula",
+     "start": 23.259,
+     "end": 23.542
+    },
+    {
+     "text": "jadi",
+     "start": 23.542,
+     "end": 23.824
+    },
+    {
+     "text": "lag,",
+     "start": 23.824,
+     "end": 24.107
+    },
+    {
+     "text": "phone",
+     "start": 24.406,
+     "end": 24.764
+    },
+    {
+     "text": "pun",
+     "start": 24.764,
+     "end": 25.003
+    },
+    {
+     "text": "akan",
+     "start": 25.003,
+     "end": 25.302
+    },
+    {
+     "text": "jadi",
+     "start": 25.302,
+     "end": 25.601
+    },
+    {
+     "text": "cepat",
+     "start": 25.601,
+     "end": 25.96
+    },
+    {
+     "text": "panas.",
+     "start": 25.96,
+     "end": 26.378
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "speaker": "YUSUF",
+   "scene": "laju",
+   "text": "Kalau pilih nak laju pulak, code akan jadi susah gila and sangat complex. Student pun pening nak belajar.",
+   "file": "assets/audio/voice/supplied/06.mp3",
+   "start": 26.528,
+   "file_dur": 7.001,
+   "speech_start": 26.528,
+   "speech_end": 33.357,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Kalau",
+     "start": 26.528,
+     "end": 26.862
+    },
+    {
+     "text": "pilih",
+     "start": 26.862,
+     "end": 27.197
+    },
+    {
+     "text": "nak",
+     "start": 27.197,
+     "end": 27.42
+    },
+    {
+     "text": "laju",
+     "start": 27.42,
+     "end": 27.699
+    },
+    {
+     "text": "pulak,",
+     "start": 27.699,
+     "end": 28.432
+    },
+    {
+     "text": "code",
+     "start": 28.432,
+     "end": 28.711
+    },
+    {
+     "text": "akan",
+     "start": 28.711,
+     "end": 28.99
+    },
+    {
+     "text": "jadi",
+     "start": 28.99,
+     "end": 29.268
+    },
+    {
+     "text": "susah",
+     "start": 29.268,
+     "end": 29.603
+    },
+    {
+     "text": "gila",
+     "start": 29.603,
+     "end": 29.882
+    },
+    {
+     "text": "and",
+     "start": 29.882,
+     "end": 30.105
+    },
+    {
+     "text": "sangat",
+     "start": 30.105,
+     "end": 30.495
+    },
+    {
+     "text": "complex.",
+     "start": 30.495,
+     "end": 30.997
+    },
+    {
+     "text": "Student",
+     "start": 30.997,
+     "end": 31.883
+    },
+    {
+     "text": "pun",
+     "start": 31.883,
+     "end": 32.106
+    },
+    {
+     "text": "pening",
+     "start": 32.106,
+     "end": 32.632
+    },
+    {
+     "text": "nak",
+     "start": 32.632,
+     "end": 32.855
+    },
+    {
+     "text": "belajar.",
+     "start": 32.855,
+     "end": 33.357
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "speaker": "YUSUF",
+   "scene": "bug",
+   "text": "Dan kalau ada satu bug je dalam bahasa tu… seluruh sistem dekat dunia ni akan terkesan.",
+   "file": "assets/audio/voice/supplied/07.mp3",
+   "start": 33.607,
+   "file_dur": 6.191,
+   "speech_start": 33.607,
+   "speech_end": 39.635,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Dan",
+     "start": 33.607,
+     "end": 33.86
+    },
+    {
+     "text": "kalau",
+     "start": 33.86,
+     "end": 34.24
+    },
+    {
+     "text": "ada",
+     "start": 34.24,
+     "end": 34.493
+    },
+    {
+     "text": "satu",
+     "start": 34.493,
+     "end": 34.81
+    },
+    {
+     "text": "bug",
+     "start": 34.81,
+     "end": 35.063
+    },
+    {
+     "text": "je",
+     "start": 35.063,
+     "end": 35.253
+    },
+    {
+     "text": "dalam",
+     "start": 35.253,
+     "end": 35.633
+    },
+    {
+     "text": "bahasa",
+     "start": 35.633,
+     "end": 36.076
+    },
+    {
+     "text": "tu…",
+     "start": 36.076,
+     "end": 36.329
+    },
+    {
+     "text": "seluruh",
+     "start": 36.329,
+     "end": 37.293
+    },
+    {
+     "text": "sistem",
+     "start": 37.293,
+     "end": 37.736
+    },
+    {
+     "text": "dekat",
+     "start": 37.736,
+     "end": 38.116
+    },
+    {
+     "text": "dunia",
+     "start": 38.116,
+     "end": 38.496
+    },
+    {
+     "text": "ni",
+     "start": 38.496,
+     "end": 38.686
+    },
+    {
+     "text": "akan",
+     "start": 38.686,
+     "end": 39.002
+    },
+    {
+     "text": "terkesan.",
+     "start": 39.002,
+     "end": 39.635
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "speaker": "YUSUF",
+   "scene": "toolbox",
+   "text": "Sebab sebenarnya, setiap bahasa tu dicipta untuk kerja yang berbeza. Macam toolbox. Tukul untuk paku, screwdriver untuk skru.",
+   "file": "assets/audio/voice/supplied/08.mp3",
+   "start": 39.935,
+   "file_dur": 9.169,
+   "speech_start": 39.935,
+   "speech_end": 48.9,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Sebab",
+     "start": 39.935,
+     "end": 40.287
+    },
+    {
+     "text": "sebenarnya,",
+     "start": 40.287,
+     "end": 40.992
+    },
+    {
+     "text": "setiap",
+     "start": 40.992,
+     "end": 41.574
+    },
+    {
+     "text": "bahasa",
+     "start": 41.574,
+     "end": 41.985
+    },
+    {
+     "text": "tu",
+     "start": 41.985,
+     "end": 42.161
+    },
+    {
+     "text": "dicipta",
+     "start": 42.161,
+     "end": 42.787
+    },
+    {
+     "text": "untuk",
+     "start": 42.787,
+     "end": 43.139
+    },
+    {
+     "text": "kerja",
+     "start": 43.139,
+     "end": 43.491
+    },
+    {
+     "text": "yang",
+     "start": 43.491,
+     "end": 43.785
+    },
+    {
+     "text": "berbeza.",
+     "start": 43.785,
+     "end": 44.825
+    },
+    {
+     "text": "Macam",
+     "start": 44.825,
+     "end": 45.178
+    },
+    {
+     "text": "toolbox.",
+     "start": 45.178,
+     "end": 46.104
+    },
+    {
+     "text": "Tukul",
+     "start": 46.104,
+     "end": 46.456
+    },
+    {
+     "text": "untuk",
+     "start": 46.456,
+     "end": 46.808
+    },
+    {
+     "text": "paku,",
+     "start": 46.808,
+     "end": 47.491
+    },
+    {
+     "text": "screwdriver",
+     "start": 47.491,
+     "end": 48.196
+    },
+    {
+     "text": "untuk",
+     "start": 48.196,
+     "end": 48.548
+    },
+    {
+     "text": "skru.",
+     "start": 48.548,
+     "end": 48.9
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "speaker": "YUSUF",
+   "scene": "mesin",
+   "text": "Dan yang paling best… komputer sebenarnya memang dah guna satu bahasa pun. iaitu, Kosong dan satu.",
+   "file": "assets/audio/voice/supplied/09.mp3",
+   "start": 49.2,
+   "file_dur": 7.236,
+   "speech_start": 49.2,
+   "speech_end": 56.245,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Dan",
+     "start": 49.2,
+     "end": 49.429
+    },
+    {
+     "text": "yang",
+     "start": 49.429,
+     "end": 49.715
+    },
+    {
+     "text": "paling",
+     "start": 49.715,
+     "end": 50.116
+    },
+    {
+     "text": "best…",
+     "start": 50.116,
+     "end": 50.459
+    },
+    {
+     "text": "komputer",
+     "start": 50.459,
+     "end": 51.337
+    },
+    {
+     "text": "sebenarnya",
+     "start": 51.337,
+     "end": 51.967
+    },
+    {
+     "text": "memang",
+     "start": 51.967,
+     "end": 52.368
+    },
+    {
+     "text": "dah",
+     "start": 52.368,
+     "end": 52.596
+    },
+    {
+     "text": "guna",
+     "start": 52.596,
+     "end": 52.883
+    },
+    {
+     "text": "satu",
+     "start": 52.883,
+     "end": 53.169
+    },
+    {
+     "text": "bahasa",
+     "start": 53.169,
+     "end": 54.027
+    },
+    {
+     "text": "pun.",
+     "start": 54.027,
+     "end": 54.313
+    },
+    {
+     "text": "iaitu,",
+     "start": 54.313,
+     "end": 55.115
+    },
+    {
+     "text": "Kosong",
+     "start": 55.115,
+     "end": 55.673
+    },
+    {
+     "text": "dan",
+     "start": 55.673,
+     "end": 55.902
+    },
+    {
+     "text": "satu.",
+     "start": 55.902,
+     "end": 56.245
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "speaker": "YUSUF",
+   "scene": "terjemah",
+   "text": "Semua bahasa programming tu hanyalah cuma penterjemah je. Kita tulis, dia yang akan tukar jadi bahasa komputer.",
+   "file": "assets/audio/voice/supplied/10.mp3",
+   "start": 56.395,
+   "file_dur": 7.393,
+   "speech_start": 56.395,
+   "speech_end": 63.587,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Semua",
+     "start": 56.395,
+     "end": 56.748
+    },
+    {
+     "text": "bahasa",
+     "start": 56.748,
+     "end": 57.16
+    },
+    {
+     "text": "programming",
+     "start": 57.16,
+     "end": 57.865
+    },
+    {
+     "text": "tu",
+     "start": 57.865,
+     "end": 58.042
+    },
+    {
+     "text": "hanyalah",
+     "start": 58.042,
+     "end": 58.571
+    },
+    {
+     "text": "cuma",
+     "start": 58.571,
+     "end": 58.865
+    },
+    {
+     "text": "penterjemah",
+     "start": 58.865,
+     "end": 59.571
+    },
+    {
+     "text": "je.",
+     "start": 59.571,
+     "end": 59.806
+    },
+    {
+     "text": "Kita",
+     "start": 60.311,
+     "end": 60.616
+    },
+    {
+     "text": "tulis,",
+     "start": 60.616,
+     "end": 61.043
+    },
+    {
+     "text": "dia",
+     "start": 61.313,
+     "end": 61.53
+    },
+    {
+     "text": "yang",
+     "start": 61.53,
+     "end": 61.8
+    },
+    {
+     "text": "akan",
+     "start": 61.8,
+     "end": 62.071
+    },
+    {
+     "text": "tukar",
+     "start": 62.071,
+     "end": 62.396
+    },
+    {
+     "text": "jadi",
+     "start": 62.396,
+     "end": 62.666
+    },
+    {
+     "text": "bahasa",
+     "start": 62.666,
+     "end": 63.045
+    },
+    {
+     "text": "komputer.",
+     "start": 63.045,
+     "end": 63.587
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "speaker": "YUSUF",
+   "scene": "akhir",
+   "text": "Jadi banyak bahasa tu bukan lah masalah, tapi tu adalah kelebihan. Korang mula belajar bahasa apa dulu? Komen bawah!",
+   "file": "assets/audio/voice/supplied/11.mp3",
+   "start": 63.887,
+   "file_dur": 8.046,
+   "speech_start": 63.887,
+   "speech_end": 71.726,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Jadi",
+     "start": 63.887,
+     "end": 64.16
+    },
+    {
+     "text": "banyak",
+     "start": 64.16,
+     "end": 64.542
+    },
+    {
+     "text": "bahasa",
+     "start": 64.542,
+     "end": 64.924
+    },
+    {
+     "text": "tu",
+     "start": 64.924,
+     "end": 65.088
+    },
+    {
+     "text": "bukan",
+     "start": 65.088,
+     "end": 65.415
+    },
+    {
+     "text": "lah",
+     "start": 65.415,
+     "end": 65.633
+    },
+    {
+     "text": "masalah,",
+     "start": 65.633,
+     "end": 66.124
+    },
+    {
+     "text": "tapi",
+     "start": 66.124,
+     "end": 66.397
+    },
+    {
+     "text": "tu",
+     "start": 66.397,
+     "end": 66.93
+    },
+    {
+     "text": "adalah",
+     "start": 66.93,
+     "end": 67.499
+    },
+    {
+     "text": "kelebihan.",
+     "start": 67.499,
+     "end": 68.099
+    },
+    {
+     "text": "Korang",
+     "start": 68.099,
+     "end": 68.481
+    },
+    {
+     "text": "mula",
+     "start": 68.481,
+     "end": 69.295
+    },
+    {
+     "text": "belajar",
+     "start": 69.295,
+     "end": 69.732
+    },
+    {
+     "text": "bahasa",
+     "start": 69.732,
+     "end": 70.114
+    },
+    {
+     "text": "apa",
+     "start": 70.114,
+     "end": 70.332
+    },
+    {
+     "text": "dulu?",
+     "start": 70.332,
+     "end": 70.66
+    },
+    {
+     "text": "Komen",
+     "start": 70.66,
+     "end": 71.344
+    },
+    {
+     "text": "bawah!",
+     "start": 71.344,
+     "end": 71.726
+    }
+   ]
+  }
+ ],
+ "scenes": [
+  {
+   "id": "hook",
+   "start": 0.0,
+   "lines": [
+    1
+   ],
+   "duration": 6.2
+  },
+  {
+   "id": "best",
+   "start": 6.2,
+   "lines": [
+    2
+   ],
+   "duration": 6.26
+  },
+  {
+   "id": "belajar",
+   "start": 12.46,
+   "lines": [
+    3
+   ],
+   "duration": 3.56
+  },
+  {
+   "id": "tunggu",
+   "start": 16.02,
+   "lines": [
+    4
+   ],
+   "duration": 5.18
+  },
+  {
+   "id": "senang",
+   "start": 21.2,
+   "lines": [
+    5
+   ],
+   "duration": 5.25
+  },
+  {
+   "id": "laju",
+   "start": 26.45,
+   "lines": [
+    6
+   ],
+   "duration": 7.03
+  },
+  {
+   "id": "bug",
+   "start": 33.48,
+   "lines": [
+    7
+   ],
+   "duration": 6.3
+  },
+  {
+   "id": "toolbox",
+   "start": 39.78,
+   "lines": [
+    8
+   ],
+   "duration": 9.27
+  },
+  {
+   "id": "mesin",
+   "start": 49.05,
+   "lines": [
+    9
+   ],
+   "duration": 7.27
+  },
+  {
+   "id": "terjemah",
+   "start": 56.32,
+   "lines": [
+    10
+   ],
+   "duration": 7.42
+  },
+  {
+   "id": "akhir",
+   "start": 63.74,
+   "lines": [
+    11
+   ],
+   "duration": 9.89
+  }
+ ]
+}

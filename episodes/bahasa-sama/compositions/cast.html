@@ -1,0 +1,134 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+    .slot { position: absolute; top: 1120px; width: 640px; height: 800px; }
+    #slot-a { left: -40px; }
+    #slot-y { left: 470px; }
+    .ch, .cam, .dim, .hop, .sq, .br { position: absolute; inset: 0; }
+    .cam { transform-origin: 50% 12%; }
+    #shade { position: absolute; left: 0; right: 0; bottom: 0; height: 900px;
+      background: linear-gradient(180deg, rgba(3,10,26,0) 0%, rgba(3,10,26,0.55) 45%, rgba(3,10,26,0.88) 100%); }
+    .sq, .br { transform-origin: 50% 100%; }
+    #shade, .cam, .ch, .dim, .hop, .sq, .br, .pose { will-change: transform, opacity; }
+    .pose { position: absolute; left: 0; top: 0; width: 640px; height: 800px; }
+    .shadow { position: absolute; left: 170px; bottom: -14px; width: 300px; height: 44px; border-radius: 50%;
+      background: radial-gradient(closest-side, rgba(0,0,0,0.42), rgba(0,0,0,0)); }
+    .badge { position: absolute; width: 110px; height: 110px; border-radius: 50%; display: grid; place-items: center;
+      font-family: "Sora"; font-weight: 800; font-size: 70px; color: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.35); }
+    #b-sweat { left: 210px; top: 40px; width: 50px; height: 70px; border-radius: 50% 50% 50% 50% / 64% 64% 36% 36%;
+      background: linear-gradient(160deg, #bfefff, #00C2FF); box-shadow: none; }
+    #b-ex { left: 420px; top: 10px; background: var(--orange); }
+  </style>
+  <div id="root" data-composition-id="cast" data-width="1080" data-height="1920">
+    <div id="slot-a" class="slot">
+      <div id="a-ch" class="ch"><div id="a-cam" class="cam"><div class="shadow"></div><div id="a-dim" class="dim"><div id="a-hop" class="hop"><div id="a-sq" class="sq"><div id="a-br" class="br">
+        <img id="a-celebrating" class="pose" src="assets/images/aiman-celebrating.png" alt="Aiman" />
+        <img id="a-asking" class="pose" src="assets/images/aiman-asking.png" alt="" />
+        <img id="a-shocked" class="pose" src="assets/images/aiman-shocked.png" alt="" />
+        <img id="a-scared" class="pose" src="assets/images/aiman-scared.png" alt="" />
+        <img id="a-anxious" class="pose" src="assets/images/aiman-anxious.png" alt="" />
+        <img id="a-sad" class="pose" src="assets/images/aiman-sad.png" alt="" />
+        <img id="a-thumbs-up" class="pose" src="assets/images/aiman-thumbs-up.png" alt="" />
+        <img id="a-shrugging" class="pose" src="assets/images/aiman-shrugging.png" alt="" />
+        <img id="a-thinking" class="pose" src="assets/images/aiman-thinking.png" alt="" />
+      </div></div>
+      <div id="b-sweat" class="badge"></div>
+      <div id="b-ex" class="badge">!</div>
+      </div></div></div></div>
+    </div>
+    <div id="slot-y" class="slot">
+      <div id="y-ch" class="ch"><div id="y-cam" class="cam"><div class="shadow"></div><div id="y-dim" class="dim"><div id="y-hop" class="hop"><div id="y-sq" class="sq"><div id="y-br" class="br">
+        <img id="y-stop" class="pose" src="assets/images/yusuf-stop.png" alt="Yusuf" />
+        <img id="y-crossed-arms" class="pose" src="assets/images/yusuf-crossed-arms.png" alt="" />
+        <img id="y-explain" class="pose" src="assets/images/yusuf-explain.png" alt="" />
+        <img id="y-thinking" class="pose" src="assets/images/yusuf-thinking.png" alt="" />
+        <img id="y-pointing" class="pose" src="assets/images/yusuf-pointing.png" alt="" />
+        <img id="y-waving" class="pose" src="assets/images/yusuf-waving.png" alt="" />
+      </div></div></div></div></div></div>
+    </div>
+    <div id="shade"></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const T = window.YA_T, END = T.total;
+    const A_CENTER = 290, Y_OFF = 680;
+    // ---- pose schedule (absolute seconds): each pose is a separate reference render, swapped with a squash-pop
+    const S = T.scenes;
+    const WW = (n, w) => T.words[n].find((v) => v[0].toLowerCase().startsWith(w.toLowerCase()))[1];
+    const A_POSES = [[0, "shocked"]];
+    const Y_POSES = [[0, "explain"], [WW(11, "Korang") - 0.1, "pointing"], [WW(11, "Komen") - 0.1, "waving"]];
+    function poses(who, list) {
+      document.querySelectorAll("#slot-" + who + " .pose").forEach((el) => gsap.set(el, { opacity: el.id === `${who}-${list[0][1]}` ? 1 : 0 }));
+      list.forEach(([t, p], i) => {
+        if (!i) return;
+        const prev = list[i - 1][1];
+        tl.to(`#${who}-${prev}`, { opacity: 0, duration: 0.06 }, t);
+        tl.to(`#${who}-${p}`, { opacity: 1, duration: 0.06 }, t);
+        tl.to(`#${who}-sq`, { scaleY: 0.95, scaleX: 1.03, duration: 0.08, ease: "power2.in" }, t - 0.08);
+        tl.to(`#${who}-sq`, { scaleY: 1, scaleX: 1, duration: 0.35, ease: "back.out(3)" }, t);
+      });
+    }
+    poses("a", A_POSES); poses("y", Y_POSES);
+
+    // ---- CAMERA / FRAMING (standing rule 2026-11-27): one speaker = close-up on that character, other one off-frame;
+    // a conversation exchange = two-shot. Heads always fully in frame (head top ~980 px, below the graphics zone);
+    // legs may leave the bottom. Dark shade at the bottom keeps focus on the face and carries the captions.
+    const CLOSE = { s: 1.75, y: -135 }, TWO = { s: 1.35, y: -125 };
+    const FRAMES = {
+      A:  { a: { x: 260, ...CLOSE }, y: { x: 760, ...CLOSE }, shade: 1 },
+      Y:  { a: { x: -760, ...CLOSE }, y: { x: -250, ...CLOSE }, shade: 1 },
+      AY: { a: { x: 25, ...TWO }, y: { x: -25, ...TWO }, shade: 0.75 },
+    };
+    // ONE character per frame (user rule 2026-11-28). Ep #05: no Aiman; Yusuf VO throughout, on screen only at the CTA.
+    gsap.set("#a-ch", { transformOrigin: "50% 0%", x: FRAMES.A.a.x, y: FRAMES.A.a.y, scale: FRAMES.A.a.s });
+    gsap.set("#y-ch", { transformOrigin: "50% 0%", x: FRAMES.Y.y.x, y: FRAMES.Y.y.y, scale: FRAMES.Y.y.s });
+    const VIS_A = [], VIS_Y = [[S.akhir, END + 1]];  // ep #05: Yusuf only, on screen at the CTA
+    function vis(sel, wins) {
+      gsap.set(sel, { opacity: wins[0][0] <= 0 ? 1 : 0 });
+      wins.forEach(([a, b]) => {
+        if (a > 0) tl.fromTo(sel, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.18, ease: "power2.out", immediateRender: false }, a);
+        if (b < END) tl.to(sel, { opacity: 0, duration: 0.08 }, b - 0.08);
+      });
+    }
+    gsap.set("#slot-a", { opacity: 0, display: "none" }); vis("#slot-y", VIS_Y);
+    const ALLW = [...VIS_A, ...VIS_Y].sort((x, y) => x[0] - y[0]);
+    vis("#shade", ALLW);
+    ALLW.forEach(([a, b]) => {
+      const who = VIS_Y.some((w) => w[0] === a) ? "#y-cam" : "#a-cam";
+      tl.fromTo(who, { scale: 1 }, { scale: 1.06, duration: Math.min(b, END) - a, ease: "none", immediateRender: false }, a);
+    });
+    // ---- idle breathing, offset
+    tl.fromTo("#a-br", { scaleY: 1 }, { scaleY: 1.012, duration: 1.7, ease: "sine.inOut", yoyo: true, repeat: Math.ceil(END / 1.7) }, 0);
+    tl.fromTo("#y-br", { scaleY: 1 }, { scaleY: 1.01, duration: 2.1, ease: "sine.inOut", yoyo: true, repeat: Math.ceil(END / 2.1) }, 0.6);
+
+    // ---- speaker full brightness, listener slightly back
+    const lines = Object.entries(T.lines).map(([n, v]) => ({ n: +n, s: v[0], e: v[1], who: v[2] }));
+    let last = { a: 1, y: 1 };
+    gsap.set(["#a-dim", "#y-dim"], { opacity: 1 });
+    lines.forEach((l) => {
+      const a = l.who === "AIMAN" ? 1 : 0.82, y = l.who === "YUSUF" ? 1 : 0.82;
+      if (a !== last.a) tl.to("#a-dim", { opacity: a, duration: 0.25 }, l.s - 0.15);
+      if (y !== last.y) tl.to("#y-dim", { opacity: y, duration: 0.25 }, l.s - 0.15);
+      last = { a, y };
+    });
+
+    // ---- talking beat on every phrase (body hop + tiny tilt; no lip-sync on still renders)
+    Object.entries(T.phr).forEach(([n, starts]) => {
+      const who = T.lines[n][2] === "AIMAN" ? "a" : "y";
+      starts.forEach((s, i) => {
+        const amp = who === "a" ? 14 : 9;
+        tl.to(`#${who}-hop`, { y: -amp, rotation: (i % 2 ? -1 : 1) * 1.2, duration: 0.12, ease: "power2.out", overwrite: "auto" }, s);
+        tl.to(`#${who}-hop`, { y: 0, rotation: 0, duration: 0.3, ease: "power2.inOut", overwrite: "auto" }, s + 0.12);
+      });
+    });
+
+    // ---- reactions
+    function jump(t, h = 46) {
+      tl.to("#a-hop", { y: -h, duration: 0.16, ease: "power2.out", overwrite: "auto" }, t);
+      tl.to("#a-hop", { y: 0, duration: 0.34, ease: "bounce.out", overwrite: "auto" }, t + 0.16);
+    }
+    gsap.set(["#b-sweat", "#b-ex"], { scale: 0, opacity: 0 });
+
+    window.__timelines["cast"] = tl;
+  </script>
+</template>

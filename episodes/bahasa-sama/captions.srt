@@ -1,0 +1,95 @@
+1
+00:00:00,200 --> 00:00:04,282
+Bayangkan Python, Java, C++ dan
+JavaScript…
+
+2
+00:00:04,082 --> 00:00:06,328
+jadi satu bahasa je.
+
+3
+00:00:06,278 --> 00:00:08,654
+Mula-mula memang akan rasa best.
+
+4
+00:00:08,875 --> 00:00:12,589
+sebab semua developer boleh faham code
+antara satu sama lain.
+
+5
+00:00:12,539 --> 00:00:16,094
+Belajar satu bahasa, terus dah boleh buat
+semua benda.
+
+6
+00:00:16,144 --> 00:00:21,322
+Tapi tunggu jap… bahasa tu tujuan dia nak
+senang ke, atau nak laju?
+
+7
+00:00:21,272 --> 00:00:26,578
+Kalau pilih nak senang, game akan mula
+jadi lag, phone pun akan jadi cepat panas.
+
+8
+00:00:26,528 --> 00:00:31,197
+Kalau pilih nak laju pulak, code akan jadi
+susah gila and sangat complex.
+
+9
+00:00:30,997 --> 00:00:33,557
+Student pun pening nak belajar.
+
+10
+00:00:33,607 --> 00:00:38,316
+Dan kalau ada satu bug je dalam bahasa tu…
+seluruh sistem dekat
+
+11
+00:00:38,116 --> 00:00:39,835
+dunia ni akan terkesan.
+
+12
+00:00:39,935 --> 00:00:45,025
+Sebab sebenarnya, setiap bahasa tu dicipta
+untuk kerja yang berbeza.
+
+13
+00:00:44,825 --> 00:00:46,304
+Macam toolbox.
+
+14
+00:00:46,104 --> 00:00:49,100
+Tukul untuk paku, screwdriver untuk skru.
+
+15
+00:00:49,200 --> 00:00:54,513
+Dan yang paling best… komputer sebenarnya
+memang dah guna satu bahasa pun.
+
+16
+00:00:54,313 --> 00:00:56,445
+iaitu, Kosong dan satu.
+
+17
+00:00:56,395 --> 00:01:00,006
+Semua bahasa programming tu hanyalah cuma
+penterjemah je.
+
+18
+00:01:00,311 --> 00:01:03,787
+Kita tulis, dia yang akan tukar jadi
+bahasa komputer.
+
+19
+00:01:03,887 --> 00:01:08,299
+Jadi banyak bahasa tu bukan lah masalah,
+tapi tu adalah kelebihan.
+
+20
+00:01:08,099 --> 00:01:10,860
+Korang mula belajar bahasa apa dulu?
+
+21
+00:01:10,660 --> 00:01:11,926
+Komen bawah!
