@@ -1,0 +1,95 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+    .ab { position: absolute; }
+    #flash { inset: 0; background: #F5F7FA; }
+    #glitch { inset: 0; mix-blend-mode: screen;
+      background: repeating-linear-gradient(0deg, rgba(0,194,255,0.0) 0px, rgba(0,194,255,0.0) 10px, rgba(0,194,255,0.35) 11px, rgba(255,77,94,0.25) 14px, rgba(0,194,255,0) 15px); }
+    #vig { inset: 0; background: radial-gradient(120% 80% at 50% 50%, transparent 55%, rgba(3,10,26,0.55) 100%); }
+    #title { left: 70px; right: 70px; top: 190px; text-align: center; padding: 22px 20px 28px; border-radius: 34px; background: rgba(11,30,63,0.86); border: 3px solid rgba(0,194,255,0.5); box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+    #title .k { font-family: "Sora"; font-weight: 800; font-size: 44px; color: var(--orange); letter-spacing: 0.06em; text-shadow: 0 4px 16px rgba(0,0,0,0.45); }
+    #title .h { font-family: "Sora"; font-weight: 800; font-size: 78px; line-height: 1.02; color: #fff; letter-spacing: -0.02em;
+      text-shadow: 0 6px 28px rgba(0,0,0,0.6), 0 0 2px rgba(0,0,0,0.6); }
+    #title .h b { color: var(--cyan); }
+    .kw { position: absolute; left: 0; right: 0; top: 230px; text-align: center; }
+    .kw span { display: inline-block; padding: 16px 40px 18px; border-radius: 26px; font-family: "Sora"; font-weight: 800; font-size: 64px; letter-spacing: 0.02em;
+      color: #fff; background: rgba(11,30,63,0.88); border: 3px solid rgba(0,194,255,0.6); box-shadow: 0 18px 50px rgba(0,0,0,0.4); white-space: nowrap; }
+    .kw span b { color: var(--cyan); font-weight: 800; }
+    .kw span i { color: var(--orange); font-style: normal; }
+    .kw.red span { background: rgba(255,77,94,0.95); border-color: rgba(255,255,255,0.7); }
+    .kw.green span { background: rgba(34,197,94,0.95); border-color: rgba(255,255,255,0.7); }
+    .kw.orange span { background: rgba(255,138,0,0.95); border-color: rgba(255,255,255,0.7); }
+    #k-tugas span { font-size: 50px; } #k-manusia span, #k-laju span { font-size: 58px; }
+    #cta { left: 90px; right: 90px; top: 250px; text-align: center; border-radius: 34px; background: var(--card); padding: 30px 36px 34px; box-shadow: 0 24px 60px rgba(4,12,30,0.5); }
+    #cta .k { font-family: "Sora"; font-weight: 800; font-size: 36px; letter-spacing: 0.1em; color: var(--orange); }
+    #cta .h { font-family: "Sora"; font-weight: 800; font-size: 64px; line-height: 1.08; color: var(--navy); margin-top: 6px; }
+    #tag { left: 0; right: 0; top: 640px; text-align: center; font-family: "Plus Jakarta Sans"; font-weight: 700; font-size: 40px; color: #fff; text-shadow: 0 4px 18px rgba(0,0,0,0.7); }
+    #fol { left: 50%; top: 720px; margin-left: -170px; width: 340px; text-align: center; padding: 12px 26px; border-radius: 999px; background: var(--blue);
+      font-family: "Sora"; font-weight: 800; font-size: 44px; letter-spacing: 0.08em; color: #fff; box-shadow: 0 12px 30px rgba(0,0,0,0.35); }
+  </style>
+  <div id="root" data-composition-id="hud" data-width="1080" data-height="1920">
+    <div id="vig" class="ab"></div>
+    <div id="title" class="ab"><div class="k">APA JADI KALAU</div><div class="h"><b>AI</b> GANTI SEMUA KERJA MANUSIA?</div></div>
+    <div id="k-siap" class="kw green"><span>TUGAS DAH SIAP ✓</span></div>
+    <div id="k-sendiri" class="kw"><span>SEMUA JALAN <b>SENDIRI</b></span></div>
+    <div id="k-untung" class="kw green"><span>UNTUNG BESAR</span></div>
+    <div id="k-gaji" class="kw red"><span>TAKDE GAJI?</span></div>
+    <div id="k-beli" class="kw orange"><span>SIAPA NAK BELI?</span></div>
+    <div id="k-sekat" class="kw red"><span>DUIT TERSEKAT</span></div>
+    <div id="k-tugas" class="kw"><span>AI GANTI <b>TUGAS</b>, BUKAN <i>KERJA</i></span></div>
+    <div id="k-manusia" class="kw green"><span>MANUSIA TETAP PERLU</span></div>
+    <div id="k-ubah" class="kw"><span>KERJA <b>BERUBAH</b></span></div>
+    <div id="k-laju" class="kw orange"><span>GUNA AI = LEBIH LAJU</span></div>
+    <div id="cta" class="ab"><div class="k">KOMEN</div><div class="h">Kerja apa AI takkan boleh ganti?</div></div>
+    <div id="tag" class="ab">Technology, Made Understandable.</div>
+    <div id="fol" class="ab">FOLLOW</div>
+    <div id="glitch" class="ab"></div>
+    <div id="flash" class="ab"></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const T = window.YA_T, S = T.scenes, END = T.total;
+    const W = (n, w) => T.words[n].find((v) => v[0].toLowerCase().startsWith(w.toLowerCase()))[1];
+    const LN = (n) => T.lines[n];
+    const CHIPS = ["#k-siap", "#k-sendiri", "#k-untung", "#k-gaji", "#k-beli", "#k-sekat", "#k-tugas", "#k-manusia", "#k-ubah", "#k-laju"];
+    gsap.set(["#title", "#cta", "#tag", "#fol", "#flash", "#glitch", ...CHIPS], { opacity: 0 });
+    const show = (sel, a, b, from = { y: 30, scale: 0.92 }) => {
+      tl.fromTo(sel, { opacity: 0, ...from }, { opacity: 1, y: 0, scale: 1, duration: 0.26, ease: "back.out(2.2)", immediateRender: false }, a);
+      if (b !== undefined) tl.to(sel, { opacity: 0, scale: 0.94, duration: 0.16, ease: "power2.in" }, b - 0.16);
+    };
+    // cuts = same times as the 3D camera shots in assets/iso/iso.js
+    const cuts = [S.hook, W(3, "Email") - 0.1, W(3, "Report") - 0.1, W(3, "Design") - 0.1, W(3, "Korang") - 0.1, S.domino, W(4, "Kilang") - 0.1, W(4, "kedai") - 0.1, W(4, "bank") - 0.1,
+      W(4, "semua") - 0.1, S.untung, W(5, "sebab") - 0.1, S.soalan, W(6, "siapa") - 0.1, S.sunyi, W(7, "Barang") - 0.1, W(7, "Duit") - 0.1, S.ragu, S.twist, W(9, "tugas") - 0.1,
+      W(9, "Sebab") - 0.1, S.manusia, W(10, "salah") - 0.1, W(10, "keputusan") - 0.1, W(10, "perasaan") - 0.1, W(10, "bertanggungjawab") - 0.1, W(10, "Jadi") - 0.1, S.berubah, W(11, "Dan") - 0.1, S.akhir];
+    cuts.forEach((t) => {
+      tl.fromTo("#flash", { opacity: 0 }, { opacity: 0.32, duration: 0.05, immediateRender: false }, t - 0.06);
+      tl.to("#flash", { opacity: 0, duration: 0.2 }, t - 0.01);
+    });
+    const glitch = (a, d) => {
+      tl.fromTo("#glitch", { opacity: 0, y: 0 }, { opacity: 0.9, y: 14, duration: 0.06, immediateRender: false }, a);
+      tl.to("#glitch", { opacity: 0.25, y: -10, duration: 0.08 }, a + 0.07);
+      tl.to("#glitch", { opacity: 0.8, y: 6, duration: 0.06 }, a + 0.16);
+      tl.to("#glitch", { opacity: 0, y: 0, duration: 0.12 }, a + d);
+    };
+    glitch(W(2, "AI.") - 0.05, 0.45); glitch(S.domino + 0.2, 0.4); glitch(W(4, "semua") - 0.05, 0.4); glitch(W(5, "gaji") - 0.05, 0.4);
+    glitch(W(7, "berpusing") - 0.05, 0.5); glitch(W(9, "tak.") - 0.05, 0.4); glitch(W(10, "salah") - 0.05, 0.35);
+    show("#title", 0.1, W(2, "semua") - 0.1, { y: -40, scale: 0.85 });
+    tl.to("#title", { scale: 1.04, duration: 0.18, yoyo: true, repeat: 1, ease: "sine.inOut" }, W(1, "AI"));
+    show("#k-siap", W(3, "Korang") - 0.1, S.domino, { scale: 1.5, y: 0 });
+    show("#k-sendiri", W(4, "semua") - 0.1, S.untung);
+    show("#k-untung", W(5, "untung") - 0.1, W(5, "sebab") - 0.1, { scale: 1.5, y: 0 });
+    show("#k-gaji", W(5, "gaji") - 0.4, S.soalan, { scale: 1.6, y: 0 });
+    show("#k-beli", W(6, "siapa") - 0.1, S.sunyi, { scale: 1.6, y: 0 });
+    show("#k-sekat", W(7, "Duit") - 0.1, S.ragu, { scale: 1.6, y: 0 });
+    tl.to("#k-sekat", { x: 8, duration: 0.04, yoyo: true, repeat: 7 }, W(7, "berpusing"));
+    show("#k-tugas", W(9, "ganti") - 0.1, S.manusia);
+    show("#k-manusia", W(10, "Jadi") - 0.1, S.berubah, { scale: 1.5, y: 0 });
+    show("#k-ubah", W(11, "berubah") - 0.2, W(11, "Dan") - 0.1);
+    show("#k-laju", W(11, "pandai") - 0.1, S.akhir, { scale: 1.5, y: 0 });
+    show("#cta", W(12, "Kerja") - 0.1, END, { y: -40, scale: 0.9 });
+    show("#tag", LN(12)[1] - 1.2, END, { y: 20, scale: 1 });
+    show("#fol", LN(12)[1] - 1.0, END, { scale: 0.4, y: 0 });
+    tl.to("#fol", { scale: 1.08, duration: 0.3, yoyo: true, repeat: 3, ease: "sine.inOut" }, LN(12)[1] - 0.5);
+    window.__timelines["hud"] = tl;
+  </script>
+</template>

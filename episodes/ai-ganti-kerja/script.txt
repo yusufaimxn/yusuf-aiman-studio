@@ -1,0 +1,25 @@
+// Siri "Apa Jadi Kalau…?" #07. Satu baris = satu MP3 (01.mp3 ... 12.mp3), ikut Doc #07 (versi user). Yusuf sahaja.
+# scene title | Tajuk: office pagi, otak AI menyala
+YUSUF (misteri): Apa Jadi Kalau AI Ganti Semua Pekerjaan Manusia?
+# scene hook | Meja kerja, monitor jalan sendiri
+YUSUF (misteri): Bayangkan korang datang kerja... dan semua tugas korang dah siap dibuat oleh AI.
+# scene siap | Email terbang, report tersusun, design siap; orang duduk
+YUSUF (kagum): Email dah balas. Report dah siap. Design pun dah ada. Korang cuma... duduk je.
+# scene domino | Gelombang AI merebak: office, kilang, kedai, bank
+YUSUF (tegang): Lepas tu satu office pun sama. Kilang, kedai, bank... semua jalan sendiri.
+# scene untung | Graf untung naik, slip gaji pecah
+YUSUF (sinis): Syarikat pun untung besar, sebab AI tak perlukan gaji.
+# scene soalan | Bandar senyap, dompet kosong, tanda soal gergasi
+YUSUF (suspen): Tapi tunggu jap... kalau semua orang takde gaji, siapa nak beli barang dorang?
+# scene sunyi | Kedai gelap, gudang penuh, gelung duit tersekat
+YUSUF (seram): Kedai jadi sunyi. Barang pun bertimbun. Duit terus berhenti berpusing.
+# scene ragu | Robot vs manusia, kad KERJA
+YUSUF (ragu): Jadi... AI memang akan ganti semua kerja manusia ke?
+# scene twist | Kad KERJA pecah jadi kad TUGAS
+YUSUF (twist): Sebenarnya tak. AI cuma ganti tugas, bukan terus ganti semua kerja. Sebab dia laju buat benda yang berulang.
+# scene manusia | AI salah, manusia check, putuskan, faham, tanggungjawab
+YUSUF (bersemangat): Tapi bila AI salah, siapa yang nak check? Siapa yang nak buat keputusan? yang nak faham perasaan orang? dan yang nak bertanggungjawab? Jadi semua kerja tu tetap manusia.
+# scene berubah | Manusia + robot kerja sama, bandar hidup semula
+YUSUF (yakin): Sebab tu kerja takkan hilang macam tu je, tapi dia akan berubah. Dan orang yang pandai guna AI, akan jadi jauh lebih laju.
+# scene akhir | Yusuf CTA
+YUSUF (ceria): Kerja apa yang korang rasa AI takkan boleh ganti? Komen bawah!

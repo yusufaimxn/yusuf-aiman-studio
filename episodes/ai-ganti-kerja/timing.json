@@ -1,0 +1,1111 @@
+{
+ "total": 74.59,
+ "lines": [
+  {
+   "n": 1,
+   "speaker": "YUSUF",
+   "scene": "title",
+   "text": "Apa Jadi Kalau AI Ganti Semua Pekerjaan Manusia?",
+   "file": "assets/audio/voice/supplied/01.mp3",
+   "start": 0.2,
+   "file_dur": 3.709,
+   "speech_start": 0.2,
+   "speech_end": 3.909,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Apa",
+     "start": 0.2,
+     "end": 0.503
+    },
+    {
+     "text": "Jadi",
+     "start": 0.503,
+     "end": 0.881
+    },
+    {
+     "text": "Kalau",
+     "start": 0.881,
+     "end": 1.336
+    },
+    {
+     "text": "AI",
+     "start": 1.336,
+     "end": 1.563
+    },
+    {
+     "text": "Ganti",
+     "start": 1.563,
+     "end": 2.017
+    },
+    {
+     "text": "Semua",
+     "start": 2.017,
+     "end": 2.471
+    },
+    {
+     "text": "Pekerjaan",
+     "start": 2.471,
+     "end": 3.228
+    },
+    {
+     "text": "Manusia?",
+     "start": 3.228,
+     "end": 3.909
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "speaker": "YUSUF",
+   "scene": "hook",
+   "text": "Bayangkan korang datang kerja... dan semua tugas korang dah siap dibuat oleh AI.",
+   "file": "assets/audio/voice/supplied/02.mp3",
+   "start": 4.209,
+   "file_dur": 5.329,
+   "speech_start": 4.209,
+   "speech_end": 9.387,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Bayangkan",
+     "start": 4.209,
+     "end": 4.722
+    },
+    {
+     "text": "korang",
+     "start": 4.722,
+     "end": 5.082
+    },
+    {
+     "text": "datang",
+     "start": 5.082,
+     "end": 5.441
+    },
+    {
+     "text": "kerja...",
+     "start": 5.441,
+     "end": 5.903
+    },
+    {
+     "text": "dan",
+     "start": 6.235,
+     "end": 6.498
+    },
+    {
+     "text": "semua",
+     "start": 6.498,
+     "end": 6.892
+    },
+    {
+     "text": "tugas",
+     "start": 6.892,
+     "end": 7.286
+    },
+    {
+     "text": "korang",
+     "start": 7.286,
+     "end": 7.746
+    },
+    {
+     "text": "dah",
+     "start": 7.746,
+     "end": 8.008
+    },
+    {
+     "text": "siap",
+     "start": 8.008,
+     "end": 8.337
+    },
+    {
+     "text": "dibuat",
+     "start": 8.337,
+     "end": 8.796
+    },
+    {
+     "text": "oleh",
+     "start": 8.796,
+     "end": 9.125
+    },
+    {
+     "text": "AI.",
+     "start": 9.125,
+     "end": 9.387
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "speaker": "YUSUF",
+   "scene": "siap",
+   "text": "Email dah balas. Report dah siap. Design pun dah ada. Korang cuma... duduk je.",
+   "file": "assets/audio/voice/supplied/03.mp3",
+   "start": 9.537,
+   "file_dur": 6.191,
+   "speech_start": 9.537,
+   "speech_end": 15.53,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Email",
+     "start": 9.537,
+     "end": 9.901
+    },
+    {
+     "text": "dah",
+     "start": 9.901,
+     "end": 10.144
+    },
+    {
+     "text": "balas.",
+     "start": 10.144,
+     "end": 10.569
+    },
+    {
+     "text": "Report",
+     "start": 10.569,
+     "end": 11.319
+    },
+    {
+     "text": "dah",
+     "start": 11.319,
+     "end": 11.562
+    },
+    {
+     "text": "siap.",
+     "start": 11.562,
+     "end": 12.329
+    },
+    {
+     "text": "Design",
+     "start": 12.329,
+     "end": 12.754
+    },
+    {
+     "text": "pun",
+     "start": 12.754,
+     "end": 12.996
+    },
+    {
+     "text": "dah",
+     "start": 12.996,
+     "end": 13.709
+    },
+    {
+     "text": "ada.",
+     "start": 13.709,
+     "end": 14.012
+    },
+    {
+     "text": "Korang",
+     "start": 14.012,
+     "end": 14.437
+    },
+    {
+     "text": "cuma...",
+     "start": 14.437,
+     "end": 14.923
+    },
+    {
+     "text": "duduk",
+     "start": 14.923,
+     "end": 15.287
+    },
+    {
+     "text": "je.",
+     "start": 15.287,
+     "end": 15.53
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "speaker": "YUSUF",
+   "scene": "domino",
+   "text": "Lepas tu satu office pun sama. Kilang, kedai, bank... semua jalan sendiri.",
+   "file": "assets/audio/voice/supplied/04.mp3",
+   "start": 15.68,
+   "file_dur": 6.269,
+   "speech_start": 15.68,
+   "speech_end": 21.778,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Lepas",
+     "start": 15.68,
+     "end": 16.103
+    },
+    {
+     "text": "tu",
+     "start": 16.103,
+     "end": 16.315
+    },
+    {
+     "text": "satu",
+     "start": 16.315,
+     "end": 16.668
+    },
+    {
+     "text": "office",
+     "start": 16.668,
+     "end": 17.161
+    },
+    {
+     "text": "pun",
+     "start": 17.161,
+     "end": 17.443
+    },
+    {
+     "text": "sama.",
+     "start": 17.443,
+     "end": 17.867
+    },
+    {
+     "text": "Kilang,",
+     "start": 17.867,
+     "end": 18.881
+    },
+    {
+     "text": "kedai,",
+     "start": 18.881,
+     "end": 19.375
+    },
+    {
+     "text": "bank...",
+     "start": 19.375,
+     "end": 19.939
+    },
+    {
+     "text": "semua",
+     "start": 19.939,
+     "end": 20.72
+    },
+    {
+     "text": "jalan",
+     "start": 20.72,
+     "end": 21.143
+    },
+    {
+     "text": "sendiri.",
+     "start": 21.143,
+     "end": 21.778
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "speaker": "YUSUF",
+   "scene": "untung",
+   "text": "Syarikat pun untung besar, sebab AI tak perlukan gaji.",
+   "file": "assets/audio/voice/supplied/05.mp3",
+   "start": 21.928,
+   "file_dur": 4.127,
+   "speech_start": 21.928,
+   "speech_end": 25.858,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Syarikat",
+     "start": 21.928,
+     "end": 22.498
+    },
+    {
+     "text": "pun",
+     "start": 22.498,
+     "end": 22.751
+    },
+    {
+     "text": "untung",
+     "start": 22.751,
+     "end": 23.194
+    },
+    {
+     "text": "besar,",
+     "start": 23.194,
+     "end": 23.956
+    },
+    {
+     "text": "sebab",
+     "start": 23.956,
+     "end": 24.465
+    },
+    {
+     "text": "AI",
+     "start": 24.465,
+     "end": 24.655
+    },
+    {
+     "text": "tak",
+     "start": 24.655,
+     "end": 24.908
+    },
+    {
+     "text": "perlukan",
+     "start": 24.908,
+     "end": 25.478
+    },
+    {
+     "text": "gaji.",
+     "start": 25.478,
+     "end": 25.858
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "speaker": "YUSUF",
+   "scene": "soalan",
+   "text": "Tapi tunggu jap... kalau semua orang takde gaji, siapa nak beli barang dorang?",
+   "file": "assets/audio/voice/supplied/06.mp3",
+   "start": 26.108,
+   "file_dur": 5.068,
+   "speech_start": 26.108,
+   "speech_end": 31.034,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Tapi",
+     "start": 26.108,
+     "end": 26.355
+    },
+    {
+     "text": "tunggu",
+     "start": 26.355,
+     "end": 26.864
+    },
+    {
+     "text": "jap...",
+     "start": 26.864,
+     "end": 27.762
+    },
+    {
+     "text": "kalau",
+     "start": 27.762,
+     "end": 28.058
+    },
+    {
+     "text": "semua",
+     "start": 28.058,
+     "end": 28.355
+    },
+    {
+     "text": "orang",
+     "start": 28.355,
+     "end": 28.652
+    },
+    {
+     "text": "takde",
+     "start": 28.652,
+     "end": 28.949
+    },
+    {
+     "text": "gaji,",
+     "start": 28.949,
+     "end": 29.245
+    },
+    {
+     "text": "siapa",
+     "start": 29.245,
+     "end": 29.847
+    },
+    {
+     "text": "nak",
+     "start": 29.847,
+     "end": 30.045
+    },
+    {
+     "text": "beli",
+     "start": 30.045,
+     "end": 30.292
+    },
+    {
+     "text": "barang",
+     "start": 30.292,
+     "end": 30.639
+    },
+    {
+     "text": "dorang?",
+     "start": 30.639,
+     "end": 31.034
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "speaker": "YUSUF",
+   "scene": "sunyi",
+   "text": "Kedai jadi sunyi. Barang pun bertimbun. Duit terus berhenti berpusing.",
+   "file": "assets/audio/voice/supplied/07.mp3",
+   "start": 31.184,
+   "file_dur": 5.486,
+   "speech_start": 31.184,
+   "speech_end": 36.482,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Kedai",
+     "start": 31.184,
+     "end": 31.543
+    },
+    {
+     "text": "jadi",
+     "start": 31.543,
+     "end": 31.842
+    },
+    {
+     "text": "sunyi.",
+     "start": 31.842,
+     "end": 32.261
+    },
+    {
+     "text": "Barang",
+     "start": 32.261,
+     "end": 33.075
+    },
+    {
+     "text": "pun",
+     "start": 33.075,
+     "end": 33.314
+    },
+    {
+     "text": "bertimbun.",
+     "start": 33.314,
+     "end": 33.973
+    },
+    {
+     "text": "Duit",
+     "start": 33.973,
+     "end": 34.755
+    },
+    {
+     "text": "terus",
+     "start": 34.755,
+     "end": 35.285
+    },
+    {
+     "text": "berhenti",
+     "start": 35.285,
+     "end": 35.824
+    },
+    {
+     "text": "berpusing.",
+     "start": 35.824,
+     "end": 36.482
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "speaker": "YUSUF",
+   "scene": "ragu",
+   "text": "Jadi... AI memang akan ganti semua kerja manusia ke?",
+   "file": "assets/audio/voice/supplied/08.mp3",
+   "start": 36.782,
+   "file_dur": 3.971,
+   "speech_start": 36.782,
+   "speech_end": 40.512,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Jadi...",
+     "start": 36.782,
+     "end": 37.552
+    },
+    {
+     "text": "AI",
+     "start": 37.887,
+     "end": 38.062
+    },
+    {
+     "text": "memang",
+     "start": 38.062,
+     "end": 38.47
+    },
+    {
+     "text": "akan",
+     "start": 38.47,
+     "end": 38.762
+    },
+    {
+     "text": "ganti",
+     "start": 38.762,
+     "end": 39.112
+    },
+    {
+     "text": "semua",
+     "start": 39.112,
+     "end": 39.462
+    },
+    {
+     "text": "kerja",
+     "start": 39.462,
+     "end": 39.812
+    },
+    {
+     "text": "manusia",
+     "start": 39.812,
+     "end": 40.278
+    },
+    {
+     "text": "ke?",
+     "start": 40.278,
+     "end": 40.512
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "speaker": "YUSUF",
+   "scene": "twist",
+   "text": "Sebenarnya tak. AI cuma ganti tugas, bukan terus ganti semua kerja. Sebab dia laju buat benda yang berulang.",
+   "file": "assets/audio/voice/supplied/09.mp3",
+   "start": 40.712,
+   "file_dur": 7.706,
+   "speech_start": 40.712,
+   "speech_end": 48.244,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Sebenarnya",
+     "start": 40.712,
+     "end": 41.492
+    },
+    {
+     "text": "tak.",
+     "start": 41.492,
+     "end": 41.779
+    },
+    {
+     "text": "AI",
+     "start": 41.779,
+     "end": 42.376
+    },
+    {
+     "text": "cuma",
+     "start": 42.376,
+     "end": 42.664
+    },
+    {
+     "text": "ganti",
+     "start": 42.664,
+     "end": 43.01
+    },
+    {
+     "text": "tugas,",
+     "start": 43.01,
+     "end": 43.413
+    },
+    {
+     "text": "bukan",
+     "start": 43.413,
+     "end": 43.995
+    },
+    {
+     "text": "terus",
+     "start": 43.995,
+     "end": 44.341
+    },
+    {
+     "text": "ganti",
+     "start": 44.341,
+     "end": 44.686
+    },
+    {
+     "text": "semua",
+     "start": 44.686,
+     "end": 45.032
+    },
+    {
+     "text": "kerja.",
+     "start": 45.032,
+     "end": 45.434
+    },
+    {
+     "text": "Sebab",
+     "start": 45.434,
+     "end": 46.229
+    },
+    {
+     "text": "dia",
+     "start": 46.229,
+     "end": 46.459
+    },
+    {
+     "text": "laju",
+     "start": 46.459,
+     "end": 46.747
+    },
+    {
+     "text": "buat",
+     "start": 46.747,
+     "end": 47.035
+    },
+    {
+     "text": "benda",
+     "start": 47.035,
+     "end": 47.381
+    },
+    {
+     "text": "yang",
+     "start": 47.381,
+     "end": 47.668
+    },
+    {
+     "text": "berulang.",
+     "start": 47.668,
+     "end": 48.244
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "speaker": "YUSUF",
+   "scene": "manusia",
+   "text": "Tapi bila AI salah, siapa yang nak check? Siapa yang nak buat keputusan? yang nak faham perasaan orang? dan yang nak bertanggungjawab? Jadi semua kerja tu tetap manusia.",
+   "file": "assets/audio/voice/supplied/10.mp3",
+   "start": 48.394,
+   "file_dur": 11.729,
+   "speech_start": 48.394,
+   "speech_end": 59.925,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Tapi",
+     "start": 48.394,
+     "end": 48.659
+    },
+    {
+     "text": "bila",
+     "start": 48.659,
+     "end": 48.923
+    },
+    {
+     "text": "AI",
+     "start": 48.923,
+     "end": 49.082
+    },
+    {
+     "text": "salah,",
+     "start": 49.082,
+     "end": 49.453
+    },
+    {
+     "text": "siapa",
+     "start": 49.453,
+     "end": 49.77
+    },
+    {
+     "text": "yang",
+     "start": 49.77,
+     "end": 50.035
+    },
+    {
+     "text": "nak",
+     "start": 50.035,
+     "end": 50.598
+    },
+    {
+     "text": "check?",
+     "start": 50.598,
+     "end": 50.969
+    },
+    {
+     "text": "Siapa",
+     "start": 50.969,
+     "end": 51.286
+    },
+    {
+     "text": "yang",
+     "start": 51.286,
+     "end": 52.089
+    },
+    {
+     "text": "nak",
+     "start": 52.089,
+     "end": 52.301
+    },
+    {
+     "text": "buat",
+     "start": 52.301,
+     "end": 52.565
+    },
+    {
+     "text": "keputusan?",
+     "start": 52.565,
+     "end": 53.147
+    },
+    {
+     "text": "yang",
+     "start": 53.147,
+     "end": 53.843
+    },
+    {
+     "text": "nak",
+     "start": 53.843,
+     "end": 54.055
+    },
+    {
+     "text": "faham",
+     "start": 54.055,
+     "end": 54.372
+    },
+    {
+     "text": "perasaan",
+     "start": 54.372,
+     "end": 54.849
+    },
+    {
+     "text": "orang?",
+     "start": 54.849,
+     "end": 55.219
+    },
+    {
+     "text": "dan",
+     "start": 55.219,
+     "end": 55.845
+    },
+    {
+     "text": "yang",
+     "start": 55.845,
+     "end": 56.11
+    },
+    {
+     "text": "nak",
+     "start": 56.11,
+     "end": 56.322
+    },
+    {
+     "text": "bertanggungjawab?",
+     "start": 56.322,
+     "end": 57.764
+    },
+    {
+     "text": "Jadi",
+     "start": 57.764,
+     "end": 58.029
+    },
+    {
+     "text": "semua",
+     "start": 58.029,
+     "end": 58.347
+    },
+    {
+     "text": "kerja",
+     "start": 58.347,
+     "end": 58.664
+    },
+    {
+     "text": "tu",
+     "start": 58.664,
+     "end": 58.823
+    },
+    {
+     "text": "tetap",
+     "start": 58.823,
+     "end": 59.448
+    },
+    {
+     "text": "manusia.",
+     "start": 59.448,
+     "end": 59.925
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "speaker": "YUSUF",
+   "scene": "berubah",
+   "text": "Sebab tu kerja takkan hilang macam tu je, tapi dia akan berubah. Dan orang yang pandai guna AI, akan jadi jauh lebih laju.",
+   "file": "assets/audio/voice/supplied/11.mp3",
+   "start": 60.075,
+   "file_dur": 8.751,
+   "speech_start": 60.075,
+   "speech_end": 68.669,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Sebab",
+     "start": 60.075,
+     "end": 60.555
+    },
+    {
+     "text": "tu",
+     "start": 60.555,
+     "end": 60.733
+    },
+    {
+     "text": "kerja",
+     "start": 60.733,
+     "end": 61.231
+    },
+    {
+     "text": "takkan",
+     "start": 61.231,
+     "end": 61.647
+    },
+    {
+     "text": "hilang",
+     "start": 61.647,
+     "end": 62.063
+    },
+    {
+     "text": "macam",
+     "start": 62.063,
+     "end": 62.42
+    },
+    {
+     "text": "tu",
+     "start": 62.42,
+     "end": 62.599
+    },
+    {
+     "text": "je,",
+     "start": 62.599,
+     "end": 62.836
+    },
+    {
+     "text": "tapi",
+     "start": 62.836,
+     "end": 63.459
+    },
+    {
+     "text": "dia",
+     "start": 63.459,
+     "end": 63.697
+    },
+    {
+     "text": "akan",
+     "start": 63.697,
+     "end": 63.994
+    },
+    {
+     "text": "berubah.",
+     "start": 63.994,
+     "end": 64.529
+    },
+    {
+     "text": "Dan",
+     "start": 64.529,
+     "end": 65.244
+    },
+    {
+     "text": "orang",
+     "start": 65.244,
+     "end": 65.601
+    },
+    {
+     "text": "yang",
+     "start": 65.601,
+     "end": 65.898
+    },
+    {
+     "text": "pandai",
+     "start": 65.898,
+     "end": 66.315
+    },
+    {
+     "text": "guna",
+     "start": 66.315,
+     "end": 66.612
+    },
+    {
+     "text": "AI,",
+     "start": 66.612,
+     "end": 67.063
+    },
+    {
+     "text": "akan",
+     "start": 67.063,
+     "end": 67.361
+    },
+    {
+     "text": "jadi",
+     "start": 67.361,
+     "end": 67.658
+    },
+    {
+     "text": "jauh",
+     "start": 67.658,
+     "end": 67.955
+    },
+    {
+     "text": "lebih",
+     "start": 67.955,
+     "end": 68.312
+    },
+    {
+     "text": "laju.",
+     "start": 68.312,
+     "end": 68.669
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "speaker": "YUSUF",
+   "scene": "akhir",
+   "text": "Kerja apa yang korang rasa AI takkan boleh ganti? Komen bawah!",
+   "file": "assets/audio/voice/supplied/12.mp3",
+   "start": 68.969,
+   "file_dur": 4.284,
+   "speech_start": 68.969,
+   "speech_end": 73.088,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Kerja",
+     "start": 68.969,
+     "end": 69.306
+    },
+    {
+     "text": "apa",
+     "start": 69.306,
+     "end": 69.682
+    },
+    {
+     "text": "yang",
+     "start": 69.682,
+     "end": 69.963
+    },
+    {
+     "text": "korang",
+     "start": 69.963,
+     "end": 70.356
+    },
+    {
+     "text": "rasa",
+     "start": 70.356,
+     "end": 70.637
+    },
+    {
+     "text": "AI",
+     "start": 70.637,
+     "end": 70.806
+    },
+    {
+     "text": "takkan",
+     "start": 70.806,
+     "end": 71.199
+    },
+    {
+     "text": "boleh",
+     "start": 71.199,
+     "end": 71.536
+    },
+    {
+     "text": "ganti?",
+     "start": 71.536,
+     "end": 71.93
+    },
+    {
+     "text": "Komen",
+     "start": 71.93,
+     "end": 72.695
+    },
+    {
+     "text": "bawah!",
+     "start": 72.695,
+     "end": 73.088
+    }
+   ]
+  }
+ ],
+ "scenes": [
+  {
+   "id": "title",
+   "start": 0.0,
+   "lines": [
+    1
+   ],
+   "duration": 4.06
+  },
+  {
+   "id": "hook",
+   "start": 4.06,
+   "lines": [
+    2
+   ],
+   "duration": 5.4
+  },
+  {
+   "id": "siap",
+   "start": 9.46,
+   "lines": [
+    3
+   ],
+   "duration": 6.15
+  },
+  {
+   "id": "domino",
+   "start": 15.61,
+   "lines": [
+    4
+   ],
+   "duration": 6.24
+  },
+  {
+   "id": "untung",
+   "start": 21.85,
+   "lines": [
+    5
+   ],
+   "duration": 4.13
+  },
+  {
+   "id": "soalan",
+   "start": 25.98,
+   "lines": [
+    6
+   ],
+   "duration": 5.13
+  },
+  {
+   "id": "sunyi",
+   "start": 31.11,
+   "lines": [
+    7
+   ],
+   "duration": 5.52
+  },
+  {
+   "id": "ragu",
+   "start": 36.63,
+   "lines": [
+    8
+   ],
+   "duration": 3.98
+  },
+  {
+   "id": "twist",
+   "start": 40.61,
+   "lines": [
+    9
+   ],
+   "duration": 7.71
+  },
+  {
+   "id": "manusia",
+   "start": 48.32,
+   "lines": [
+    10
+   ],
+   "duration": 11.68
+  },
+  {
+   "id": "berubah",
+   "start": 60.0,
+   "lines": [
+    11
+   ],
+   "duration": 8.82
+  },
+  {
+   "id": "akhir",
+   "start": 68.82,
+   "lines": [
+    12
+   ],
+   "duration": 5.77
+  }
+ ]
+}
