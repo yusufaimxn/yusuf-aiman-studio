@@ -1,0 +1,1066 @@
+{
+ "total": 71.99,
+ "lines": [
+  {
+   "n": 1,
+   "speaker": "YUSUF",
+   "scene": "hook",
+   "text": "Bayangkan Google Maps tiba-tiba… tak tahu korang dekat mana.",
+   "file": "assets/audio/voice/supplied/01.mp3",
+   "start": 0.2,
+   "file_dur": 4.284,
+   "speech_start": 0.2,
+   "speech_end": 4.28,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Bayangkan",
+     "start": 0.2,
+     "end": 0.799
+    },
+    {
+     "text": "Google",
+     "start": 0.799,
+     "end": 1.218
+    },
+    {
+     "text": "Maps",
+     "start": 1.218,
+     "end": 1.517
+    },
+    {
+     "text": "tiba-tiba…",
+     "start": 1.517,
+     "end": 2.175
+    },
+    {
+     "text": "tak",
+     "start": 2.175,
+     "end": 2.415
+    },
+    {
+     "text": "tahu",
+     "start": 2.415,
+     "end": 3.143
+    },
+    {
+     "text": "korang",
+     "start": 3.143,
+     "end": 3.562
+    },
+    {
+     "text": "dekat",
+     "start": 3.562,
+     "end": 3.921
+    },
+    {
+     "text": "mana.",
+     "start": 3.921,
+     "end": 4.28
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "speaker": "YUSUF",
+   "scene": "bulatan",
+   "text": "Titik biru dekat maps tu bukan hilang tau… tapi dia jadi bulatan besar. dia agak-agak je.",
+   "file": "assets/audio/voice/supplied/02.mp3",
+   "start": 4.48,
+   "file_dur": 6.687,
+   "speech_start": 4.48,
+   "speech_end": 10.937,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Titik",
+     "start": 4.48,
+     "end": 4.851
+    },
+    {
+     "text": "biru",
+     "start": 4.851,
+     "end": 5.16
+    },
+    {
+     "text": "dekat",
+     "start": 5.16,
+     "end": 5.531
+    },
+    {
+     "text": "maps",
+     "start": 5.531,
+     "end": 5.84
+    },
+    {
+     "text": "tu",
+     "start": 5.84,
+     "end": 6.025
+    },
+    {
+     "text": "bukan",
+     "start": 6.025,
+     "end": 6.396
+    },
+    {
+     "text": "hilang",
+     "start": 6.396,
+     "end": 6.829
+    },
+    {
+     "text": "tau…",
+     "start": 6.829,
+     "end": 7.599
+    },
+    {
+     "text": "tapi",
+     "start": 7.599,
+     "end": 7.908
+    },
+    {
+     "text": "dia",
+     "start": 7.908,
+     "end": 8.156
+    },
+    {
+     "text": "jadi",
+     "start": 8.156,
+     "end": 8.465
+    },
+    {
+     "text": "bulatan",
+     "start": 8.465,
+     "end": 8.959
+    },
+    {
+     "text": "besar.",
+     "start": 8.959,
+     "end": 9.824
+    },
+    {
+     "text": "dia",
+     "start": 9.824,
+     "end": 10.071
+    },
+    {
+     "text": "agak-agak",
+     "start": 10.071,
+     "end": 10.689
+    },
+    {
+     "text": "je.",
+     "start": 10.689,
+     "end": 10.937
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "speaker": "YUSUF",
+   "scene": "rider",
+   "text": "Rider makanan korang? dia pusing satu taman, sebab tak jumpa rumah korang.",
+   "file": "assets/audio/voice/supplied/03.mp3",
+   "start": 11.087,
+   "file_dur": 4.754,
+   "speech_start": 11.087,
+   "speech_end": 15.683,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Rider",
+     "start": 11.087,
+     "end": 11.388
+    },
+    {
+     "text": "makanan",
+     "start": 11.388,
+     "end": 11.789
+    },
+    {
+     "text": "korang?",
+     "start": 11.789,
+     "end": 12.19
+    },
+    {
+     "text": "dia",
+     "start": 12.639,
+     "end": 12.866
+    },
+    {
+     "text": "pusing",
+     "start": 12.866,
+     "end": 13.262
+    },
+    {
+     "text": "satu",
+     "start": 13.262,
+     "end": 13.545
+    },
+    {
+     "text": "taman,",
+     "start": 13.545,
+     "end": 13.941
+    },
+    {
+     "text": "sebab",
+     "start": 14.21,
+     "end": 14.505
+    },
+    {
+     "text": "tak",
+     "start": 14.505,
+     "end": 14.701
+    },
+    {
+     "text": "jumpa",
+     "start": 14.701,
+     "end": 14.996
+    },
+    {
+     "text": "rumah",
+     "start": 14.996,
+     "end": 15.29
+    },
+    {
+     "text": "korang.",
+     "start": 15.29,
+     "end": 15.683
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "speaker": "YUSUF",
+   "scene": "grab",
+   "text": "Grab pulak? tunggu dekat simpang yang salah.",
+   "file": "assets/audio/voice/supplied/04.mp3",
+   "start": 15.833,
+   "file_dur": 3.004,
+   "speech_start": 15.833,
+   "speech_end": 18.668,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Grab",
+     "start": 15.833,
+     "end": 16.162
+    },
+    {
+     "text": "pulak?",
+     "start": 16.162,
+     "end": 16.621
+    },
+    {
+     "text": "tunggu",
+     "start": 17.175,
+     "end": 17.491
+    },
+    {
+     "text": "dekat",
+     "start": 17.491,
+     "end": 17.763
+    },
+    {
+     "text": "simpang",
+     "start": 17.763,
+     "end": 18.125
+    },
+    {
+     "text": "yang",
+     "start": 18.125,
+     "end": 18.351
+    },
+    {
+     "text": "salah.",
+     "start": 18.351,
+     "end": 18.668
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "speaker": "YUSUF",
+   "scene": "laut",
+   "text": "Kapal tengah laut, pilot atas awan… semua kena balik guna cara lama.",
+   "file": "assets/audio/voice/supplied/05.mp3",
+   "start": 18.818,
+   "file_dur": 5.146,
+   "speech_start": 18.818,
+   "speech_end": 23.748,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Kapal",
+     "start": 18.818,
+     "end": 19.187
+    },
+    {
+     "text": "tengah",
+     "start": 19.187,
+     "end": 19.616
+    },
+    {
+     "text": "laut,",
+     "start": 19.616,
+     "end": 20.343
+    },
+    {
+     "text": "pilot",
+     "start": 20.343,
+     "end": 20.711
+    },
+    {
+     "text": "atas",
+     "start": 20.711,
+     "end": 21.018
+    },
+    {
+     "text": "awan…",
+     "start": 21.018,
+     "end": 21.387
+    },
+    {
+     "text": "semua",
+     "start": 21.387,
+     "end": 22.09
+    },
+    {
+     "text": "kena",
+     "start": 22.09,
+     "end": 22.397
+    },
+    {
+     "text": "balik",
+     "start": 22.397,
+     "end": 22.765
+    },
+    {
+     "text": "guna",
+     "start": 22.765,
+     "end": 23.072
+    },
+    {
+     "text": "cara",
+     "start": 23.072,
+     "end": 23.379
+    },
+    {
+     "text": "lama.",
+     "start": 23.379,
+     "end": 23.748
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "speaker": "YUSUF",
+   "scene": "ingat",
+   "text": "Okay, kita ingat masalah dia sesat jalan je kan?",
+   "file": "assets/audio/voice/supplied/06.mp3",
+   "start": 24.048,
+   "file_dur": 3.474,
+   "speech_start": 24.048,
+   "speech_end": 27.391,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Okay,",
+     "start": 24.048,
+     "end": 24.47
+    },
+    {
+     "text": "kita",
+     "start": 24.745,
+     "end": 25.052
+    },
+    {
+     "text": "ingat",
+     "start": 25.052,
+     "end": 25.422
+    },
+    {
+     "text": "masalah",
+     "start": 25.422,
+     "end": 25.914
+    },
+    {
+     "text": "dia",
+     "start": 25.914,
+     "end": 26.16
+    },
+    {
+     "text": "sesat",
+     "start": 26.16,
+     "end": 26.529
+    },
+    {
+     "text": "jalan",
+     "start": 26.529,
+     "end": 26.899
+    },
+    {
+     "text": "je",
+     "start": 26.899,
+     "end": 27.083
+    },
+    {
+     "text": "kan?",
+     "start": 27.083,
+     "end": 27.391
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "speaker": "YUSUF",
+   "scene": "twist",
+   "text": "Silap. sebenarnya yang paling bahaya… bukan peta, Tapi jam.",
+   "file": "assets/audio/voice/supplied/07.mp3",
+   "start": 27.541,
+   "file_dur": 5.721,
+   "speech_start": 27.541,
+   "speech_end": 33.062,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Silap.",
+     "start": 27.541,
+     "end": 28.177
+    },
+    {
+     "text": "sebenarnya",
+     "start": 28.177,
+     "end": 29.295
+    },
+    {
+     "text": "yang",
+     "start": 29.295,
+     "end": 29.648
+    },
+    {
+     "text": "paling",
+     "start": 29.648,
+     "end": 30.142
+    },
+    {
+     "text": "bahaya…",
+     "start": 30.142,
+     "end": 30.706
+    },
+    {
+     "text": "bukan",
+     "start": 30.706,
+     "end": 31.521
+    },
+    {
+     "text": "peta,",
+     "start": 31.521,
+     "end": 32.357
+    },
+    {
+     "text": "Tapi",
+     "start": 32.357,
+     "end": 32.709
+    },
+    {
+     "text": "jam.",
+     "start": 32.709,
+     "end": 33.062
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "speaker": "AIMAN",
+   "scene": "jam",
+   "text": "Jam?!",
+   "file": "assets/audio/voice/supplied/08.mp3",
+   "start": 33.162,
+   "file_dur": 0.914,
+   "speech_start": 33.162,
+   "speech_end": 33.729,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Jam?!",
+     "start": 33.162,
+     "end": 33.729
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "speaker": "YUSUF",
+   "scene": "lari",
+   "text": "Network phone, bank, sampai grid elektrik, semua sync masa guna GPS. Lama-lama, jam tu akan mula lari.",
+   "file": "assets/audio/voice/supplied/09.mp3",
+   "start": 33.849,
+   "file_dur": 8.124,
+   "speech_start": 33.849,
+   "speech_end": 41.973,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Network",
+     "start": 33.849,
+     "end": 34.409
+    },
+    {
+     "text": "phone,",
+     "start": 34.409,
+     "end": 34.899
+    },
+    {
+     "text": "bank,",
+     "start": 34.899,
+     "end": 35.319
+    },
+    {
+     "text": "sampai",
+     "start": 35.319,
+     "end": 35.81
+    },
+    {
+     "text": "grid",
+     "start": 35.81,
+     "end": 36.16
+    },
+    {
+     "text": "elektrik,",
+     "start": 36.16,
+     "end": 37.245
+    },
+    {
+     "text": "semua",
+     "start": 37.245,
+     "end": 37.665
+    },
+    {
+     "text": "sync",
+     "start": 37.665,
+     "end": 38.015
+    },
+    {
+     "text": "masa",
+     "start": 38.015,
+     "end": 38.365
+    },
+    {
+     "text": "guna",
+     "start": 38.365,
+     "end": 38.715
+    },
+    {
+     "text": "GPS.",
+     "start": 38.715,
+     "end": 39.066
+    },
+    {
+     "text": "Lama-lama,",
+     "start": 39.066,
+     "end": 40.363
+    },
+    {
+     "text": "jam",
+     "start": 40.363,
+     "end": 40.643
+    },
+    {
+     "text": "tu",
+     "start": 40.643,
+     "end": 40.853
+    },
+    {
+     "text": "akan",
+     "start": 40.853,
+     "end": 41.203
+    },
+    {
+     "text": "mula",
+     "start": 41.203,
+     "end": 41.553
+    },
+    {
+     "text": "lari.",
+     "start": 41.553,
+     "end": 41.973
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "speaker": "YUSUF",
+   "scene": "reveal",
+   "text": "Sebab sebenarnya, satelit GPS ni bukan peta semata-mata, tapi dia adalah jam yang sangat tepat… kat angkasa.",
+   "file": "assets/audio/voice/supplied/10.mp3",
+   "start": 42.273,
+   "file_dur": 8.359,
+   "speech_start": 42.273,
+   "speech_end": 50.445,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Sebab",
+     "start": 42.273,
+     "end": 42.65
+    },
+    {
+     "text": "sebenarnya,",
+     "start": 42.65,
+     "end": 43.405
+    },
+    {
+     "text": "satelit",
+     "start": 43.405,
+     "end": 44.093
+    },
+    {
+     "text": "GPS",
+     "start": 44.093,
+     "end": 44.345
+    },
+    {
+     "text": "ni",
+     "start": 44.345,
+     "end": 44.534
+    },
+    {
+     "text": "bukan",
+     "start": 44.534,
+     "end": 44.911
+    },
+    {
+     "text": "peta",
+     "start": 44.911,
+     "end": 45.226
+    },
+    {
+     "text": "semata-mata,",
+     "start": 45.226,
+     "end": 46.171
+    },
+    {
+     "text": "tapi",
+     "start": 46.171,
+     "end": 46.977
+    },
+    {
+     "text": "dia",
+     "start": 46.977,
+     "end": 47.228
+    },
+    {
+     "text": "adalah",
+     "start": 47.228,
+     "end": 47.669
+    },
+    {
+     "text": "jam",
+     "start": 47.669,
+     "end": 47.92
+    },
+    {
+     "text": "yang",
+     "start": 47.92,
+     "end": 48.235
+    },
+    {
+     "text": "sangat",
+     "start": 48.235,
+     "end": 48.675
+    },
+    {
+     "text": "tepat…",
+     "start": 48.675,
+     "end": 49.116
+    },
+    {
+     "text": "kat",
+     "start": 49.116,
+     "end": 49.879
+    },
+    {
+     "text": "angkasa.",
+     "start": 49.879,
+     "end": 50.445
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "speaker": "YUSUF",
+   "scene": "kira",
+   "text": "Setiap satelit tu dia akan hantar masa. dan phone korang akan dengar beberapa satelit, lepas tu, dia akan kira beza masa sampai… dan dari situ, baru lah dia tahu korang dekat mana.",
+   "file": "assets/audio/voice/supplied/11.mp3",
+   "start": 50.595,
+   "file_dur": 11.964,
+   "speech_start": 50.595,
+   "speech_end": 62.358,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Setiap",
+     "start": 50.595,
+     "end": 50.988
+    },
+    {
+     "text": "satelit",
+     "start": 50.988,
+     "end": 51.437
+    },
+    {
+     "text": "tu",
+     "start": 51.437,
+     "end": 51.606
+    },
+    {
+     "text": "dia",
+     "start": 51.606,
+     "end": 51.83
+    },
+    {
+     "text": "akan",
+     "start": 51.83,
+     "end": 52.111
+    },
+    {
+     "text": "hantar",
+     "start": 52.111,
+     "end": 52.504
+    },
+    {
+     "text": "masa.",
+     "start": 52.504,
+     "end": 52.841
+    },
+    {
+     "text": "dan",
+     "start": 52.841,
+     "end": 53.534
+    },
+    {
+     "text": "phone",
+     "start": 53.534,
+     "end": 53.871
+    },
+    {
+     "text": "korang",
+     "start": 53.871,
+     "end": 54.264
+    },
+    {
+     "text": "akan",
+     "start": 54.264,
+     "end": 54.545
+    },
+    {
+     "text": "dengar",
+     "start": 54.545,
+     "end": 54.938
+    },
+    {
+     "text": "beberapa",
+     "start": 54.938,
+     "end": 55.443
+    },
+    {
+     "text": "satelit,",
+     "start": 55.443,
+     "end": 56.195
+    },
+    {
+     "text": "lepas",
+     "start": 56.195,
+     "end": 56.532
+    },
+    {
+     "text": "tu,",
+     "start": 56.532,
+     "end": 56.757
+    },
+    {
+     "text": "dia",
+     "start": 56.757,
+     "end": 57.31
+    },
+    {
+     "text": "akan",
+     "start": 57.31,
+     "end": 57.59
+    },
+    {
+     "text": "kira",
+     "start": 57.59,
+     "end": 57.871
+    },
+    {
+     "text": "beza",
+     "start": 57.871,
+     "end": 58.152
+    },
+    {
+     "text": "masa",
+     "start": 58.152,
+     "end": 58.433
+    },
+    {
+     "text": "sampai…",
+     "start": 58.433,
+     "end": 58.882
+    },
+    {
+     "text": "dan",
+     "start": 58.882,
+     "end": 59.106
+    },
+    {
+     "text": "dari",
+     "start": 59.106,
+     "end": 59.747
+    },
+    {
+     "text": "situ,",
+     "start": 59.747,
+     "end": 60.084
+    },
+    {
+     "text": "baru",
+     "start": 60.084,
+     "end": 60.561
+    },
+    {
+     "text": "lah",
+     "start": 60.561,
+     "end": 60.786
+    },
+    {
+     "text": "dia",
+     "start": 60.786,
+     "end": 61.01
+    },
+    {
+     "text": "tahu",
+     "start": 61.01,
+     "end": 61.291
+    },
+    {
+     "text": "korang",
+     "start": 61.291,
+     "end": 61.684
+    },
+    {
+     "text": "dekat",
+     "start": 61.684,
+     "end": 62.021
+    },
+    {
+     "text": "mana.",
+     "start": 62.021,
+     "end": 62.358
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "speaker": "YUSUF",
+   "scene": "akhir",
+   "text": "Jadi bukan Maps je yang sesat… masa pun sesat. Korang rasa apa yang akan paling terkesan? Komen bawah!",
+   "file": "assets/audio/voice/supplied/12.mp3",
+   "start": 62.658,
+   "file_dur": 7.628,
+   "speech_start": 62.658,
+   "speech_end": 70.088,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Jadi",
+     "start": 62.658,
+     "end": 62.934
+    },
+    {
+     "text": "bukan",
+     "start": 62.934,
+     "end": 63.264
+    },
+    {
+     "text": "Maps",
+     "start": 63.264,
+     "end": 63.54
+    },
+    {
+     "text": "je",
+     "start": 63.54,
+     "end": 63.705
+    },
+    {
+     "text": "yang",
+     "start": 63.705,
+     "end": 63.981
+    },
+    {
+     "text": "sesat…",
+     "start": 63.981,
+     "end": 64.367
+    },
+    {
+     "text": "masa",
+     "start": 64.367,
+     "end": 64.642
+    },
+    {
+     "text": "pun",
+     "start": 64.642,
+     "end": 65.312
+    },
+    {
+     "text": "sesat.",
+     "start": 65.312,
+     "end": 65.698
+    },
+    {
+     "text": "Korang",
+     "start": 65.698,
+     "end": 66.084
+    },
+    {
+     "text": "rasa",
+     "start": 66.084,
+     "end": 66.36
+    },
+    {
+     "text": "apa",
+     "start": 66.36,
+     "end": 67.173
+    },
+    {
+     "text": "yang",
+     "start": 67.173,
+     "end": 67.449
+    },
+    {
+     "text": "akan",
+     "start": 67.449,
+     "end": 68.039
+    },
+    {
+     "text": "paling",
+     "start": 68.039,
+     "end": 68.425
+    },
+    {
+     "text": "terkesan?",
+     "start": 68.425,
+     "end": 68.976
+    },
+    {
+     "text": "Komen",
+     "start": 68.976,
+     "end": 69.702
+    },
+    {
+     "text": "bawah!",
+     "start": 69.702,
+     "end": 70.088
+    }
+   ]
+  }
+ ],
+ "scenes": [
+  {
+   "id": "hook",
+   "start": 0.0,
+   "lines": [
+    1
+   ],
+   "duration": 4.38
+  },
+  {
+   "id": "bulatan",
+   "start": 4.38,
+   "lines": [
+    2
+   ],
+   "duration": 6.63
+  },
+  {
+   "id": "rider",
+   "start": 11.01,
+   "lines": [
+    3
+   ],
+   "duration": 4.75
+  },
+  {
+   "id": "grab",
+   "start": 15.76,
+   "lines": [
+    4
+   ],
+   "duration": 2.98
+  },
+  {
+   "id": "laut",
+   "start": 18.74,
+   "lines": [
+    5
+   ],
+   "duration": 5.16
+  },
+  {
+   "id": "ingat",
+   "start": 23.9,
+   "lines": [
+    6
+   ],
+   "duration": 3.57
+  },
+  {
+   "id": "twist",
+   "start": 27.47,
+   "lines": [
+    7
+   ],
+   "duration": 5.64
+  },
+  {
+   "id": "jam",
+   "start": 33.11,
+   "lines": [
+    8
+   ],
+   "duration": 0.68
+  },
+  {
+   "id": "lari",
+   "start": 33.79,
+   "lines": [
+    9
+   ],
+   "duration": 8.33
+  },
+  {
+   "id": "reveal",
+   "start": 42.12,
+   "lines": [
+    10
+   ],
+   "duration": 8.4
+  },
+  {
+   "id": "kira",
+   "start": 50.52,
+   "lines": [
+    11
+   ],
+   "duration": 11.99
+  },
+  {
+   "id": "akhir",
+   "start": 62.51,
+   "lines": [
+    12
+   ],
+   "duration": 9.48
+  }
+ ]
+}

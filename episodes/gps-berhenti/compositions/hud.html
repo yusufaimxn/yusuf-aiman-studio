@@ -1,0 +1,97 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+    .ab { position: absolute; }
+    #flash { inset: 0; background: #F5F7FA; }
+    #glitch { inset: 0; mix-blend-mode: screen;
+      background: repeating-linear-gradient(0deg, rgba(0,194,255,0.0) 0px, rgba(0,194,255,0.0) 10px, rgba(0,194,255,0.35) 11px, rgba(255,77,94,0.25) 14px, rgba(0,194,255,0) 15px); }
+    #vig { inset: 0; background: radial-gradient(120% 80% at 50% 50%, transparent 55%, rgba(3,10,26,0.55) 100%); }
+    #title { left: 70px; right: 70px; top: 190px; text-align: center; padding: 22px 20px 28px; border-radius: 34px; background: rgba(11,30,63,0.86); border: 3px solid rgba(0,194,255,0.5); box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+    #title .k { font-family: "Sora"; font-weight: 800; font-size: 44px; color: var(--orange); letter-spacing: 0.06em; text-shadow: 0 4px 16px rgba(0,0,0,0.45); }
+    #title .h { font-family: "Sora"; font-weight: 800; font-size: 78px; line-height: 1.02; color: #fff; letter-spacing: -0.02em;
+      text-shadow: 0 6px 28px rgba(0,0,0,0.6), 0 0 2px rgba(0,0,0,0.6); }
+    #title .h b { color: var(--cyan); }
+    .kw { position: absolute; left: 0; right: 0; top: 230px; text-align: center; }
+    .kw span { display: inline-block; padding: 16px 40px 18px; border-radius: 26px; font-family: "Sora"; font-weight: 800; font-size: 64px; letter-spacing: 0.02em;
+      color: #fff; background: rgba(11,30,63,0.88); border: 3px solid rgba(0,194,255,0.6); box-shadow: 0 18px 50px rgba(0,0,0,0.4); white-space: nowrap; }
+    .kw span b { color: var(--cyan); font-weight: 800; }
+    .kw span i { color: var(--orange); font-style: normal; }
+    .kw.red span { background: rgba(255,77,94,0.95); border-color: rgba(255,255,255,0.7); }
+    .kw.green span { background: rgba(34,197,94,0.95); border-color: rgba(255,255,255,0.7); }
+    .kw.orange span { background: rgba(255,138,0,0.95); border-color: rgba(255,255,255,0.7); }
+    #k-jam span { font-size: 76px; padding: 20px 46px 22px; }
+    #cta { left: 90px; right: 90px; top: 250px; text-align: center; border-radius: 34px; background: var(--card); padding: 30px 36px 34px; box-shadow: 0 24px 60px rgba(4,12,30,0.5); }
+    #cta .k { font-family: "Sora"; font-weight: 800; font-size: 36px; letter-spacing: 0.1em; color: var(--orange); }
+    #cta .h { font-family: "Sora"; font-weight: 800; font-size: 64px; line-height: 1.08; color: var(--navy); margin-top: 6px; }
+    #tag { left: 0; right: 0; top: 640px; text-align: center; font-family: "Plus Jakarta Sans"; font-weight: 700; font-size: 40px; color: #fff; text-shadow: 0 4px 18px rgba(0,0,0,0.7); }
+    #fol { left: 50%; top: 720px; margin-left: -170px; width: 340px; text-align: center; padding: 12px 26px; border-radius: 999px; background: var(--blue);
+      font-family: "Sora"; font-weight: 800; font-size: 44px; letter-spacing: 0.08em; color: #fff; box-shadow: 0 12px 30px rgba(0,0,0,0.35); }
+  </style>
+  <div id="root" data-composition-id="hud" data-width="1080" data-height="1920">
+    <div id="vig" class="ab"></div>
+    <div id="title" class="ab"><div class="k">APA JADI KALAU</div><div class="h">SATELIT <b>GPS</b> BERHENTI?</div></div>
+    <div id="k-agak" class="kw orange"><span>AGAK-AGAK JE</span></div>
+    <div id="k-sesat" class="kw red"><span>SESAT!</span></div>
+    <div id="k-lama" class="kw"><span>BALIK GUNA <i>CARA LAMA</i></span></div>
+    <div id="k-ingat" class="kw"><span>SESAT JALAN JE…?</span></div>
+    <div id="k-jam" class="kw orange"><span>BUKAN PETA… JAM!</span></div>
+    <div id="k-sync" class="kw green"><span>SYNC MASA GUNA GPS</span></div>
+    <div id="k-lari" class="kw red"><span>JAM MULA LARI</span></div>
+    <div id="k-atom" class="kw"><span>JAM <b>TEPAT</b> DI ANGKASA</span></div>
+    <div id="k-hantar" class="kw"><span>SATELIT HANTAR <b>MASA</b></span></div>
+    <div id="k-kira" class="kw orange"><span>KIRA BEZA MASA</span></div>
+    <div id="k-lokasi" class="kw green"><span>LOKASI ✓</span></div>
+    <div id="cta" class="ab"><div class="k">KOMEN</div><div class="h">Apa paling terkesan kalau GPS mati?</div></div>
+    <div id="tag" class="ab">Technology, Made Understandable.</div>
+    <div id="fol" class="ab">FOLLOW</div>
+    <div id="glitch" class="ab"></div>
+    <div id="flash" class="ab"></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const T = window.YA_T, S = T.scenes, END = T.total;
+    const W = (n, w) => T.words[n].find((v) => v[0].toLowerCase().startsWith(w.toLowerCase()))[1];
+    const LN = (n) => T.lines[n];
+    const CHIPS = ["#k-agak", "#k-sesat", "#k-lama", "#k-ingat", "#k-jam", "#k-sync", "#k-lari", "#k-atom", "#k-hantar", "#k-kira", "#k-lokasi"];
+    gsap.set(["#title", "#cta", "#tag", "#fol", "#flash", "#glitch", ...CHIPS], { opacity: 0 });
+    const show = (sel, a, b, from = { y: 30, scale: 0.92 }) => {
+      tl.fromTo(sel, { opacity: 0, ...from }, { opacity: 1, y: 0, scale: 1, duration: 0.26, ease: "back.out(2.2)", immediateRender: false }, a);
+      if (b !== undefined) tl.to(sel, { opacity: 0, scale: 0.94, duration: 0.16, ease: "power2.in" }, b - 0.16);
+    };
+    // cuts = same times as the 3D camera shots in assets/iso/iso.js
+    const cuts = [W(1, "Maps") - 0.15, W(1, "tak") - 0.1, W(1, "korang") - 0.1, S.bulatan, W(2, "tapi") - 0.1, S.rider, W(3, "sebab") - 0.1, S.grab, S.laut,
+      W(5, "pilot") - 0.1, W(5, "semua") - 0.1, S.ingat, S.twist, W(7, "bukan") - 0.1, S.jam, S.lari, W(9, "bank") - 0.1, W(9, "grid") - 0.1, W(9, "semua") - 0.15,
+      W(9, "Lama") - 0.1, S.reveal, W(10, "bukan") - 0.1, W(10, "jam") - 0.3, S.kira, W(11, "phone") - 0.1, W(11, "kira") - 0.2, W(11, "dari") - 0.1, S.akhir];
+    cuts.forEach((t) => {
+      tl.fromTo("#flash", { opacity: 0 }, { opacity: 0.32, duration: 0.05, immediateRender: false }, t - 0.06);
+      tl.to("#flash", { opacity: 0, duration: 0.2 }, t - 0.01);
+    });
+    // glitch bursts: satellites die, clocks run away
+    const glitch = (a, d) => {
+      tl.fromTo("#glitch", { opacity: 0, y: 0 }, { opacity: 0.9, y: 14, duration: 0.06, immediateRender: false }, a);
+      tl.to("#glitch", { opacity: 0.25, y: -10, duration: 0.08 }, a + 0.07);
+      tl.to("#glitch", { opacity: 0.8, y: 6, duration: 0.06 }, a + 0.16);
+      tl.to("#glitch", { opacity: 0, y: 0, duration: 0.12 }, a + d);
+    };
+    glitch(W(1, "tak") + 0.2, 0.5); glitch(W(9, "lari") - 0.1, 0.45);
+    show("#title", 0.1, S.bulatan, { y: -40, scale: 0.85 });
+    tl.to("#title", { scale: 1.04, duration: 0.18, yoyo: true, repeat: 1, ease: "sine.inOut" }, W(1, "tak"));
+    show("#k-agak", W(2, "agak") - 0.5, S.rider, { scale: 1.5, y: 0 });
+    show("#k-sesat", W(3, "pusing") - 0.05, S.laut, { scale: 1.6, y: 0 });
+    show("#k-lama", W(5, "kena") - 0.1, S.ingat);
+    show("#k-ingat", W(6, "sesat") - 0.1, S.twist);
+    show("#k-jam", W(7, "Tapi") - 0.05, S.lari, { scale: 1.8, y: 0 });
+    show("#k-sync", W(9, "sync") - 0.1, W(9, "Lama"));
+    show("#k-lari", W(9, "jam") - 0.1, S.reveal, { scale: 1.6, y: 0 });
+    tl.to("#k-lari", { x: 8, duration: 0.04, yoyo: true, repeat: 7 }, W(9, "lari"));
+    show("#k-atom", W(10, "jam") - 0.05, S.kira);
+    show("#k-hantar", W(11, "hantar") - 0.1, W(11, "phone") - 0.1);
+    show("#k-kira", W(11, "kira") - 0.1, W(11, "dari") - 0.1);
+    show("#k-lokasi", W(11, "mana") - 0.1, S.akhir, { scale: 1.6, y: 0 });
+    show("#cta", W(12, "Korang") - 0.1, END, { y: -40, scale: 0.9 });
+    show("#tag", LN(12)[1] - 1.2, END, { y: 20, scale: 1 });
+    show("#fol", LN(12)[1] - 1.0, END, { scale: 0.4, y: 0 });
+    tl.to("#fol", { scale: 1.08, duration: 0.3, yoyo: true, repeat: 3, ease: "sine.inOut" }, LN(12)[1] - 0.5);
+    window.__timelines["hud"] = tl;
+  </script>
+</template>

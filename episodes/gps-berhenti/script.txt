@@ -1,0 +1,25 @@
+// Siri "Apa Jadi Kalau…?" #04. Satu baris = satu MP3 (01.mp3 ... 12.mp3), ikut Doc #04 (versi user).
+# scene hook | Angkasa ke bandar, titik biru dalam phone
+YUSUF (misteri): Bayangkan Google Maps tiba-tiba… tak tahu korang dekat mana.
+# scene bulatan | Satelit padam, titik biru jadi bulatan besar
+YUSUF (hairan): Titik biru dekat maps tu bukan hilang tau… tapi dia jadi bulatan besar. dia agak-agak je.
+# scene rider | Rider makanan pusing taman
+YUSUF (santai): Rider makanan korang? dia pusing satu taman, sebab tak jumpa rumah korang.
+# scene grab | Kereta tunggu simpang salah
+YUSUF (geram): Grab pulak? tunggu dekat simpang yang salah.
+# scene laut | Kapal di laut, kapal terbang atas awan
+YUSUF (serius): Kapal tengah laut, pilot atas awan… semua kena balik guna cara lama.
+# scene ingat | Bandar senyap, pull out
+YUSUF (yakin): Okay, kita ingat masalah dia sesat jalan je kan?
+# scene twist | Peta pecah, jam gergasi
+YUSUF (dramatik): Silap. sebenarnya yang paling bahaya… bukan peta, Tapi jam.
+# scene jam | Aiman close-up
+AIMAN (terkejut): Jam?!
+# scene lari | Menara telco, bank, grid elektrik
+YUSUF (cemas): Network phone, bank, sampai grid elektrik, semua sync masa guna GPS. Lama-lama, jam tu akan mula lari.
+# scene reveal | Satelit exploded view, jam atom
+YUSUF (kagum): Sebab sebenarnya, satelit GPS ni bukan peta semata-mata, tapi dia adalah jam yang sangat tepat… kat angkasa.
+# scene kira | Ring masa dari satelit bertemu di phone
+YUSUF (jelas): Setiap satelit tu dia akan hantar masa. dan phone korang akan dengar beberapa satelit, lepas tu, dia akan kira beza masa sampai… dan dari situ, baru lah dia tahu korang dekat mana.
+# scene akhir | Yusuf close-up, CTA
+YUSUF (ajak): Jadi bukan Maps je yang sesat… masa pun sesat. Korang rasa apa yang akan paling terkesan? Komen bawah!
