@@ -1,0 +1,884 @@
+{
+ "total": 59.94,
+ "lines": [
+  {
+   "n": 1,
+   "speaker": "YUSUF",
+   "scene": "hook",
+   "text": "Bayangkan semua rekod, gambar, video dan database… tiba-tiba jadi kosong.",
+   "file": "assets/audio/voice/supplied/01.mp3",
+   "start": 0.2,
+   "file_dur": 6.687,
+   "speech_start": 0.2,
+   "speech_end": 6.751,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Bayangkan",
+     "start": 0.2,
+     "end": 1.276
+    },
+    {
+     "text": "semua",
+     "start": 1.276,
+     "end": 1.705
+    },
+    {
+     "text": "rekod,",
+     "start": 1.705,
+     "end": 2.462
+    },
+    {
+     "text": "gambar,",
+     "start": 2.462,
+     "end": 3.155
+    },
+    {
+     "text": "video",
+     "start": 3.155,
+     "end": 3.584
+    },
+    {
+     "text": "dan",
+     "start": 3.584,
+     "end": 3.87
+    },
+    {
+     "text": "database…",
+     "start": 3.87,
+     "end": 4.585
+    },
+    {
+     "text": "tiba-tiba",
+     "start": 4.585,
+     "end": 5.821
+    },
+    {
+     "text": "jadi",
+     "start": 5.821,
+     "end": 6.179
+    },
+    {
+     "text": "kosong.",
+     "start": 6.179,
+     "end": 6.751
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "speaker": "YUSUF",
+   "scene": "gallery",
+   "text": "Buka gallery, kosong. Chat lama pun kosong. semua hilang.",
+   "file": "assets/audio/voice/supplied/02.mp3",
+   "start": 6.901,
+   "file_dur": 4.911,
+   "speech_start": 6.901,
+   "speech_end": 11.629,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Buka",
+     "start": 6.901,
+     "end": 7.206
+    },
+    {
+     "text": "gallery,",
+     "start": 7.206,
+     "end": 7.754
+    },
+    {
+     "text": "kosong.",
+     "start": 8.073,
+     "end": 8.52
+    },
+    {
+     "text": "Chat",
+     "start": 8.984,
+     "end": 9.306
+    },
+    {
+     "text": "lama",
+     "start": 9.306,
+     "end": 9.628
+    },
+    {
+     "text": "pun",
+     "start": 9.628,
+     "end": 9.885
+    },
+    {
+     "text": "kosong.",
+     "start": 9.885,
+     "end": 10.401
+    },
+    {
+     "text": "semua",
+     "start": 10.666,
+     "end": 11.079
+    },
+    {
+     "text": "hilang.",
+     "start": 11.079,
+     "end": 11.629
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "speaker": "YUSUF",
+   "scene": "hospital",
+   "text": "Pergi hospital, rekod kesihatan korang pun kosong.",
+   "file": "assets/audio/voice/supplied/03.mp3",
+   "start": 11.659,
+   "file_dur": 3.553,
+   "speech_start": 11.78,
+   "speech_end": 15.034,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Pergi",
+     "start": 11.78,
+     "end": 12.11
+    },
+    {
+     "text": "hospital,",
+     "start": 12.11,
+     "end": 12.661
+    },
+    {
+     "text": "rekod",
+     "start": 12.975,
+     "end": 13.328
+    },
+    {
+     "text": "kesihatan",
+     "start": 13.328,
+     "end": 13.916
+    },
+    {
+     "text": "korang",
+     "start": 13.916,
+     "end": 14.328
+    },
+    {
+     "text": "pun",
+     "start": 14.328,
+     "end": 14.563
+    },
+    {
+     "text": "kosong.",
+     "start": 14.563,
+     "end": 15.034
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "speaker": "YUSUF",
+   "scene": "flight",
+   "text": "Nak naik flight? Sistem pun tak kenal siapa korang.",
+   "file": "assets/audio/voice/supplied/04.mp3",
+   "start": 15.184,
+   "file_dur": 3.317,
+   "speech_start": 15.184,
+   "speech_end": 18.294,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Nak",
+     "start": 15.184,
+     "end": 15.356
+    },
+    {
+     "text": "naik",
+     "start": 15.356,
+     "end": 15.571
+    },
+    {
+     "text": "flight?",
+     "start": 15.571,
+     "end": 15.915
+    },
+    {
+     "text": "Sistem",
+     "start": 16.383,
+     "end": 16.765
+    },
+    {
+     "text": "pun",
+     "start": 16.765,
+     "end": 16.983
+    },
+    {
+     "text": "tak",
+     "start": 16.983,
+     "end": 17.202
+    },
+    {
+     "text": "kenal",
+     "start": 17.202,
+     "end": 17.529
+    },
+    {
+     "text": "siapa",
+     "start": 17.529,
+     "end": 17.857
+    },
+    {
+     "text": "korang.",
+     "start": 17.857,
+     "end": 18.294
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "speaker": "YUSUF",
+   "scene": "seram",
+   "text": "Tapi yang paling seram… duit dalam bank...",
+   "file": "assets/audio/voice/supplied/05.mp3",
+   "start": 18.544,
+   "file_dur": 3.788,
+   "speech_start": 18.544,
+   "speech_end": 22.12,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Tapi",
+     "start": 18.544,
+     "end": 18.881
+    },
+    {
+     "text": "yang",
+     "start": 18.881,
+     "end": 19.387
+    },
+    {
+     "text": "paling",
+     "start": 19.387,
+     "end": 19.858
+    },
+    {
+     "text": "seram…",
+     "start": 19.858,
+     "end": 20.329
+    },
+    {
+     "text": "duit",
+     "start": 20.329,
+     "end": 21.178
+    },
+    {
+     "text": "dalam",
+     "start": 21.178,
+     "end": 21.582
+    },
+    {
+     "text": "bank...",
+     "start": 21.582,
+     "end": 22.12
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "speaker": "YUSUF",
+   "scene": "vault",
+   "text": "Korang ingat duit tu duduk dalam peti besi ke? Sebenarnya tidak, sebab kebanyakannya cuma sekadar nombor dalam database.",
+   "file": "assets/audio/voice/supplied/06.mp3",
+   "start": 22.32,
+   "file_dur": 7.967,
+   "speech_start": 22.32,
+   "speech_end": 30.089,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Korang",
+     "start": 22.32,
+     "end": 22.712
+    },
+    {
+     "text": "ingat",
+     "start": 22.712,
+     "end": 23.048
+    },
+    {
+     "text": "duit",
+     "start": 23.048,
+     "end": 23.328
+    },
+    {
+     "text": "tu",
+     "start": 23.328,
+     "end": 23.495
+    },
+    {
+     "text": "duduk",
+     "start": 23.495,
+     "end": 23.831
+    },
+    {
+     "text": "dalam",
+     "start": 23.831,
+     "end": 24.167
+    },
+    {
+     "text": "peti",
+     "start": 24.167,
+     "end": 24.447
+    },
+    {
+     "text": "besi",
+     "start": 24.447,
+     "end": 24.727
+    },
+    {
+     "text": "ke?",
+     "start": 24.727,
+     "end": 24.951
+    },
+    {
+     "text": "Sebenarnya",
+     "start": 25.426,
+     "end": 26.023
+    },
+    {
+     "text": "tidak,",
+     "start": 26.023,
+     "end": 26.403
+    },
+    {
+     "text": "sebab",
+     "start": 26.857,
+     "end": 27.203
+    },
+    {
+     "text": "kebanyakannya",
+     "start": 27.203,
+     "end": 28.011
+    },
+    {
+     "text": "cuma",
+     "start": 28.011,
+     "end": 28.3
+    },
+    {
+     "text": "sekadar",
+     "start": 28.3,
+     "end": 28.761
+    },
+    {
+     "text": "nombor",
+     "start": 28.761,
+     "end": 29.165
+    },
+    {
+     "text": "dalam",
+     "start": 29.165,
+     "end": 29.512
+    },
+    {
+     "text": "database.",
+     "start": 29.512,
+     "end": 30.089
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "speaker": "YUSUF",
+   "scene": "padam",
+   "text": "Jadi kalau data hilang, nombor tu pun akan hilang.",
+   "file": "assets/audio/voice/supplied/07.mp3",
+   "start": 30.239,
+   "file_dur": 3.553,
+   "speech_start": 30.239,
+   "speech_end": 33.616,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Jadi",
+     "start": 30.239,
+     "end": 30.529
+    },
+    {
+     "text": "kalau",
+     "start": 30.529,
+     "end": 30.876
+    },
+    {
+     "text": "data",
+     "start": 30.876,
+     "end": 31.166
+    },
+    {
+     "text": "hilang,",
+     "start": 31.166,
+     "end": 31.63
+    },
+    {
+     "text": "nombor",
+     "start": 31.63,
+     "end": 32.328
+    },
+    {
+     "text": "tu",
+     "start": 32.328,
+     "end": 32.502
+    },
+    {
+     "text": "pun",
+     "start": 32.502,
+     "end": 32.734
+    },
+    {
+     "text": "akan",
+     "start": 32.734,
+     "end": 33.152
+    },
+    {
+     "text": "hilang.",
+     "start": 33.152,
+     "end": 33.616
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "speaker": "YUSUF",
+   "scene": "dc",
+   "text": "Semua data ni sebenarnya disimpan dalam data center. Berderet-deret hard disk, simpan nombor kosong dan satu.",
+   "file": "assets/audio/voice/supplied/08.mp3",
+   "start": 33.916,
+   "file_dur": 7.393,
+   "speech_start": 33.916,
+   "speech_end": 41.089,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Semua",
+     "start": 33.916,
+     "end": 34.277
+    },
+    {
+     "text": "data",
+     "start": 34.277,
+     "end": 34.579
+    },
+    {
+     "text": "ni",
+     "start": 34.579,
+     "end": 34.759
+    },
+    {
+     "text": "sebenarnya",
+     "start": 34.759,
+     "end": 35.422
+    },
+    {
+     "text": "disimpan",
+     "start": 35.422,
+     "end": 35.964
+    },
+    {
+     "text": "dalam",
+     "start": 35.964,
+     "end": 36.326
+    },
+    {
+     "text": "data",
+     "start": 36.326,
+     "end": 36.627
+    },
+    {
+     "text": "center.",
+     "start": 36.627,
+     "end": 37.109
+    },
+    {
+     "text": "Berderet-deret",
+     "start": 37.554,
+     "end": 38.4
+    },
+    {
+     "text": "hard",
+     "start": 38.4,
+     "end": 38.682
+    },
+    {
+     "text": "disk,",
+     "start": 38.682,
+     "end": 39.02
+    },
+    {
+     "text": "simpan",
+     "start": 39.201,
+     "end": 39.627
+    },
+    {
+     "text": "nombor",
+     "start": 39.627,
+     "end": 40.054
+    },
+    {
+     "text": "kosong",
+     "start": 40.054,
+     "end": 40.48
+    },
+    {
+     "text": "dan",
+     "start": 40.48,
+     "end": 40.724
+    },
+    {
+     "text": "satu.",
+     "start": 40.724,
+     "end": 41.089
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "speaker": "YUSUF",
+   "scene": "backup",
+   "text": "Sebab tu syarikat besar takkan simpan satu salinan je. Dorang akan buat backup, also dekat banyak tempat.",
+   "file": "assets/audio/voice/supplied/09.mp3",
+   "start": 41.239,
+   "file_dur": 7.236,
+   "speech_start": 41.239,
+   "speech_end": 48.282,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Sebab",
+     "start": 41.239,
+     "end": 41.588
+    },
+    {
+     "text": "tu",
+     "start": 41.588,
+     "end": 41.763
+    },
+    {
+     "text": "syarikat",
+     "start": 41.763,
+     "end": 42.287
+    },
+    {
+     "text": "besar",
+     "start": 42.287,
+     "end": 42.636
+    },
+    {
+     "text": "takkan",
+     "start": 42.636,
+     "end": 43.043
+    },
+    {
+     "text": "simpan",
+     "start": 43.043,
+     "end": 43.451
+    },
+    {
+     "text": "satu",
+     "start": 43.451,
+     "end": 43.877
+    },
+    {
+     "text": "salinan",
+     "start": 43.877,
+     "end": 44.343
+    },
+    {
+     "text": "je.",
+     "start": 44.343,
+     "end": 44.575
+    },
+    {
+     "text": "Dorang",
+     "start": 44.575,
+     "end": 45.452
+    },
+    {
+     "text": "akan",
+     "start": 45.452,
+     "end": 45.743
+    },
+    {
+     "text": "buat",
+     "start": 45.743,
+     "end": 46.034
+    },
+    {
+     "text": "backup,",
+     "start": 46.034,
+     "end": 46.769
+    },
+    {
+     "text": "also",
+     "start": 46.769,
+     "end": 47.06
+    },
+    {
+     "text": "dekat",
+     "start": 47.06,
+     "end": 47.409
+    },
+    {
+     "text": "banyak",
+     "start": 47.409,
+     "end": 47.816
+    },
+    {
+     "text": "tempat.",
+     "start": 47.816,
+     "end": 48.282
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "speaker": "YUSUF",
+   "scene": "selamat",
+   "text": "Jadi kalau satu rosak, salinan lain tu masih ada.",
+   "file": "assets/audio/voice/supplied/10.mp3",
+   "start": 48.432,
+   "file_dur": 3.788,
+   "speech_start": 48.432,
+   "speech_end": 52.04,
+   "segments_matched": true,
+   "words": [
+    {
+     "text": "Jadi",
+     "start": 48.432,
+     "end": 48.793
+    },
+    {
+     "text": "kalau",
+     "start": 48.793,
+     "end": 49.226
+    },
+    {
+     "text": "satu",
+     "start": 49.226,
+     "end": 49.587
+    },
+    {
+     "text": "rosak,",
+     "start": 49.587,
+     "end": 50.093
+    },
+    {
+     "text": "salinan",
+     "start": 50.4,
+     "end": 50.886
+    },
+    {
+     "text": "lain",
+     "start": 50.886,
+     "end": 51.19
+    },
+    {
+     "text": "tu",
+     "start": 51.19,
+     "end": 51.372
+    },
+    {
+     "text": "masih",
+     "start": 51.372,
+     "end": 51.737
+    },
+    {
+     "text": "ada.",
+     "start": 51.737,
+     "end": 52.04
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "speaker": "YUSUF",
+   "scene": "akhir",
+   "text": "Sebab tu backup data tu penting. Data apa yang korang paling takut untuk hilang? Komen bawah!",
+   "file": "assets/audio/voice/supplied/11.mp3",
+   "start": 52.34,
+   "file_dur": 6.269,
+   "speech_start": 52.34,
+   "speech_end": 58.438,
+   "segments_matched": false,
+   "words": [
+    {
+     "text": "Sebab",
+     "start": 52.34,
+     "end": 52.647
+    },
+    {
+     "text": "tu",
+     "start": 52.647,
+     "end": 52.942
+    },
+    {
+     "text": "backup",
+     "start": 52.942,
+     "end": 53.301
+    },
+    {
+     "text": "data",
+     "start": 53.301,
+     "end": 53.557
+    },
+    {
+     "text": "tu",
+     "start": 53.557,
+     "end": 53.711
+    },
+    {
+     "text": "penting.",
+     "start": 53.711,
+     "end": 54.172
+    },
+    {
+     "text": "Data",
+     "start": 54.172,
+     "end": 54.428
+    },
+    {
+     "text": "apa",
+     "start": 54.428,
+     "end": 54.633
+    },
+    {
+     "text": "yang",
+     "start": 54.633,
+     "end": 55.352
+    },
+    {
+     "text": "korang",
+     "start": 55.352,
+     "end": 55.833
+    },
+    {
+     "text": "paling",
+     "start": 55.833,
+     "end": 56.343
+    },
+    {
+     "text": "takut",
+     "start": 56.343,
+     "end": 56.651
+    },
+    {
+     "text": "untuk",
+     "start": 56.651,
+     "end": 56.958
+    },
+    {
+     "text": "hilang?",
+     "start": 56.958,
+     "end": 57.368
+    },
+    {
+     "text": "Komen",
+     "start": 57.368,
+     "end": 58.079
+    },
+    {
+     "text": "bawah!",
+     "start": 58.079,
+     "end": 58.438
+    }
+   ]
+  }
+ ],
+ "scenes": [
+  {
+   "id": "hook",
+   "start": 0.0,
+   "lines": [
+    1
+   ],
+   "duration": 6.83
+  },
+  {
+   "id": "gallery",
+   "start": 6.83,
+   "lines": [
+    2
+   ],
+   "duration": 4.81
+  },
+  {
+   "id": "hospital",
+   "start": 11.64,
+   "lines": [
+    3
+   ],
+   "duration": 3.47
+  },
+  {
+   "id": "flight",
+   "start": 15.11,
+   "lines": [
+    4
+   ],
+   "duration": 3.31
+  },
+  {
+   "id": "seram",
+   "start": 18.42,
+   "lines": [
+    5
+   ],
+   "duration": 3.8
+  },
+  {
+   "id": "vault",
+   "start": 22.22,
+   "lines": [
+    6
+   ],
+   "duration": 7.94
+  },
+  {
+   "id": "padam",
+   "start": 30.16,
+   "lines": [
+    7
+   ],
+   "duration": 3.61
+  },
+  {
+   "id": "dc",
+   "start": 33.77,
+   "lines": [
+    8
+   ],
+   "duration": 7.39
+  },
+  {
+   "id": "backup",
+   "start": 41.16,
+   "lines": [
+    9
+   ],
+   "duration": 7.2
+  },
+  {
+   "id": "selamat",
+   "start": 48.36,
+   "lines": [
+    10
+   ],
+   "duration": 3.83
+  },
+  {
+   "id": "akhir",
+   "start": 52.19,
+   "lines": [
+    11
+   ],
+   "duration": 7.75
+  }
+ ]
+}

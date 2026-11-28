@@ -1,0 +1,100 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+    .ab { position: absolute; }
+    #flash { inset: 0; background: #F5F7FA; }
+    #glitch { inset: 0; mix-blend-mode: screen;
+      background: repeating-linear-gradient(0deg, rgba(0,194,255,0.0) 0px, rgba(0,194,255,0.0) 10px, rgba(0,194,255,0.35) 11px, rgba(255,77,94,0.25) 14px, rgba(0,194,255,0) 15px); }
+    #vig { inset: 0; background: radial-gradient(120% 80% at 50% 50%, transparent 55%, rgba(3,10,26,0.55) 100%); }
+    #title { left: 70px; right: 70px; top: 190px; text-align: center; padding: 22px 20px 28px; border-radius: 34px; background: rgba(11,30,63,0.86); border: 3px solid rgba(0,194,255,0.5); box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+    #title .k { font-family: "Sora"; font-weight: 800; font-size: 44px; color: var(--orange); letter-spacing: 0.06em; text-shadow: 0 4px 16px rgba(0,0,0,0.45); }
+    #title .h { font-family: "Sora"; font-weight: 800; font-size: 78px; line-height: 1.02; color: #fff; letter-spacing: -0.02em;
+      text-shadow: 0 6px 28px rgba(0,0,0,0.6), 0 0 2px rgba(0,0,0,0.6); }
+    #title .h b { color: var(--cyan); }
+    .kw { position: absolute; left: 0; right: 0; top: 230px; text-align: center; }
+    .kw span { display: inline-block; padding: 16px 40px 18px; border-radius: 26px; font-family: "Sora"; font-weight: 800; font-size: 64px; letter-spacing: 0.02em;
+      color: #fff; background: rgba(11,30,63,0.88); border: 3px solid rgba(0,194,255,0.6); box-shadow: 0 18px 50px rgba(0,0,0,0.4); white-space: nowrap; }
+    .kw span b { color: var(--cyan); font-weight: 800; }
+    .kw span i { color: var(--orange); font-style: normal; }
+    .kw.red span { background: rgba(255,77,94,0.95); border-color: rgba(255,255,255,0.7); }
+    .kw.green span { background: rgba(34,197,94,0.95); border-color: rgba(255,255,255,0.7); }
+    .kw.orange span { background: rgba(255,138,0,0.95); border-color: rgba(255,255,255,0.7); }
+    #k-backup span, #k-nombor span { font-size: 54px; }
+    #k-bit span { font-size: 96px; padding: 16px 56px 20px; }
+    #cta { left: 90px; right: 90px; top: 250px; text-align: center; border-radius: 34px; background: var(--card); padding: 30px 36px 34px; box-shadow: 0 24px 60px rgba(4,12,30,0.5); }
+    #cta .k { font-family: "Sora"; font-weight: 800; font-size: 36px; letter-spacing: 0.1em; color: var(--orange); }
+    #cta .h { font-family: "Sora"; font-weight: 800; font-size: 64px; line-height: 1.08; color: var(--navy); margin-top: 6px; }
+    #tag { left: 0; right: 0; top: 640px; text-align: center; font-family: "Plus Jakarta Sans"; font-weight: 700; font-size: 40px; color: #fff; text-shadow: 0 4px 18px rgba(0,0,0,0.7); }
+    #fol { left: 50%; top: 720px; margin-left: -170px; width: 340px; text-align: center; padding: 12px 26px; border-radius: 999px; background: var(--blue);
+      font-family: "Sora"; font-weight: 800; font-size: 44px; letter-spacing: 0.08em; color: #fff; box-shadow: 0 12px 30px rgba(0,0,0,0.35); }
+  </style>
+  <div id="root" data-composition-id="hud" data-width="1080" data-height="1920">
+    <div id="vig" class="ab"></div>
+    <div id="title" class="ab"><div class="k">APA JADI KALAU</div><div class="h">SEMUA <b>DATA</b> DUNIA HILANG?</div></div>
+    <div id="k-gal" class="kw red"><span>GALLERY KOSONG</span></div>
+    <div id="k-rekod" class="kw red"><span>REKOD HILANG</span></div>
+    <div id="k-kenal" class="kw orange"><span>SISTEM TAK KENAL</span></div>
+    <div id="k-duit" class="kw"><span>DUIT <i>=</i> <b>DATA?</b></span></div>
+    <div id="k-nombor" class="kw"><span>NOMBOR DALAM <b>DATABASE</b></span></div>
+    <div id="k-padam" class="kw red"><span>DUIT PUN HILANG!</span></div>
+    <div id="k-dc" class="kw"><span><b>DATA CENTER</b></span></div>
+    <div id="k-bit" class="kw orange"><span>0 &amp; 1</span></div>
+    <div id="k-satu" class="kw red"><span>SATU SALINAN JE?</span></div>
+    <div id="k-backup" class="kw green"><span>BACKUP DI BANYAK TEMPAT</span></div>
+    <div id="k-ada" class="kw green"><span>SALINAN MASIH ADA ✓</span></div>
+    <div id="cta" class="ab"><div class="k">KOMEN</div><div class="h">Data apa korang paling takut hilang?</div></div>
+    <div id="tag" class="ab">Technology, Made Understandable.</div>
+    <div id="fol" class="ab">FOLLOW</div>
+    <div id="glitch" class="ab"></div>
+    <div id="flash" class="ab"></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const T = window.YA_T, S = T.scenes, END = T.total;
+    const W = (n, w) => T.words[n].find((v) => v[0].toLowerCase().startsWith(w.toLowerCase()))[1];
+    const LN = (n) => T.lines[n];
+    const CHIPS = ["#k-gal", "#k-rekod", "#k-kenal", "#k-duit", "#k-nombor", "#k-padam", "#k-dc", "#k-bit", "#k-satu", "#k-backup", "#k-ada"];
+    gsap.set(["#title", "#cta", "#tag", "#fol", "#flash", "#glitch", ...CHIPS], { opacity: 0 });
+    const show = (sel, a, b, from = { y: 30, scale: 0.92 }) => {
+      tl.fromTo(sel, { opacity: 0, ...from }, { opacity: 1, y: 0, scale: 1, duration: 0.26, ease: "back.out(2.2)", immediateRender: false }, a);
+      if (b !== undefined) tl.to(sel, { opacity: 0, scale: 0.94, duration: 0.16, ease: "power2.in" }, b - 0.16);
+    };
+    const WN = (n, w, k) => T.words[n].filter((v) => v[0].toLowerCase().startsWith(w.toLowerCase()))[k][1];
+    // cuts = same times as the 3D camera shots in assets/iso/iso.js
+    const cuts = [W(1, "gambar") - 0.1, W(1, "video") - 0.1, W(1, "database") - 0.1, W(1, "tiba") - 0.1, S.gallery, W(2, "Chat") - 0.1, W(2, "semua") - 0.1, S.hospital, W(3, "rekod") - 0.1,
+      S.flight, W(4, "Sistem") - 0.1, S.seram, S.vault, W(6, "peti") - 0.1, W(6, "Sebenarnya") - 0.1, W(6, "nombor") - 0.1, S.padam, S.dc, W(8, "Berderet") - 0.1, W(8, "hard") - 0.1,
+      S.backup, W(9, "satu") - 0.1, W(9, "backup") - 0.1, S.selamat, S.akhir];
+    cuts.forEach((t) => {
+      tl.fromTo("#flash", { opacity: 0 }, { opacity: 0.32, duration: 0.05, immediateRender: false }, t - 0.06);
+      tl.to("#flash", { opacity: 0, duration: 0.2 }, t - 0.01);
+    });
+    // glitch bursts: data wiped
+    const glitch = (a, d) => {
+      tl.fromTo("#glitch", { opacity: 0, y: 0 }, { opacity: 0.9, y: 14, duration: 0.06, immediateRender: false }, a);
+      tl.to("#glitch", { opacity: 0.25, y: -10, duration: 0.08 }, a + 0.07);
+      tl.to("#glitch", { opacity: 0.8, y: 6, duration: 0.06 }, a + 0.16);
+      tl.to("#glitch", { opacity: 0, y: 0, duration: 0.12 }, a + d);
+    };
+    glitch(W(1, "tiba") + 0.1, 0.5); glitch(W(1, "kosong") - 0.05, 0.4); glitch(W(2, "kosong") - 0.15, 0.35); glitch(W(3, "kosong") - 0.1, 0.35);
+    glitch(W(7, "hilang") - 0.05, 0.4); glitch(WN(7, "hilang", 1) - 0.05, 0.5); glitch(W(10, "rosak") - 0.05, 0.4);
+    show("#title", 0.1, S.gallery, { y: -40, scale: 0.85 });
+    tl.to("#title", { scale: 1.04, duration: 0.18, yoyo: true, repeat: 1, ease: "sine.inOut" }, W(1, "kosong"));
+    show("#k-gal", W(2, "kosong") - 0.1, W(2, "Chat") - 0.1, { scale: 1.6, y: 0 });
+    show("#k-rekod", W(3, "kosong") - 0.1, S.flight, { scale: 1.6, y: 0 });
+    show("#k-kenal", W(4, "tak") - 0.1, S.seram, { scale: 1.6, y: 0 });
+    show("#k-duit", W(5, "duit") - 0.1, S.vault);
+    show("#k-nombor", W(6, "nombor") - 0.1, S.padam);
+    show("#k-padam", W(7, "nombor") - 0.1, S.dc, { scale: 1.6, y: 0 });
+    tl.to("#k-padam", { x: 8, duration: 0.04, yoyo: true, repeat: 7 }, WN(7, "hilang", 1));
+    show("#k-dc", W(8, "center") - 0.2, W(8, "hard") - 0.1);
+    show("#k-bit", W(8, "kosong") - 0.1, S.backup, { scale: 1.8, y: 0 });
+    show("#k-satu", W(9, "satu") - 0.1, W(9, "backup") - 0.1, { scale: 1.6, y: 0 });
+    show("#k-backup", W(9, "backup") - 0.05, S.selamat);
+    show("#k-ada", W(10, "salinan") - 0.1, S.akhir, { scale: 1.6, y: 0 });
+    show("#cta", W(11, "Data") - 0.1, END, { y: -40, scale: 0.9 });
+    show("#tag", LN(11)[1] - 1.2, END, { y: 20, scale: 1 });
+    show("#fol", LN(11)[1] - 1.0, END, { scale: 0.4, y: 0 });
+    tl.to("#fol", { scale: 1.08, duration: 0.3, yoyo: true, repeat: 3, ease: "sine.inOut" }, LN(11)[1] - 0.5);
+    window.__timelines["hud"] = tl;
+  </script>
+</template>

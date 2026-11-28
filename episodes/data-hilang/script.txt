@@ -1,0 +1,23 @@
+// Siri "Apa Jadi Kalau…?" #06. Satu baris = satu MP3 (01.mp3 ... 11.mp3), ikut Doc #06 (versi user). Yusuf sahaja.
+# scene hook | Bandar data, blok larut jadi piksel
+YUSUF (misteri): Bayangkan semua rekod, gambar, video dan database… tiba-tiba jadi kosong.
+# scene gallery | Phone gallery kosong, chat larut
+YUSUF (terkejut): Buka gallery, kosong. Chat lama pun kosong. semua hilang.
+# scene hospital | Hospital, rekod kosong
+YUSUF (risau): Pergi hospital, rekod kesihatan korang pun kosong.
+# scene flight | Airport scanner merah
+YUSUF (geram): Nak naik flight? Sistem pun tak kenal siapa korang.
+# scene seram | Pintu peti besi bank
+YUSUF (dramatik): Tapi yang paling seram… duit dalam bank...
+# scene vault | Peti besi terbuka: skrin database, duit jadi data
+YUSUF (twist): Korang ingat duit tu duduk dalam peti besi ke? Sebenarnya tidak, sebab kebanyakannya cuma sekadar nombor dalam database.
+# scene padam | Kiub duit pecah jadi piksel
+YUSUF (seram): Jadi kalau data hilang, nombor tu pun akan hilang.
+# scene dc | Data center, hard disk 0/1
+YUSUF (jelas): Semua data ni sebenarnya disimpan dalam data center. Berderet-deret hard disk, simpan nombor kosong dan satu.
+# scene backup | Peta dunia, salinan antara data center
+YUSUF (yakin): Sebab tu syarikat besar takkan simpan satu salinan je. Dorang akan buat backup, also dekat banyak tempat.
+# scene selamat | Satu DC padam, lain masih menyala
+YUSUF (lega): Jadi kalau satu rosak, salinan lain tu masih ada.
+# scene akhir | Yusuf close-up, CTA
+YUSUF (ajak): Sebab tu backup data tu penting. Data apa yang korang paling takut untuk hilang? Komen bawah!

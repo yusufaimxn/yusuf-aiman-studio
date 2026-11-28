@@ -1,0 +1,90 @@
+1
+00:00:00,200 --> 00:00:04,785
+Bayangkan semua rekod, gambar, video dan
+database…
+
+2
+00:00:04,585 --> 00:00:06,951
+tiba-tiba jadi kosong.
+
+3
+00:00:06,901 --> 00:00:08,720
+Buka gallery, kosong.
+
+4
+00:00:08,984 --> 00:00:10,601
+Chat lama pun kosong.
+
+5
+00:00:10,666 --> 00:00:11,829
+semua hilang.
+
+6
+00:00:11,780 --> 00:00:15,234
+Pergi hospital, rekod kesihatan korang pun
+kosong.
+
+7
+00:00:15,184 --> 00:00:16,115
+Nak naik flight?
+
+8
+00:00:16,383 --> 00:00:18,494
+Sistem pun tak kenal siapa korang.
+
+9
+00:00:18,544 --> 00:00:22,320
+Tapi yang paling seram… duit dalam bank...
+
+10
+00:00:22,320 --> 00:00:25,151
+Korang ingat duit tu duduk dalam peti besi
+ke?
+
+11
+00:00:25,426 --> 00:00:30,289
+Sebenarnya tidak, sebab kebanyakannya cuma
+sekadar nombor dalam database.
+
+12
+00:00:30,239 --> 00:00:33,816
+Jadi kalau data hilang, nombor tu pun akan
+hilang.
+
+13
+00:00:33,916 --> 00:00:37,309
+Semua data ni sebenarnya disimpan dalam
+data center.
+
+14
+00:00:37,554 --> 00:00:41,289
+Berderet-deret hard disk, simpan nombor
+kosong dan satu.
+
+15
+00:00:41,239 --> 00:00:44,775
+Sebab tu syarikat besar takkan simpan satu
+salinan je.
+
+16
+00:00:44,575 --> 00:00:48,482
+Dorang akan buat backup, also dekat banyak
+tempat.
+
+17
+00:00:48,432 --> 00:00:52,240
+Jadi kalau satu rosak, salinan lain tu
+masih ada.
+
+18
+00:00:52,340 --> 00:00:54,372
+Sebab tu backup data tu penting.
+
+19
+00:00:54,172 --> 00:00:57,568
+Data apa yang korang paling takut untuk
+hilang?
+
+20
+00:00:57,368 --> 00:00:58,638
+Komen bawah!
